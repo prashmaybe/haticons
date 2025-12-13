@@ -1,23 +1,35 @@
 function searchHaticons() {
-    $('.haticons-box').each(function(){
-        ($(this).attr('tags').search($('[name="search-haticon"]').val().toLowerCase())<0)?$(this).addClass('hidden'):$(this).removeClass('hidden');
+    var q = ($('[name="search-haticon"]').val() || '').toLowerCase();
+    $('.haticons-box').each(function () {
+        var t = ($(this).attr('tags') || '').toLowerCase();
+        (t.indexOf(q) < 0) ? $(this).addClass('hidden') : $(this).removeClass('hidden');
     });
 }
 
-$(function() {
-    $('.cheatsheet').click(function(e) {
-        $('.cheatsheet-modal').addClass('open')
-    })
-    $('.cdn').click(function(e) {
-        $('.cdn-modal').addClass('open')
-    })
-    $('.close').click(function(e) {
-        $('.modal').removeClass('open')
-    })
-    $('.haticons-box').click(function(e){
-    	$(this).toggleClass('open').siblings().removeClass('open');
-    })
-    $('.haticons-box .haticons-data').click(function(e){
-    	e.stopPropagation();
-    })
+$(function () {
+    var debounce = function (fn, wait) {
+        var timeout;
+        return function () {
+            var ctx = this, args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(function () { fn.apply(ctx, args); }, wait);
+        };
+    };
+    var onSearch = debounce(searchHaticons, 150);
+    $(document).on('input', '[name="search-haticon"]', onSearch);
+    $('.cheatsheet').on('click', function () {
+        $('.cheatsheet-modal').addClass('open');
+    });
+    $('.close').on('click', function () {
+        $('.modal').removeClass('open');
+    });
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') $('.modal').removeClass('open');
+    });
+    $('.haticons-box').on('click', function () {
+        $(this).toggleClass('open').siblings().removeClass('open');
+    });
+    $('.haticons-box .haticons-data').on('click', function (e) {
+        e.stopPropagation();
+    });
 })

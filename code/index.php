@@ -33,7 +33,7 @@
     </div>
     <div class="modal cheatsheet-modal">
         <button class="close"></button>
-        <input type="text" name="search-haticon" placeholder="Search Haticons here..." onkeyup="searchHaticons()">
+        <input type="text" name="search-haticon" placeholder="Search Haticons here...">
         <div class="haticons-set">
             <?php
                 $haticons = array(
@@ -2018,9 +2018,12 @@
                         'content' => "\\e985"
                     )
                 );
+                $seen = array();
                 foreach ($haticons as $key => $value) {
+                    if (in_array($value['class'], $seen)) { continue; }
+                    $seen[] = $value['class'];
                     ?>
-                    <div class="haticons-box" tags="<?php echo $value['class'];?>">
+                    <div class="haticons-box" tags="<?php echo strtolower($value['class']);?>">
                         <i class="<?php echo $value['class'];?>"></i>
                         <p class="haticons-data">class = <span class="select-all"><?php echo $value['class'];?></span><br />css-content = <span class="select-all">"<?php echo $value['content'];?>"</span></p>
                     </div>
