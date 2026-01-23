@@ -1,0 +1,1982 @@
+[
+    {
+        "class": "hi-aws",
+        "content": "\\f00a"
+    },
+    {
+        "class": "hi-network",
+        "content": "\\e9aa"
+    },
+    {
+        "class": "hi-haticons",
+        "content": "\\f000"
+    },
+    {
+        "class": "hi-play",
+        "content": "\\f001"
+    },
+    {
+        "class": "hi-paypal",
+        "content": "\\f002"
+    },
+    {
+        "class": "hi-share1",
+        "content": "\\f003"
+    },
+    {
+        "class": "hi-launchpad",
+        "content": "\\f004"
+    },
+    {
+        "class": "hi-ubuntu",
+        "content": "\\f005"
+    },
+    {
+        "class": "hi-filezilla",
+        "content": "\\f006"
+    },
+    {
+        "class": "hi-android",
+        "content": "\\f007"
+    },
+    {
+        "class": "hi-apple",
+        "content": "\\f008"
+    },
+    {
+        "class": "hi-blackberry",
+        "content": "\\f009"
+    },
+    {
+        "class": "hi-aws",
+        "content": "\\f00a"
+    },
+    {
+        "class": "hi-amd",
+        "content": "\\f00b"
+    },
+    {
+        "class": "hi-angellist",
+        "content": "\\f00c"
+    },
+    {
+        "class": "hi-applemusic",
+        "content": "\\f00d"
+    },
+    {
+        "class": "hi-applepay",
+        "content": "\\f00e"
+    },
+    {
+        "class": "hi-archlinux",
+        "content": "\\f00f"
+    },
+    {
+        "class": "hi-blob",
+        "content": "\\f010"
+    },
+    {
+        "class": "hi-blog",
+        "content": "\\f011"
+    },
+    {
+        "class": "hi-cat-paw",
+        "content": "\\f012"
+    },
+    {
+        "class": "hi-chrome",
+        "content": "\\f013"
+    },
+    {
+        "class": "hi-coop",
+        "content": "\\f014"
+    },
+    {
+        "class": "hi-credit-card1",
+        "content": "\\f015"
+    },
+    {
+        "class": "hi-doctor",
+        "content": "\\f016"
+    },
+    {
+        "class": "hi-dog-paw",
+        "content": "\\f017"
+    },
+    {
+        "class": "hi-drive",
+        "content": "\\f018"
+    },
+    {
+        "class": "hi-dropbox",
+        "content": "\\f019"
+    },
+    {
+        "class": "hi-artstation",
+        "content": "\\f01a"
+    },
+    {
+        "class": "hi-asana",
+        "content": "\\f01b"
+    },
+    {
+        "class": "hi-at-and-t",
+        "content": "\\f01c"
+    },
+    {
+        "class": "hi-atlassian",
+        "content": "\\f01d"
+    },
+    {
+        "class": "hi-atom",
+        "content": "\\f01e"
+    },
+    {
+        "class": "hi-aurelia",
+        "content": "\\f01f"
+    },
+    {
+        "class": "hi-edge",
+        "content": "\\f020"
+    },
+    {
+        "class": "hi-facebook",
+        "content": "\\f021"
+    },
+    {
+        "class": "hi-fire",
+        "content": "\\f022"
+    },
+    {
+        "class": "hi-folder1",
+        "content": "\\f023"
+    },
+    {
+        "class": "hi-google-assistant",
+        "content": "\\f024"
+    },
+    {
+        "class": "hi-google-plus",
+        "content": "\\f025"
+    },
+    {
+        "class": "hi-google",
+        "content": "\\f026"
+    },
+    {
+        "class": "hi-hangout",
+        "content": "\\f027"
+    },
+    {
+        "class": "hi-hard-disk",
+        "content": "\\f028"
+    },
+    {
+        "class": "hi-home",
+        "content": "\\f029"
+    },
+    {
+        "class": "hi-automatic",
+        "content": "\\f02a"
+    },
+    {
+        "class": "hi-autotask",
+        "content": "\\f02b"
+    },
+    {
+        "class": "hi-azurepipelines",
+        "content": "\\f02c"
+    },
+    {
+        "class": "hi-basecamp",
+        "content": "\\f02d"
+    },
+    {
+        "class": "hi-behance",
+        "content": "\\f02e"
+    },
+    {
+        "class": "hi-bing",
+        "content": "\\f02f"
+    },
+    {
+        "class": "hi-html5",
+        "content": "\\f030"
+    },
+    {
+        "class": "hi-hut",
+        "content": "\\f031"
+    },
+    {
+        "class": "hi-instagram",
+        "content": "\\f032"
+    },
+    {
+        "class": "hi-landline",
+        "content": "\\f033"
+    },
+    {
+        "class": "hi-linkedin",
+        "content": "\\f034"
+    },
+    {
+        "class": "hi-map",
+        "content": "\\f035"
+    },
+    {
+        "class": "hi-message",
+        "content": "\\f036"
+    },
+    {
+        "class": "hi-music",
+        "content": "\\f037"
+    },
+    {
+        "class": "hi-npm",
+        "content": "\\f038"
+    },
+    {
+        "class": "hi-pacman",
+        "content": "\\f039"
+    },
+    {
+        "class": "hi-bitbucket",
+        "content": "\\f03a"
+    },
+    {
+        "class": "hi-bitly",
+        "content": "\\f03b"
+    },
+    {
+        "class": "hi-blender",
+        "content": "\\f03c"
+    },
+    {
+        "class": "hi-bootstrap",
+        "content": "\\f03d"
+    },
+    {
+        "class": "hi-bower",
+        "content": "\\f03e"
+    },
+    {
+        "class": "hi-cakephp",
+        "content": "\\f03f"
+    },
+    {
+        "class": "hi-pencil1",
+        "content": "\\f040"
+    },
+    {
+        "class": "hi-phone",
+        "content": "\\f041"
+    },
+    {
+        "class": "hi-picasa",
+        "content": "\\f042"
+    },
+    {
+        "class": "hi-reddit",
+        "content": "\\f043"
+    },
+    {
+        "class": "hi-skype",
+        "content": "\\f044"
+    },
+    {
+        "class": "hi-spanchat",
+        "content": "\\f045"
+    },
+    {
+        "class": "hi-star1",
+        "content": "\\f046"
+    },
+    {
+        "class": "hi-trello",
+        "content": "\\f047"
+    },
+    {
+        "class": "hi-trophy",
+        "content": "\\f048"
+    },
+    {
+        "class": "hi-twitter-font",
+        "content": "\\f049"
+    },
+    {
+        "class": "hi-campaignmonitor",
+        "content": "\\f04a"
+    },
+    {
+        "class": "hi-dailymotion",
+        "content": "\\f04b"
+    },
+    {
+        "class": "hi-coffeescript",
+        "content": "\\f04c"
+    },
+    {
+        "class": "hi-conda-forge",
+        "content": "\\f04d"
+    },
+    {
+        "class": "hi-css3",
+        "content": "\\f04e"
+    },
+    {
+        "class": "hi-csswizardry",
+        "content": "\\f04f"
+    },
+    {
+        "class": "hi-twitter",
+        "content": "\\f050"
+    },
+    {
+        "class": "hi-wholensole",
+        "content": "\\f051"
+    },
+    {
+        "class": "hi-windows",
+        "content": "\\f052"
+    },
+    {
+        "class": "hi-youtube-play",
+        "content": "\\f053"
+    },
+    {
+        "class": "hi-amazon",
+        "content": "\\f054"
+    },
+    {
+        "class": "hi-redo1",
+        "content": "\\f055"
+    },
+    {
+        "class": "hi-undo1",
+        "content": "\\f056"
+    },
+    {
+        "class": "hi-profile",
+        "content": "\\f057"
+    },
+    {
+        "class": "hi-clubs",
+        "content": "\\f058"
+    },
+    {
+        "class": "hi-spades",
+        "content": "\\f059"
+    },
+    {
+        "class": "hi-diamonds",
+        "content": "\\f05a"
+    },
+    {
+        "class": "hi-heart",
+        "content": "\\f05b"
+    },
+    {
+        "class": "hi-sim_card",
+        "content": "\\f05c"
+    },
+    {
+        "class": "hi-trash1",
+        "content": "\\f05d"
+    },
+    {
+        "class": "hi-attachment1",
+        "content": "\\f05e"
+    },
+    {
+        "class": "hi-thumbs-down",
+        "content": "\\f05f"
+    },
+    {
+        "class": "hi-thumbs-up",
+        "content": "\\f060"
+    },
+    {
+        "class": "hi-to-do",
+        "content": "\\f061"
+    },
+    {
+        "class": "hi-dream11",
+        "content": "\\f062"
+    },
+    {
+        "class": "hi-suru",
+        "content": "\\f063"
+    },
+    {
+        "class": "hi-slack",
+        "content": "\\f064"
+    },
+    {
+        "class": "hi-microblog",
+        "content": "\\f065"
+    },
+    {
+        "class": "hi-microgenetics",
+        "content": "\\f066"
+    },
+    {
+        "class": "hi-microsoft",
+        "content": "\\f067"
+    },
+    {
+        "class": "hi-microsoft-access",
+        "content": "\\f068"
+    },
+    {
+        "class": "hi-microsoftexcel",
+        "content": "\\f069"
+    },
+    {
+        "class": "hi-microsoft-one-note",
+        "content": "\\f06a"
+    },
+    {
+        "class": "hi-microsoft-outlook",
+        "content": "\\f06b"
+    },
+    {
+        "class": "hi-microsoft-power-point",
+        "content": "\\f06c"
+    },
+    {
+        "class": "hi-microsoft-word",
+        "content": "\\f06d"
+    },
+    {
+        "class": "hi-prismic",
+        "content": "\\f06e"
+    },
+    {
+        "class": "hi-statamic",
+        "content": "\\f06f"
+    },
+    {
+        "class": "hi-archive",
+        "content": "\\f070"
+    },
+    {
+        "class": "hi-library",
+        "content": "\\f071"
+    },
+    {
+        "class": "hi-zoom-out1",
+        "content": "\\f072"
+    },
+    {
+        "class": "hi-bell1",
+        "content": "\\f073"
+    },
+    {
+        "class": "hi-location",
+        "content": "\\f074"
+    },
+    {
+        "class": "hi-allo",
+        "content": "\\f075"
+    },
+    {
+        "class": "hi-block",
+        "content": "\\f076"
+    },
+    {
+        "class": "hi-book-my-show",
+        "content": "\\f077"
+    },
+    {
+        "class": "hi-duo",
+        "content": "\\f078"
+    },
+    {
+        "class": "hi-electric",
+        "content": "\\f079"
+    },
+    {
+        "class": "hi-gaming-console",
+        "content": "\\f07a"
+    },
+    {
+        "class": "hi-lego-face",
+        "content": "\\f07b"
+    },
+    {
+        "class": "hi-maestro",
+        "content": "\\f07c"
+    },
+    {
+        "class": "hi-master-card",
+        "content": "\\f07d"
+    },
+    {
+        "class": "hi-medium",
+        "content": "\\f07e"
+    },
+    {
+        "class": "hi-paytm",
+        "content": "\\f07f"
+    },
+    {
+        "class": "hi-play-station",
+        "content": "\\f080"
+    },
+    {
+        "class": "hi-plugin",
+        "content": "\\f081"
+    },
+    {
+        "class": "hi-pocket",
+        "content": "\\f082"
+    },
+    {
+        "class": "hi-programmerindia",
+        "content": "\\f083"
+    },
+    {
+        "class": "hi-search1",
+        "content": "\\f084"
+    },
+    {
+        "class": "hi-ad-block-plus",
+        "content": "\\f085"
+    },
+    {
+        "class": "hi-swiggy",
+        "content": "\\f086"
+    },
+    {
+        "class": "hi-tumblr",
+        "content": "\\f087"
+    },
+    {
+        "class": "hi-uber-driver",
+        "content": "\\f088"
+    },
+    {
+        "class": "hi-uber-freight",
+        "content": "\\f089"
+    },
+    {
+        "class": "hi-uber",
+        "content": "\\f08a"
+    },
+    {
+        "class": "hi-visa",
+        "content": "\\f08b"
+    },
+    {
+        "class": "hi-yash-raj",
+        "content": "\\f08c"
+    },
+    {
+        "class": "hi-zomato",
+        "content": "\\f08d"
+    },
+    {
+        "class": "hi-zoom-in1",
+        "content": "\\f08e"
+    },
+    {
+        "class": "hi-finder",
+        "content": "\\f08f"
+    },
+    {
+        "class": "hi-washing-machine",
+        "content": "\\f090"
+    },
+    {
+        "class": "hi-tags",
+        "content": "\\f091"
+    },
+    {
+        "class": "hi-tag",
+        "content": "\\f092"
+    },
+    {
+        "class": "hi-more",
+        "content": "\\f093"
+    },
+    {
+        "class": "hi-nav",
+        "content": "\\f094"
+    },
+    {
+        "class": "hi-help",
+        "content": "\\f095"
+    },
+    {
+        "class": "hi-gmail",
+        "content": "\\f096"
+    },
+    {
+        "class": "hi-letterboxd1",
+        "content": "\\f097"
+    },
+    {
+        "class": "hi-mailchimp",
+        "content": "\\f098"
+    },
+    {
+        "class": "hi-mailru",
+        "content": "\\f099"
+    },
+    {
+        "class": "hi-protonmail",
+        "content": "\\f09a"
+    },
+    {
+        "class": "hi-envelope1",
+        "content": "\\f09b"
+    },
+    {
+        "class": "hi-envelope-open",
+        "content": "\\f09c"
+    },
+    {
+        "class": "hi-paper-plane1",
+        "content": "\\f09d"
+    },
+    {
+        "class": "hi-user1",
+        "content": "\\f09e"
+    },
+    {
+        "class": "hi-user-plus",
+        "content": "\\f09f"
+    },
+    {
+        "class": "hi-unity",
+        "content": "\\f0a0"
+    },
+    {
+        "class": "hi-upwork",
+        "content": "\\f0a1"
+    },
+    {
+        "class": "hi-viadeo",
+        "content": "\\f0a2"
+    },
+    {
+        "class": "hi-vim",
+        "content": "\\f0a3"
+    },
+    {
+        "class": "hi-vimeo",
+        "content": "\\f0a4"
+    },
+    {
+        "class": "hi-vine",
+        "content": "\\f0a5"
+    },
+    {
+        "class": "hi-visualstudiocode",
+        "content": "\\f0a6"
+    },
+    {
+        "class": "hi-vk",
+        "content": "\\f0a7"
+    },
+    {
+        "class": "hi-vlcmediaplayer",
+        "content": "\\f0a8"
+    },
+    {
+        "class": "hi-vue-js",
+        "content": "\\f0a9"
+    },
+    {
+        "class": "hi-webstorm",
+        "content": "\\f0aa"
+    },
+    {
+        "class": "hi-wechat",
+        "content": "\\f0ab"
+    },
+    {
+        "class": "hi-wheniwork",
+        "content": "\\f0ac"
+    },
+    {
+        "class": "hi-wikipedia",
+        "content": "\\f0ad"
+    },
+    {
+        "class": "hi-wix",
+        "content": "\\f0ae"
+    },
+    {
+        "class": "hi-wordpress",
+        "content": "\\f0af"
+    },
+    {
+        "class": "hi-xbox",
+        "content": "\\f0b0"
+    },
+    {
+        "class": "hi-xcode",
+        "content": "\\f0b1"
+    },
+    {
+        "class": "hi-xing",
+        "content": "\\f0b2"
+    },
+    {
+        "class": "hi-yammer",
+        "content": "\\f0b3"
+    },
+    {
+        "class": "hi-yandex",
+        "content": "\\f0b4"
+    },
+    {
+        "class": "hi-yarn",
+        "content": "\\f0b5"
+    },
+    {
+        "class": "hi-ycombinator",
+        "content": "\\f0b6"
+    },
+    {
+        "class": "hi-zendesk",
+        "content": "\\f0b7"
+    },
+    {
+        "class": "hi-zerply",
+        "content": "\\f0b8"
+    },
+    {
+        "class": "hi-zillow",
+        "content": "\\f0b9"
+    },
+    {
+        "class": "hi-zorin",
+        "content": "\\f0ba"
+    },
+    {
+        "class": "hi-tic-tac-toe",
+        "content": "\\f0bb"
+    },
+    {
+        "class": "hi-pakpak",
+        "content": "\\f0bc"
+    },
+    {
+        "class": "hi-user-minus",
+        "content": "\\f0f0"
+    },
+    {
+        "class": "hi-user-check",
+        "content": "\\f0f1"
+    },
+    {
+        "class": "hi-users1",
+        "content": "\\f0f2"
+    },
+    {
+        "class": "hi-gravatar",
+        "content": "\\f0f3"
+    },
+    {
+        "class": "hi-superuser",
+        "content": "\\f0f4"
+    },
+    {
+        "class": "hi-key",
+        "content": "\\f0f5"
+    },
+    {
+        "class": "hi-angular",
+        "content": "\\f0f6"
+    },
+    {
+        "class": "hi-ola-cabs",
+        "content": "\\f0f7"
+    },
+    {
+        "class": "hi-bitcoin",
+        "content": "\\f0f8"
+    },
+    {
+        "class": "hi-tinder-icon",
+        "content": "\\f0f9"
+    },
+    {
+        "class": "hi-viber-icon",
+        "content": "\\f0fa"
+    },
+    {
+        "class": "hi-whatsapp",
+        "content": "\\f0fb"
+    },
+    {
+        "class": "hi-steam",
+        "content": "\\f0fc"
+    },
+    {
+        "class": "hi-github",
+        "content": "\\f0fd"
+    },
+    {
+        "class": "hi-tux",
+        "content": "\\f0fe"
+    },
+    {
+        "class": "hi-firefox",
+        "content": "\\f0ff"
+    },
+    {
+        "class": "hi-git",
+        "content": "\\f100"
+    },
+    {
+        "class": "hi-check1",
+        "content": "\\f101"
+    },
+    {
+        "class": "hi-close",
+        "content": "\\f102"
+    },
+    {
+        "class": "hi-adobe",
+        "content": "\\f103"
+    },
+    {
+        "class": "hi-appboxlab",
+        "content": "\\f104"
+    },
+    {
+        "class": "hi-bean-bag",
+        "content": "\\f105"
+    },
+    {
+        "class": "hi-bulb",
+        "content": "\\f106"
+    },
+    {
+        "class": "hi-bus",
+        "content": "\\f107"
+    },
+    {
+        "class": "hi-camera1",
+        "content": "\\f108"
+    },
+    {
+        "class": "hi-car",
+        "content": "\\f109"
+    },
+    {
+        "class": "hi-checkbox-unchecked",
+        "content": "\\f10b"
+    },
+    {
+        "class": "hi-checked",
+        "content": "\\f10c"
+    },
+    {
+        "class": "hi-cookie",
+        "content": "\\f10f"
+    },
+    {
+        "class": "hi-creative-cloud",
+        "content": "\\f110"
+    },
+    {
+        "class": "hi-dihadiwala",
+        "content": "\\f111"
+    },
+    {
+        "class": "hi-edit",
+        "content": "\\f112"
+    },
+    {
+        "class": "hi-flag1",
+        "content": "\\f113"
+    },
+    {
+        "class": "hi-grofers",
+        "content": "\\f114"
+    },
+    {
+        "class": "hi-images",
+        "content": "\\f115"
+    },
+    {
+        "class": "hi-incognito",
+        "content": "\\f116"
+    },
+    {
+        "class": "hi-indane",
+        "content": "\\f117"
+    },
+    {
+        "class": "hi-info1",
+        "content": "\\f118"
+    },
+    {
+        "class": "hi-kadam",
+        "content": "\\f119"
+    },
+    {
+        "class": "hi-lock1",
+        "content": "\\f11a"
+    },
+    {
+        "class": "hi-lucifer",
+        "content": "\\f11b"
+    },
+    {
+        "class": "hi-messenger",
+        "content": "\\f11c"
+    },
+    {
+        "class": "hi-meteor",
+        "content": "\\f11d"
+    },
+    {
+        "class": "hi-ojook",
+        "content": "\\f11e"
+    },
+    {
+        "class": "hi-orchid",
+        "content": "\\f11f"
+    },
+    {
+        "class": "hi-paintbox",
+        "content": "\\f120"
+    },
+    {
+        "class": "hi-radio-checked",
+        "content": "\\f121"
+    },
+    {
+        "class": "hi-robot",
+        "content": "\\f123"
+    },
+    {
+        "class": "hi-support",
+        "content": "\\f124"
+    },
+    {
+        "class": "hi-tooth",
+        "content": "\\f125"
+    },
+    {
+        "class": "hi-unlock",
+        "content": "\\f126"
+    },
+    {
+        "class": "hi-wallet",
+        "content": "\\f127"
+    },
+    {
+        "class": "hi-calendar1",
+        "content": "\\f128"
+    },
+    {
+        "class": "hi-elastic-cloud",
+        "content": "\\f12b"
+    },
+    {
+        "class": "hi-icloud",
+        "content": "\\f12c"
+    },
+    {
+        "class": "hi-cloudflare",
+        "content": "\\f12d"
+    },
+    {
+        "class": "hi-soundcloud",
+        "content": "\\f12e"
+    },
+    {
+        "class": "hi-ionic",
+        "content": "\\f12f"
+    },
+    {
+        "class": "hi-mail",
+        "content": "\\f130"
+    },
+    {
+        "class": "hi-time1",
+        "content": "\\f131"
+    },
+    {
+        "class": "hi-bookmark-o",
+        "content": "\\f132"
+    },
+    {
+        "class": "hi-bookmark",
+        "content": "\\f133"
+    },
+    {
+        "class": "hi-star-o1",
+        "content": "\\f134"
+    },
+    {
+        "class": "hi-star-half",
+        "content": "\\f135"
+    },
+    {
+        "class": "hi-debian",
+        "content": "\\f136"
+    },
+    {
+        "class": "hi-dell",
+        "content": "\\f137"
+    },
+    {
+        "class": "hi-deno",
+        "content": "\\f138"
+    },
+    {
+        "class": "hi-dependabot",
+        "content": "\\f139"
+    },
+    {
+        "class": "hi-digg",
+        "content": "\\f13a"
+    },
+    {
+        "class": "hi-digitalocean",
+        "content": "\\f13b"
+    },
+    {
+        "class": "hi-dribbble",
+        "content": "\\f13c"
+    },
+    {
+        "class": "hi-ebay",
+        "content": "\\f13d"
+    },
+    {
+        "class": "hi-eclipseide",
+        "content": "\\f13e"
+    },
+    {
+        "class": "hi-eventbrite",
+        "content": "\\f13f"
+    },
+    {
+        "class": "hi-evernote",
+        "content": "\\f140"
+    },
+    {
+        "class": "hi-everplaces",
+        "content": "\\f141"
+    },
+    {
+        "class": "hi-f-secure",
+        "content": "\\f142"
+    },
+    {
+        "class": "hi-favro",
+        "content": "\\f143"
+    },
+    {
+        "class": "hi-fedora",
+        "content": "\\f144"
+    },
+    {
+        "class": "hi-flutter",
+        "content": "\\f145"
+    },
+    {
+        "class": "hi-gitlab",
+        "content": "\\f146"
+    },
+    {
+        "class": "hi-gnu",
+        "content": "\\f147"
+    },
+    {
+        "class": "hi-gnusocial",
+        "content": "\\f148"
+    },
+    {
+        "class": "hi-googlehangoutschat",
+        "content": "\\f149"
+    },
+    {
+        "class": "hi-googlepay",
+        "content": "\\f14a"
+    },
+    {
+        "class": "hi-grafana",
+        "content": "\\f14b"
+    },
+    {
+        "class": "hi-hackaday",
+        "content": "\\f14c"
+    },
+    {
+        "class": "hi-hackster",
+        "content": "\\f14d"
+    },
+    {
+        "class": "hi-hootsuite",
+        "content": "\\f14e"
+    },
+    {
+        "class": "hi-hubspot",
+        "content": "\\f14f"
+    },
+    {
+        "class": "hi-iconjar",
+        "content": "\\f150"
+    },
+    {
+        "class": "hi-inkscape",
+        "content": "\\f151"
+    },
+    {
+        "class": "hi-intel",
+        "content": "\\f152"
+    },
+    {
+        "class": "hi-internetexplorer",
+        "content": "\\f153"
+    },
+    {
+        "class": "hi-invision",
+        "content": "\\f154"
+    },
+    {
+        "class": "hi-jabber",
+        "content": "\\f155"
+    },
+    {
+        "class": "hi-javascript",
+        "content": "\\f156"
+    },
+    {
+        "class": "hi-jenkins",
+        "content": "\\f157"
+    },
+    {
+        "class": "hi-kaios",
+        "content": "\\f158"
+    },
+    {
+        "class": "hi-keybase",
+        "content": "\\f159"
+    },
+    {
+        "class": "hi-kibana",
+        "content": "\\f15a"
+    },
+    {
+        "class": "hi-klout",
+        "content": "\\f15b"
+    },
+    {
+        "class": "hi-kotlin",
+        "content": "\\f15c"
+    },
+    {
+        "class": "hi-laravel",
+        "content": "\\f15d"
+    },
+    {
+        "class": "hi-laravelhorizon",
+        "content": "\\f15e"
+    },
+    {
+        "class": "hi-letterboxd",
+        "content": "\\f15f"
+    },
+    {
+        "class": "hi-line",
+        "content": "\\f160"
+    },
+    {
+        "class": "hi-linewebtoon",
+        "content": "\\f161"
+    },
+    {
+        "class": "hi-linuxmint",
+        "content": "\\f162"
+    },
+    {
+        "class": "hi-magento",
+        "content": "\\f163"
+    },
+    {
+        "class": "hi-magisk",
+        "content": "\\f164"
+    },
+    {
+        "class": "hi-mastodon",
+        "content": "\\f165"
+    },
+    {
+        "class": "hi-mathworks",
+        "content": "\\f166"
+    },
+    {
+        "class": "hi-mediafire",
+        "content": "\\f167"
+    },
+    {
+        "class": "hi-mixcloud",
+        "content": "\\f168"
+    },
+    {
+        "class": "hi-monogram",
+        "content": "\\f169"
+    },
+    {
+        "class": "hi-mysql",
+        "content": "\\f16a"
+    },
+    {
+        "class": "hi-netflix",
+        "content": "\\f16b"
+    },
+    {
+        "class": "hi-odnoklassniki",
+        "content": "\\f16c"
+    },
+    {
+        "class": "hi-opensuse",
+        "content": "\\f16d"
+    },
+    {
+        "class": "hi-periscope",
+        "content": "\\f16e"
+    },
+    {
+        "class": "hi-php",
+        "content": "\\f16f"
+    },
+    {
+        "class": "hi-plangrid",
+        "content": "\\f170"
+    },
+    {
+        "class": "hi-player-dot-me",
+        "content": "\\f171"
+    },
+    {
+        "class": "hi-plurk",
+        "content": "\\f172"
+    },
+    {
+        "class": "hi-powershell",
+        "content": "\\f173"
+    },
+    {
+        "class": "hi-probot",
+        "content": "\\f174"
+    },
+    {
+        "class": "hi-processwire",
+        "content": "\\f175"
+    },
+    {
+        "class": "hi-producthunt",
+        "content": "\\f176"
+    },
+    {
+        "class": "hi-python",
+        "content": "\\f177"
+    },
+    {
+        "class": "hi-reason",
+        "content": "\\f178"
+    },
+    {
+        "class": "hi-redbubble",
+        "content": "\\f179"
+    },
+    {
+        "class": "hi-redhat",
+        "content": "\\f17a"
+    },
+    {
+        "class": "hi-redux",
+        "content": "\\f17b"
+    },
+    {
+        "class": "hi-riot",
+        "content": "\\f17c"
+    },
+    {
+        "class": "hi-ruby",
+        "content": "\\f17d"
+    },
+    {
+        "class": "hi-runkeeper",
+        "content": "\\f17e"
+    },
+    {
+        "class": "hi-rust",
+        "content": "\\f17f"
+    },
+    {
+        "class": "hi-salesforce",
+        "content": "\\f180"
+    },
+    {
+        "class": "hi-samsung",
+        "content": "\\f181"
+    },
+    {
+        "class": "hi-samsungpay",
+        "content": "\\f182"
+    },
+    {
+        "class": "hi-sass",
+        "content": "\\f183"
+    },
+    {
+        "class": "hi-sega",
+        "content": "\\f184"
+    },
+    {
+        "class": "hi-shazam",
+        "content": "\\f185"
+    },
+    {
+        "class": "hi-shopify",
+        "content": "\\f186"
+    },
+    {
+        "class": "hi-sinaweibo",
+        "content": "\\f187"
+    },
+    {
+        "class": "hi-skyliner",
+        "content": "\\f188"
+    },
+    {
+        "class": "hi-sourceforge",
+        "content": "\\f189"
+    },
+    {
+        "class": "hi-spotify",
+        "content": "\\f18a"
+    },
+    {
+        "class": "hi-staticman",
+        "content": "\\f18b"
+    },
+    {
+        "class": "hi-steemit",
+        "content": "\\f18c"
+    },
+    {
+        "class": "hi-stylus",
+        "content": "\\f18d"
+    },
+    {
+        "class": "hi-swarm",
+        "content": "\\f18e"
+    },
+    {
+        "class": "hi-swift",
+        "content": "\\f18f"
+    },
+    {
+        "class": "hi-symfony",
+        "content": "\\f190"
+    },
+    {
+        "class": "hi-teamviewer",
+        "content": "\\f191"
+    },
+    {
+        "class": "hi-ted",
+        "content": "\\f192"
+    },
+    {
+        "class": "hi-teespring",
+        "content": "\\f193"
+    },
+    {
+        "class": "hi-tencentqq",
+        "content": "\\f194"
+    },
+    {
+        "class": "hi-tiktok",
+        "content": "\\f195"
+    },
+    {
+        "class": "hi-todoist",
+        "content": "\\f196"
+    },
+    {
+        "class": "hi-toggl",
+        "content": "\\f197"
+    },
+    {
+        "class": "hi-tor",
+        "content": "\\f198"
+    },
+    {
+        "class": "hi-treehouse",
+        "content": "\\f199"
+    },
+    {
+        "class": "hi-twilio",
+        "content": "\\f19a"
+    },
+    {
+        "class": "hi-twitch",
+        "content": "\\f19b"
+    },
+    {
+        "class": "hi-typescript",
+        "content": "\\f19c"
+    },
+    {
+        "class": "hi-typo3",
+        "content": "\\f19d"
+    },
+    {
+        "class": "hi-udacity",
+        "content": "\\f19e"
+    },
+    {
+        "class": "hi-udemy",
+        "content": "\\f19f"
+    },
+    {
+        "class": "hi-add-circle",
+        "content": "\\e900"
+    },
+    {
+        "class": "hi-add-file",
+        "content": "\\e901"
+    },
+    {
+        "class": "hi-add-folder",
+        "content": "\\e902"
+    },
+    {
+        "class": "hi-alarm",
+        "content": "\\e903"
+    },
+    {
+        "class": "hi-align-center",
+        "content": "\\e904"
+    },
+    {
+        "class": "hi-align-justify",
+        "content": "\\e905"
+    },
+    {
+        "class": "hi-align-left",
+        "content": "\\e906"
+    },
+    {
+        "class": "hi-align-right",
+        "content": "\\e907"
+    },
+    {
+        "class": "hi-arrow-bottom",
+        "content": "\\e908"
+    },
+    {
+        "class": "hi-arrow-circle-bottom",
+        "content": "\\e909"
+    },
+    {
+        "class": "hi-arrow-circle-left",
+        "content": "\\e90a"
+    },
+    {
+        "class": "hi-arrow-circle-right",
+        "content": "\\e90b"
+    },
+    {
+        "class": "hi-arrow-circle-top",
+        "content": "\\e90c"
+    },
+    {
+        "class": "hi-arrow-left",
+        "content": "\\e90d"
+    },
+    {
+        "class": "hi-arrow-right",
+        "content": "\\e90e"
+    },
+    {
+        "class": "hi-arrow-top",
+        "content": "\\e90f"
+    },
+    {
+        "class": "hi-attachment",
+        "content": "\\e910"
+    },
+    {
+        "class": "hi-ban",
+        "content": "\\e911"
+    },
+    {
+        "class": "hi-bell",
+        "content": "\\e912"
+    },
+    {
+        "class": "hi-briefcase",
+        "content": "\\e913"
+    },
+    {
+        "class": "hi-broken-link",
+        "content": "\\e914"
+    },
+    {
+        "class": "hi-bullet-list",
+        "content": "\\e915"
+    },
+    {
+        "class": "hi-calendar",
+        "content": "\\e916"
+    },
+    {
+        "class": "hi-camera",
+        "content": "\\e917"
+    },
+    {
+        "class": "hi-cart",
+        "content": "\\e918"
+    },
+    {
+        "class": "hi-chart",
+        "content": "\\e919"
+    },
+    {
+        "class": "hi-chat",
+        "content": "\\e91a"
+    },
+    {
+        "class": "hi-check-circle",
+        "content": "\\e91b"
+    },
+    {
+        "class": "hi-check",
+        "content": "\\e91c"
+    },
+    {
+        "class": "hi-checkbox",
+        "content": "\\e91d"
+    },
+    {
+        "class": "hi-chevron-bottom",
+        "content": "\\e91e"
+    },
+    {
+        "class": "hi-chevron-left",
+        "content": "\\e91f"
+    },
+    {
+        "class": "hi-chevron-right",
+        "content": "\\e920"
+    },
+    {
+        "class": "hi-chevron-top",
+        "content": "\\e921"
+    },
+    {
+        "class": "hi-circle",
+        "content": "\\e922"
+    },
+    {
+        "class": "hi-clock",
+        "content": "\\e923"
+    },
+    {
+        "class": "hi-cog",
+        "content": "\\e924"
+    },
+    {
+        "class": "hi-credit-card",
+        "content": "\\e925"
+    },
+    {
+        "class": "hi-cross-circle",
+        "content": "\\e926"
+    },
+    {
+        "class": "hi-cross",
+        "content": "\\e927"
+    },
+    {
+        "class": "hi-date",
+        "content": "\\e928"
+    },
+    {
+        "class": "hi-delete-file",
+        "content": "\\e929"
+    },
+    {
+        "class": "hi-dislike",
+        "content": "\\e92a"
+    },
+    {
+        "class": "hi-document",
+        "content": "\\e92b"
+    },
+    {
+        "class": "hi-download-box",
+        "content": "\\e92c"
+    },
+    {
+        "class": "hi-download-cloud",
+        "content": "\\e92d"
+    },
+    {
+        "class": "hi-download",
+        "content": "\\e92e"
+    },
+    {
+        "class": "hi-empty-bag",
+        "content": "\\e92f"
+    },
+    {
+        "class": "hi-envelope",
+        "content": "\\e930"
+    },
+    {
+        "class": "hi-export",
+        "content": "\\e931"
+    },
+    {
+        "class": "hi-eye",
+        "content": "\\e932"
+    },
+    {
+        "class": "hi-fat-bag",
+        "content": "\\e933"
+    },
+    {
+        "class": "hi-file",
+        "content": "\\e934"
+    },
+    {
+        "class": "hi-fill-bag",
+        "content": "\\e935"
+    },
+    {
+        "class": "hi-fit-horizontal",
+        "content": "\\e936"
+    },
+    {
+        "class": "hi-fit-to-screen",
+        "content": "\\e937"
+    },
+    {
+        "class": "hi-fit-vertical",
+        "content": "\\e938"
+    },
+    {
+        "class": "hi-flag",
+        "content": "\\e939"
+    },
+    {
+        "class": "hi-folder",
+        "content": "\\e93a"
+    },
+    {
+        "class": "hi-funnel",
+        "content": "\\e93b"
+    },
+    {
+        "class": "hi-game",
+        "content": "\\e93c"
+    },
+    {
+        "class": "hi-hand-index",
+        "content": "\\e93d"
+    },
+    {
+        "class": "hi-happy",
+        "content": "\\e93e"
+    },
+    {
+        "class": "hi-heart-o",
+        "content": "\\e93f"
+    },
+    {
+        "class": "hi-hide",
+        "content": "\\e940"
+    },
+    {
+        "class": "hi-id-card-vertical",
+        "content": "\\e941"
+    },
+    {
+        "class": "hi-id-card",
+        "content": "\\e942"
+    },
+    {
+        "class": "hi-image",
+        "content": "\\e943"
+    },
+    {
+        "class": "hi-info-square",
+        "content": "\\e944"
+    },
+    {
+        "class": "hi-info",
+        "content": "\\e945"
+    },
+    {
+        "class": "hi-like",
+        "content": "\\e946"
+    },
+    {
+        "class": "hi-link",
+        "content": "\\e947"
+    },
+    {
+        "class": "hi-lock",
+        "content": "\\e948"
+    },
+    {
+        "class": "hi-logout",
+        "content": "\\e949"
+    },
+    {
+        "class": "hi-marker-o",
+        "content": "\\e94a"
+    },
+    {
+        "class": "hi-maximize",
+        "content": "\\e94b"
+    },
+    {
+        "class": "hi-media-file",
+        "content": "\\e94c"
+    },
+    {
+        "class": "hi-menu",
+        "content": "\\e94d"
+    },
+    {
+        "class": "hi-mic",
+        "content": "\\e94e"
+    },
+    {
+        "class": "hi-minimize",
+        "content": "\\e94f"
+    },
+    {
+        "class": "hi-minus-circle",
+        "content": "\\e950"
+    },
+    {
+        "class": "hi-monitor",
+        "content": "\\e951"
+    },
+    {
+        "class": "hi-mute",
+        "content": "\\e952"
+    },
+    {
+        "class": "hi-neutral",
+        "content": "\\e953"
+    },
+    {
+        "class": "hi-next",
+        "content": "\\e954"
+    },
+    {
+        "class": "hi-numbered-list",
+        "content": "\\e955"
+    },
+    {
+        "class": "hi-paint-bucket",
+        "content": "\\e956"
+    },
+    {
+        "class": "hi-paper-plane",
+        "content": "\\e957"
+    },
+    {
+        "class": "hi-paper-tag",
+        "content": "\\e958"
+    },
+    {
+        "class": "hi-paste",
+        "content": "\\e959"
+    },
+    {
+        "class": "hi-pencil",
+        "content": "\\e95a"
+    },
+    {
+        "class": "hi-pie-chart",
+        "content": "\\e95b"
+    },
+    {
+        "class": "hi-pin",
+        "content": "\\e95c"
+    },
+    {
+        "class": "hi-pinned",
+        "content": "\\e95d"
+    },
+    {
+        "class": "hi-power",
+        "content": "\\e95e"
+    },
+    {
+        "class": "hi-presentation",
+        "content": "\\e95f"
+    },
+    {
+        "class": "hi-previous",
+        "content": "\\e960"
+    },
+    {
+        "class": "hi-print",
+        "content": "\\e961"
+    },
+    {
+        "class": "hi-question-circle-big",
+        "content": "\\e962"
+    },
+    {
+        "class": "hi-question-circle",
+        "content": "\\e963"
+    },
+    {
+        "class": "hi-quotes",
+        "content": "\\e964"
+    },
+    {
+        "class": "hi-redo",
+        "content": "\\e965"
+    },
+    {
+        "class": "hi-refresh",
+        "content": "\\e966"
+    },
+    {
+        "class": "hi-reply",
+        "content": "\\e967"
+    },
+    {
+        "class": "hi-sad",
+        "content": "\\e968"
+    },
+    {
+        "class": "hi-save-file",
+        "content": "\\e969"
+    },
+    {
+        "class": "hi-search",
+        "content": "\\e96a"
+    },
+    {
+        "class": "hi-settings",
+        "content": "\\e96b"
+    },
+    {
+        "class": "hi-share",
+        "content": "\\e96c"
+    },
+    {
+        "class": "hi-speaker",
+        "content": "\\e96d"
+    },
+    {
+        "class": "hi-speech-bubble",
+        "content": "\\e96e"
+    },
+    {
+        "class": "hi-stack",
+        "content": "\\e96f"
+    },
+    {
+        "class": "hi-star-o",
+        "content": "\\e970"
+    },
+    {
+        "class": "hi-star",
+        "content": "\\e971"
+    },
+    {
+        "class": "hi-sun",
+        "content": "\\e972"
+    },
+    {
+        "class": "hi-switch-off",
+        "content": "\\e973"
+    },
+    {
+        "class": "hi-switch-on",
+        "content": "\\e974"
+    },
+    {
+        "class": "hi-tag-o",
+        "content": "\\e975"
+    },
+    {
+        "class": "hi-time",
+        "content": "\\e976"
+    },
+    {
+        "class": "hi-trash",
+        "content": "\\e977"
+    },
+    {
+        "class": "hi-turn-left",
+        "content": "\\e978"
+    },
+    {
+        "class": "hi-turn-right",
+        "content": "\\e979"
+    },
+    {
+        "class": "hi-undo",
+        "content": "\\e97a"
+    },
+    {
+        "class": "hi-upload-cloud",
+        "content": "\\e97b"
+    },
+    {
+        "class": "hi-upload",
+        "content": "\\e97c"
+    },
+    {
+        "class": "hi-user",
+        "content": "\\e97d"
+    },
+    {
+        "class": "hi-users",
+        "content": "\\e97e"
+    },
+    {
+        "class": "hi-video-camera",
+        "content": "\\e97f"
+    },
+    {
+        "class": "hi-volume-down",
+        "content": "\\e980"
+    },
+    {
+        "class": "hi-volume-up",
+        "content": "\\e981"
+    },
+    {
+        "class": "hi-warning-o",
+        "content": "\\e982"
+    },
+    {
+        "class": "hi-warning",
+        "content": "\\e983"
+    },
+    {
+        "class": "hi-zoom-in",
+        "content": "\\e984"
+    },
+    {
+        "class": "hi-zoom-out",
+        "content": "\\e985"
+    }
+]
