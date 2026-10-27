@@ -1,0 +1,55 @@
+# Haticons
+
+> A set of 494 beautifully crafted, modular, lightweight Webfont and SVG Icons for Web, iOS, Android, and Desktop apps.
+> An open-source project by PebbleBenders, built with first-class support for boodoo Framework.
+
+- Website: https://haticons.com
+- Documentation / Tutorial: https://haticons.com/tutorial.html
+- Full Icon Reference: https://haticons.com/reference.html
+- Changelog: https://haticons.com/changelogs.html
+- npm Package: https://www.npmjs.com/package/haticons
+- Repository: https://github.com/prashmaybe/haticons
+
+## Key Architecture & Features
+- 494 crisp vector icons categorized into 14 distinct modules (Brands, UI & Interface, Commerce, Directional, Media, Editor, Feedback, Files, Devices, Communication, Users, Navigation, Security, Time).
+- Zero-waste modular CSS: users do not need to import the full bundle. They can load individual categories (e.g., `dist/css/categories/commerce.min.css`) or pure category glyphs (`commerce-only.min.css`) along with `core.min.css`.
+- Full Sass / SCSS support with configurable variables (`$hi-font-path`, `$hi-prefix`) and category partials in `scss/categories/`.
+- First-class UI styling designed with boodoo CSS Framework (https://www.boodooframework.com/).
+- Published on npm as `haticons` (version 1.0.0) with TypeScript declarations (`index.d.ts`) and programmatic querying API.
+
+## Installation Quick Links
+- npm: `npm install haticons`
+- Full Bundle CDN: `https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css`
+- Core CSS: `https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css`
+- Category CDN pattern: `https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/{category}.min.css`
+
+## HTML Usage Pattern
+```html
+<i class="hi-cart"></i>
+<i class="hi-refresh hi-spin"></i>
+<i class="hi-heart text-danger hi-2x"></i>
+```
+
+## JavaScript API Pattern
+```javascript
+import { icons, categories, getIcon, getByCategory } from 'haticons';
+
+const cart = getIcon('hi-cart');
+const commerceIcons = getByCategory('commerce');
+```
+
+## Categories Catalog
+- `brands`: Tech stacks, social platforms, and developer services (257 icons)
+- `interface`: Core UI controls, ratings, switches, menus (87 icons)
+- `commerce`: Cards, carts, wallets, and payment gateways (17 icons)
+- `editor`: Text alignment, lists, editing, tags, and markers (17 icons)
+- `directional`: Arrows, chevrons, turns, next/previous (16 icons)
+- `feedback`: Checks, alerts, warnings, and notifications (20 icons)
+- `files`: Documents, folders, archives, and attachments (14 icons)
+- `media`: Play, pause, volume, cameras, and multimedia (13 icons)
+- `communication`: Messages, mail, chat bubbles, paper planes (11 icons)
+- `devices`: Monitors, phones, networks, and appliances (10 icons)
+- `users`: User profiles, avatars, roles, and contacts (9 icons)
+- `navigation`: Maps, location pins, transport, vehicles (9 icons)
+- `security`: Locks, unlocks, keys, and privacy symbols (8 icons)
+- `time`: Clocks, calendars, alarms, and dates (6 icons)

@@ -1,0 +1,15 @@
+# Robots.txt for Haticons by PebbleBenders
+# Website: https://haticons.com
+
+User-agent: *
+Allow: /
+Allow: /assets/css/
+Allow: /assets/fonts/
+Allow: /assets/images/
+Allow: /assets/js/
+
+# Disallow internal download archive crawling if desired, or keep open
+Allow: /download/
+
+# Sitemap location
+Sitemap: https://haticons.com/sitemap.xml
