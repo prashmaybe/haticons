@@ -8,22 +8,22 @@ const categories = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'dist', 'data'
 // Group icons by category
 const catGroups = {};
 Object.keys(categories).forEach(cat => {
-  catGroups[cat] = [];
+    catGroups[cat] = [];
 });
 icons.forEach(i => {
-  const c = i.category || 'interface';
-  if (!catGroups[c]) catGroups[c] = [];
-  catGroups[c].push(i);
+    const c = i.category || 'interface';
+    if (!catGroups[c]) catGroups[c] = [];
+    catGroups[c].push(i);
 });
 
 let categoryRowsHtml = '';
 Object.keys(categories).sort().forEach(catKey => {
-  const meta = categories[catKey];
-  const list = catGroups[catKey] || [];
-  
-  let iconsListHtml = '';
-  list.forEach(item => {
-    iconsListHtml += `
+    const meta = categories[catKey];
+    const list = catGroups[catKey] || [];
+
+    let iconsListHtml = '';
+    list.forEach(item => {
+        iconsListHtml += `
       <div class="col-6 col-sm-4 col-md-3 col-xl-2">
         <div class="p-2 border rounded-3 bg-white d-flex align-items-center gap-2 reference-icon-item">
           <i class="${item.class} fs-4 text-primary"></i>
@@ -33,9 +33,9 @@ Object.keys(categories).sort().forEach(catKey => {
           </div>
         </div>
       </div>`;
-  });
+    });
 
-  categoryRowsHtml += `
+    categoryRowsHtml += `
     <div class="category-reference-block mb-5 pb-4 border-bottom" id="cat-${catKey}">
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
         <div>
@@ -59,9 +59,9 @@ Object.keys(categories).sort().forEach(catKey => {
 
 let categoryNavLinks = '';
 Object.keys(categories).sort().forEach(catKey => {
-  const meta = categories[catKey];
-  const list = catGroups[catKey] || [];
-  categoryNavLinks += `<a class="nav-link text-muted py-1 px-2 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
+    const meta = categories[catKey];
+    const list = catGroups[catKey] || [];
+    categoryNavLinks += `<a class="nav-link text-muted py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
     <span>${meta.name}</span>
     <span class="badge bg-light text-muted border rounded-pill">${list.length}</span>
   </a>`;
@@ -95,13 +95,13 @@ const html = `<!DOCTYPE html>
 <body class="bg-light text-dark">
 
     <!-- Top Announcement Bar -->
-    <div class="py-2 px-3 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
+    <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.0</span>
         <span>Haticons is an open-source project by <strong class="text-white">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-white text-decoration-underline fw-bold">boodoo Framework</a></span>
     </div>
 
     <!-- Main Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3 shadow-xs">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center gap-3">
                 <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="/">
@@ -110,27 +110,27 @@ const html = `<!DOCTYPE html>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
-                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1">
+                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1 ">
                     <span>by</span>
                     <strong class="text-dark">PebbleBenders</strong>
                 </span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1">
+                <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-home"></i> Home
                 </a>
-                <a href="/tutorial.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1">
+                <a href="/tutorial.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     <i class="hi-bulb"></i> Tutorial
                 </a>
-                <a href="/reference.html" class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1">
+                <a href="/reference.html" class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1 ">
                     <i class="hi-document"></i> Reference
                 </a>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1" title="Made with boodoo Framework">
+                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 " title="Made with boodoo Framework">
                     <span class="badge bg-primary text-white rounded-pill px-1 text-2xs me-1">UI</span>
                     <span>boodoo</span>
                     <i class="hi-arrow-right"></i>
                 </a>
-                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1">
+                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
                     <span>npm</span>
                 </a>
@@ -158,13 +158,13 @@ const html = `<!DOCTYPE html>
             <!-- Sidebar Navigation -->
             <aside class="col-12 col-lg-3">
                 <div class="sticky-top" style="top: 90px;">
-                    <div class="card p-3 rounded-4 border bg-white shadow-xs">
+                    <div class="card p-1 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">Categories (14)</div>
-                        <nav class="nav flex-column gap-1 text-sm">
+                        <nav class="nav flex-column gap-1  text-sm">
                             ${categoryNavLinks}
                         </nav>
                         <hr class="my-3">
-                        <a href="/tutorial.html" class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1">
+                        <a href="/tutorial.html" class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1 ">
                             <i class="hi-bulb"></i>
                             <span>View Tutorial Guide</span>
                         </a>

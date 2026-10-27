@@ -7,24 +7,24 @@ const categories = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'dist', 'data'
 
 const catCounts = {};
 icons.forEach(i => {
-  const c = i.category || 'interface';
-  catCounts[c] = (catCounts[c] || 0) + 1;
+    const c = i.category || 'interface';
+    catCounts[c] = (catCounts[c] || 0) + 1;
 });
 
 let categoryTabsHtml = `<button type="button" class="btn btn-sm rounded-pill category-filter-btn active btn-primary" data-category="all">All Icons (${icons.length})</button>\n`;
 Object.keys(categories).sort().forEach(catKey => {
-  const meta = categories[catKey];
-  const cnt = catCounts[catKey] || 0;
-  categoryTabsHtml += `<button type="button" class="btn btn-sm rounded-pill category-filter-btn btn-outline-secondary bg-white" data-category="${catKey}">${meta.name} (${cnt})</button>\n`;
+    const meta = categories[catKey];
+    const cnt = catCounts[catKey] || 0;
+    categoryTabsHtml += `<button type="button" class="btn btn-sm rounded-pill category-filter-btn btn-outline-secondary bg-white" data-category="${catKey}">${meta.name} (${cnt})</button>\n`;
 });
 
 let cardsHtml = '';
 icons.forEach(i => {
-  const cat = i.category || 'interface';
-  const rawName = i.class.replace(/^hi-/, '');
-  const contentEscaped = i.content.replace(/"/g, '&quot;');
-  cardsHtml += `
-    <div class="haticon-card text-center p-3 rounded-4 bg-white border" 
+    const cat = i.category || 'interface';
+    const rawName = i.class.replace(/^hi-/, '');
+    const contentEscaped = i.content.replace(/"/g, '&quot;');
+    cardsHtml += `
+    <div class="haticon-card text-center p-1 rounded-4 bg-white border" 
          data-class="${i.class}" 
          data-name="${rawName}" 
          data-category="${cat}" 
@@ -71,13 +71,13 @@ const html = `<!DOCTYPE html>
 <body class="bg-light text-dark">
 
     <!-- Top Announcement Bar -->
-    <div class="py-2 px-3 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
+    <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.0</span>
         <span>Haticons is an open-source project by <strong class="text-white">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-white text-decoration-underline fw-bold">boodoo Framework</a></span>
     </div>
 
     <!-- Main Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3 shadow-xs">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center gap-3">
                 <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="#">
@@ -86,30 +86,30 @@ const html = `<!DOCTYPE html>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
-                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1">
+                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1 ">
                     <span>by</span>
                     <strong class="text-dark">PebbleBenders</strong>
                 </span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <a href="#quickstart" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1">
+                <a href="#quickstart" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     Quickstart
                 </a>
-                <a href="tutorial.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1">
+                <a href="tutorial.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     <i class="hi-bulb"></i> Tutorial
                 </a>
-                <a href="reference.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1">
+                <a href="reference.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     <i class="hi-document"></i> Reference
                 </a>
-                <a href="changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1">
+                <a href="changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1" title="Made with boodoo Framework">
+                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 " title="Made with boodoo Framework">
                     <span class="badge bg-primary text-white rounded-pill px-1 text-2xs me-1">UI</span>
                     <span>boodoo</span>
                     <i class="hi-arrow-right"></i>
                 </a>
-                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1">
+                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
                     <span>npm install</span>
                 </a>
@@ -121,15 +121,15 @@ const html = `<!DOCTYPE html>
     <section class="hero-section py-5 text-center position-relative overflow-hidden">
         <div class="container py-4 position-relative z-1">
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
-                <span class="px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
+                <span class="px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1 ">
                     <i class="hi-star"></i>
                     <span>494+ Modern Vector Icons</span>
                 </span>
-                <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
+                <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1 ">
                     <span>A project by</span>
                     <strong class="text-dark">PebbleBenders</strong>
                 </span>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="px-3 py-1 rounded-pill bg-purple-soft text-purple fw-semibold text-xs border border-purple-subtle d-inline-flex align-items-center gap-1 text-decoration-none">
+                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="px-3 py-1 rounded-pill bg-purple-soft text-purple fw-semibold text-xs border border-purple-subtle d-inline-flex align-items-center gap-1  text-decoration-none">
                     <i class="hi-bulb"></i>
                     <span>Made with boodoo</span>
                 </a>
@@ -175,7 +175,7 @@ const html = `<!DOCTYPE html>
                 <span>Crafted by <strong class="text-dark">PebbleBenders</strong></span>
                 <span>&bull;</span>
                 <span>Made with</span>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="fw-semibold text-primary d-inline-flex align-items-center gap-1 text-decoration-none">
+                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="fw-semibold text-primary d-inline-flex align-items-center gap-1  text-decoration-none">
                     <span>boodoo CSS Framework</span>
                     <i class="hi-arrow-circle-right"></i>
                 </a>

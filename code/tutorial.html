@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-boodoo-theme="light">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="/assets/images/favicon.png" rel="shortcut icon">
     <title>Tutorial &amp; Getting Started Guide | Haticons by PebbleBenders</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Step-by-step tutorial on how to install, use, customize, and optimize Haticons via npm, partial category CSS, Sass/SCSS, and boodoo framework.">
-    <meta name="keywords" content="haticons tutorial, font icons tutorial, modular icons guide, boodoo icons, npm haticons, css icons tutorial"/>
+    <meta name="description"
+        content="Step-by-step tutorial on how to install, use, customize, and optimize Haticons via npm, partial category CSS, Sass/SCSS, and boodoo framework.">
+    <meta name="keywords"
+        content="haticons tutorial, font icons tutorial, modular icons guide, boodoo icons, npm haticons, css icons tutorial" />
     <meta name="theme-color" content="#7c3aed">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- boodoo CSS Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css">
@@ -26,42 +31,51 @@
 <body class="bg-light text-dark">
 
     <!-- Top Announcement Bar -->
-    <div class="py-2 px-3 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
+    <div
+        class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.0</span>
-        <span>Haticons is an open-source project by <strong class="text-white">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-white text-decoration-underline fw-bold">boodoo Framework</a></span>
+        <span>Haticons is an open-source project by <strong class="text-white">PebbleBenders</strong> &middot; Made with
+            <a href="https://www.boodooframework.com/" target="_blank" rel="noopener"
+                class="text-white text-decoration-underline fw-bold">boodoo Framework</a></span>
     </div>
 
     <!-- Main Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3 shadow-xs">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center gap-3">
                 <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="/">
-                    <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
+                    <span
+                        class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                         <i class="hi-haticons fs-4"></i>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
-                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1">
+                <span
+                    class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1 ">
                     <span>by</span>
                     <strong class="text-dark">PebbleBenders</strong>
                 </span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1">
+                <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-home"></i> Home
                 </a>
-                <a href="/tutorial.html" class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1">
+                <a href="/tutorial.html"
+                    class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1 ">
                     <i class="hi-bulb"></i> Tutorial
                 </a>
-                <a href="/reference.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1">
+                <a href="/reference.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     <i class="hi-document"></i> Reference
                 </a>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1" title="Made with boodoo Framework">
+                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener"
+                    class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 "
+                    title="Made with boodoo Framework">
                     <span class="badge bg-primary text-white rounded-pill px-1 text-2xs me-1">UI</span>
                     <span>boodoo</span>
                     <i class="hi-arrow-right"></i>
                 </a>
-                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1">
+                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
+                    class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
                     <span>npm</span>
                 </a>
@@ -72,13 +86,15 @@
     <!-- Header Banner -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-3 border border-primary-subtle">
+            <div
+                class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-3 border border-primary-subtle">
                 <i class="hi-bulb"></i>
                 <span>Getting Started &amp; Integration Guide</span>
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-3">Haticons Tutorial</h1>
             <p class="lead text-muted mx-auto" style="max-width: 640px;">
-                Learn how to install, import modular category stylesheets, compile with Sass, and build interfaces paired with <strong>boodoo Framework</strong>.
+                Learn how to install, import modular category stylesheets, compile with Sass, and build interfaces
+                paired with <strong>boodoo Framework</strong>.
             </p>
         </div>
     </header>
@@ -89,18 +105,27 @@
             <!-- Sidebar Table of Contents -->
             <aside class="col-12 col-lg-3">
                 <div class="sticky-top" style="top: 90px;">
-                    <div class="card p-3 rounded-4 border bg-white shadow-xs">
+                    <div class="card p-1 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">On this page</div>
-                        <nav class="nav flex-column gap-1 text-sm">
-                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#installation">1. Installation Options</a>
-                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#basic-usage">2. Basic HTML Usage</a>
-                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#modular-css">3. Modular Category CSS</a>
-                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#sass-workflow">4. Sass / SCSS Workflow</a>
-                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#boodoo-pairing">5. Pairing with boodoo</a>
-                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#js-api">6. JavaScript / TypeScript API</a>
+                        <nav class="nav flex-column gap-1  text-sm">
+                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#installation">1.
+                                Installation Options</a>
+                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#basic-usage">2.
+                                Basic
+                                HTML Usage</a>
+                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#modular-css">3.
+                                Modular Category CSS</a>
+                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#sass-workflow">4.
+                                Sass / SCSS Workflow</a>
+                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#boodoo-pairing">5.
+                                Pairing with boodoo</a>
+                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#js-api">6.
+                                JavaScript
+                                / TypeScript API</a>
                         </nav>
                         <hr class="my-3">
-                        <a href="/reference.html" class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1">
+                        <a href="/reference.html"
+                            class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1 ">
                             <i class="hi-document"></i>
                             <span>View API Reference</span>
                         </a>
@@ -117,7 +142,8 @@
                         <span>Installation Options</span>
                     </h2>
                     <p class="text-muted">
-                        Haticons can be installed as an npm package in Node, Vite, Webpack, Next.js, or loaded directly via jsDelivr / UNPKG CDN.
+                        Haticons can be installed as an npm package in Node, Vite, Webpack, Next.js, or loaded directly
+                        via jsDelivr / UNPKG CDN.
                     </p>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">A. Via Package Manager</h3>
@@ -131,9 +157,12 @@
                     </div>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">B. Via CDN (Quickest for static sites)</h3>
-                    <p class="text-muted text-sm">Add the full minified stylesheet to your HTML <code>&lt;head&gt;</code>:</p>
+                    <p class="text-muted text-sm">Add the full minified stylesheet to your HTML
+                        <code>&lt;head&gt;</code>:
+                    </p>
                     <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css"&gt;
+                        &lt;link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css"&gt;
                     </div>
                 </section>
 
@@ -144,7 +173,8 @@
                         <span>Basic HTML Usage</span>
                     </h2>
                     <p class="text-muted">
-                        Use the <code>&lt;i&gt;</code> or <code>&lt;span&gt;</code> tag with the <code>hi-[icon-name]</code> class:
+                        Use the <code>&lt;i&gt;</code> or <code>&lt;span&gt;</code> tag with the
+                        <code>hi-[icon-name]</code> class:
                     </p>
                     <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
                         &lt;i class="hi-cart"&gt;&lt;/i&gt;<br>
@@ -195,24 +225,30 @@
                         <span>Modular Category CSS (Zero Waste)</span>
                     </h2>
                     <p class="text-muted">
-                        Unlike traditional heavy icon fonts, Haticons splits all 494 icons into 14 distinct categories. You don't need to load the full 23 KB stylesheet if your project only uses a few icons!
+                        Unlike traditional heavy icon fonts, Haticons splits all 494 icons into 14 distinct categories.
+                        You don't need to load the full 23 KB stylesheet if your project only uses a few icons!
                     </p>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">Option 1: Load a standalone category bundle</h3>
                     <p class="text-muted text-sm">Includes font definition and all category icons in ~1.5 KB:</p>
                     <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
                         &lt;!-- Commerce &amp; Payments only (~1.5 KB) --&gt;<br>
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css"&gt;
+                        &lt;link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css"&gt;
                     </div>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">Option 2: Core + Category-only files (Recommended)</h3>
-                    <p class="text-muted text-sm">If you use multiple categories, load <code>core.min.css</code> once, then import category glyphs without duplicate <code>@font-face</code> blocks:</p>
+                    <p class="text-muted text-sm">If you use multiple categories, load <code>core.min.css</code> once,
+                        then import category glyphs without duplicate <code>@font-face</code> blocks:</p>
                     <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
                         &lt;!-- 1. Core webfont &amp; sizing utilities (&lt; 1 KB) --&gt;<br>
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css"&gt;<br><br>
+                        &lt;link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css"&gt;<br><br>
                         &lt;!-- 2. Category glyphs --&gt;<br>
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css"&gt;<br>
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional-only.min.css"&gt;
+                        &lt;link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css"&gt;<br>
+                        &lt;link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional-only.min.css"&gt;
                     </div>
                 </section>
 
@@ -223,7 +259,8 @@
                         <span>Sass / SCSS Workflow</span>
                     </h2>
                     <p class="text-muted">
-                        In projects with a Sass pipeline (Vite, Webpack, Nuxt, Next), import partials directly from <code>haticons/scss</code>:
+                        In projects with a Sass pipeline (Vite, Webpack, Nuxt, Next), import partials directly from
+                        <code>haticons/scss</code>:
                     </p>
                     <div class="p-3 bg-dark text-white rounded-3 font-monospace text-xs mb-3">
                         <span class="text-muted">// Custom font path if needed</span><br>
@@ -246,7 +283,8 @@
                         <span>Pairing with boodoo Framework</span>
                     </h2>
                     <p class="text-muted">
-                        Haticons is engineered to pair with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener">boodoo CSS framework</a> components:
+                        Haticons is engineered to pair with <a href="https://www.boodooframework.com/" target="_blank"
+                            rel="noopener">boodoo CSS framework</a> components:
                     </p>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">A. Buttons with Icons</h3>
@@ -274,13 +312,15 @@
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">B. Search Input Group</h3>
                     <div class="p-3 bg-white border rounded-3 mb-3" style="max-width: 400px;">
                         <div class="input-group">
-                            <span class="input-group-text bg-light border-end-0"><i class="hi-search text-muted"></i></span>
+                            <span class="input-group-text bg-light border-end-0"><i
+                                    class="hi-search text-muted"></i></span>
                             <input type="text" class="form-control border-start-0" placeholder="Search icons...">
                         </div>
                     </div>
                     <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs">
                         &lt;div class="input-group"&gt;<br>
-                        &nbsp;&nbsp;&lt;span class="input-group-text"&gt;&lt;i class="hi-search"&gt;&lt;/i&gt;&lt;/span&gt;<br>
+                        &nbsp;&nbsp;&lt;span class="input-group-text"&gt;&lt;i
+                        class="hi-search"&gt;&lt;/i&gt;&lt;/span&gt;<br>
                         &nbsp;&nbsp;&lt;input type="text" class="form-control" placeholder="Search..."&gt;<br>
                         &lt;/div&gt;
                     </div>
@@ -293,15 +333,19 @@
                         <span>JavaScript / TypeScript API</span>
                     </h2>
                     <p class="text-muted">
-                        Haticons includes a JS/TS module to query icon metadata, unicode codepoints, and category sets dynamically:
+                        Haticons includes a JS/TS module to query icon metadata, unicode codepoints, and category sets
+                        dynamically:
                     </p>
                     <div class="p-3 bg-dark text-white rounded-3 font-monospace text-xs mb-3">
-                        <span class="text-primary">import</span> { icons, categories, getIcon, getByCategory } <span class="text-primary">from</span> <span class="text-success">'haticons'</span>;<br><br>
+                        <span class="text-primary">import</span> { icons, categories, getIcon, getByCategory } <span
+                            class="text-primary">from</span> <span class="text-success">'haticons'</span>;<br><br>
                         <span class="text-muted">// Lookup specific icon</span><br>
-                        <span class="text-primary">const</span> cartIcon = getIcon(<span class="text-success">'hi-cart'</span>);<br>
+                        <span class="text-primary">const</span> cartIcon = getIcon(<span
+                            class="text-success">'hi-cart'</span>);<br>
                         console.log(cartIcon.content); <span class="text-muted">// "\f063"</span><br><br>
                         <span class="text-muted">// Get all icons for a category</span><br>
-                        <span class="text-primary">const</span> directional = getByCategory(<span class="text-success">'directional'</span>);<br>
+                        <span class="text-primary">const</span> directional = getByCategory(<span
+                            class="text-success">'directional'</span>);<br>
                         console.log(directional.length); <span class="text-muted">// 16</span>
                     </div>
                 </section>
@@ -313,13 +357,17 @@
     <footer class="py-5 bg-white border-top text-center mt-5">
         <div class="container">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
-                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary" style="width: 32px; height: 32px;">
+                <span
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary"
+                    style="width: 32px; height: 32px;">
                     <i class="hi-haticons fs-5"></i>
                 </span>
                 <span class="fs-5 fw-bold text-dark">Haticons</span>
             </div>
             <p class="text-xs text-muted mb-3">
-                An open-source icon system by <strong class="text-dark">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
+                An open-source icon system by <strong class="text-dark">PebbleBenders</strong> &middot; Made with <a
+                    href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank"
+                    rel="noopener">boodoo Framework</a>
             </p>
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 text-sm text-muted mb-4">
                 <a href="/" class="text-decoration-none text-muted">Homepage</a>
@@ -328,12 +376,15 @@
                 <span>&bull;</span>
                 <a href="/reference.html" class="text-decoration-none text-muted">Reference</a>
                 <span>&bull;</span>
-                <a href="https://www.npmjs.com/package/haticons" class="text-decoration-none text-muted" target="_blank" rel="noopener">npm package</a>
+                <a href="https://www.npmjs.com/package/haticons" class="text-decoration-none text-muted" target="_blank"
+                    rel="noopener">npm package</a>
                 <span>&bull;</span>
-                <a href="https://www.boodooframework.com/" class="text-decoration-none text-primary" target="_blank" rel="noopener">boodoo UI</a>
+                <a href="https://www.boodooframework.com/" class="text-decoration-none text-primary" target="_blank"
+                    rel="noopener">boodoo UI</a>
             </div>
             <p class="text-xs text-muted mb-0">
-                Released under GPL-3.0 License &middot; Designed &amp; Crafted by <strong class="text-dark">PebbleBenders</strong>
+                Released under GPL-3.0 License &middot; Designed &amp; Crafted by <strong
+                    class="text-dark">PebbleBenders</strong>
             </p>
         </div>
     </footer>
@@ -341,4 +392,5 @@
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
 </body>
+
 </html>
