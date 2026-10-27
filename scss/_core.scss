@@ -1,0 +1,40 @@
+// Haticons Core & @font-face
+@font-face {
+  font-family: '#{$hi-font-name}';
+  src: url('#{$hi-font-path}/haticons.eot?#{$hi-font-version}');
+  src: url('#{$hi-font-path}/haticons.eot?#{$hi-font-version}#iefix') format('embedded-opentype'),
+       url('#{$hi-font-path}/haticons.ttf?#{$hi-font-version}') format('truetype'),
+       url('#{$hi-font-path}/haticons.woff?#{$hi-font-version}') format('woff'),
+       url('#{$hi-font-path}/haticons.svg?#{$hi-font-version}#haticons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="#{$hi-prefix}"], [class*=" #{$hi-prefix}"] {
+  font-family: '#{$hi-font-name}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Optional utility sizing & transforms
+.#{$hi-prefix}lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -0.0667em; }
+.#{$hi-prefix}2x { font-size: 2em; }
+.#{$hi-prefix}3x { font-size: 3em; }
+.#{$hi-prefix}4x { font-size: 4em; }
+.#{$hi-prefix}5x { font-size: 5em; }
+.#{$hi-prefix}fw { text-align: center; width: 1.25em; display: inline-block; }
+.#{$hi-prefix}spin {
+  animation: hi-spin 2s infinite linear;
+  display: inline-block;
+}
+@keyframes hi-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}

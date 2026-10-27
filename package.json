@@ -1,0 +1,65 @@
+{
+  "name": "haticons",
+  "version": "1.0.0",
+  "description": "A set of beautifully crafted, modular, lightweight web font and SVG icons for Web, iOS, Android, and Desktop apps. Inspired by Ionicons, FontAwesome, and Glyphicons.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "style": "dist/css/haticons.min.css",
+  "sass": "scss/haticons.scss",
+  "files": [
+    "dist",
+    "scss",
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./data/icons.json": "./dist/data/icons.json",
+    "./data/categories.json": "./dist/data/categories.json",
+    "./css/haticons.css": "./dist/css/haticons.css",
+    "./css/haticons.min.css": "./dist/css/haticons.min.css",
+    "./css/core.css": "./dist/css/core.css",
+    "./css/core.min.css": "./dist/css/core.min.css",
+    "./css/categories/*": "./dist/css/categories/*",
+    "./scss/*": "./scss/*",
+    "./fonts/*": "./dist/fonts/*"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "prepublishOnly": "npm run build",
+    "test": "node -e \"const h = require('./index.js'); console.log('Icons count:', h.icons.length); if (h.icons.length !== 494) process.exit(1);\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prashmaybe/haticons.git"
+  },
+  "keywords": [
+    "haticons",
+    "icons",
+    "font-icons",
+    "webfonts",
+    "vector-icons",
+    "svg",
+    "boodoo",
+    "boodooframework",
+    "pebblebenders",
+    "ionicons",
+    "fontawesome",
+    "glyphicons"
+  ],
+  "author": "PebbleBenders",
+  "license": "GPL-3.0",
+  "homepage": "https://haticons.com",
+  "bugs": {
+    "url": "https://github.com/prashmaybe/haticons/issues"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "sass": "^1.106.1"
+  }
+}
