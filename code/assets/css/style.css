@@ -183,6 +183,55 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Reference page icon items */
+.reference-icon-item {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid #e2e8f0;
+  user-select: none;
+}
+
+.reference-icon-item:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 20px -5px rgba(124, 58, 237, 0.16), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #7c3aed !important;
+  background-color: #ffffff !important;
+  z-index: 2;
+}
+
+.reference-icon-icon-wrap {
+  transition: all 0.2s ease;
+}
+
+.reference-icon-item:hover .reference-icon-icon-wrap {
+  background-color: rgba(124, 58, 237, 0.12) !important;
+}
+
+.reference-icon-item:hover i {
+  transform: scale(1.15);
+  color: #7c3aed !important;
+}
+
+.reference-icon-item i {
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.reference-icon-item .copy-hint {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  font-size: 0.7rem;
+}
+
+.reference-icon-item:hover .copy-hint {
+  opacity: 1;
+}
+
+.reference-icon-item:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
 /* Legacy fallback overrides */
 .hidden {
   display: none !important;

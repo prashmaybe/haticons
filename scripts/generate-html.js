@@ -73,7 +73,7 @@ const html = `<!DOCTYPE html>
     <!-- Top Announcement Bar -->
     <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.0</span>
-        <span>Haticons is an open-source project by <strong class="text-white">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-white text-decoration-underline fw-bold">boodoo Framework</a></span>
+        <span>494+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
     </div>
 
     <!-- Main Navigation Header -->
@@ -86,10 +86,6 @@ const html = `<!DOCTYPE html>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
-                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1 ">
-                    <span>by</span>
-                    <strong class="text-dark">PebbleBenders</strong>
-                </span>
             </div>
             <div class="d-flex align-items-center gap-2">
                 <a href="#quickstart" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
@@ -103,11 +99,6 @@ const html = `<!DOCTYPE html>
                 </a>
                 <a href="changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
-                </a>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 " title="Made with boodoo Framework">
-                    <span class="badge bg-primary text-white rounded-pill px-1 text-2xs me-1">UI</span>
-                    <span>boodoo</span>
-                    <i class="hi-arrow-right"></i>
                 </a>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
@@ -126,13 +117,9 @@ const html = `<!DOCTYPE html>
                     <span>494+ Modern Vector Icons</span>
                 </span>
                 <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1 ">
-                    <span>A project by</span>
-                    <strong class="text-dark">PebbleBenders</strong>
+                    <i class="hi-check-circle text-success"></i>
+                    <span>GPL-3.0 Open Source</span>
                 </span>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="px-3 py-1 rounded-pill bg-purple-soft text-purple fw-semibold text-xs border border-purple-subtle d-inline-flex align-items-center gap-1  text-decoration-none">
-                    <i class="hi-bulb"></i>
-                    <span>Made with boodoo</span>
-                </a>
             </div>
             
             <h1 class="display-4 fw-extrabold text-dark mb-3 hero-title">
@@ -140,7 +127,7 @@ const html = `<!DOCTYPE html>
             </h1>
             
             <p class="lead text-muted mx-auto mb-4 hero-subtitle" style="max-width: 680px;">
-                A super-optimized, modular icon suite for Web, iOS, Android, and Desktop apps. Inspired by <strong>Ionicons</strong>, <strong>FontAwesome</strong>, and <strong>Glyphicons</strong>. Crafted by <strong>PebbleBenders</strong> and styled with <strong>boodoo</strong>.
+                A super-optimized, modular icon suite for Web, iOS, Android, and Desktop apps. Inspired by <strong>Ionicons</strong>, <strong>FontAwesome</strong>, and <strong>Glyphicons</strong>.
             </p>
 
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-4">
@@ -169,17 +156,6 @@ const html = `<!DOCTYPE html>
                     </button>
                 </div>
             </div>
-
-            <!-- Framework Mention Badge -->
-            <div class="mt-4 text-xs text-muted d-flex flex-wrap align-items-center justify-content-center gap-2">
-                <span>Crafted by <strong class="text-dark">PebbleBenders</strong></span>
-                <span>&bull;</span>
-                <span>Made with</span>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="fw-semibold text-primary d-inline-flex align-items-center gap-1  text-decoration-none">
-                    <span>boodoo CSS Framework</span>
-                    <i class="hi-arrow-circle-right"></i>
-                </a>
-            </div>
         </div>
     </section>
 
@@ -188,7 +164,7 @@ const html = `<!DOCTYPE html>
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="h3 fw-bold text-dark">Why Haticons?</h2>
-                <p class="text-muted">Modular like Ionicons &amp; FontAwesome, lightweight and styled with boodoo.</p>
+                <p class="text-muted">Modular like Ionicons &amp; FontAwesome, lightweight, customizable, and ready for any stack.</p>
             </div>
 
             <div class="row g-4">
@@ -227,9 +203,9 @@ const html = `<!DOCTYPE html>
                         <div class="feature-icon-badge rounded-3 bg-green-soft text-success mb-3 d-inline-flex align-items-center justify-content-center">
                             <i class="hi-bulb fs-3"></i>
                         </div>
-                        <h3 class="h5 fw-bold text-dark mb-2">Native boodoo Integration</h3>
+                        <h3 class="h5 fw-bold text-dark mb-2">Framework &amp; UI Friendly</h3>
                         <p class="text-muted text-sm mb-3">
-                            Designed to blend seamlessly with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener">boodoo framework</a> buttons, navs, search bars, inputs, modals, and responsive layout.
+                            Engineered to blend seamlessly with modern UI frameworks, responsive layouts, buttons, navbars, cards, modals, and search inputs.
                         </p>
                         <div class="p-2 bg-light rounded font-monospace text-xs text-dark">
                             &lt;button class="btn btn-primary"&gt;
@@ -335,10 +311,7 @@ const html = `<!DOCTYPE html>
                     </div>
                 </div>
                 <div class="modal-footer border-top px-4 py-3 bg-light rounded-bottom-4">
-                    <button type="button" class="btn btn-secondary btn-sm rounded-pill px-3" data-bs-dismiss="modal" data-boodoo-dismiss="modal">Close</button>
-                    <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3">
-                        Explore boodoo UI
-                    </a>
+                    <button type="button" class="btn btn-primary btn-sm rounded-pill px-4" data-bs-dismiss="modal" data-boodoo-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

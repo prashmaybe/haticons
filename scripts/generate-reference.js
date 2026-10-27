@@ -24,12 +24,21 @@ Object.keys(categories).sort().forEach(catKey => {
     let iconsListHtml = '';
     list.forEach(item => {
         iconsListHtml += `
-      <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-        <div class="p-2 border rounded-3 bg-white d-flex align-items-center gap-2 reference-icon-item">
-          <i class="${item.class} fs-4 text-primary"></i>
-          <div class="text-truncate">
-            <div class="text-xs fw-semibold text-dark text-truncate">${item.name}</div>
-            <div class="text-2xs text-muted font-monospace">${item.content}</div>
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+        <div class="p-2 border rounded-3 bg-white d-flex align-items-center gap-2 reference-icon-item" 
+             data-class="${item.class}" 
+             data-name="${item.name}" 
+             data-unicode="${item.content}"
+             title="Click to copy <i class='${item.class}'></i>">
+          <div class="reference-icon-icon-wrap d-flex align-items-center justify-content-center rounded-2 bg-light text-primary flex-shrink-0" style="width: 42px; height: 42px;">
+            <i class="${item.class} fs-3"></i>
+          </div>
+          <div class="overflow-hidden flex-grow-1">
+            <div class="text-sm fw-semibold text-dark text-truncate icon-title-label" title="${item.name}">${item.name}</div>
+            <div class="text-xs text-muted font-monospace d-flex align-items-center justify-content-between">
+              <span>${item.content}</span>
+              <span class="copy-hint text-primary fw-medium">Copy</span>
+            </div>
           </div>
         </div>
       </div>`;
@@ -97,7 +106,7 @@ const html = `<!DOCTYPE html>
     <!-- Top Announcement Bar -->
     <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.0</span>
-        <span>Haticons is an open-source project by <strong class="text-white">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-white text-decoration-underline fw-bold">boodoo Framework</a></span>
+        <span>494+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
     </div>
 
     <!-- Main Navigation Header -->
@@ -110,10 +119,6 @@ const html = `<!DOCTYPE html>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
-                <span class="badge bg-light text-muted border rounded-pill px-2 py-1 text-2xs d-none d-sm-inline-flex align-items-center gap-1 ">
-                    <span>by</span>
-                    <strong class="text-dark">PebbleBenders</strong>
-                </span>
             </div>
             <div class="d-flex align-items-center gap-2">
                 <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
@@ -125,10 +130,8 @@ const html = `<!DOCTYPE html>
                 <a href="/reference.html" class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1 ">
                     <i class="hi-document"></i> Reference
                 </a>
-                <a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 " title="Made with boodoo Framework">
-                    <span class="badge bg-primary text-white rounded-pill px-1 text-2xs me-1">UI</span>
-                    <span>boodoo</span>
-                    <i class="hi-arrow-right"></i>
+                <a href="/changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
+                    <i class="hi-time"></i> Changelogs
                 </a>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
@@ -210,6 +213,43 @@ const html = `<!DOCTYPE html>
 
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script>
+      function showToast(message) {
+        let toast = document.getElementById('reference-toast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.id = 'reference-toast';
+          toast.className = 'copy-toast';
+          document.body.appendChild(toast);
+        }
+        toast.innerHTML = '<i class="hi-check-circle me-1 text-success"></i> ' + message;
+        toast.style.display = 'block';
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => {
+          toast.style.display = 'none';
+        }, 2200);
+      }
+
+      document.addEventListener('click', function(e) {
+        const item = e.target.closest('.reference-icon-item');
+        if (!item) return;
+        const iconClass = item.getAttribute('data-class');
+        const iconName = item.getAttribute('data-name');
+        const snippet = '<i class="' + iconClass + '"></i>';
+
+        navigator.clipboard.writeText(snippet).then(() => {
+          showToast('Copied: &lt;i class="' + iconClass + '"&gt;&lt;/i&gt;');
+        }).catch(() => {
+          const textarea = document.createElement('textarea');
+          textarea.value = snippet;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast('Copied: &lt;i class="' + iconClass + '"&gt;&lt;/i&gt;');
+        });
+      });
+    </script>
 </body>
 </html>`;
 
