@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const htmlFiles = ['index.html', 'cheatsheet.html', 'tutorial.html', 'reference.html', 'changelogs.html', 'terms.html', 'privacy.html', 'license.html'];
+const htmlFiles = ['index.html', 'tutorial.html', 'reference.html', 'changelogs.html', 'terms.html', 'privacy.html', 'license.html'];
 const issues = [];
 
 htmlFiles.forEach(file => {

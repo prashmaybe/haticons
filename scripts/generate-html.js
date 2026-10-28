@@ -50,7 +50,7 @@ ${getNavbar('home')}
             </p>
 
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-4">
-                <a href="/cheatsheet.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
+                <a href="/reference.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
                     <i class="hi-search"></i>
                     <span>Browse 494 Icons</span>
                 </a>
@@ -188,8 +188,8 @@ ${getNavbar('home')}
                                 </div>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="/cheatsheet.html" class="btn btn-primary rounded-pill btn-sm px-3 flex-fill text-center">
-                                    <i class="hi-search me-1"></i> Browse Cheatsheet
+                                <a href="/reference.html" class="btn btn-primary rounded-pill btn-sm px-3 flex-fill text-center">
+                                    <i class="hi-search me-1"></i> Browse Reference
                                 </a>
                                 <a href="/tutorial.html" class="btn btn-outline-secondary rounded-pill btn-sm px-3 flex-fill text-center bg-white">
                                     <i class="hi-bulb me-1"></i> Full Tutorial
@@ -358,10 +358,10 @@ createApp(App).mount('#app');</code></pre>
                                 Install <code>dist/fonts/haticons.ttf</code> into macOS Font Book or Windows Fonts. Type icon glyphs directly or drag-and-drop vector SVGs into your design canvases.
                             </p>
                             <div class="p-3 bg-white rounded-3 border text-xs text-muted mb-3">
-                                <strong>Tip:</strong> Copy Unicode codepoints directly from the <a href="/cheatsheet.html" class="text-primary fw-semibold">Cheatsheet</a> to paste into design text layers.
+                                <strong>Tip:</strong> Copy Unicode codepoints directly from the <a href="/reference.html" class="text-primary fw-semibold">Reference</a> catalog to paste into design text layers.
                             </div>
-                            <a href="/cheatsheet.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3 bg-white">
-                                <i class="hi-search me-1"></i> Open Cheatsheet
+                            <a href="/reference.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3 bg-white">
+                                <i class="hi-search me-1"></i> Open Reference
                             </a>
                         </div>
                     </div>

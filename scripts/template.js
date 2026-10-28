@@ -67,11 +67,10 @@ function getAnnouncementBar() {
 
 /**
  * Main Navigation Bar
- * @param {'home'|'cheatsheet'|'tutorial'|'reference'|'changelogs'|'other'} activePage
+ * @param {'home'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
  */
 function getNavbar(activePage = 'home') {
   const isHome = activePage === 'home';
-  const isCheatsheet = activePage === 'cheatsheet';
   const isTutorial = activePage === 'tutorial';
   const isReference = activePage === 'reference';
   const isChangelogs = activePage === 'changelogs';
@@ -88,17 +87,14 @@ function getNavbar(activePage = 'home') {
                 </a>
             </div>
             <div class="d-flex align-items-center gap-1">
-                <a href="${isHome ? '#start' : '/start.html'}" class="btn btn-ghost ${activePage === 'start' ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
+                <a href="${isHome ? '#start' : '/#start'}" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1">
                     <i class="hi-play"></i> Set Up
-                </a>
-                <a href="/cheatsheet.html" class="btn btn-ghost ${isCheatsheet ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
-                    <i class="hi-search"></i> Cheatsheet
-                </a>
-                <a href="/tutorial.html" class="btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
-                    <i class="hi-bulb"></i> Tutorial
                 </a>
                 <a href="/reference.html" class="btn btn-ghost ${isReference ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
                     <i class="hi-document"></i> Reference
+                </a>
+                <a href="/tutorial.html" class="btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
+                    <i class="hi-bulb"></i> Tutorial
                 </a>
                 <a href="/changelogs.html" class="btn btn-ghost ${isChangelogs ? 'text-primary fw-semibold' : 'text-muted'} d-none d-md-inline-flex align-items-center gap-1">
                     <i class="hi-time"></i> Changelogs
@@ -117,7 +113,7 @@ function getNavbar(activePage = 'home') {
 
 /**
  * Shared Global Footer
- * @param {'home'|'cheatsheet'|'tutorial'|'reference'|'changelogs'|'other'} activePage
+ * @param {'home'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
  */
 function getFooter(activePage = 'home') {
   return `    <!-- Footer -->
@@ -140,20 +136,16 @@ function getFooter(activePage = 'home') {
                     <i class="hi-home me-1"></i> Homepage
                 </a>
                 <span>&bull;</span>
-                <a href="/start.html" class="text-decoration-none ${activePage === 'start' ? 'text-primary fw-semibold' : 'text-muted'}">
+                <a href="/#start" class="text-decoration-none text-muted">
                     <i class="hi-play me-1"></i> Set Up
-                </a>
-                <span>&bull;</span>
-                <a href="/cheatsheet.html" class="text-decoration-none ${activePage === 'cheatsheet' ? 'text-primary fw-semibold' : 'text-muted'}">
-                    <i class="hi-search me-1"></i> Cheatsheet
-                </a>
-                <span>&bull;</span>
-                <a href="/tutorial.html" class="text-decoration-none ${activePage === 'tutorial' ? 'text-primary fw-semibold' : 'text-muted'}">
-                    <i class="hi-bulb me-1"></i> Tutorial
                 </a>
                 <span>&bull;</span>
                 <a href="/reference.html" class="text-decoration-none ${activePage === 'reference' ? 'text-primary fw-semibold' : 'text-muted'}">
                     <i class="hi-document me-1"></i> Reference
+                </a>
+                <span>&bull;</span>
+                <a href="/tutorial.html" class="text-decoration-none ${activePage === 'tutorial' ? 'text-primary fw-semibold' : 'text-muted'}">
+                    <i class="hi-bulb me-1"></i> Tutorial
                 </a>
                 <span>&bull;</span>
                 <a href="/changelogs.html" class="text-decoration-none ${activePage === 'changelogs' ? 'text-primary fw-semibold' : 'text-muted'}">
