@@ -128,7 +128,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
 
 <!-- Button with Haticon -->
-<button class="btn btn-primary d-inline-flex align-items-center gap-2">
+<button class="btn btn-primary d-inline-flex align-items-center gap-1">
   <i class="hi-download"></i>
   <span>Download</span>
 </button>
