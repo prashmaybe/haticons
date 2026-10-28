@@ -215,6 +215,38 @@ body {
   background-color: var(--hi-bg-surface) !important;
 }
 
+/* Dark Mode Tables & Headings */
+[data-theme="dark"] .table {
+  color: var(--hi-text) !important;
+  border-color: var(--hi-border) !important;
+  background-color: var(--hi-bg-card) !important;
+}
+
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: var(--hi-bg-card) !important;
+  color: var(--hi-text) !important;
+  border-color: var(--hi-border) !important;
+}
+
+[data-theme="dark"] .table-light,
+[data-theme="dark"] .table thead.table-light th,
+[data-theme="dark"] .table-light th,
+[data-theme="dark"] .table-light td {
+  background-color: var(--hi-bg-elevated) !important;
+  color: #f8fafc !important;
+  border-color: var(--hi-border) !important;
+}
+
+[data-theme="dark"] hr {
+  border-color: var(--hi-border) !important;
+  opacity: 0.7;
+}
+
+[data-theme="dark"] .hover-bg-light:hover {
+  background-color: var(--hi-bg-elevated) !important;
+  color: #f8fafc !important;
+}
+
 /* Gradients and Soft Colors */
 .text-gradient-purple {
   background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%);

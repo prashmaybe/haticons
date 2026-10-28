@@ -110,15 +110,15 @@
 
             <!-- Install / CDN Pills -->
             <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-stretch gap-2">
-                <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-2 overflow-hidden">
+                <div class="install-code-box flex-fill px-2 py-1 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate install-text" id="npmCmd">npm install haticons</span>
-                    <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
+                    <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
-                <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-2 overflow-hidden">
+                <div class="install-code-box flex-fill px-2 py-1 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css</span>
-                    <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" title="Copy CDN URL">
+                    <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" title="Copy CDN URL">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
@@ -141,23 +141,113 @@
 
                 <!-- Method Switcher Pills -->
                 <div class="d-inline-flex flex-wrap p-1 rounded-pill bg-light border shadow-2xs gap-1" id="setupTabGroup">
-                    <button type="button" class="btn btn-sm rounded-pill px-4 start-method-tab active" data-target="#tab-cdn">
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab active" data-target="#tab-npm">
+                        <i class="hi-npm me-1"></i> npm Package (Recommended)
+                    </button>
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-cdn">
                         <i class="hi-globe me-1"></i> Web CDN
                     </button>
-                    <button type="button" class="btn btn-sm rounded-pill px-4 start-method-tab text-muted" data-target="#tab-npm">
-                        <i class="hi-npm me-1"></i> npm Package
-                    </button>
-                    <button type="button" class="btn btn-sm rounded-pill px-4 start-method-tab text-muted" data-target="#tab-frameworks">
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-frameworks">
                         <i class="hi-code me-1"></i> React &amp; Vue
                     </button>
-                    <button type="button" class="btn btn-sm rounded-pill px-4 start-method-tab text-muted" data-target="#tab-desktop">
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-desktop">
                         <i class="hi-devices me-1"></i> Desktop &amp; SVG
                     </button>
                 </div>
             </div>
 
-            <!-- Tab 1: Web CDN (Single line embed like FontAwesome Kit) -->
-            <div class="setup-tab-pane" id="tab-cdn">
+            <!-- Tab 1: npm Package Manager -->
+            <div class="setup-tab-pane" id="tab-npm">
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="hi-npm fs-2 text-danger"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">npm</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-3">Install in any Node, Webpack, or Vite project:</p>
+                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
+                                <span>npm install haticons</span>
+                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="npm install haticons">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="text-muted text-2xs">Includes TypeScript <code>index.d.ts</code> declarations out of the box.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="hi-yarn fs-2 text-info"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">Yarn</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-3">Add as project dependency using Yarn:</p>
+                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
+                                <span>yarn add haticons</span>
+                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="yarn add haticons">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="text-muted text-2xs">Fast, reproducible dependencies with package lock support.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="hi-package fs-2 text-warning"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">pnpm</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-3">Disk-space efficient symlinked install:</p>
+                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
+                                <span>pnpm add haticons</span>
+                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="pnpm add haticons">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="text-muted text-2xs">Saves gigabytes of node_modules disk space across monorepos.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-4 rounded-4 bg-white border shadow-2xs">
+                    <h4 class="h6 fw-bold text-dark mb-2">Bundler &amp; Framework Integration (Vite, Webpack, Next.js):</h4>
+                    <p class="text-muted text-sm mb-3">
+                        Import CSS or individual tree-shakeable SVG icons directly in your JavaScript / TypeScript files:
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-6">
+                            <div class="code-snippet-box">
+                                <div class="code-snippet-header">
+                                    <span class="code-lang-label"><i class="hi-code"></i> CSS / Webfont Import</span>
+                                    <button type="button" class="code-copy-btn" data-code="import 'haticons/dist/css/haticons.min.css';">
+                                        <i class="hi-paste"></i> <span>Copy</span>
+                                    </button>
+                                </div>
+                                <pre class="code-snippet-body"><code><span class="code-token-comment">// In your index.js / main.ts entry:</span>
+<span class="code-token-keyword">import</span> <span class="code-token-string">'haticons/dist/css/haticons.min.css'</span>;</code></pre>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="code-snippet-box">
+                                <div class="code-snippet-header">
+                                    <span class="code-lang-label"><i class="hi-code"></i> Tree-Shakeable SVG</span>
+                                    <button type="button" class="code-copy-btn" data-code="import cart from 'haticons/icons/cart';">
+                                        <i class="hi-paste"></i> <span>Copy</span>
+                                    </button>
+                                </div>
+                                <pre class="code-snippet-body"><code><span class="code-token-comment">// Zero webfont overhead:</span>
+<span class="code-token-keyword">import</span> cart <span class="code-token-keyword">from</span> <span class="code-token-string">'haticons/icons/cart'</span>;
+<span class="code-token-comment">// cart.svg &amp; cart.path available</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Web CDN -->
+            <div class="setup-tab-pane d-none" id="tab-cdn">
                 <div class="row g-4 align-items-stretch">
                     <div class="col-12 col-lg-7">
                         <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
@@ -244,80 +334,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab 2: npm Package Manager -->
-            <div class="setup-tab-pane d-none" id="tab-npm">
-                <div class="row g-4">
-                    <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="hi-npm fs-2 text-danger"></i>
-                                <h3 class="h5 fw-bold text-dark mb-0">npm</h3>
-                            </div>
-                            <p class="text-muted text-xs mb-3">Install in any Node, Webpack, or Vite project:</p>
-                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
-                                <span>npm install haticons</span>
-                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="npm install haticons">
-                                    <i class="hi-paste"></i>
-                                </button>
-                            </div>
-                            <div class="text-muted text-2xs">Includes TypeScript <code>index.d.ts</code> declarations out of the box.</div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="hi-yarn fs-2 text-info"></i>
-                                <h3 class="h5 fw-bold text-dark mb-0">Yarn</h3>
-                            </div>
-                            <p class="text-muted text-xs mb-3">Add as project dependency using Yarn:</p>
-                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
-                                <span>yarn add haticons</span>
-                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="yarn add haticons">
-                                    <i class="hi-paste"></i>
-                                </button>
-                            </div>
-                            <div class="text-muted text-2xs">Fast, reproducible dependencies with package lock support.</div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="hi-package fs-2 text-warning"></i>
-                                <h3 class="h5 fw-bold text-dark mb-0">pnpm</h3>
-                            </div>
-                            <p class="text-muted text-xs mb-3">Disk-space efficient symlinked install:</p>
-                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
-                                <span>pnpm add haticons</span>
-                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="pnpm add haticons">
-                                    <i class="hi-paste"></i>
-                                </button>
-                            </div>
-                            <div class="text-muted text-2xs">Saves gigabytes of node_modules disk space across monorepos.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-4 p-4 rounded-4 bg-white border shadow-2xs">
-                    <h4 class="h6 fw-bold text-dark mb-2">Modular Category Imports (Save Bandwidth &amp; Memory):</h4>
-                    <p class="text-muted text-sm mb-3">
-                        Only need e-commerce or arrows? You don't have to load all 494 icons:
-                    </p>
-                    <div class="code-snippet-box">
-                        <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> JavaScript / Bundler</span>
-                            <button type="button" class="code-copy-btn" data-code="import 'haticons/categories/commerce.min.css';
-import 'haticons/categories/directional.min.css';">
-                                <i class="hi-paste"></i> <span>Copy</span>
-                            </button>
-                        </div>
-                        <pre class="code-snippet-body"><code><span class="code-token-keyword">import</span> <span class="code-token-string">'haticons/categories/commerce.min.css'</span>;
-<span class="code-token-keyword">import</span> <span class="code-token-string">'haticons/categories/directional.min.css'</span>;</code></pre>
                     </div>
                 </div>
             </div>

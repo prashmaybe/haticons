@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-function generateScssFiles({ ROOT_DIR, SCSS_DIR, SCSS_CATEGORIES, categorized, categories, icons }) {
+function generateScssFiles({ ROOT_DIR, SCSS_DIR, SCSS_CATEGORIES, categorized, categories, icons, aliases = {} }) {
   // 1. Generate SCSS variables & core font-face
   const varsScss = `// Haticons Variables
 $hi-font-path: "../fonts" !default;
@@ -78,13 +78,33 @@ $hi-prefix: "hi-" !default;
 `;
   fs.writeFileSync(path.join(SCSS_DIR, '_core.scss'), coreScss);
 
+  // Invert aliases to easily find all aliases that target an icon name
+  const targetToAliases = {};
+  Object.entries(aliases).forEach(([aliasName, targetName]) => {
+    if (!targetToAliases[targetName]) targetToAliases[targetName] = [];
+    targetToAliases[targetName].push(aliasName);
+  });
+
   // 2. Generate category SCSS partial files (_cat.scss)
   const categoryImports = [];
   Object.entries(categorized).forEach(([cat, list]) => {
     let catScss = `// Haticons - Category: ${categories[cat].name} (${list.length} icons)\n`;
     list.forEach(icon => {
       const contentVal = icon.content.startsWith('\\') ? icon.content : `\\${icon.content}`;
-      catScss += `.${icon.class}:before,\n.${icon.class}-fill:before,\n.${icon.class}-outline:before,\n.${icon.class}-sharp:before { content: "${contentVal}"; }\n`;
+      const iconAliases = targetToAliases[icon.name] || [];
+      const classSelectors = [
+        `.${icon.class}:before`,
+        `.${icon.class}-fill:before`,
+        `.${icon.class}-outline:before`,
+        `.${icon.class}-sharp:before`
+      ];
+      iconAliases.forEach(alias => {
+        classSelectors.push(`.hi-${alias}:before`);
+        classSelectors.push(`.hi-${alias}-fill:before`);
+        classSelectors.push(`.hi-${alias}-outline:before`);
+        classSelectors.push(`.hi-${alias}-sharp:before`);
+      });
+      catScss += `${classSelectors.join(',\n')} { content: "${contentVal}"; }\n`;
     });
 
     const catFilePath = path.join(SCSS_CATEGORIES, `_${cat}.scss`);

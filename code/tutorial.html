@@ -134,6 +134,12 @@
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#js-api">
                                 6. JavaScript / TypeScript API
                             </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#accessibility">
+                                7. Accessibility &amp; Screen Readers
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#cross-platform">
+                                8. Cross-Platform &amp; Native Apps
+                            </a>
                         </nav>
                         <hr class="my-3">
                         <a href="/reference.html"
@@ -549,7 +555,7 @@ $hi-prefix: "hi-";
                 </section>
 
                 <!-- Section 6 -->
-                <section id="js-api" class="tutorial-section">
+                <section id="js-api" class="tutorial-section mb-5 pb-4 border-bottom">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="section-number-badge">6</span>
                         <div>
@@ -587,6 +593,133 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
 <span class="code-token-comment">// Get all icons for a category</span>
 <span class="code-token-keyword">const</span> directional <span class="code-token-punct">=</span> getByCategory<span class="code-token-punct">(</span><span class="code-token-string">'directional'</span><span class="code-token-punct">);</span>
 console<span class="code-token-punct">.</span>log<span class="code-token-punct">(</span>directional<span class="code-token-punct">.</span>length<span class="code-token-punct">);</span> <span class="code-token-comment">// 16</span></code></pre>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="accessibility" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">7</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Accessibility &amp; Screen Readers</h2>
+                            <p class="text-muted text-sm mb-0">Best practices for decorative vs meaningful icons, screen reader support, and focus states</p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        Icons alone can be ambiguous or completely silent to assistive technologies (screen readers like NVDA, JAWS, or VoiceOver). Proper accessibility patterns ensure all users have an equivalent experience.
+                    </p>
+
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-check-circle text-success"></i> A. Decorative Icons (With Visible Text)
+                    </h3>
+                    <p class="text-muted text-sm">
+                        When an icon accompanies visible label text, the icon is decorative. Always add <code>aria-hidden="true"</code> so screen readers ignore the glyph:
+                    </p>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;button class="btn btn-primary"&gt;
+    &lt;i class="hi-cart" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;span&gt;Add to Cart&lt;/span&gt;
+&lt;/button&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">button</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"btn btn-primary"</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-cart"</span> <span class="code-token-attr">aria-hidden</span><span class="code-token-punct">=</span><span class="code-token-string">"true"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">span</span><span class="code-token-punct">&gt;</span>Add to Cart<span class="code-token-punct">&lt;/</span><span class="code-token-tag">span</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;/</span><span class="code-token-tag">button</span><span class="code-token-punct">&gt;</span></code></pre>
+                    </div>
+
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-star text-primary"></i> B. Icon-Only Buttons (Meaningful Icons)
+                    </h3>
+                    <p class="text-muted text-sm">
+                        When a button or link contains ONLY an icon (e.g. search, close, delete), you MUST supply an accessible name using <code>aria-label</code> or a <code>.visually-hidden</code> text span:
+                    </p>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;!-- Option 1: aria-label on interactive element --&gt;
+&lt;button class="btn btn-outline-secondary" aria-label="Search icon catalogue"&gt;
+    &lt;i class="hi-search" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Option 2: Visually hidden text for screen readers --&gt;
+&lt;button class="btn btn-danger"&gt;
+    &lt;i class="hi-trash" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;span class="visually-hidden"&gt;Delete item&lt;/span&gt;
+&lt;/button&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment">&lt;!-- Option 1: aria-label on interactive element --&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">button</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"btn btn-outline-secondary"</span> <span class="code-token-attr">aria-label</span><span class="code-token-punct">=</span><span class="code-token-string">"Search icon catalogue"</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-search"</span> <span class="code-token-attr">aria-hidden</span><span class="code-token-punct">=</span><span class="code-token-string">"true"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;/</span><span class="code-token-tag">button</span><span class="code-token-punct">&gt;</span>
+
+<span class="code-token-comment">&lt;!-- Option 2: Visually hidden text for screen readers --&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">button</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"btn btn-danger"</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-trash"</span> <span class="code-token-attr">aria-hidden</span><span class="code-token-punct">=</span><span class="code-token-string">"true"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">span</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"visually-hidden"</span><span class="code-token-punct">&gt;</span>Delete item<span class="code-token-punct">&lt;/</span><span class="code-token-tag">span</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;/</span><span class="code-token-tag">button</span><span class="code-token-punct">&gt;</span></code></pre>
+                    </div>
+                </section>
+
+                <!-- Section 8 -->
+                <section id="cross-platform" class="tutorial-section">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">8</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Cross-Platform &amp; Native Apps</h2>
+                            <p class="text-muted text-sm mb-0">Integration details for Web, iOS, Android, React Native, and Flutter</p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        While web apps use our CSS webfont or modular SVG assets, mobile platforms have different rendering requirements:
+                    </p>
+
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered bg-white text-sm align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 25%;">Platform</th>
+                                    <th style="width: 35%;">Recommended Asset</th>
+                                    <th>Integration Method</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Web (HTML / React / Vue)</strong></td>
+                                    <td><code>haticons.woff2</code> or <code>dist/svg/*.svg</code></td>
+                                    <td>CSS class <code>&lt;i class="hi-*"&gt;</code> or direct SVG inline import</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>React Native</strong></td>
+                                    <td><code>dist/icons/*.js</code> or <code>dist/svg/*.svg</code></td>
+                                    <td>Use <code>react-native-svg</code> with <code>icon.path</code> data</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Flutter</strong></td>
+                                    <td><code>dist/fonts/haticons.ttf</code> or <code>dist/svg/*.svg</code></td>
+                                    <td>Load TTF as font family or use <code>flutter_svg</code> with standalone SVGs</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>iOS (SwiftUI / UIKit)</strong></td>
+                                    <td><code>dist/fonts/haticons.ttf</code> or PDF/SVG assets</td>
+                                    <td>Add TTF to <code>Info.plist</code> (UIAppFonts) or import SVGs into Asset Catalog</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Android (Compose / XML)</strong></td>
+                                    <td><code>dist/fonts/haticons.ttf</code> or Vector Drawables</td>
+                                    <td>Place TTF in <code>app/src/main/assets/fonts/</code> or convert SVGs to Vector Drawables</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
             </main>

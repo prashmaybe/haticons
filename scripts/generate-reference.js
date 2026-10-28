@@ -13,6 +13,14 @@ const {
 
 const icons = loadIcons();
 const categories = loadCategories();
+const { ICON_ALIASES } = require('./categories.js');
+
+// Invert aliases for easy lookup by target name
+const targetToAliases = {};
+Object.entries(ICON_ALIASES).forEach(([aliasName, targetName]) => {
+  if (!targetToAliases[targetName]) targetToAliases[targetName] = [];
+  targetToAliases[targetName].push(aliasName);
+});
 
 // Group icons by category
 const catGroups = {};
@@ -32,18 +40,28 @@ Object.keys(categories).sort().forEach(catKey => {
 
   let iconsListHtml = '';
   list.forEach(item => {
+    const itemAliases = targetToAliases[item.name] || [];
+    const searchTerms = [item.name, item.class, ...itemAliases].join(' ');
+    const aliasBadge = itemAliases.length > 0 
+      ? `<span class="badge bg-light text-muted border text-2xs rounded-pill" title="Canonical alias: ${itemAliases.map(a => 'hi-' + a).join(', ')}">${itemAliases[0]}</span>`
+      : '';
+
     iconsListHtml += `
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="p-1 border rounded-3 bg-white d-flex align-items-center gap-1 reference-icon-item" 
              data-class="${item.class}" 
              data-name="${item.name}" 
+             data-search="${searchTerms}"
              data-unicode="${item.content}"
              title="Click to copy <i class='${item.class}'></i>">
           <div class="reference-icon-icon-wrap d-flex align-items-center justify-content-center rounded-2 bg-light text-primary flex-shrink-0">
             <i class="${item.class} fs-3"></i>
           </div>
           <div class="overflow-hidden flex-grow-1">
-            <div class="text-sm fw-semibold text-dark text-truncate icon-title-label" title="${item.name}">${item.name}</div>
+            <div class="d-flex align-items-center justify-content-between gap-1">
+              <div class="text-sm fw-semibold text-dark text-truncate icon-title-label" title="${item.name}">${item.name}</div>
+              ${aliasBadge}
+            </div>
             <div class="text-xs text-muted font-monospace d-flex align-items-center justify-content-between">
               <span>${item.content}</span>
               <span class="copy-hint text-primary fw-medium">Copy</span>
@@ -109,14 +127,36 @@ ${getNavbar('reference')}
                 <span>Complete Icon Catalog &amp; Codepoint Reference</span>
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-3">Haticons Reference</h1>
-            <p class="lead text-muted mx-auto header-subtitle-constrained">
-                Direct reference for all <strong>${icons.length} icons</strong> organized by category, including CSS unicode values, partial files, and class names.
+            <p class="lead text-muted mx-auto header-subtitle-constrained mb-4">
+                Direct reference for all <strong>${icons.length} icons</strong> organized by category, including CSS unicode values, partial files, canonical aliases, and class names.
             </p>
+
+            <!-- Search input bar -->
+            <div class="mx-auto" style="max-width: 520px;">
+                <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
+                    <span class="input-group-text bg-white border-0 ps-3 text-muted">
+                        <i class="hi-search fs-5"></i>
+                    </span>
+                    <input type="text" id="referenceSearchInput" class="form-control border-0 ps-2" placeholder="Search by name, class, alias (e.g. calendar, snapchat, pencil)..." aria-label="Search icons">
+                    <button class="btn btn-light border-0 text-muted px-3" type="button" id="clearRefSearch" title="Clear search">
+                        <i class="hi-close"></i>
+                    </button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between text-xs text-muted mt-2 px-2">
+                    <span>Showing <strong id="refVisibleCount" class="text-primary">${icons.length}</strong> of ${icons.length} icons</span>
+                    <span>Supports canonical aliases &amp; legacy names</span>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Container -->
     <div class="container pt-5">
+        <div id="refNoResults" class="alert alert-warning text-center rounded-4 border d-none my-4">
+            <i class="hi-warning fs-3 d-block mb-2 text-warning"></i>
+            <h4 class="h5 fw-bold text-dark mb-1">No matching icons found</h4>
+            <p class="text-muted text-sm mb-0">Try searching for broader terms like "arrow", "cart", "user", "star", or a category name.</p>
+        </div>
         <div class="row g-5">
             <!-- Sidebar Navigation -->
             <aside class="col-12 col-lg-3">

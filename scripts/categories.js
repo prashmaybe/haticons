@@ -69,6 +69,36 @@ function classifyIcon(cls) {
   return 'interface';
 }
 
+const ICON_ALIASES = {
+  'snapchat': 'spanchat',
+  'share-alt': 'share1',
+  'credit-card-alt': 'credit-card1',
+  'folder-alt': 'folder1',
+  'pencil-alt': 'pencil1',
+  'star-alt': 'star1',
+  'star-outline-alt': 'star-o1',
+  'redo-alt': 'redo1',
+  'undo-alt': 'undo1',
+  'trash-alt': 'trash1',
+  'attachment-alt': 'attachment1',
+  'zoom-out-alt': 'zoom-out1',
+  'zoom-in-alt': 'zoom-in1',
+  'bell-alt': 'bell1',
+  'search-alt': 'search1',
+  'letterboxd-alt': 'letterboxd1',
+  'envelope-alt': 'envelope1',
+  'paper-plane-alt': 'paper-plane1',
+  'user-alt': 'user1',
+  'users-alt': 'users1',
+  'check-alt': 'check1',
+  'camera-alt': 'camera1',
+  'flag-alt': 'flag1',
+  'info-alt': 'info1',
+  'lock-alt': 'lock1',
+  'calendar-alt': 'calendar1',
+  'time-alt': 'time1'
+};
+
 function enrichIcons(rawIcons) {
   const seen = new Set();
   const uniqueIcons = [];
@@ -97,13 +127,16 @@ function enrichIcons(rawIcons) {
   return {
     icons: enrichedIcons,
     categorized,
-    categories: CATEGORY_META
+    categories: CATEGORY_META,
+    aliases: ICON_ALIASES
   };
 }
 
 module.exports = {
   BRAND_EXACT,
   CATEGORY_META,
+  ICON_ALIASES,
   classifyIcon,
   enrichIcons
 };
+

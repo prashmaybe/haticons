@@ -14,7 +14,11 @@
 .hi-lock1:before,
 .hi-lock1-fill:before,
 .hi-lock1-outline:before,
-.hi-lock1-sharp:before { content: "\f11a"; }
+.hi-lock1-sharp:before,
+.hi-lock-alt:before,
+.hi-lock-alt-fill:before,
+.hi-lock-alt-outline:before,
+.hi-lock-alt-sharp:before { content: "\f11a"; }
 .hi-unlock:before,
 .hi-unlock-fill:before,
 .hi-unlock-outline:before,

@@ -2,7 +2,11 @@
 .hi-folder1:before,
 .hi-folder1-fill:before,
 .hi-folder1-outline:before,
-.hi-folder1-sharp:before { content: "\f023"; }
+.hi-folder1-sharp:before,
+.hi-folder-alt:before,
+.hi-folder-alt-fill:before,
+.hi-folder-alt-outline:before,
+.hi-folder-alt-sharp:before { content: "\f023"; }
 .hi-profile:before,
 .hi-profile-fill:before,
 .hi-profile-outline:before,
@@ -10,7 +14,11 @@
 .hi-attachment1:before,
 .hi-attachment1-fill:before,
 .hi-attachment1-outline:before,
-.hi-attachment1-sharp:before { content: "\f05e"; }
+.hi-attachment1-sharp:before,
+.hi-attachment-alt:before,
+.hi-attachment-alt-fill:before,
+.hi-attachment-alt-outline:before,
+.hi-attachment-alt-sharp:before { content: "\f05e"; }
 .hi-archive:before,
 .hi-archive-fill:before,
 .hi-archive-outline:before,

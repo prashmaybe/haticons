@@ -189,17 +189,63 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 
 ---
 
+## ♿ Accessibility & Screen Readers
+
+Icons should be made accessible depending on whether they are **decorative** or **meaningful**:
+
+### 1. Decorative Icons (With Visible Text)
+When an icon is accompanied by visible text, hide it from assistive technologies using `aria-hidden="true"`:
+```html
+<button class="btn btn-primary">
+  <i class="hi-cart" aria-hidden="true"></i>
+  <span>Add to Cart</span>
+</button>
+```
+
+### 2. Meaningful / Icon-Only Buttons
+When a button or link has no visible text, supply an accessible label via `aria-label` or a `.visually-hidden` text span:
+```html
+<!-- Accessible icon-only button -->
+<button class="btn btn-outline-secondary" aria-label="Search icon catalog">
+  <i class="hi-search" aria-hidden="true"></i>
+</button>
+```
+
+---
+
+## 🔄 Canonical Names & Backward-Compatible Aliases
+
+To standardize icon naming without breaking existing code:
+- Legacy suffixes with `1` (such as `pencil1`, `search1`, `bell1`, `calendar1`, `check1`) now have standard canonical aliases (`pencil-alt`, `search-alt`, `bell-alt`, `calendar-alt`, `check-alt`).
+- Typo corrections like `snapchat` are supported as aliases pointing to `spanchat`.
+- The original classes and glyph Unicode codepoints remain 100% intact and functional for existing deployments.
+
+---
+
+## 📱 Cross-Platform Integration
+
+Haticons is engineered for modern cross-platform development:
+- **Web (HTML, React, Vue, Next.js, Vite)**: Use the compact CSS webfont (`haticons.woff2`, ~34 KB) or modular category stylesheets.
+- **Modern JavaScript Tree-Shaking**: Import standalone SVG icon modules from `haticons/icons/*` with zero webfont payload.
+- **Mobile (React Native)**: Import path data via `import cart from 'haticons/icons/cart'` and render using `react-native-svg`.
+- **Flutter & Native Android/iOS**: Place `haticons.ttf` in your app font assets or import standalone SVGs into Android Vector Drawables / iOS Asset Catalogs.
+
+---
+
 ## 🔍 JavaScript & TypeScript API
 
 For dynamic apps, search bars, or metadata inspect:
 
 ```javascript
-import { icons, categories, getIcon, getByCategory } from 'haticons';
+import { icons, categories, aliases, getIcon, getByCategory } from 'haticons';
 
-// Find icon by name or class
+// Find icon by name, class, or alias
 const icon = getIcon('hi-cart');
 console.log(icon);
 // { class: 'hi-cart', name: 'cart', content: '\\e918', category: 'commerce' }
+
+// Resolves canonical aliases seamlessly
+const snapchat = getIcon('snapchat'); // Resolves to 'spanchat'
 
 // Get all icons in a category
 const commerceIcons = getByCategory('commerce');
@@ -217,7 +263,7 @@ npm install
 # Run full compilation & category generation
 npm run build
 
-# Run tests
+# Run automated tests
 npm test
 ```
 
@@ -227,9 +273,9 @@ npm test
  
 Visit the official documentation website for live examples, cheat sheets, and integration guides:
 
-- 🌐 **[Official Website](https://haticons.com/)** - Overview, CDN links, and 2-minute quickstart.
-- 📚 **[Full Icon Reference Catalog](https://haticons.com/reference.html)** - Comprehensive categorization index with quick-copy tags, unicode values, and category sidebar scrollspy.
-- 💡 **[Step-by-Step Tutorial](https://haticons.com/tutorial.html)** - In-depth examples for vanilla HTML, boodoo UI components, Vue, React, Angular, Sass customization, and tree-shaking individual SVG modules.
+- 🌐 **[Official Website](https://haticons.com/)** - Overview, npm installation, and live interactive previews.
+- 📚 **[Full Icon Reference Catalog](https://haticons.com/reference.html)** - Comprehensive categorization index with quick-copy tags, live search, and Unicode codepoints.
+- 💡 **[Step-by-Step Tutorial](https://haticons.com/tutorial.html)** - Accessibility guidance, native platform integration, React, Vue, Sass customization, and tree-shaking individual SVG modules.
 - 📝 **[Changelogs](https://haticons.com/changelogs.html)** - Version history, migration guides, and release notes.
 
 ---
@@ -240,7 +286,9 @@ Detailed release notes and migration guides can be found in [CHANGELOG.md](CHANG
 
 ---
 
-## 📄 License
+## 📄 License & Trademark Notice
 
-GPL-3.0 License. See [LICENSE](LICENSE) for details.
-HatIcons by PebbleBenders &middot; Made with boodoo Framework.
+- **Software & Artwork**: Distributed under the **GNU General Public License v3.0 (GPL-3.0)**. See [LICENSE](LICENSE) for details.
+- **Third-Party Trademarks**: All company, product, and service logos in the `brands` category are trademarks of their respective owners. Their inclusion in Haticons does not imply endorsement or affiliation.
+- Crafted with pride by **PebbleBenders** &middot; Built with **[boodoo Framework](https://www.boodooframework.com/)**.
+

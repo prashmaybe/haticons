@@ -2,7 +2,11 @@
 .hi-bell1:before,
 .hi-bell1-fill:before,
 .hi-bell1-outline:before,
-.hi-bell1-sharp:before { content: "\f073"; }
+.hi-bell1-sharp:before,
+.hi-bell-alt:before,
+.hi-bell-alt-fill:before,
+.hi-bell-alt-outline:before,
+.hi-bell-alt-sharp:before { content: "\f073"; }
 .hi-help:before,
 .hi-help-fill:before,
 .hi-help-outline:before,
@@ -10,7 +14,11 @@
 .hi-check1:before,
 .hi-check1-fill:before,
 .hi-check1-outline:before,
-.hi-check1-sharp:before { content: "\f101"; }
+.hi-check1-sharp:before,
+.hi-check-alt:before,
+.hi-check-alt-fill:before,
+.hi-check-alt-outline:before,
+.hi-check-alt-sharp:before { content: "\f101"; }
 .hi-close:before,
 .hi-close-fill:before,
 .hi-close-outline:before,
@@ -26,7 +34,11 @@
 .hi-info1:before,
 .hi-info1-fill:before,
 .hi-info1-outline:before,
-.hi-info1-sharp:before { content: "\f118"; }
+.hi-info1-sharp:before,
+.hi-info-alt:before,
+.hi-info-alt-fill:before,
+.hi-info-alt-outline:before,
+.hi-info-alt-sharp:before { content: "\f118"; }
 .hi-radio-checked:before,
 .hi-radio-checked-fill:before,
 .hi-radio-checked-outline:before,

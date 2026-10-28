@@ -27,15 +27,14 @@
             const icon = btn.querySelector('.theme-toggle-icon');
             const text = btn.querySelector('.theme-toggle-text');
             if (icon) {
-                if (theme === 'system') {
-                    icon.className = 'hi-sun theme-toggle-icon fs-5';
-                    btn.setAttribute('title', 'Theme: System (' + resolvedTheme + ') - Click to change');
-                } else if (theme === 'dark') {
-                    icon.className = 'hi-bulb theme-toggle-icon fs-5';
-                    btn.setAttribute('title', 'Theme: Dark - Click to change');
+                if (resolvedTheme === 'dark') {
+                    icon.className = 'hi-bulb theme-toggle-icon fs-5 text-warning';
+                    btn.setAttribute('title', 'Dark mode active (Setting: ' + theme + ') - Click to switch theme');
+                    btn.setAttribute('aria-label', 'Dark mode active - Click to toggle');
                 } else {
                     icon.className = 'hi-sun theme-toggle-icon fs-5';
-                    btn.setAttribute('title', 'Theme: Light - Click to change');
+                    btn.setAttribute('title', 'Light mode active (Setting: ' + theme + ') - Click to switch theme');
+                    btn.setAttribute('aria-label', 'Light mode active - Click to toggle');
                 }
             }
             if (text) {
@@ -54,13 +53,11 @@
         });
     }
 
-    // Set theme cycle: system -> light -> dark -> system
+    // Set theme cycle: light -> dark -> light
     function cycleTheme() {
         const current = getSavedTheme();
-        let next = 'light';
-        if (current === 'system') next = 'dark';
-        else if (current === 'dark') next = 'light';
-        else if (current === 'light') next = 'system';
+        const resolved = current === 'system' ? getSystemTheme() : current;
+        const next = resolved === 'dark' ? 'light' : 'dark';
 
         localStorage.setItem(THEME_KEY, next);
         applyTheme(next);

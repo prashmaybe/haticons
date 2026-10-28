@@ -450,5 +450,69 @@
             window.addEventListener('scroll', updateScrollspy, { passive: true });
             updateScrollspy();
         }
+
+        // ---------------------------------------------------------
+        // 6. Live Search on Reference Page
+        // ---------------------------------------------------------
+        var refSearchInput = document.getElementById('referenceSearchInput');
+        if (refSearchInput) {
+            var refItems = document.querySelectorAll('.reference-icon-item');
+            var refBlocks = document.querySelectorAll('.category-reference-block');
+            var refCountEl = document.getElementById('refVisibleCount');
+            var refNoResults = document.getElementById('refNoResults');
+            var clearBtn = document.getElementById('clearRefSearch');
+
+            function filterRefItems() {
+                var query = refSearchInput.value.toLowerCase().trim();
+                var totalVisible = 0;
+
+                refBlocks.forEach(function (block) {
+                    var blockItems = block.querySelectorAll('.reference-icon-item');
+                    var blockVisible = 0;
+
+                    blockItems.forEach(function (item) {
+                        var searchData = (item.getAttribute('data-search') || item.getAttribute('data-name') || '').toLowerCase();
+                        var cls = (item.getAttribute('data-class') || '').toLowerCase();
+                        var unicode = (item.getAttribute('data-unicode') || '').toLowerCase();
+                        var parentCol = item.closest('.col-12');
+
+                        if (!query || searchData.indexOf(query) !== -1 || cls.indexOf(query) !== -1 || unicode.indexOf(query) !== -1) {
+                            if (parentCol) parentCol.classList.remove('d-none');
+                            blockVisible++;
+                            totalVisible++;
+                        } else {
+                            if (parentCol) parentCol.classList.add('d-none');
+                        }
+                    });
+
+                    // Hide the category header block if no icons match in that category
+                    if (blockVisible === 0 && query) {
+                        block.classList.add('d-none');
+                    } else {
+                        block.classList.remove('d-none');
+                    }
+                });
+
+                if (refCountEl) refCountEl.textContent = totalVisible;
+                if (refNoResults) {
+                    if (totalVisible === 0) refNoResults.classList.remove('d-none');
+                    else refNoResults.classList.add('d-none');
+                }
+            }
+
+            var refSearchTimer = null;
+            refSearchInput.addEventListener('input', function () {
+                clearTimeout(refSearchTimer);
+                refSearchTimer = setTimeout(filterRefItems, 100);
+            });
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function () {
+                    refSearchInput.value = '';
+                    filterRefItems();
+                    refSearchInput.focus();
+                });
+            }
+        }
     });
 })();
