@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A set of beautifully crafted, lightweight, modular Webfont and SVG Icons.</strong><br>
-  An open-source project by <strong>PebbleBenders</strong>.<br>
+  An open-source project by <strong><a href="https://pebblebenders.com/">PebbleBenders</a></strong>.<br>
   Inspired by <em>Ionicons</em>, <em>FontAwesome</em>, and <em>Glyphicons</em> &middot; <strong>Made with <a href="https://www.boodooframework.com/">boodoo Framework</a></strong>.
 </p>
 
@@ -14,7 +14,7 @@
   <a href="https://www.npmjs.com/package/haticons"><img src="https://img.shields.io/npm/v/haticons.svg?color=7c3aed" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/haticons"><img src="https://img.shields.io/npm/dm/haticons.svg" alt="npm downloads" /></a>
   <a href="https://www.boodooframework.com/"><img src="https://img.shields.io/badge/made%20with-boodoo-7c3aed.svg" alt="Made with boodoo" /></a>
-  <img src="https://img.shields.io/badge/by-PebbleBenders-0f172a.svg" alt="by PebbleBenders" />
+  <a href="https://pebblebenders.com/"><img src="https://img.shields.io/badge/by-PebbleBenders-0f172a.svg" alt="by PebbleBenders" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License" /></a>
 </p>
 
@@ -211,4 +211,4 @@ Detailed release notes and migration guides can be found in [CHANGELOG.md](CHANG
 ## 📄 License
 
 GPL-3.0 License. See [LICENSE](LICENSE) for details.
-HatIcons by PebbleBenders &middot; Made with boodoo Framework.
+HatIcons by [PebbleBenders](https://pebblebenders.com/) &middot; Made with boodoo Framework.

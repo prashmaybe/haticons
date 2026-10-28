@@ -100,7 +100,10 @@
     "fontawesome",
     "glyphicons"
   ],
-  "author": "PebbleBenders",
+  "author": {
+    "name": "PebbleBenders",
+    "url": "https://pebblebenders.com/"
+  },
   "license": "GPL-3.0",
   "homepage": "https://haticons.com",
   "bugs": {

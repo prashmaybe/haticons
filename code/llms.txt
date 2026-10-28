@@ -1,7 +1,7 @@
 # Haticons
 
 > A set of 494 beautifully crafted, modular, lightweight Webfont and SVG Icons for Web, iOS, Android, and Desktop apps.
-> An open-source project by PebbleBenders, built with first-class support for boodoo Framework.
+> An open-source project by [PebbleBenders](https://pebblebenders.com/), built with first-class support for boodoo Framework.
 
 - Website: https://haticons.com
 - Documentation / Tutorial: https://haticons.com/tutorial.html

@@ -50,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Integrated [boodoo CSS Framework](https://www.boodooframework.com/) design system tokens, responsive navigation, search modals, and toasts.
   - Interactive theme switcher supporting System, Light, and Dark modes.
   - Automated link validation and sitemap indexation (`sitemap.xml`, `llms.txt`).
-- **Governance & Open Source Identity**: Established repository licensing under GNU General Public License v3.0, maintained by **PebbleBenders**.
+- **Governance & Open Source Identity**: Established repository licensing under GNU General Public License v3.0, maintained by **[PebbleBenders](https://pebblebenders.com/)**.
 
 ---
 

@@ -126,7 +126,7 @@ function getFooter(activePage = 'home') {
                 <span class="fs-5 fw-bold text-dark">Haticons</span>
             </div>
             <p class="text-xs text-muted mb-3">
-                An open-source icon system by <strong class="text-dark">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
+                An open-source icon system by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
             </p>
             <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
                 494 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
@@ -172,7 +172,7 @@ function getFooter(activePage = 'home') {
                 <a href="/license.html" class="text-decoration-none ${activePage === 'license' ? 'text-primary fw-semibold' : 'text-muted'}">License (GPL-3.0)</a>
             </div>
             <p class="text-xs text-muted mb-0">
-                Released under GPL-3.0 License &middot; Designed &amp; Crafted by <strong class="text-dark">PebbleBenders</strong>
+                Released under GPL-3.0 License &middot; Designed &amp; Crafted by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>
             </p>
         </div>
     </footer>`;

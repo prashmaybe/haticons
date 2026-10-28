@@ -34,7 +34,7 @@ ${getNavbar('other')}
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-2">Terms of Use</h1>
             <p class="lead text-muted mx-auto header-subtitle-constrained mb-0">
-                Effective Date: October 27, 2026 &middot; Maintained by <strong>PebbleBenders</strong>
+                Effective Date: October 27, 2026 &middot; Maintained by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>
             </p>
         </div>
     </header>
@@ -59,7 +59,7 @@ ${getNavbar('other')}
 
             <h2 class="h4 fw-bold text-dark mb-3">3. Brand &amp; Trademark Notice</h2>
             <p class="text-muted text-sm mb-4">
-                The "Haticons" name and logo are trademarks of <strong>PebbleBenders</strong>. Icons within the <code>brands</code> category are trademarks and copyrighted properties of their respective trademark owners (such as Apple, Google, GitHub, Twitter/X, etc.). Haticons does not claim ownership or endorsement from third-party trademark holders. You are responsible for ensuring that your usage of brand logos complies with each respective brand's guidelines.
+                The "Haticons" name and logo are trademarks of <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>. Icons within the <code>brands</code> category are trademarks and copyrighted properties of their respective trademark owners (such as Apple, Google, GitHub, Twitter/X, etc.). Haticons does not claim ownership or endorsement from third-party trademark holders. You are responsible for ensuring that your usage of brand logos complies with each respective brand's guidelines.
             </p>
 
             <h2 class="h4 fw-bold text-dark mb-3">4. Disclaimer of Warranties</h2>
@@ -142,7 +142,7 @@ ${getNavbar('other')}
 
             <h2 class="h4 fw-bold text-dark mb-3">5. Contact Information</h2>
             <p class="text-muted text-sm mb-0">
-                If you have any questions or feedback regarding this Privacy Policy, please contact the PebbleBenders maintainers via GitHub at <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="text-primary fw-medium">github.com/prashmaybe/haticons</a>.
+                If you have any questions or feedback regarding this Privacy Policy, please contact the <a href="https://pebblebenders.com/" class="text-primary fw-medium" target="_blank" rel="noopener">PebbleBenders</a> maintainers via GitHub at <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="text-primary fw-medium">github.com/prashmaybe/haticons</a>.
             </p>
         </div>
     </main>
@@ -188,7 +188,7 @@ ${getNavbar('other')}
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-2">Open Source License</h1>
             <p class="lead text-muted mx-auto header-subtitle-constrained mb-0">
-                Haticons is 100% free and open-source software, maintained with pride by <strong>PebbleBenders</strong>.
+                Haticons is 100% free and open-source software, maintained with pride by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>.
             </p>
         </div>
     </header>
