@@ -1,6 +1,6 @@
 {
   "name": "haticons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of beautifully crafted, modular, lightweight web font and SVG icons for Web, iOS, Android, and Desktop apps. Inspired by Ionicons, FontAwesome, and Glyphicons.",
   "main": "index.js",
   "module": "index.mjs",

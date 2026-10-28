@@ -169,7 +169,7 @@ ${getNavbar('cheatsheet')}
                             dist/css/categories/interface.min.css
                         </div>
                         <div class="text-muted">
-                            Only need this category? Import <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/interface.min.css"&gt;</code> without loading the rest!
+                            Only need this category? Import <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/interface.min.css"&gt;</code> without loading the rest!
                         </div>
                     </div>
                 </div>

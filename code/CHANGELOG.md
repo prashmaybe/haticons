@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1] - 2026-10-28
+
+### Fixed
+- **Clean Build Output**: Silenced Dart Sass `@import` deprecation warnings during standalone and category bundle compilation pipelines (`scripts/compiler.js`).
+- **CDN Version References**: Updated documentation and interactive snippets to reference version 1.0.1.
+
+---
+
 ## [1.0.0] - 2026-10-27
 
 ### Added

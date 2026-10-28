@@ -60,7 +60,7 @@ function getHtmlHead(title, description, keywords, canonicalPath = '') {
 function getAnnouncementBar() {
   return `    <!-- Top Announcement Bar -->
     <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
-        <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.0</span>
+        <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.1</span>
         <span>494+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
     </div>`;
 }

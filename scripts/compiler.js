@@ -90,14 +90,14 @@ function compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, 
   const CLEANCSS_BIN = path.join(ROOT_DIR, 'node_modules', '.bin', 'cleancss');
 
   console.log('Compiling full haticons CSS...');
-  execSync(`"${SASS_BIN}" "${path.join(SCSS_DIR, 'haticons.scss')}" "${path.join(DIST_CSS, 'haticons.css')}" --no-source-map --quiet-deps`, { stdio: 'inherit' });
+  execSync(`"${SASS_BIN}" "${path.join(SCSS_DIR, 'haticons.scss')}" "${path.join(DIST_CSS, 'haticons.css')}" --no-source-map --quiet-deps --silence-deprecation=import`, { stdio: 'inherit' });
   execSync(`"${CLEANCSS_BIN}" -o "${path.join(DIST_CSS, 'haticons.min.css')}" "${path.join(DIST_CSS, 'haticons.css')}"`, { stdio: 'inherit' });
 
   // Compile core alone
   const coreStandalone = `@import "variables";\n@import "core";\n`;
   const coreScssFile = path.join(SCSS_DIR, '_core_standalone.scss');
   fs.writeFileSync(coreScssFile, coreStandalone);
-  execSync(`"${SASS_BIN}" "${coreScssFile}" "${path.join(DIST_CSS, 'core.css')}" --no-source-map --quiet-deps`, { stdio: 'inherit' });
+  execSync(`"${SASS_BIN}" "${coreScssFile}" "${path.join(DIST_CSS, 'core.css')}" --no-source-map --quiet-deps --silence-deprecation=import`, { stdio: 'inherit' });
   execSync(`"${CLEANCSS_BIN}" -o "${path.join(DIST_CSS, 'core.min.css')}" "${path.join(DIST_CSS, 'core.css')}"`, { stdio: 'inherit' });
   fs.unlinkSync(coreScssFile);
 
@@ -112,7 +112,7 @@ function compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, 
     fs.writeFileSync(bundleFile, bundleContent);
     const destCss = path.join(DIST_CATEGORIES_CSS, `${cat}.css`);
     const destMinCss = path.join(DIST_CATEGORIES_CSS, `${cat}.min.css`);
-    execSync(`"${SASS_BIN}" "${bundleFile}" "${destCss}" --no-source-map --quiet-deps`, { stdio: 'inherit' });
+    execSync(`"${SASS_BIN}" "${bundleFile}" "${destCss}" --no-source-map --quiet-deps --silence-deprecation=import`, { stdio: 'inherit' });
     execSync(`"${CLEANCSS_BIN}" -o "${destMinCss}" "${destCss}"`, { stdio: 'inherit' });
 
     // Pure icon-only: includes variables and category icons only (no @font-face repeat)
@@ -121,7 +121,7 @@ function compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, 
     fs.writeFileSync(pureFile, pureContent);
     const destPureCss = path.join(DIST_CATEGORIES_CSS, `${cat}-only.css`);
     const destPureMinCss = path.join(DIST_CATEGORIES_CSS, `${cat}-only.min.css`);
-    execSync(`"${SASS_BIN}" "${pureFile}" "${destPureCss}" --no-source-map --quiet-deps`, { stdio: 'inherit' });
+    execSync(`"${SASS_BIN}" "${pureFile}" "${destPureCss}" --no-source-map --quiet-deps --silence-deprecation=import`, { stdio: 'inherit' });
     execSync(`"${CLEANCSS_BIN}" -o "${destPureMinCss}" "${destPureCss}"`, { stdio: 'inherit' });
   });
 

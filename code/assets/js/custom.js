@@ -115,7 +115,7 @@
                 var htmlCode = codepenBtn.getAttribute('data-html');
                 var cssCode = codepenBtn.getAttribute('data-css') || '';
                 var jsCode = codepenBtn.getAttribute('data-js') || '';
-                var cssExt = codepenBtn.getAttribute('data-css-external') || 'https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css;https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css';
+                var cssExt = codepenBtn.getAttribute('data-css-external') || 'https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css;https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css';
 
                 if (!htmlCode) {
                     var pbox = codepenBtn.closest('.code-snippet-box');

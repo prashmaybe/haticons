@@ -69,8 +69,8 @@ ${getNavbar('home')}
                     </button>
                 </div>
                 <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-2 overflow-hidden">
-                    <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css</span>
-                    <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css" title="Copy CDN URL">
+                    <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css</span>
+                    <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" title="Copy CDN URL">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
@@ -100,7 +100,7 @@ ${getNavbar('home')}
                             <span class="text-muted">&lt;!-- via CDN --&gt;</span><br>
                             &lt;link rel="stylesheet"<br>
                             &nbsp;&nbsp;href="https://cdn.jsdelivr.net/npm/<br>
-                            &nbsp;&nbsp;haticons@1.0.0/dist/css/<br>
+                            &nbsp;&nbsp;haticons@1.0.1/dist/css/<br>
                             &nbsp;&nbsp;haticons.min.css"&gt;
                         </div>
                     </div>

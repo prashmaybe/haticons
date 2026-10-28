@@ -68,7 +68,7 @@ Or use directly via CDN (jsDelivr / unpkg):
 
 ```html
 <!-- Full bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
 ```
 
 ---
@@ -83,13 +83,13 @@ Every category is available as a standalone CSS file (including font definitions
 
 ```html
 <!-- Load only Commerce & Payment icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce.min.css">
 
 <!-- Load only Directional & Arrow icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/directional.min.css">
 
 <!-- Load only Media icons (~1.4 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/media.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/media.min.css">
 ```
 
 ### 2. Shared Core + Category-Only CSS (Optimal for Multi-Category Sites)
@@ -98,11 +98,11 @@ If you use multiple categories, load `core.min.css` once, then load only the ico
 
 ```html
 <!-- Core webfont & sizing classes (less than 1 KB) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/core.min.css">
 
 <!-- Then add category glyphs without duplicate font-face declarations -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/communication-only.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce-only.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/communication-only.min.css">
 ```
 
 ### 3. Modular SCSS / Sass
@@ -133,7 +133,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 ```html
 <!-- Include boodoo CSS & Haticons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@latest/dist/css/boodoo.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
 
 <!-- Button with Haticon -->
 <button class="btn btn-primary d-inline-flex align-items-center gap-1">

@@ -15,13 +15,13 @@
 - Zero-waste modular CSS: users do not need to import the full bundle. They can load individual categories (e.g., `dist/css/categories/commerce.min.css`) or pure category glyphs (`commerce-only.min.css`) along with `core.min.css`.
 - Full Sass / SCSS support with configurable variables (`$hi-font-path`, `$hi-prefix`) and category partials in `scss/categories/`.
 - First-class UI styling designed with boodoo CSS Framework (https://www.boodooframework.com/).
-- Published on npm as `haticons` (version 1.0.0) with TypeScript declarations (`index.d.ts`) and programmatic querying API.
+- Published on npm as `haticons` (version 1.0.1) with TypeScript declarations (`index.d.ts`) and programmatic querying API.
 
 ## Installation Quick Links
 - npm: `npm install haticons`
-- Full Bundle CDN: `https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css`
-- Core CSS: `https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css`
-- Category CDN pattern: `https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/{category}.min.css`
+- Full Bundle CDN: `https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css`
+- Core CSS: `https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/core.min.css`
+- Category CDN pattern: `https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/{category}.min.css`
 
 ## HTML Usage Pattern
 ```html

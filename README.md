@@ -68,7 +68,7 @@ Or use directly via CDN (jsDelivr / unpkg):
 
 ```html
 <!-- Full bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
 ```
 
 ---
@@ -89,7 +89,7 @@ import 'haticons/categories/directional.min.css';
 Or via HTML / CDN:
 ```html
 <!-- Load only Commerce & Payment icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce.min.css">
 ```
 
 ### 2. Shared Core + Category Glyphs (Maximum Multi-Category Performance)
@@ -137,7 +137,7 @@ Every icon is also exported as an optimized standalone `.svg` file ready for SVG
 
 Or via CDN:
 ```html
-<img src="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/svg/cart.svg" alt="Cart" />
+<img src="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/svg/cart.svg" alt="Cart" />
 ```
 
 ### 5. Modular SCSS / Sass
@@ -167,7 +167,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 ```html
 <!-- Include boodoo CSS & Haticons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@latest/dist/css/boodoo.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
 
 <!-- Button with Haticon -->
 <button class="btn btn-primary d-inline-flex align-items-center gap-1">
