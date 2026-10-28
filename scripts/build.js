@@ -24,7 +24,9 @@ const SCSS_DIR = path.join(ROOT_DIR, 'scss');
 const SCSS_CATEGORIES = path.join(SCSS_DIR, 'categories');
 
 // Ensure output directories exist
-[DIST_DIR, DIST_CSS, DIST_CATEGORIES_CSS, DIST_FONTS, DIST_DATA, SCSS_DIR, SCSS_CATEGORIES].forEach(dir => {
+const DIST_SVG = path.join(DIST_DIR, 'svg');
+const DIST_ICONS = path.join(DIST_DIR, 'icons');
+[DIST_DIR, DIST_CSS, DIST_CATEGORIES_CSS, DIST_FONTS, DIST_DATA, DIST_SVG, DIST_ICONS, SCSS_DIR, SCSS_CATEGORIES].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -32,6 +34,73 @@ const SCSS_CATEGORIES = path.join(SCSS_DIR, 'categories');
 const rawData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
 const { icons, categorized, categories } = enrichIcons(rawData);
 console.log(`Loaded ${icons.length} unique icons across ${Object.keys(categories).length} categories.`);
+
+// Parse SVG font to extract glyph path definitions
+const svgFontContent = fs.readFileSync(path.join(FONTS_SRC, 'haticons.svg'), 'utf-8');
+const glyphRe = /<glyph\s+([^>]+)>/g;
+let m;
+const glyphPaths = {};
+while ((m = glyphRe.exec(svgFontContent)) !== null) {
+  const attr = m[1];
+  const nameM = attr.match(/glyph-name="([^"]+)"/);
+  const dM = attr.match(/d="([^"]*)"/);
+  if (nameM && dM && dM[1]) {
+    glyphPaths[nameM[1]] = dM[1];
+  }
+}
+console.log(`Parsed ${Object.keys(glyphPaths).length} vector SVG paths from font.`);
+
+// Generate standalone SVG files & individual JS/TS icon modules for tree-shaking
+let svgGeneratedCount = 0;
+icons.forEach(icon => {
+  const d = glyphPaths[icon.name] || '';
+  const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor">
+  <g transform="scale(1, -1) translate(0, -960)">
+    <path d="${d}" />
+  </g>
+</svg>`;
+  fs.writeFileSync(path.join(DIST_SVG, `${icon.name}.svg`), svgContent);
+
+  // Individual JS module (CommonJS + ESM)
+  const iconJs = `module.exports = {
+  name: ${JSON.stringify(icon.name)},
+  class: ${JSON.stringify(icon.class)},
+  category: ${JSON.stringify(icon.category)},
+  content: ${JSON.stringify(icon.content)},
+  path: ${JSON.stringify(d)},
+  svg: ${JSON.stringify(svgContent)}
+};
+`;
+  const iconMjs = `export const name = ${JSON.stringify(icon.name)};
+export const className = ${JSON.stringify(icon.class)};
+export const category = ${JSON.stringify(icon.category)};
+export const content = ${JSON.stringify(icon.content)};
+export const path = ${JSON.stringify(d)};
+export const svg = ${JSON.stringify(svgContent)};
+export default { name, class: className, category, content, path, svg };
+`;
+  const iconDts = `export declare const name: string;
+export declare const className: string;
+export declare const category: string;
+export declare const content: string;
+export declare const path: string;
+export declare const svg: string;
+declare const _default: {
+  name: string;
+  class: string;
+  category: string;
+  content: string;
+  path: string;
+  svg: string;
+};
+export default _default;
+`;
+  fs.writeFileSync(path.join(DIST_ICONS, `${icon.name}.js`), iconJs);
+  fs.writeFileSync(path.join(DIST_ICONS, `${icon.name}.mjs`), iconMjs);
+  fs.writeFileSync(path.join(DIST_ICONS, `${icon.name}.d.ts`), iconDts);
+  svgGeneratedCount++;
+});
+console.log(`Generated ${svgGeneratedCount} individual SVG files and tree-shakeable icon modules.`);
 
 // Copy font assets
 const fontFiles = ['haticons.eot', 'haticons.svg', 'haticons.ttf', 'haticons.woff'];
