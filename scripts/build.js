@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { enrichIcons } = require('./categories.js');
-const { generateScssFiles, compileCssBundles } = require('./compiler.js');
+const { generateScssFiles, generateLessFiles, compileCssBundles } = require('./compiler.js');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DATA_FILE = path.join(ROOT_DIR, 'code', 'data', 'icons.json');
@@ -22,11 +22,13 @@ const DIST_DATA = path.join(DIST_DIR, 'data');
 
 const SCSS_DIR = path.join(ROOT_DIR, 'scss');
 const SCSS_CATEGORIES = path.join(SCSS_DIR, 'categories');
+const LESS_DIR = path.join(ROOT_DIR, 'less');
+const LESS_CATEGORIES = path.join(LESS_DIR, 'categories');
 
 // Ensure output directories exist
 const DIST_SVG = path.join(DIST_DIR, 'svg');
 const DIST_ICONS = path.join(DIST_DIR, 'icons');
-[DIST_DIR, DIST_CSS, DIST_CATEGORIES_CSS, DIST_FONTS, DIST_DATA, DIST_SVG, DIST_ICONS, SCSS_DIR, SCSS_CATEGORIES].forEach(dir => {
+[DIST_DIR, DIST_CSS, DIST_CATEGORIES_CSS, DIST_FONTS, DIST_DATA, DIST_SVG, DIST_ICONS, SCSS_DIR, SCSS_CATEGORIES, LESS_DIR, LESS_CATEGORIES].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -189,8 +191,9 @@ Object.entries(categorized).forEach(([cat, list]) => {
   console.log(`  ${cat.padEnd(16)} : ${list.length} icons`);
 });
 
-// 2. Generate SCSS and compile CSS
+// 2. Generate SCSS & LESS, and compile CSS
 generateScssFiles({ ROOT_DIR, SCSS_DIR, SCSS_CATEGORIES, categorized, categories, icons, aliases });
+generateLessFiles({ ROOT_DIR, LESS_DIR, LESS_CATEGORIES, categorized, categories, icons, aliases });
 compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, categorized });
 
 // 3. Generate npm module exports & TypeScript definition files

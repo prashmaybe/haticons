@@ -105,10 +105,11 @@ If you use multiple categories, load `core.min.css` once, then load only the ico
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/communication-only.min.css">
 ```
 
-### 3. Modular SCSS / Sass
+### 3. Modular SCSS / Sass & LESS
 
-If your project uses SCSS, customize font paths and import only required modules:
+If your project uses SCSS or LESS, customize font paths and import only required modules:
 
+#### SCSS / Sass:
 ```scss
 // Override variables if needed
 $hi-font-path: "~haticons/dist/fonts";
@@ -122,6 +123,22 @@ $hi-prefix: "hi-";
 @import "haticons/scss/categories/commerce";
 @import "haticons/scss/categories/communication";
 @import "haticons/scss/categories/directional";
+```
+
+#### LESS:
+```less
+// Override variables if needed
+@hi-font-path: "~haticons/dist/fonts";
+@hi-prefix: ~"hi-";
+
+// Import core font-face & utilities
+@import "haticons/less/variables.less";
+@import "haticons/less/core.less";
+
+// Import only the categories you need
+@import "haticons/less/categories/commerce.less";
+@import "haticons/less/categories/communication.less";
+@import "haticons/less/categories/directional.less";
 ```
 
 ---

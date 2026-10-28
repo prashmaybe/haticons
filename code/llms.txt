@@ -13,7 +13,7 @@
 ## Key Architecture & Features
 - 494 crisp vector icons categorized into 14 distinct modules (Brands, UI & Interface, Commerce, Directional, Media, Editor, Feedback, Files, Devices, Communication, Users, Navigation, Security, Time).
 - Zero-waste modular CSS: users do not need to import the full bundle. They can load individual categories (e.g., `dist/css/categories/commerce.min.css`) or pure category glyphs (`commerce-only.min.css`) along with `core.min.css`.
-- Full Sass / SCSS support with configurable variables (`$hi-font-path`, `$hi-prefix`) and category partials in `scss/categories/`.
+- Full Sass / SCSS & LESS support with configurable variables (`$hi-font-path` / `@hi-font-path`, `$hi-prefix` / `@hi-prefix`) and category partials in `scss/` and `less/`.
 - First-class UI styling designed with boodoo CSS Framework (https://www.boodooframework.com/).
 - Published on npm as `haticons` (version 1.0.1) with TypeScript declarations (`index.d.ts`) and programmatic querying API.
 

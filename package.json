@@ -7,9 +7,11 @@
   "types": "index.d.ts",
   "style": "dist/css/haticons.min.css",
   "sass": "scss/haticons.scss",
+  "less": "less/haticons.less",
   "files": [
     "dist",
     "scss",
+    "less",
     "index.js",
     "index.mjs",
     "index.d.ts",
@@ -75,6 +77,7 @@
     "./data/icons.json": "./dist/data/icons.json",
     "./data/categories.json": "./dist/data/categories.json",
     "./scss/*": "./scss/*",
+    "./less/*": "./less/*",
     "./fonts/*": "./dist/fonts/*"
   },
   "scripts": {
@@ -93,6 +96,9 @@
     "webfonts",
     "vector-icons",
     "svg",
+    "sass",
+    "scss",
+    "less",
     "boodoo",
     "boodooframework",
     "pebblebenders",
@@ -111,6 +117,7 @@
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
+    "less": "^4.9.1",
     "sass": "^1.106.1",
     "woff2": "^1.0.0"
   }

@@ -250,10 +250,11 @@ You can customize the secondary opacity of duotone icons using CSS variables:
 
 ---
 
-### 5. Modular SCSS / Sass
+### 5. Modular SCSS / Sass & LESS
 
 Customize font paths and compile only the categories you need:
 
+#### SCSS / Sass:
 ```scss
 // Override variables if needed
 $hi-font-path: "~haticons/dist/fonts";
@@ -266,6 +267,21 @@ $hi-prefix: "hi-";
 // Import only the categories you need
 @import "haticons/scss/categories/commerce";
 @import "haticons/scss/categories/directional";
+```
+
+#### LESS:
+```less
+// Override variables if needed
+@hi-font-path: "~haticons/dist/fonts";
+@hi-prefix: ~"hi-";
+
+// Import core font-face & utilities
+@import "haticons/less/variables.less";
+@import "haticons/less/core.less";
+
+// Import only the categories you need
+@import "haticons/less/categories/commerce.less";
+@import "haticons/less/categories/directional.less";
 ```
 
 ---
