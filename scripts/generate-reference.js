@@ -45,7 +45,7 @@ Object.keys(categories).sort().forEach(catKey => {
   });
 
   categoryRowsHtml += `
-    <div class="category-reference-block mb-5 pb-4 border-bottom" id="cat-${catKey}">
+    <div class="category-reference-block mb-4 pb-5 border-bottom" id="cat-${catKey}">
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
         <div>
           <h3 class="h4 fw-bold text-dark mb-1 d-flex align-items-center gap-1">
@@ -167,7 +167,7 @@ const html = `<!DOCTYPE html>
     </header>
 
     <!-- Main Container -->
-    <div class="container py-5">
+    <div class="container pt-5">
         <div class="row g-5">
             <!-- Sidebar Navigation -->
             <aside class="col-12 col-lg-3">
@@ -177,7 +177,7 @@ const html = `<!DOCTYPE html>
                         <nav class="nav flex-column gap-0.5 text-sm">
                             ${categoryNavLinks}
                         </nav>
-                        <hr class="my-3">
+                        <hr class="my-1">
                         <a href="/tutorial.html" class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1 ">
                             <i class="hi-bulb"></i>
                             <span>View Tutorial Guide</span>
