@@ -1,18 +1,69 @@
 // Haticons - Category: Editor & Formatting (17 icons)
-.hi-pencil1:before { content: "\f040"; }
-.hi-tags:before { content: "\f091"; }
-.hi-tag:before { content: "\f092"; }
-.hi-edit:before { content: "\f112"; }
-.hi-paintbox:before { content: "\f120"; }
-.hi-align-center:before { content: "\e904"; }
-.hi-align-justify:before { content: "\e905"; }
-.hi-align-left:before { content: "\e906"; }
-.hi-align-right:before { content: "\e907"; }
-.hi-bullet-list:before { content: "\e915"; }
-.hi-marker-o:before { content: "\e94a"; }
-.hi-numbered-list:before { content: "\e955"; }
-.hi-paint-bucket:before { content: "\e956"; }
-.hi-paper-tag:before { content: "\e958"; }
-.hi-pencil:before { content: "\e95a"; }
-.hi-quotes:before { content: "\e964"; }
-.hi-tag-o:before { content: "\e975"; }
+.hi-pencil1:before,
+.hi-pencil1-fill:before,
+.hi-pencil1-outline:before,
+.hi-pencil1-sharp:before { content: "\f040"; }
+.hi-tags:before,
+.hi-tags-fill:before,
+.hi-tags-outline:before,
+.hi-tags-sharp:before { content: "\f091"; }
+.hi-tag:before,
+.hi-tag-fill:before,
+.hi-tag-outline:before,
+.hi-tag-sharp:before { content: "\f092"; }
+.hi-edit:before,
+.hi-edit-fill:before,
+.hi-edit-outline:before,
+.hi-edit-sharp:before { content: "\f112"; }
+.hi-paintbox:before,
+.hi-paintbox-fill:before,
+.hi-paintbox-outline:before,
+.hi-paintbox-sharp:before { content: "\f120"; }
+.hi-align-center:before,
+.hi-align-center-fill:before,
+.hi-align-center-outline:before,
+.hi-align-center-sharp:before { content: "\e904"; }
+.hi-align-justify:before,
+.hi-align-justify-fill:before,
+.hi-align-justify-outline:before,
+.hi-align-justify-sharp:before { content: "\e905"; }
+.hi-align-left:before,
+.hi-align-left-fill:before,
+.hi-align-left-outline:before,
+.hi-align-left-sharp:before { content: "\e906"; }
+.hi-align-right:before,
+.hi-align-right-fill:before,
+.hi-align-right-outline:before,
+.hi-align-right-sharp:before { content: "\e907"; }
+.hi-bullet-list:before,
+.hi-bullet-list-fill:before,
+.hi-bullet-list-outline:before,
+.hi-bullet-list-sharp:before { content: "\e915"; }
+.hi-marker-o:before,
+.hi-marker-o-fill:before,
+.hi-marker-o-outline:before,
+.hi-marker-o-sharp:before { content: "\e94a"; }
+.hi-numbered-list:before,
+.hi-numbered-list-fill:before,
+.hi-numbered-list-outline:before,
+.hi-numbered-list-sharp:before { content: "\e955"; }
+.hi-paint-bucket:before,
+.hi-paint-bucket-fill:before,
+.hi-paint-bucket-outline:before,
+.hi-paint-bucket-sharp:before { content: "\e956"; }
+.hi-paper-tag:before,
+.hi-paper-tag-fill:before,
+.hi-paper-tag-outline:before,
+.hi-paper-tag-sharp:before { content: "\e958"; }
+.hi-pencil:before,
+.hi-pencil-fill:before,
+.hi-pencil-outline:before,
+.hi-pencil-sharp:before { content: "\e95a"; }
+.hi-quotes:before,
+.hi-quotes-fill:before,
+.hi-quotes-outline:before,
+.hi-quotes-sharp:before { content: "\e964"; }
+.hi-tag-o:before,
+.hi-tag-o-fill:before,
+.hi-tag-o-outline:before,
+.hi-tag-o-sharp:before { content: "\e975"; }

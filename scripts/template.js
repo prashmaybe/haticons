@@ -88,8 +88,8 @@ function getNavbar(activePage = 'home') {
                 </a>
             </div>
             <div class="d-flex align-items-center gap-1">
-                <a href="${isHome ? '#quickstart' : '/'}" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1">
-                    <i class="hi-home"></i> ${isHome ? 'Quickstart' : 'Home'}
+                <a href="${isHome ? '#start' : '/start.html'}" class="btn btn-ghost ${activePage === 'start' ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
+                    <i class="hi-play"></i> Set Up
                 </a>
                 <a href="/cheatsheet.html" class="btn btn-ghost ${isCheatsheet ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
                     <i class="hi-search"></i> Cheatsheet
@@ -138,6 +138,10 @@ function getFooter(activePage = 'home') {
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="/" class="text-decoration-none ${activePage === 'home' ? 'text-primary fw-semibold' : 'text-muted'}">
                     <i class="hi-home me-1"></i> Homepage
+                </a>
+                <span>&bull;</span>
+                <a href="/start.html" class="text-decoration-none ${activePage === 'start' ? 'text-primary fw-semibold' : 'text-muted'}">
+                    <i class="hi-play me-1"></i> Set Up
                 </a>
                 <span>&bull;</span>
                 <a href="/cheatsheet.html" class="text-decoration-none ${activePage === 'cheatsheet' ? 'text-primary fw-semibold' : 'text-muted'}">

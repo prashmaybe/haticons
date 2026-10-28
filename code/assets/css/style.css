@@ -359,12 +359,39 @@ body {
 }
 
 .icon-glyph-wrap {
-  height: 48px;
+  height: 56px;
+  width: 56px;
+}
+
+.haticon-display-icon {
+  font-size: 2.35rem;
+  line-height: 1;
 }
 
 .icon-glyph-wrap i {
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
   color: #334155;
+}
+
+.style-filter-btn {
+  font-size: 0.8125rem;
+  transition: all 0.15s ease;
+}
+
+.style-filter-btn.active {
+  background-color: var(--hi-primary) !important;
+  border-color: var(--hi-primary) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .style-filter-btn {
+  border-color: var(--hi-border);
+  color: var(--hi-text-muted);
+}
+
+[data-theme="dark"] .style-filter-btn.active {
+  background-color: var(--hi-primary) !important;
+  color: #ffffff !important;
 }
 
 .icon-name-text {
@@ -568,6 +595,52 @@ body {
 
 .tutorial-sample-card {
   max-width: 400px;
+}
+
+/* Start Page Setup Cards & Method Selector */
+.start-method-tab {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid transparent;
+}
+
+.start-method-tab.active {
+  background-color: var(--hi-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
+
+.start-setup-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--hi-border);
+}
+
+.start-setup-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--hi-primary);
+  box-shadow: var(--hi-card-hover-shadow);
+}
+
+.framework-card {
+  transition: all 0.2s ease;
+  border: 1px solid var(--hi-border);
+}
+
+.framework-card:hover {
+  border-color: var(--hi-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(124, 58, 237, 0.15);
+}
+
+.start-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
 /* ==========================================================================

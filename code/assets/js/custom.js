@@ -172,7 +172,29 @@
                 return;
             }
 
-            // E. Modal Close Dismiss Fallbacks
+            // E. Setup Hub Tab Switching (.start-method-tab)
+            var tabBtn = e.target.closest('.start-method-tab');
+            if (tabBtn) {
+                e.preventDefault();
+                var targetSelector = tabBtn.getAttribute('data-target');
+                var allTabs = document.querySelectorAll('.start-method-tab');
+                allTabs.forEach(function (t) {
+                    t.classList.remove('active');
+                    t.classList.add('text-muted');
+                });
+                tabBtn.classList.add('active');
+                tabBtn.classList.remove('text-muted');
+
+                var panes = document.querySelectorAll('.setup-tab-pane');
+                panes.forEach(function (p) {
+                    p.classList.add('d-none');
+                });
+                var activePane = document.querySelector(targetSelector);
+                if (activePane) activePane.classList.remove('d-none');
+                return;
+            }
+
+            // F. Modal Close Dismiss Fallbacks
             if (e.target.closest('[data-bs-dismiss="modal"], [data-boodoo-dismiss="modal"], #customBackdrop')) {
                 closeDetailModal();
             }
@@ -197,15 +219,35 @@
         }
 
         // ---------------------------------------------------------
-        // 4. Homepage Cheatsheet Controller (Search & Category filter)
+        // 4. Homepage Cheatsheet Controller (Search, Category & Style filter)
         // ---------------------------------------------------------
         var iconCards = document.querySelectorAll('.haticon-card');
         if (iconCards.length > 0) {
             var activeCategory = 'all';
+            var activeStyle = 'all';
             var searchQuery = '';
             var visibleCountEl = document.getElementById('visibleCount');
             var noResultsEl = document.getElementById('noResults');
             var searchInput = document.getElementById('iconSearchInput') || document.querySelector('[name="search-haticon"]');
+
+            function updateCardGlyphs() {
+                iconCards.forEach(function (card) {
+                    var baseCls = card.getAttribute('data-class') || '';
+                    var iconEl = card.querySelector('.haticon-display-icon') || card.querySelector('i');
+                    if (!iconEl) return;
+
+                    // Reset to base display
+                    if (activeStyle === 'all') {
+                        iconEl.className = baseCls + ' haticon-display-icon';
+                    } else if (activeStyle === 'fill') {
+                        iconEl.className = baseCls + '-fill haticon-display-icon hi-fill';
+                    } else if (activeStyle === 'outline') {
+                        iconEl.className = baseCls + '-outline haticon-display-icon hi-outline';
+                    } else if (activeStyle === 'sharp') {
+                        iconEl.className = baseCls + '-sharp haticon-display-icon hi-sharp';
+                    }
+                });
+            }
 
             function applyFilter() {
                 var visibleCount = 0;
@@ -234,6 +276,21 @@
                     else noResultsEl.classList.add('d-none');
                 }
             }
+
+            // Style Variant Buttons
+            var styleButtons = document.querySelectorAll('.style-filter-btn');
+            styleButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    activeStyle = this.getAttribute('data-style') || 'all';
+                    styleButtons.forEach(function (b) {
+                        b.classList.remove('active', 'btn-primary');
+                        b.classList.add('btn-outline-secondary');
+                    });
+                    this.classList.add('active', 'btn-primary');
+                    this.classList.remove('btn-outline-secondary');
+                    updateCardGlyphs();
+                });
+            });
 
             // Search input with debounce
             if (searchInput) {
@@ -269,6 +326,7 @@
                 resetBtn.addEventListener('click', function () {
                     searchQuery = '';
                     activeCategory = 'all';
+                    activeStyle = 'all';
                     if (searchInput) searchInput.value = '';
                     categoryButtons.forEach(function (b) {
                         b.classList.remove('active', 'btn-primary');
@@ -279,6 +337,16 @@
                         allBtn.classList.add('active', 'btn-primary');
                         allBtn.classList.remove('btn-outline-secondary', 'bg-white');
                     }
+                    styleButtons.forEach(function (b) {
+                        b.classList.remove('active', 'btn-primary');
+                        b.classList.add('btn-outline-secondary');
+                    });
+                    var allStyleBtn = document.querySelector('.style-filter-btn[data-style="all"]');
+                    if (allStyleBtn) {
+                        allStyleBtn.classList.add('active', 'btn-primary');
+                        allStyleBtn.classList.remove('btn-outline-secondary');
+                    }
+                    updateCardGlyphs();
                     applyFilter();
                 });
             }
@@ -297,20 +365,36 @@
                 var titleEl = document.getElementById('modalIconTitle');
                 var badgeEl = document.getElementById('modalCategoryBadge');
                 var htmlCodeEl = document.getElementById('modalHtmlCode');
+                var htmlFillEl = document.getElementById('modalHtmlFill');
+                var htmlOutlineEl = document.getElementById('modalHtmlOutline');
+                var htmlSharpEl = document.getElementById('modalHtmlSharp');
                 var cssCodeEl = document.getElementById('modalCssCode');
                 var catLinkEl = document.getElementById('modalCategoryLink');
 
-                if (glyphEl) glyphEl.className = cls + ' fs-1';
+                if (glyphEl) {
+                    if (activeStyle === 'outline') {
+                        glyphEl.className = cls + '-outline fs-1 hi-outline';
+                    } else if (activeStyle === 'sharp') {
+                        glyphEl.className = cls + '-sharp fs-1 hi-sharp';
+                    } else if (activeStyle === 'fill') {
+                        glyphEl.className = cls + '-fill fs-1 hi-fill';
+                    } else {
+                        glyphEl.className = cls + ' fs-1';
+                    }
+                }
                 if (titleEl) titleEl.textContent = cls;
                 if (badgeEl) badgeEl.textContent = cat;
                 if (htmlCodeEl) htmlCodeEl.value = '<i class="' + cls + '"></i>';
+                if (htmlFillEl) htmlFillEl.value = '<i class="' + cls + '-fill"></i>';
+                if (htmlOutlineEl) htmlOutlineEl.value = '<i class="' + cls + '-outline"></i>';
+                if (htmlSharpEl) htmlSharpEl.value = '<i class="' + cls + '-sharp"></i>';
                 if (cssCodeEl) cssCodeEl.value = 'content: "' + unicode + '";';
                 if (catLinkEl) catLinkEl.textContent = 'dist/css/categories/' + cat + '.min.css';
 
                 var cpBtn = document.getElementById('modalCodePenBtn');
                 if (cpBtn) {
                     cpBtn.setAttribute('data-title', 'Haticons - ' + cls);
-                    cpBtn.setAttribute('data-html', '<div class="p-5 text-center">\n  <i class="' + cls + ' fs-1 text-primary"></i>\n  <h2 class="mt-3 font-monospace h4">' + cls + '</h2>\n  <p class="text-muted">Unicode codepoint: <code>' + unicode + '</code></p>\n</div>');
+                    cpBtn.setAttribute('data-html', '<div class="p-5 text-center">\n  <i class="' + cls + ' fs-1 text-primary"></i>\n  <i class="' + cls + '-outline fs-1 text-primary ms-3"></i>\n  <i class="' + cls + '-sharp fs-1 text-primary ms-3"></i>\n  <h2 class="mt-3 font-monospace h4">' + cls + '</h2>\n  <p class="text-muted">Unicode codepoint: <code>' + unicode + '</code></p>\n</div>');
                 }
 
                 var modalEl = document.getElementById('iconDetailModal');

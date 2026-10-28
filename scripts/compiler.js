@@ -42,8 +42,26 @@ $hi-prefix: "hi-" !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Style Variant Modifiers
+.#{$hi-prefix}fill {
+  font-weight: normal;
+}
+.#{$hi-prefix}outline {
+  -webkit-text-stroke: 1.1px currentColor;
+  paint-order: stroke fill;
+}
+.#{$hi-prefix}sharp {
+  font-feature-settings: "ss01" on;
+  letter-spacing: -0.05em;
+  transform: scale(0.98);
+  display: inline-block;
+}
+
 // Optional utility sizing & transforms
+.#{$hi-prefix}sm { font-size: 0.875em; }
+.#{$hi-prefix}md { font-size: 1.15em; }
 .#{$hi-prefix}lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -0.0667em; }
+.#{$hi-prefix}xl { font-size: 1.75em; }
 .#{$hi-prefix}2x { font-size: 2em; }
 .#{$hi-prefix}3x { font-size: 3em; }
 .#{$hi-prefix}4x { font-size: 4em; }
@@ -66,7 +84,7 @@ $hi-prefix: "hi-" !default;
     let catScss = `// Haticons - Category: ${categories[cat].name} (${list.length} icons)\n`;
     list.forEach(icon => {
       const contentVal = icon.content.startsWith('\\') ? icon.content : `\\${icon.content}`;
-      catScss += `.${icon.class}:before { content: "${contentVal}"; }\n`;
+      catScss += `.${icon.class}:before,\n.${icon.class}-fill:before,\n.${icon.class}-outline:before,\n.${icon.class}-sharp:before { content: "${contentVal}"; }\n`;
     });
 
     const catFilePath = path.join(SCSS_CATEGORIES, `_${cat}.scss`);

@@ -1,9 +1,33 @@
 // Haticons - Category: Security & Access (8 icons)
-.hi-block:before { content: "\f076"; }
-.hi-key:before { content: "\f0f5"; }
-.hi-incognito:before { content: "\f116"; }
-.hi-lock1:before { content: "\f11a"; }
-.hi-unlock:before { content: "\f126"; }
-.hi-ban:before { content: "\e911"; }
-.hi-clock:before { content: "\e923"; }
-.hi-lock:before { content: "\e948"; }
+.hi-block:before,
+.hi-block-fill:before,
+.hi-block-outline:before,
+.hi-block-sharp:before { content: "\f076"; }
+.hi-key:before,
+.hi-key-fill:before,
+.hi-key-outline:before,
+.hi-key-sharp:before { content: "\f0f5"; }
+.hi-incognito:before,
+.hi-incognito-fill:before,
+.hi-incognito-outline:before,
+.hi-incognito-sharp:before { content: "\f116"; }
+.hi-lock1:before,
+.hi-lock1-fill:before,
+.hi-lock1-outline:before,
+.hi-lock1-sharp:before { content: "\f11a"; }
+.hi-unlock:before,
+.hi-unlock-fill:before,
+.hi-unlock-outline:before,
+.hi-unlock-sharp:before { content: "\f126"; }
+.hi-ban:before,
+.hi-ban-fill:before,
+.hi-ban-outline:before,
+.hi-ban-sharp:before { content: "\e911"; }
+.hi-clock:before,
+.hi-clock-fill:before,
+.hi-clock-outline:before,
+.hi-clock-sharp:before { content: "\e923"; }
+.hi-lock:before,
+.hi-lock-fill:before,
+.hi-lock-outline:before,
+.hi-lock-sharp:before { content: "\e948"; }

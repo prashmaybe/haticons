@@ -1,7 +1,25 @@
 // Haticons - Category: Time & Calendar (6 icons)
-.hi-calendar1:before { content: "\f128"; }
-.hi-time1:before { content: "\f131"; }
-.hi-alarm:before { content: "\e903"; }
-.hi-calendar:before { content: "\e916"; }
-.hi-date:before { content: "\e928"; }
-.hi-time:before { content: "\e976"; }
+.hi-calendar1:before,
+.hi-calendar1-fill:before,
+.hi-calendar1-outline:before,
+.hi-calendar1-sharp:before { content: "\f128"; }
+.hi-time1:before,
+.hi-time1-fill:before,
+.hi-time1-outline:before,
+.hi-time1-sharp:before { content: "\f131"; }
+.hi-alarm:before,
+.hi-alarm-fill:before,
+.hi-alarm-outline:before,
+.hi-alarm-sharp:before { content: "\e903"; }
+.hi-calendar:before,
+.hi-calendar-fill:before,
+.hi-calendar-outline:before,
+.hi-calendar-sharp:before { content: "\e916"; }
+.hi-date:before,
+.hi-date-fill:before,
+.hi-date-outline:before,
+.hi-date-sharp:before { content: "\e928"; }
+.hi-time:before,
+.hi-time-fill:before,
+.hi-time-outline:before,
+.hi-time-sharp:before { content: "\e976"; }

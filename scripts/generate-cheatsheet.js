@@ -33,7 +33,7 @@ icons.forEach(i => {
     const rawName = i.class.replace(/^hi-/, '');
     const contentEscaped = i.content.replace(/"/g, '&quot;');
     cardsHtml += `
-    <div class="haticon-card text-center p-1 rounded-4 bg-white border" 
+    <div class="haticon-card text-center p-2 rounded-4 bg-white border" 
          data-class="${i.class}" 
          data-name="${rawName}" 
          data-category="${cat}" 
@@ -41,9 +41,9 @@ icons.forEach(i => {
          tags="${i.class.toLowerCase()} ${cat.toLowerCase()}"
          title="${i.class}">
         <div class="icon-glyph-wrap mb-2 d-flex align-items-center justify-content-center">
-            <i class="${i.class} fs-2"></i>
+            <i class="${i.class} haticon-display-icon"></i>
         </div>
-        <div class="icon-name-text text-truncate text-xs fw-medium text-dark">
+        <div class="icon-name-text text-truncate text-xs fw-semibold text-dark">
             ${rawName}
         </div>
         <span class="badge bg-light text-muted border text-2xs mt-1 rounded-pill category-badge">
@@ -77,7 +77,7 @@ ${getNavbar('cheatsheet')}
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-2">Haticons Cheat Sheet</h1>
             <p class="lead text-muted mx-auto header-subtitle-constrained mb-0">
-                Search all <strong>${icons.length} icons</strong> by keyword or filter by category. Click any icon to view details, copy HTML, and grab CSS codes.
+                Search all <strong>${icons.length} icons</strong> by keyword, category, and style (Fill, Outline, Sharp). Click any icon to view details, copy HTML, and grab CSS codes.
             </p>
         </div>
     </header>
@@ -104,6 +104,33 @@ ${getNavbar('cheatsheet')}
                 </div>
             </div>
 
+            <!-- Style Variants Filter Bar -->
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 p-2 mb-3 bg-white border rounded-4 shadow-2xs">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-xs fw-bold text-muted text-uppercase tracking-wider px-2">
+                        <i class="hi-star text-primary me-1"></i> Style:
+                    </span>
+                    <div class="btn-group btn-group-sm" role="group" id="styleVariantGroup">
+                        <button type="button" class="btn btn-sm rounded-pill px-3 style-filter-btn active btn-primary" data-style="all">
+                            All Styles
+                        </button>
+                        <button type="button" class="btn btn-sm rounded-pill px-3 style-filter-btn btn-outline-secondary" data-style="fill">
+                            <i class="hi-paint-bucket me-1"></i> Fill (<code>hi-*-fill</code>)
+                        </button>
+                        <button type="button" class="btn btn-sm rounded-pill px-3 style-filter-btn btn-outline-secondary" data-style="outline">
+                            <i class="hi-pen me-1"></i> Outline (<code>hi-*-outline</code>)
+                        </button>
+                        <button type="button" class="btn btn-sm rounded-pill px-3 style-filter-btn btn-outline-secondary" data-style="sharp">
+                            <i class="hi-crop me-1"></i> Sharp (<code>hi-*-sharp</code>)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 text-xs text-muted">
+                    <span class="badge bg-primary-soft text-primary rounded-pill">Addon Classes Active</span>
+                </div>
+            </div>
+
             <!-- Category Filter Pills -->
             <div class="category-tabs-wrap d-flex flex-wrap gap-1 mb-4 pb-2">
                 ${categoryTabsHtml}
@@ -113,7 +140,7 @@ ${getNavbar('cheatsheet')}
             <div id="noResults" class="text-center py-5 d-none">
                 <i class="hi-warning text-muted fs-1 mb-3 d-inline-block"></i>
                 <h3 class="h5 text-dark fw-bold">No icons found</h3>
-                <p class="text-muted text-sm">Try searching for a different keyword or select another category filter.</p>
+                <p class="text-muted text-sm">Try searching for a different keyword or select another category or style filter.</p>
                 <button type="button" class="btn btn-outline-primary btn-sm rounded-pill mt-2" id="resetSearchBtn">
                     Reset Filter
                 </button>
@@ -144,12 +171,42 @@ ${getNavbar('cheatsheet')}
                 </div>
                 <div class="modal-body px-4 py-3">
                     <div class="mb-3">
-                        <label class="form-label text-xs fw-bold text-muted text-uppercase tracking-wider">HTML Usage</label>
+                        <label class="form-label text-xs fw-bold text-muted text-uppercase tracking-wider">Default / Base Class</label>
                         <div class="input-group">
                             <input type="text" class="form-control font-monospace text-xs bg-light" id="modalHtmlCode" readonly>
                             <button class="btn btn-outline-primary btn-sm copy-modal-btn" data-target="#modalHtmlCode">
                                 <i class="hi-paste me-1"></i> Copy
                             </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-xs fw-bold text-muted text-uppercase tracking-wider">Style Variant Addons (Fill, Outline, Sharp)</label>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text bg-light text-muted font-monospace text-2xs" style="width: 80px;">Fill</span>
+                                <input type="text" class="form-control font-monospace text-xs bg-light" id="modalHtmlFill" readonly>
+                                <button class="btn btn-outline-secondary btn-sm copy-modal-btn" data-target="#modalHtmlFill">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text bg-light text-muted font-monospace text-2xs" style="width: 80px;">Outline</span>
+                                <input type="text" class="form-control font-monospace text-xs bg-light" id="modalHtmlOutline" readonly>
+                                <button class="btn btn-outline-secondary btn-sm copy-modal-btn" data-target="#modalHtmlOutline">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text bg-light text-muted font-monospace text-2xs" style="width: 80px;">Sharp</span>
+                                <input type="text" class="form-control font-monospace text-xs bg-light" id="modalHtmlSharp" readonly>
+                                <button class="btn btn-outline-secondary btn-sm copy-modal-btn" data-target="#modalHtmlSharp">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-muted text-2xs mt-1">
+                            Use individual suffix classes (e.g. <code>hi-*-fill</code>, <code>hi-*-outline</code>, <code>hi-*-sharp</code>) or the modifier classes (<code>hi-fill</code>, <code>hi-outline</code>, <code>hi-sharp</code>).
                         </div>
                     </div>
 
