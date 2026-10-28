@@ -510,6 +510,189 @@ body {
   max-width: 400px;
 }
 
+/* ==========================================================================
+   Tutorial Page Modern Enhancements
+   ========================================================================== */
+.tutorial-section {
+  scroll-margin-top: 100px;
+}
+
+.tutorial-section-card {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.section-number-badge {
+  width: 38px;
+  height: 38px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .section-number-badge {
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+/* Code Snippet Container with Header & Copy Button */
+.code-snippet-box {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.25rem;
+}
+
+[data-theme="dark"] .code-snippet-box {
+  background: #090d16;
+  border-color: #1f293d;
+}
+
+.code-snippet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+}
+
+.code-lang-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.code-copy-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.code-copy-btn:hover {
+  background: rgba(124, 58, 237, 0.3);
+  border-color: #7c3aed;
+  color: #ffffff;
+}
+
+.code-copy-btn.copied {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #22c55e;
+  color: #4ade80;
+}
+
+.code-snippet-body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Syntax Highlighting Tokens */
+.code-token-comment {
+  color: #64748b;
+  font-style: italic;
+}
+
+.code-token-tag {
+  color: #f43f5e;
+}
+
+.code-token-attr {
+  color: #38bdf8;
+}
+
+.code-token-string {
+  color: #a3e635;
+}
+
+.code-token-keyword {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.code-token-var {
+  color: #fb923c;
+}
+
+.code-token-val {
+  color: #38bdf8;
+}
+
+.code-token-punct {
+  color: #94a3b8;
+}
+
+/* Tutorial Interactive Live Component Preview Box */
+.component-demo-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .component-demo-box {
+  background: #111827;
+  border-color: #1f293d;
+}
+
+/* Active state for Table of Contents links */
+.tutorial-toc .nav-link {
+  transition: all 0.15s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.tutorial-toc .nav-link:hover {
+  color: var(--hi-primary) !important;
+  background-color: var(--hi-primary-soft);
+}
+
+.tutorial-toc .nav-link.active {
+  color: var(--hi-primary) !important;
+  background-color: var(--hi-primary-soft) !important;
+  font-weight: 600;
+  border-left: 3px solid var(--hi-primary);
+  border-radius: 0 4px 4px 0 !important;
+}
+
+/* Callout Note Box */
+.tutorial-callout {
+  border-left: 4px solid var(--hi-primary);
+  background: var(--hi-primary-soft);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
 /* 404 illustration & constrained boxes */
 .not-found-icon-wrap {
   width: 120px;

@@ -108,30 +108,35 @@
             <!-- Sidebar Table of Contents -->
             <aside class="col-12 col-lg-3">
                 <div class="sticky-top sticky-top-nav">
-                    <div class="card p-1 rounded-4 border bg-white shadow-xs">
-                        <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-1 px-1">On this page
+                    <div class="card p-3 rounded-4 border bg-white shadow-xs">
+                        <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2 px-1">
+                            <i class="hi-list me-1 text-primary"></i> On this page
                         </div>
-                        <nav class="nav flex-column gap-0.5 text-sm">
-                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#installation">1.
-                                Installation Options</a>
-                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#basic-usage">2.
-                                Basic
-                                HTML Usage</a>
-                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#modular-css">3.
-                                Modular Category CSS</a>
-                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#sass-workflow">4.
-                                Sass / SCSS Workflow</a>
-                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#boodoo-pairing">5.
-                                Pairing with boodoo</a>
-                            <a class="nav-link text-muted py-05 px-1 rounded hover-bg-light" href="#js-api">6.
-                                JavaScript
-                                / TypeScript API</a>
+                        <nav class="nav flex-column gap-1 text-sm tutorial-toc" id="tutorialToc">
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#installation">
+                                1. Installation Options
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#basic-usage">
+                                2. Basic HTML Usage
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#modular-css">
+                                3. Modular Category CSS
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#sass-workflow">
+                                4. Sass / SCSS Workflow
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#boodoo-pairing">
+                                5. Pairing with boodoo
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#js-api">
+                                6. JavaScript / TypeScript API
+                            </a>
                         </nav>
-                        <hr class="my-1">
+                        <hr class="my-3">
                         <a href="/reference.html"
                             class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1 ">
                             <i class="hi-document"></i>
-                            <span>View API Reference</span>
+                            <span>View All 494 Icons</span>
                         </a>
                     </div>
                 </div>
@@ -140,82 +145,120 @@
             <!-- Guide Sections -->
             <main class="col-12 col-lg-9">
                 <!-- Section 1 -->
-                <section id="installation" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
-                        <span class="badge bg-primary text-white rounded-circle p-2 fs-6">1</span>
-                        <span>Installation Options</span>
-                    </h2>
+                <section id="installation" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">1</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Installation Options</h2>
+                            <p class="text-muted text-sm mb-0">Install via your favorite package manager or include from CDN</p>
+                        </div>
+                    </div>
                     <p class="text-muted">
                         Haticons can be installed as an npm package in Node, Vite, Webpack, Next.js, or loaded directly
                         via jsDelivr / UNPKG CDN.
                     </p>
 
-                    <h3 class="h6 fw-bold text-dark mt-4 mb-2">A. Via Package Manager</h3>
-                    <div class="p-3 bg-dark text-white rounded-3 font-monospace text-xs mb-3 position-relative">
-                        <span class="text-muted"># npm</span><br>
-                        npm install haticons<br><br>
-                        <span class="text-muted"># yarn</span><br>
-                        yarn add haticons<br><br>
-                        <span class="text-muted"># pnpm</span><br>
-                        pnpm add haticons
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-package text-primary"></i> A. Via Package Manager
+                    </h3>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> bash / terminal</span>
+                            <button type="button" class="code-copy-btn" data-code="npm install haticons">
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment"># Install via npm</span>
+<span class="code-token-keyword">npm</span> install haticons
+
+<span class="code-token-comment"># Install via yarn</span>
+<span class="code-token-keyword">yarn</span> add haticons
+
+<span class="code-token-comment"># Install via pnpm</span>
+<span class="code-token-keyword">pnpm</span> add haticons</code></pre>
                     </div>
 
-                    <h3 class="h6 fw-bold text-dark mt-4 mb-2">B. Via CDN (Quickest for static sites)</h3>
-                    <p class="text-muted text-sm">Add the full minified stylesheet to your HTML
-                        <code>&lt;head&gt;</code>:
-                    </p>
-                    <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
-                        &lt;link rel="stylesheet"
-                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css"&gt;
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-cloud text-primary"></i> B. Via CDN (Quickest for static sites)
+                    </h3>
+                    <p class="text-muted text-sm">Add the full minified stylesheet to your HTML <code>&lt;head&gt;</code>:</p>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css"&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
                     </div>
                 </section>
 
                 <!-- Section 2 -->
-                <section id="basic-usage" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
-                        <span class="badge bg-primary text-white rounded-circle p-2 fs-6">2</span>
-                        <span>Basic HTML Usage</span>
-                    </h2>
+                <section id="basic-usage" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">2</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Basic HTML Usage</h2>
+                            <p class="text-muted text-sm mb-0">Standard markup, color utilities, and sizing multipliers</p>
+                        </div>
+                    </div>
                     <p class="text-muted">
                         Use the <code>&lt;i&gt;</code> or <code>&lt;span&gt;</code> tag with the
                         <code>hi-[icon-name]</code> class:
                     </p>
-                    <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
-                        &lt;i class="hi-cart"&gt;&lt;/i&gt;<br>
-                        &lt;i class="hi-heart text-danger"&gt;&lt;/i&gt;<br>
-                        &lt;i class="hi-search"&gt;&lt;/i&gt;
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;i class="hi-cart"&gt;&lt;/i&gt;
+&lt;i class="hi-heart text-danger"&gt;&lt;/i&gt;
+&lt;i class="hi-search text-primary"&gt;&lt;/i&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment">&lt;!-- Standard icons --&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-cart"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-heart text-danger"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-search text-primary"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span></code></pre>
                     </div>
 
-                    <h3 class="h6 fw-bold text-dark mt-4 mb-2">Built-in Size Modifiers</h3>
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-zoom-in text-primary"></i> Built-in Size Modifiers
+                    </h3>
                     <div class="table-responsive">
-                        <table class="table table-bordered bg-white text-sm">
+                        <table class="table table-bordered bg-white text-sm align-middle">
                             <thead class="table-light">
                                 <tr>
-                                    <th>Class</th>
-                                    <th>Multiplier</th>
+                                    <th style="width: 25%;">Class</th>
+                                    <th style="width: 35%;">Multiplier</th>
                                     <th>Live Preview</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><code>.hi-lg</code></td>
-                                    <td>1.33x size</td>
-                                    <td><i class="hi-haticons hi-lg text-primary"></i></td>
+                                    <td>1.33x font size</td>
+                                    <td><i class="hi-haticons hi-lg text-primary"></i> <span class="text-xs text-muted ms-2">Large</span></td>
                                 </tr>
                                 <tr>
                                     <td><code>.hi-2x</code></td>
-                                    <td>2x size</td>
-                                    <td><i class="hi-haticons hi-2x text-primary"></i></td>
+                                    <td>2x font size</td>
+                                    <td><i class="hi-haticons hi-2x text-primary"></i> <span class="text-xs text-muted ms-2">2x Size</span></td>
                                 </tr>
                                 <tr>
                                     <td><code>.hi-3x</code></td>
-                                    <td>3x size</td>
-                                    <td><i class="hi-haticons hi-3x text-primary"></i></td>
+                                    <td>3x font size</td>
+                                    <td><i class="hi-haticons hi-3x text-primary"></i> <span class="text-xs text-muted ms-2">3x Size</span></td>
                                 </tr>
                                 <tr>
                                     <td><code>.hi-spin</code></td>
-                                    <td>Continuous spin animation</td>
-                                    <td><i class="hi-refresh hi-2x hi-spin text-primary"></i></td>
+                                    <td>Continuous 360&deg; spin animation</td>
+                                    <td><i class="hi-refresh hi-2x hi-spin text-primary"></i> <span class="text-xs text-muted ms-2">Spinning</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -223,138 +266,242 @@
                 </section>
 
                 <!-- Section 3 -->
-                <section id="modular-css" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
-                        <span class="badge bg-primary text-white rounded-circle p-2 fs-6">3</span>
-                        <span>Modular Category CSS (Zero Waste)</span>
-                    </h2>
+                <section id="modular-css" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">3</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Modular Category CSS (Zero Waste)</h2>
+                            <p class="text-muted text-sm mb-0">Cut bundle size by loading only the categories your app requires</p>
+                        </div>
+                    </div>
                     <p class="text-muted">
-                        Unlike traditional heavy icon fonts, Haticons splits all 494 icons into 14 distinct categories.
+                        Unlike traditional monolithic icon fonts, Haticons splits all 494 icons into 14 distinct categories.
                         You don't need to load the full 23 KB stylesheet if your project only uses a few icons!
                     </p>
 
+                    <div class="tutorial-callout">
+                        <strong class="text-dark"><i class="hi-check-circle text-success me-1"></i> Performance Tip:</strong>
+                        Loading only the categories you need reduces unused CSS to near zero and improves Google Lighthouse speed scores.
+                    </div>
+
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">Option 1: Load a standalone category bundle</h3>
                     <p class="text-muted text-sm">Includes font definition and all category icons in ~1.5 KB:</p>
-                    <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
-                        &lt;!-- Commerce &amp; Payments only (~1.5 KB) --&gt;<br>
-                        &lt;link rel="stylesheet"
-                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css"&gt;
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;!-- Commerce & Payments only (~1.5 KB) --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css"&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment">&lt;!-- Commerce &amp; Payments only (~1.5 KB) --&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
                     </div>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">Option 2: Core + Category-only files (Recommended)</h3>
                     <p class="text-muted text-sm">If you use multiple categories, load <code>core.min.css</code> once,
                         then import category glyphs without duplicate <code>@font-face</code> blocks:</p>
-                    <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-3">
-                        &lt;!-- 1. Core webfont &amp; sizing utilities (&lt; 1 KB) --&gt;<br>
-                        &lt;link rel="stylesheet"
-                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css"&gt;<br><br>
-                        &lt;!-- 2. Category glyphs --&gt;<br>
-                        &lt;link rel="stylesheet"
-                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css"&gt;<br>
-                        &lt;link rel="stylesheet"
-                        href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional-only.min.css"&gt;
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;!-- 1. Core webfont & sizing utilities (&lt; 1 KB) --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css"&gt;
+
+&lt;!-- 2. Category glyphs --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional-only.min.css"&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment">&lt;!-- 1. Core webfont &amp; sizing utilities (&lt; 1 KB) --&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css"</span><span class="code-token-punct">&gt;</span>
+
+<span class="code-token-comment">&lt;!-- 2. Category glyphs --&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css"</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional-only.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
                     </div>
                 </section>
 
                 <!-- Section 4 -->
-                <section id="sass-workflow" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
-                        <span class="badge bg-primary text-white rounded-circle p-2 fs-6">4</span>
-                        <span>Sass / SCSS Workflow</span>
-                    </h2>
+                <section id="sass-workflow" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">4</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Sass / SCSS Workflow</h2>
+                            <p class="text-muted text-sm mb-0">Compile modular partials into your existing SCSS architecture</p>
+                        </div>
+                    </div>
                     <p class="text-muted">
                         In projects with a Sass pipeline (Vite, Webpack, Nuxt, Next), import partials directly from
                         <code>haticons/scss</code>:
                     </p>
-                    <div class="p-3 bg-dark text-white rounded-3 font-monospace text-xs mb-3">
-                        <span class="text-muted">// Custom font path if needed</span><br>
-                        $hi-font-path: "~haticons/dist/fonts";<br>
-                        $hi-prefix: "hi-";<br><br>
-                        <span class="text-muted">// Core font-face and classes</span><br>
-                        @import "haticons/scss/variables";<br>
-                        @import "haticons/scss/core";<br><br>
-                        <span class="text-muted">// Only import needed categories</span><br>
-                        @import "haticons/scss/categories/commerce";<br>
-                        @import "haticons/scss/categories/communication";<br>
-                        @import "haticons/scss/categories/directional";
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> SCSS</span>
+                            <button type="button" class="code-copy-btn" data-code='// Custom font path if needed
+$hi-font-path: "~haticons/dist/fonts";
+$hi-prefix: "hi-";
+
+// Core font-face and classes
+@import "haticons/scss/variables";
+@import "haticons/scss/core";
+
+// Only import needed categories
+@import "haticons/scss/categories/commerce";
+@import "haticons/scss/categories/communication";
+@import "haticons/scss/categories/directional";'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment">// Custom font path if needed</span>
+<span class="code-token-var">$hi-font-path</span><span class="code-token-punct">:</span> <span class="code-token-string">"~haticons/dist/fonts"</span><span class="code-token-punct">;</span>
+<span class="code-token-var">$hi-prefix</span><span class="code-token-punct">:</span> <span class="code-token-string">"hi-"</span><span class="code-token-punct">;</span>
+
+<span class="code-token-comment">// Core font-face and classes</span>
+<span class="code-token-keyword">@import</span> <span class="code-token-string">"haticons/scss/variables"</span><span class="code-token-punct">;</span>
+<span class="code-token-keyword">@import</span> <span class="code-token-string">"haticons/scss/core"</span><span class="code-token-punct">;</span>
+
+<span class="code-token-comment">// Only import needed categories</span>
+<span class="code-token-keyword">@import</span> <span class="code-token-string">"haticons/scss/categories/commerce"</span><span class="code-token-punct">;</span>
+<span class="code-token-keyword">@import</span> <span class="code-token-string">"haticons/scss/categories/communication"</span><span class="code-token-punct">;</span>
+<span class="code-token-keyword">@import</span> <span class="code-token-string">"haticons/scss/categories/directional"</span><span class="code-token-punct">;</span></code></pre>
                     </div>
                 </section>
 
                 <!-- Section 5 -->
-                <section id="boodoo-pairing" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
-                        <span class="badge bg-primary text-white rounded-circle p-2 fs-6">5</span>
-                        <span>Pairing with boodoo Framework</span>
-                    </h2>
+                <section id="boodoo-pairing" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">5</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Pairing with boodoo Framework</h2>
+                            <p class="text-muted text-sm mb-0">Seamlessly integrate with buttons, forms, and input groups</p>
+                        </div>
+                    </div>
                     <p class="text-muted">
                         Haticons is engineered to pair with <a href="https://www.boodooframework.com/" target="_blank"
                             rel="noopener">boodoo CSS framework</a> components:
                     </p>
 
-                    <h3 class="h6 fw-bold text-dark mt-4 mb-2">A. Buttons with Icons</h3>
-                    <div class="p-3 bg-white border rounded-3 mb-3 d-flex flex-wrap gap-2 align-items-center">
-                        <button class="btn btn-primary d-inline-flex align-items-center gap-1">
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-star text-primary"></i> A. Buttons with Icons
+                    </h3>
+
+                    <div class="component-demo-box d-flex flex-wrap gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-1">
                             <i class="hi-download"></i>
                             <span>Download ZIP</span>
                         </button>
-                        <button class="btn btn-outline-secondary d-inline-flex align-items-center gap-1">
+                        <button type="button" class="btn btn-outline-secondary d-inline-flex align-items-center gap-1">
                             <i class="hi-search"></i>
                             <span>Search</span>
                         </button>
-                        <button class="btn btn-success d-inline-flex align-items-center gap-1">
+                        <button type="button" class="btn btn-success d-inline-flex align-items-center gap-1">
                             <i class="hi-check-circle"></i>
                             <span>Verified</span>
                         </button>
                     </div>
-                    <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs mb-4">
-                        &lt;button class="btn btn-primary d-inline-flex align-items-center gap-1"&gt;<br>
-                        &nbsp;&nbsp;&lt;i class="hi-download"&gt;&lt;/i&gt;<br>
-                        &nbsp;&nbsp;&lt;span&gt;Download ZIP&lt;/span&gt;<br>
-                        &lt;/button&gt;
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;button class="btn btn-primary d-inline-flex align-items-center gap-1"&gt;
+    &lt;i class="hi-download"&gt;&lt;/i&gt;
+    &lt;span&gt;Download ZIP&lt;/span&gt;
+&lt;/button&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">button</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"btn btn-primary d-inline-flex align-items-center gap-1"</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-download"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">span</span><span class="code-token-punct">&gt;</span>Download ZIP<span class="code-token-punct">&lt;/</span><span class="code-token-tag">span</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;/</span><span class="code-token-tag">button</span><span class="code-token-punct">&gt;</span></code></pre>
                     </div>
 
-                    <h3 class="h6 fw-bold text-dark mt-4 mb-2">B. Search Input Group</h3>
-                    <div class="p-3 bg-white border rounded-3 mb-3 tutorial-sample-card">
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-search text-primary"></i> B. Search Input Group
+                    </h3>
+
+                    <div class="component-demo-box tutorial-sample-card">
                         <div class="input-group">
                             <span class="input-group-text bg-light border-end-0"><i
                                     class="hi-search text-muted"></i></span>
                             <input type="text" class="form-control border-start-0" placeholder="Search icons...">
                         </div>
                     </div>
-                    <div class="p-3 bg-light text-dark border rounded-3 font-monospace text-xs">
-                        &lt;div class="input-group"&gt;<br>
-                        &nbsp;&nbsp;&lt;span class="input-group-text"&gt;&lt;i
-                        class="hi-search"&gt;&lt;/i&gt;&lt;/span&gt;<br>
-                        &nbsp;&nbsp;&lt;input type="text" class="form-control" placeholder="Search..."&gt;<br>
-                        &lt;/div&gt;
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;div class="input-group"&gt;
+    &lt;span class="input-group-text"&gt;&lt;i class="hi-search"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type="text" class="form-control" placeholder="Search..."&gt;
+&lt;/div&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">div</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"input-group"</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">span</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"input-group-text"</span><span class="code-token-punct">&gt;&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-search"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">span</span><span class="code-token-punct">&gt;</span>
+    <span class="code-token-punct">&lt;</span><span class="code-token-tag">input</span> <span class="code-token-attr">type</span><span class="code-token-punct">=</span><span class="code-token-string">"text"</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"form-control"</span> <span class="code-token-attr">placeholder</span><span class="code-token-punct">=</span><span class="code-token-string">"Search..."</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;/</span><span class="code-token-tag">div</span><span class="code-token-punct">&gt;</span></code></pre>
                     </div>
                 </section>
 
                 <!-- Section 6 -->
-                <section id="js-api">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
-                        <span class="badge bg-primary text-white rounded-circle p-2 fs-6">6</span>
-                        <span>JavaScript / TypeScript API</span>
-                    </h2>
+                <section id="js-api" class="tutorial-section">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">6</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">JavaScript / TypeScript API</h2>
+                            <p class="text-muted text-sm mb-0">Access icon dictionaries and codepoint lookups in code</p>
+                        </div>
+                    </div>
                     <p class="text-muted">
                         Haticons includes a JS/TS module to query icon metadata, unicode codepoints, and category sets
                         dynamically:
                     </p>
-                    <div class="p-3 bg-dark text-white rounded-3 font-monospace text-xs mb-3">
-                        <span class="text-primary">import</span> { icons, categories, getIcon, getByCategory } <span
-                            class="text-primary">from</span> <span class="text-success">'haticons'</span>;<br><br>
-                        <span class="text-muted">// Lookup specific icon</span><br>
-                        <span class="text-primary">const</span> cartIcon = getIcon(<span
-                            class="text-success">'hi-cart'</span>);<br>
-                        console.log(cartIcon.content); <span class="text-muted">// "\f063"</span><br><br>
-                        <span class="text-muted">// Get all icons for a category</span><br>
-                        <span class="text-primary">const</span> directional = getByCategory(<span
-                            class="text-success">'directional'</span>);<br>
-                        console.log(directional.length); <span class="text-muted">// 16</span>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-code"></i> TypeScript / JavaScript</span>
+                            <button type="button" class="code-copy-btn" data-code="import { icons, categories, getIcon, getByCategory } from 'haticons';
+
+// Lookup specific icon
+const cartIcon = getIcon('hi-cart');
+console.log(cartIcon.content); // '\f063'
+
+// Get all icons for a category
+const directional = getByCategory('directional');
+console.log(directional.length); // 16">
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-keyword">import</span> <span class="code-token-punct">{</span> icons<span class="code-token-punct">,</span> categories<span class="code-token-punct">,</span> getIcon<span class="code-token-punct">,</span> getByCategory <span class="code-token-punct">}</span> <span class="code-token-keyword">from</span> <span class="code-token-string">'haticons'</span><span class="code-token-punct">;</span>
+
+<span class="code-token-comment">// Lookup specific icon</span>
+<span class="code-token-keyword">const</span> cartIcon <span class="code-token-punct">=</span> getIcon<span class="code-token-punct">(</span><span class="code-token-string">'hi-cart'</span><span class="code-token-punct">);</span>
+console<span class="code-token-punct">.</span>log<span class="code-token-punct">(</span>cartIcon<span class="code-token-punct">.</span>content<span class="code-token-punct">);</span> <span class="code-token-comment">// "\f063"</span>
+
+<span class="code-token-comment">// Get all icons for a category</span>
+<span class="code-token-keyword">const</span> directional <span class="code-token-punct">=</span> getByCategory<span class="code-token-punct">(</span><span class="code-token-string">'directional'</span><span class="code-token-punct">);</span>
+console<span class="code-token-punct">.</span>log<span class="code-token-punct">(</span>directional<span class="code-token-punct">.</span>length<span class="code-token-punct">);</span> <span class="code-token-comment">// 16</span></code></pre>
                     </div>
                 </section>
             </main>
         </div>
+    </div>
+
+    <!-- Copy Toast Notification -->
+    <div id="tutorialToast" class="copy-toast d-none">
+        <i class="hi-check-circle me-1"></i> Copied to clipboard!
     </div>
 
     <!-- Footer -->
@@ -395,6 +542,90 @@
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
     <script src="/assets/js/theme.js"></script>
+
+    <!-- Tutorial Copy & Scrollspy Interactivity -->
+    <script>
+        (function () {
+            // Copy Code Functionality
+            var toastEl = document.getElementById('tutorialToast');
+            var toastTimer = null;
+
+            function showToast(msg) {
+                if (!toastEl) return;
+                toastEl.innerHTML = '<i class="hi-check-circle me-1"></i> ' + (msg || 'Copied to clipboard!');
+                toastEl.classList.remove('d-none');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function () {
+                    toastEl.classList.add('d-none');
+                }, 2000);
+            }
+
+            document.querySelectorAll('.code-copy-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var codeText = this.getAttribute('data-code');
+                    if (!codeText) {
+                        var codeEl = this.closest('.code-snippet-box').querySelector('code');
+                        codeText = codeEl ? codeEl.innerText : '';
+                    }
+
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(codeText).then(function () {
+                            setCopiedState(btn);
+                        });
+                    } else {
+                        var temp = document.createElement('textarea');
+                        temp.value = codeText;
+                        document.body.appendChild(temp);
+                        temp.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(temp);
+                        setCopiedState(btn);
+                    }
+                });
+            });
+
+            function setCopiedState(btn) {
+                var originalHtml = btn.innerHTML;
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="hi-check"></i> <span>Copied!</span>';
+                showToast('Snippet copied to clipboard!');
+                setTimeout(function () {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = originalHtml;
+                }, 2000);
+            }
+
+            // Scrollspy for Sidebar Table of Contents
+            var tocLinks = document.querySelectorAll('#tutorialToc .nav-link');
+            var sections = document.querySelectorAll('.tutorial-section');
+
+            function updateScrollspy() {
+                var scrollPos = window.scrollY + 140;
+                var currentSectionId = '';
+
+                sections.forEach(function (sec) {
+                    var top = sec.offsetTop;
+                    var height = sec.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        currentSectionId = sec.getAttribute('id');
+                    }
+                });
+
+                if (currentSectionId) {
+                    tocLinks.forEach(function (link) {
+                        if (link.getAttribute('href') === '#' + currentSectionId) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            }
+
+            window.addEventListener('scroll', updateScrollspy, { passive: true });
+            updateScrollspy();
+        })();
+    </script>
 </body>
 
 </html>
