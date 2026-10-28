@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  ROOT_DIR,
-  loadIcons,
-  loadCategories,
-  getHtmlHead,
-  getAnnouncementBar,
-  getNavbar,
-  getFooter,
-  getToast
+    ROOT_DIR,
+    loadIcons,
+    loadCategories,
+    getHtmlHead,
+    getAnnouncementBar,
+    getNavbar,
+    getFooter,
+    getToast
 } = require('./template.js');
 
 const icons = loadIcons();
@@ -56,9 +56,9 @@ const html = `<!DOCTYPE html>
 <html lang="en" data-boodoo-theme="light">
 <head>
 ${getHtmlHead(
-  'Haticons | Beautiful Free Vector &amp; Font Icons for Modern Apps',
-  'A set of 494+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
-  'haticons, haticon, font icons, icon fonts, web fonts, font awesome alternative, ionicons, glyphicons, svg icons, boodoo framework, boodoo css'
+    'Haticons | Beautiful Free Vector &amp; Font Icons for Modern Apps',
+    'A set of 494+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
+    'haticons, haticon, font icons, icon fonts, web fonts, font awesome alternative, ionicons, glyphicons, svg icons, boodoo framework, boodoo css'
 )}
 </head>
 
@@ -131,8 +131,8 @@ ${getNavbar('home')}
 
             <div class="row g-4 justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 p-4 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-2 mb-3">
+                    <div class="card p-3 rounded-4 border bg-light shadow-2xs">
+                        <div class="d-flex align-items-center gap-1 mb-3">
                             <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">1</span>
                             <h3 class="h5 fw-bold text-dark mb-0">Install or CDN</h3>
                         </div>
@@ -148,8 +148,8 @@ ${getNavbar('home')}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 p-4 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-2 mb-3">
+                    <div class="card p-3 rounded-4 border bg-light shadow-2xs">
+                        <div class="d-flex align-items-center gap-1 mb-3">
                             <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">2</span>
                             <h3 class="h5 fw-bold text-dark mb-0">Insert Any Icon</h3>
                         </div>
@@ -164,8 +164,8 @@ ${getNavbar('home')}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 p-4 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-2 mb-3">
+                    <div class="card p-3 rounded-4 border bg-light shadow-2xs">
+                        <div class="d-flex align-items-center gap-1 mb-3">
                             <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">3</span>
                             <h3 class="h5 fw-bold text-dark mb-0">Scale &amp; Colorize</h3>
                         </div>
