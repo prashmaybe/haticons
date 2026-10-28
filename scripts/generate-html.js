@@ -111,7 +111,7 @@ const html = `<!DOCTYPE html>
                 <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
                     <i class="hi-sun theme-toggle-icon fs-5"></i>
                 </button>
-                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
+                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-2 d-inline-flex align-items-center gap-1">
                     <i class="hi-npm"></i>
                     <span>npm install</span>
                 </a>

@@ -144,7 +144,7 @@ const html = `<!DOCTYPE html>
                 <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
                     <i class="hi-sun theme-toggle-icon fs-5"></i>
                 </button>
-                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
+                <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-2 d-inline-flex align-items-center gap-1">
                     <i class="hi-npm"></i>
                     <span>npm</span>
                 </a>
@@ -173,8 +173,8 @@ const html = `<!DOCTYPE html>
             <aside class="col-12 col-lg-3">
                 <div class="sticky-top sticky-top-nav">
                     <div class="card p-1 rounded-4 border bg-white shadow-xs">
-                        <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">Categories (14)</div>
-                        <nav class="nav flex-column gap-1  text-sm">
+                        <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-1 px-1">Categories (14)</div>
+                        <nav class="nav flex-column gap-0.5 text-sm">
                             ${categoryNavLinks}
                         </nav>
                         <hr class="my-3">
