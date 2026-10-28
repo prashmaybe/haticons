@@ -526,6 +526,8 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
                 <span>&bull;</span>
                 <a href="/reference.html" class="text-decoration-none text-muted">Reference</a>
                 <span>&bull;</span>
+                <a href="/changelogs.html" class="text-decoration-none text-muted">Changelogs</a>
+                <span>&bull;</span>
                 <a href="https://www.npmjs.com/package/haticons" class="text-decoration-none text-muted" target="_blank"
                     rel="noopener">npm package</a>
                 <span>&bull;</span>
@@ -539,93 +541,10 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
         </div>
     </footer>
 
-    <!-- boodoo JavaScript Bundle -->
+    <!-- boodoo & Haticons JavaScript Bundles -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
     <script src="/assets/js/theme.js"></script>
-
-    <!-- Tutorial Copy & Scrollspy Interactivity -->
-    <script>
-        (function () {
-            // Copy Code Functionality
-            var toastEl = document.getElementById('tutorialToast');
-            var toastTimer = null;
-
-            function showToast(msg) {
-                if (!toastEl) return;
-                toastEl.innerHTML = '<i class="hi-check-circle me-1"></i> ' + (msg || 'Copied to clipboard!');
-                toastEl.classList.remove('d-none');
-                clearTimeout(toastTimer);
-                toastTimer = setTimeout(function () {
-                    toastEl.classList.add('d-none');
-                }, 2000);
-            }
-
-            document.querySelectorAll('.code-copy-btn').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    var codeText = this.getAttribute('data-code');
-                    if (!codeText) {
-                        var codeEl = this.closest('.code-snippet-box').querySelector('code');
-                        codeText = codeEl ? codeEl.innerText : '';
-                    }
-
-                    if (navigator.clipboard && navigator.clipboard.writeText) {
-                        navigator.clipboard.writeText(codeText).then(function () {
-                            setCopiedState(btn);
-                        });
-                    } else {
-                        var temp = document.createElement('textarea');
-                        temp.value = codeText;
-                        document.body.appendChild(temp);
-                        temp.select();
-                        document.execCommand('copy');
-                        document.body.removeChild(temp);
-                        setCopiedState(btn);
-                    }
-                });
-            });
-
-            function setCopiedState(btn) {
-                var originalHtml = btn.innerHTML;
-                btn.classList.add('copied');
-                btn.innerHTML = '<i class="hi-check"></i> <span>Copied!</span>';
-                showToast('Snippet copied to clipboard!');
-                setTimeout(function () {
-                    btn.classList.remove('copied');
-                    btn.innerHTML = originalHtml;
-                }, 2000);
-            }
-
-            // Scrollspy for Sidebar Table of Contents
-            var tocLinks = document.querySelectorAll('#tutorialToc .nav-link');
-            var sections = document.querySelectorAll('.tutorial-section');
-
-            function updateScrollspy() {
-                var scrollPos = window.scrollY + 140;
-                var currentSectionId = '';
-
-                sections.forEach(function (sec) {
-                    var top = sec.offsetTop;
-                    var height = sec.offsetHeight;
-                    if (scrollPos >= top && scrollPos < top + height) {
-                        currentSectionId = sec.getAttribute('id');
-                    }
-                });
-
-                if (currentSectionId) {
-                    tocLinks.forEach(function (link) {
-                        if (link.getAttribute('href') === '#' + currentSectionId) {
-                            link.classList.add('active');
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
-                }
-            }
-
-            window.addEventListener('scroll', updateScrollspy, { passive: true });
-            updateScrollspy();
-        })();
-    </script>
+    <script src="/assets/js/custom.js"></script>
 </body>
 
 </html>

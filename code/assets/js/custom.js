@@ -1,164 +1,318 @@
 /**
- * Haticons Interactivity & Cheatsheet Controller
- * Supports real-time debounced search, category filtering, boodoo modal display, and clipboard copy.
+ * Haticons Global Interactivity Controller
+ * Unified clipboard handling, global toast notifications, code block copy,
+ * cheatsheet search & category filtering, modal inspector, and table-of-contents scrollspy.
  */
 
-$(function () {
-    var activeCategory = 'all';
-    var searchQuery = '';
+(function () {
+    // -------------------------------------------------------------
+    // 1. Toast Notification Helper
+    // -------------------------------------------------------------
     var toastTimeout = null;
 
-    function showToast(message) {
-        var $toast = $('#copyToast');
-        $toast.html('<i class="hi-check-circle me-1"></i> ' + (message || 'Copied to clipboard!'));
-        $toast.removeClass('d-none');
+    function getOrCreateToast() {
+        var toast = document.getElementById('haticonsToast') ||
+                    document.getElementById('copyToast') ||
+                    document.getElementById('tutorialToast') ||
+                    document.getElementById('reference-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'haticonsToast';
+            toast.className = 'copy-toast d-none';
+            document.body.appendChild(toast);
+        }
+        return toast;
+    }
+
+    window.showHaticonsToast = function (message) {
+        var toast = getOrCreateToast();
+        toast.innerHTML = '<i class="hi-check-circle me-1"></i> ' + (message || 'Copied to clipboard!');
+        toast.classList.remove('d-none');
+        toast.style.display = 'block';
+
         clearTimeout(toastTimeout);
         toastTimeout = setTimeout(function () {
-            $toast.addClass('d-none');
+            toast.classList.add('d-none');
+            toast.style.display = '';
         }, 2200);
-    }
+    };
 
-    function copyToClipboard(text, message) {
+    // -------------------------------------------------------------
+    // 2. Clipboard Copy Utility
+    // -------------------------------------------------------------
+    window.copyHaticonsText = function (text, message, onSuccess) {
+        if (!text) return;
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(text).then(function () {
-                showToast(message);
+                window.showHaticonsToast(message);
+                if (typeof onSuccess === 'function') onSuccess();
             }).catch(function () {
-                fallbackCopy(text, message);
+                fallbackCopy(text, message, onSuccess);
             });
         } else {
-            fallbackCopy(text, message);
+            fallbackCopy(text, message, onSuccess);
         }
-    }
+    };
 
-    function fallbackCopy(text, message) {
-        var $temp = $('<textarea>');
-        $('body').append($temp);
-        $temp.val(text).select();
+    function fallbackCopy(text, message, onSuccess) {
+        var temp = document.createElement('textarea');
+        temp.value = text;
+        temp.style.position = 'fixed';
+        temp.style.opacity = '0';
+        document.body.appendChild(temp);
+        temp.select();
         try {
             document.execCommand('copy');
-            showToast(message);
+            window.showHaticonsToast(message);
+            if (typeof onSuccess === 'function') onSuccess();
         } catch (e) {
-            console.error('Copy failed', e);
+            console.error('Copy failed:', e);
         }
-        $temp.remove();
+        document.body.removeChild(temp);
     }
 
-    // Filter icons by category and search text
-    function applyFilter() {
-        var visibleCount = 0;
-        var q = searchQuery.toLowerCase().trim();
+    // -------------------------------------------------------------
+    // 3. Document-Level Event Delegations
+    // -------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function () {
+        // A. Copy Buttons (.copy-btn) with data-copy
+        document.addEventListener('click', function (e) {
+            var btn = e.target.closest('.copy-btn');
+            if (btn) {
+                e.preventDefault();
+                var text = btn.getAttribute('data-copy');
+                window.copyHaticonsText(text, 'Copied to clipboard!');
+                return;
+            }
 
-        $('.haticon-card').each(function () {
-            var $card = $(this);
-            var cardCat = $card.attr('data-category') || '';
-            var cardName = $card.attr('data-name') || '';
-            var cardClass = $card.attr('data-class') || '';
-            var tags = $card.attr('tags') || '';
+            // B. Code Snippet Copy Buttons (.code-copy-btn)
+            var codeCopyBtn = e.target.closest('.code-copy-btn');
+            if (codeCopyBtn) {
+                e.preventDefault();
+                var codeText = codeCopyBtn.getAttribute('data-code');
+                if (!codeText) {
+                    var box = codeCopyBtn.closest('.code-snippet-box');
+                    var codeEl = box ? box.querySelector('code') : null;
+                    codeText = codeEl ? codeEl.innerText : '';
+                }
+                window.copyHaticonsText(codeText, 'Snippet copied to clipboard!', function () {
+                    var origHtml = codeCopyBtn.innerHTML;
+                    codeCopyBtn.classList.add('copied');
+                    codeCopyBtn.innerHTML = '<i class="hi-check"></i> <span>Copied!</span>';
+                    setTimeout(function () {
+                        codeCopyBtn.classList.remove('copied');
+                        codeCopyBtn.innerHTML = origHtml;
+                    }, 2000);
+                });
+                return;
+            }
 
-            var matchesCategory = (activeCategory === 'all' || cardCat === activeCategory);
-            var matchesSearch = (!q || cardName.indexOf(q) >= 0 || cardClass.indexOf(q) >= 0 || tags.indexOf(q) >= 0);
+            // C. Reference Page Icon Item Click
+            var refItem = e.target.closest('.reference-icon-item');
+            if (refItem) {
+                var cls = refItem.getAttribute('data-class');
+                var snippet = '<i class="' + cls + '"></i>';
+                window.copyHaticonsText(snippet, 'Copied: &lt;i class="' + cls + '"&gt;&lt;/i&gt;');
+                return;
+            }
 
-            if (matchesCategory && matchesSearch) {
-                $card.removeClass('d-none');
-                visibleCount++;
-            } else {
-                $card.addClass('d-none');
+            // D. Modal Copy Buttons (.copy-modal-btn)
+            var modalCopyBtn = e.target.closest('.copy-modal-btn');
+            if (modalCopyBtn) {
+                var targetId = modalCopyBtn.getAttribute('data-target');
+                var targetInput = document.querySelector(targetId);
+                var val = targetInput ? targetInput.value : '';
+                window.copyHaticonsText(val, 'Copied snippet!');
+                return;
+            }
+
+            // E. Modal Close Dismiss Fallbacks
+            if (e.target.closest('[data-bs-dismiss="modal"], [data-boodoo-dismiss="modal"], #customBackdrop')) {
+                closeDetailModal();
             }
         });
 
-        $('#visibleCount').text(visibleCount);
-        if (visibleCount === 0) {
-            $('#noResults').removeClass('d-none');
-        } else {
-            $('#noResults').addClass('d-none');
+        // ESC key closes modal fallback
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeDetailModal();
+            }
+        });
+
+        function closeDetailModal() {
+            var modal = document.getElementById('iconDetailModal');
+            if (modal) {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+                document.body.classList.remove('modal-open');
+                var backdrop = document.getElementById('customBackdrop');
+                if (backdrop) backdrop.remove();
+            }
         }
-    }
 
-    // Debounced search
-    var searchTimer = null;
-    $('#iconSearchInput, [name="search-haticon"]').on('input', function () {
-        var val = $(this).val();
-        clearTimeout(searchTimer);
-        searchTimer = setTimeout(function () {
-            searchQuery = val;
-            applyFilter();
-        }, 120);
-    });
+        // ---------------------------------------------------------
+        // 4. Homepage Cheatsheet Controller (Search & Category filter)
+        // ---------------------------------------------------------
+        var iconCards = document.querySelectorAll('.haticon-card');
+        if (iconCards.length > 0) {
+            var activeCategory = 'all';
+            var searchQuery = '';
+            var visibleCountEl = document.getElementById('visibleCount');
+            var noResultsEl = document.getElementById('noResults');
+            var searchInput = document.getElementById('iconSearchInput') || document.querySelector('[name="search-haticon"]');
 
-    // Category button click
-    $('.category-filter-btn').on('click', function () {
-        var cat = $(this).attr('data-category');
-        activeCategory = cat;
-        $('.category-filter-btn').removeClass('active btn-primary').addClass('btn-outline-secondary bg-white');
-        $(this).addClass('active btn-primary').removeClass('btn-outline-secondary bg-white');
-        applyFilter();
-    });
+            function applyFilter() {
+                var visibleCount = 0;
+                var q = searchQuery.toLowerCase().trim();
 
-    // Reset filters button
-    $('#resetSearchBtn').on('click', function () {
-        searchQuery = '';
-        activeCategory = 'all';
-        $('#iconSearchInput').val('');
-        $('.category-filter-btn').removeClass('active btn-primary').addClass('btn-outline-secondary bg-white');
-        $('.category-filter-btn[data-category="all"]').addClass('active btn-primary').removeClass('btn-outline-secondary bg-white');
-        applyFilter();
-    });
+                iconCards.forEach(function (card) {
+                    var cardCat = card.getAttribute('data-category') || '';
+                    var cardName = card.getAttribute('data-name') || '';
+                    var cardClass = card.getAttribute('data-class') || '';
+                    var tags = card.getAttribute('tags') || '';
 
-    // Copy buttons in hero (npm command / cdn url)
-    $('.copy-btn').on('click', function (e) {
-        e.preventDefault();
-        var text = $(this).attr('data-copy');
-        copyToClipboard(text, 'Copied to clipboard!');
-    });
+                    var matchesCategory = (activeCategory === 'all' || cardCat === activeCategory);
+                    var matchesSearch = (!q || cardName.indexOf(q) >= 0 || cardClass.indexOf(q) >= 0 || tags.indexOf(q) >= 0);
 
-    // Icon card click -> Open boodoo detail modal
-    $(document).on('click', '.haticon-card', function () {
-        var cls = $(this).attr('data-class');
-        var name = $(this).attr('data-name');
-        var cat = $(this).attr('data-category');
-        var unicode = $(this).attr('data-unicode');
+                    if (matchesCategory && matchesSearch) {
+                        card.classList.remove('d-none');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('d-none');
+                    }
+                });
 
-        $('#modalGlyph').attr('class', cls + ' fs-1');
-        $('#modalIconTitle').text(cls);
-        $('#modalCategoryBadge').text(cat);
-        $('#modalHtmlCode').val('<i class="' + cls + '"></i>');
-        $('#modalCssCode').val('content: "' + unicode + '";');
-        $('#modalCategoryLink').text('dist/css/categories/' + cat + '.min.css');
+                if (visibleCountEl) visibleCountEl.textContent = visibleCount;
+                if (noResultsEl) {
+                    if (visibleCount === 0) noResultsEl.classList.remove('d-none');
+                    else noResultsEl.classList.add('d-none');
+                }
+            }
 
-        // Trigger boodoo modal or fallback
-        var modalEl = document.getElementById('iconDetailModal');
-        if (window.boodoo && window.boodoo.Modal) {
-            var boodooModal = boodoo.Modal.getOrCreateInstance ? boodoo.Modal.getOrCreateInstance(modalEl) : new boodoo.Modal(modalEl);
-            boodooModal.show();
-        } else if (window.bootstrap && window.bootstrap.Modal) {
-            var bsModal = new bootstrap.Modal(modalEl);
-            bsModal.show();
-        } else {
-            // Native fallback
-            $('#iconDetailModal').addClass('show').css('display', 'block');
-            $('body').addClass('modal-open').append('<div class="modal-backdrop fade show" id="customBackdrop"></div>');
+            // Search input with debounce
+            if (searchInput) {
+                var searchTimer = null;
+                searchInput.addEventListener('input', function () {
+                    var val = this.value;
+                    clearTimeout(searchTimer);
+                    searchTimer = setTimeout(function () {
+                        searchQuery = val;
+                        applyFilter();
+                    }, 120);
+                });
+            }
+
+            // Category filter buttons
+            var categoryButtons = document.querySelectorAll('.category-filter-btn');
+            categoryButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    activeCategory = this.getAttribute('data-category') || 'all';
+                    categoryButtons.forEach(function (b) {
+                        b.classList.remove('active', 'btn-primary');
+                        b.classList.add('btn-outline-secondary', 'bg-white');
+                    });
+                    this.classList.add('active', 'btn-primary');
+                    this.classList.remove('btn-outline-secondary', 'bg-white');
+                    applyFilter();
+                });
+            });
+
+            // Reset Search Button
+            var resetBtn = document.getElementById('resetSearchBtn');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', function () {
+                    searchQuery = '';
+                    activeCategory = 'all';
+                    if (searchInput) searchInput.value = '';
+                    categoryButtons.forEach(function (b) {
+                        b.classList.remove('active', 'btn-primary');
+                        b.classList.add('btn-outline-secondary', 'bg-white');
+                    });
+                    var allBtn = document.querySelector('.category-filter-btn[data-category="all"]');
+                    if (allBtn) {
+                        allBtn.classList.add('active', 'btn-primary');
+                        allBtn.classList.remove('btn-outline-secondary', 'bg-white');
+                    }
+                    applyFilter();
+                });
+            }
+
+            // Icon card click -> Open icon detail modal
+            document.addEventListener('click', function (e) {
+                var card = e.target.closest('.haticon-card');
+                if (!card) return;
+
+                var cls = card.getAttribute('data-class');
+                var name = card.getAttribute('data-name');
+                var cat = card.getAttribute('data-category');
+                var unicode = card.getAttribute('data-unicode');
+
+                var glyphEl = document.getElementById('modalGlyph');
+                var titleEl = document.getElementById('modalIconTitle');
+                var badgeEl = document.getElementById('modalCategoryBadge');
+                var htmlCodeEl = document.getElementById('modalHtmlCode');
+                var cssCodeEl = document.getElementById('modalCssCode');
+                var catLinkEl = document.getElementById('modalCategoryLink');
+
+                if (glyphEl) glyphEl.className = cls + ' fs-1';
+                if (titleEl) titleEl.textContent = cls;
+                if (badgeEl) badgeEl.textContent = cat;
+                if (htmlCodeEl) htmlCodeEl.value = '<i class="' + cls + '"></i>';
+                if (cssCodeEl) cssCodeEl.value = 'content: "' + unicode + '";';
+                if (catLinkEl) catLinkEl.textContent = 'dist/css/categories/' + cat + '.min.css';
+
+                var modalEl = document.getElementById('iconDetailModal');
+                if (!modalEl) return;
+
+                if (window.boodoo && window.boodoo.Modal) {
+                    var bModal = window.boodoo.Modal.getOrCreateInstance ? window.boodoo.Modal.getOrCreateInstance(modalEl) : new window.boodoo.Modal(modalEl);
+                    bModal.show();
+                } else if (window.bootstrap && window.bootstrap.Modal) {
+                    var bsModal = new window.bootstrap.Modal(modalEl);
+                    bsModal.show();
+                } else {
+                    modalEl.classList.add('show');
+                    modalEl.style.display = 'block';
+                    document.body.classList.add('modal-open');
+                    var bd = document.createElement('div');
+                    bd.className = 'modal-backdrop fade show';
+                    bd.id = 'customBackdrop';
+                    document.body.appendChild(bd);
+                }
+            });
+        }
+
+        // ---------------------------------------------------------
+        // 5. Scrollspy for Tutorial Table of Contents
+        // ---------------------------------------------------------
+        var tocLinks = document.querySelectorAll('#tutorialToc .nav-link');
+        var sections = document.querySelectorAll('.tutorial-section');
+        if (tocLinks.length > 0 && sections.length > 0) {
+            function updateScrollspy() {
+                var scrollPos = window.scrollY + 140;
+                var currentSectionId = '';
+
+                sections.forEach(function (sec) {
+                    var top = sec.offsetTop;
+                    var height = sec.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        currentSectionId = sec.getAttribute('id');
+                    }
+                });
+
+                if (currentSectionId) {
+                    tocLinks.forEach(function (link) {
+                        if (link.getAttribute('href') === '#' + currentSectionId) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            }
+
+            window.addEventListener('scroll', updateScrollspy, { passive: true });
+            updateScrollspy();
         }
     });
-
-    // Copy button inside modal
-    $('.copy-modal-btn').on('click', function () {
-        var targetInput = $(this).attr('data-target');
-        var val = $(targetInput).val();
-        copyToClipboard(val, 'Copied snippet!');
-    });
-
-    // Modal close fallback
-    $(document).on('click', '[data-bs-dismiss="modal"], [data-boodoo-dismiss="modal"], #customBackdrop', function () {
-        $('#iconDetailModal').removeClass('show').css('display', 'none');
-        $('body').removeClass('modal-open');
-        $('#customBackdrop').remove();
-    });
-
-    $(document).on('keydown', function (e) {
-        if (e.key === 'Escape') {
-            $('#iconDetailModal').removeClass('show').css('display', 'none');
-            $('body').removeClass('modal-open');
-            $('#customBackdrop').remove();
-        }
-    });
-});
+})();
