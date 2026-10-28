@@ -1,5 +1,17 @@
 RewriteEngine On
 
+# -------------------------------------------------------------
+# 1. Canonical Redirections: Force HTTPS & Non-WWW (haticons.com)
+# -------------------------------------------------------------
+# Redirect www.haticons.com to https://haticons.com
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Force HTTPS if requested over plain HTTP
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
 DirectoryIndex index.html
 
 ErrorDocument 404 /404.html
