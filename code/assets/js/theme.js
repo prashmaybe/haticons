@@ -18,6 +18,7 @@
     function applyTheme(theme) {
         const resolvedTheme = theme === 'system' ? getSystemTheme() : theme;
         document.documentElement.setAttribute('data-theme', resolvedTheme);
+        document.documentElement.setAttribute('data-boodoo-theme', resolvedTheme);
         document.documentElement.setAttribute('data-theme-setting', theme);
 
         // Update theme toggle buttons UI
@@ -27,13 +28,13 @@
             const text = btn.querySelector('.theme-toggle-text');
             if (icon) {
                 if (theme === 'system') {
-                    icon.className = 'hi-sun theme-toggle-icon';
+                    icon.className = 'hi-sun theme-toggle-icon fs-5';
                     btn.setAttribute('title', 'Theme: System (' + resolvedTheme + ') - Click to change');
                 } else if (theme === 'dark') {
-                    icon.className = 'hi-bulb theme-toggle-icon';
+                    icon.className = 'hi-bulb theme-toggle-icon fs-5';
                     btn.setAttribute('title', 'Theme: Dark - Click to change');
                 } else {
-                    icon.className = 'hi-sun theme-toggle-icon';
+                    icon.className = 'hi-sun theme-toggle-icon fs-5';
                     btn.setAttribute('title', 'Theme: Light - Click to change');
                 }
             }

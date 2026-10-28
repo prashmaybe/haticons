@@ -71,6 +71,7 @@ const html = `<!DOCTYPE html>
         var t=localStorage.getItem('haticons_theme_preference')||'system';
         var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
         document.documentElement.setAttribute('data-theme',d);
+        document.documentElement.setAttribute('data-boodoo-theme',d);
         document.documentElement.setAttribute('data-theme-setting',t);
       })();
     </script>
