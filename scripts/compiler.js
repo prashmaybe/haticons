@@ -21,8 +21,9 @@ $hi-prefix: "hi-" !default;
   font-family: '#{$hi-font-name}';
   src: url('#{$hi-font-path}/haticons.eot?#{$hi-font-version}');
   src: url('#{$hi-font-path}/haticons.eot?#{$hi-font-version}#iefix') format('embedded-opentype'),
-       url('#{$hi-font-path}/haticons.ttf?#{$hi-font-version}') format('truetype'),
+       url('#{$hi-font-path}/haticons.woff2?#{$hi-font-version}') format('woff2'),
        url('#{$hi-font-path}/haticons.woff?#{$hi-font-version}') format('woff'),
+       url('#{$hi-font-path}/haticons.ttf?#{$hi-font-version}') format('truetype'),
        url('#{$hi-font-path}/haticons.svg?#{$hi-font-version}#haticons') format('svg');
   font-weight: normal;
   font-style: normal;

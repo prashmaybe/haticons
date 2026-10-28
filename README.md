@@ -65,41 +65,76 @@ Or use directly via CDN (jsDelivr / unpkg):
 
 ---
 
-## 💡 Modular Usage (Import Only What You Need)
+## 💡 Modular & Partial Usage (Zero Waste)
 
-Users do not need to import the complete CSS bundle! You can import only specific categories or use Sass/SCSS partials.
+Users never need to bundle the entire library! Haticons is designed from the ground up for extreme optimization:
 
-### 1. Precompiled Category CSS (CDN or Bundler)
+### 1. Partial CSS Imports (Bundler or CDN)
 
-Every category is available as a standalone CSS file (including font definitions):
+You can import **only** the categories you need (e.g. commerce, directional) without the rest of the 494 icons:
 
+```javascript
+// In your JS / React / Vue / Vite entry:
+import 'haticons/categories/commerce.min.css';
+import 'haticons/categories/directional.min.css';
+```
+Or via HTML / CDN:
 ```html
 <!-- Load only Commerce & Payment icons (~1.5 KB minified) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css">
-
-<!-- Load only Directional & Arrow icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional.min.css">
-
-<!-- Load only Media icons (~1.4 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/media.min.css">
 ```
 
-### 2. Shared Core + Category-Only CSS (Optimal for Multi-Category Sites)
+### 2. Shared Core + Category Glyphs (Maximum Multi-Category Performance)
 
-If you use multiple categories, load `core.min.css` once, then load only the icon definitions:
+If your app uses several categories, import `core.min.css` once (sets up font-face & utilities), then import only the `-only.min.css` files with zero duplicate `@font-face` overhead:
+
+```javascript
+import 'haticons/dist/css/core.min.css';
+import 'haticons/categories/commerce-only.min.css';
+import 'haticons/categories/communication-only.min.css';
+```
+
+### 3. Tree-Shakeable Individual Icon Imports (Zero Font Overhead)
+
+If you only use 3 or 4 icons in a React, Vue, Svelte, or Next.js app, import **individual icon modules** directly. You don't even need to load a webfont!
+
+```javascript
+// Imports ONLY the 'cart' and 'heart' icons (few bytes each!)
+import cart from 'haticons/icons/cart';
+import heart from 'haticons/icons/heart';
+
+console.log(cart.svg);     // Raw optimized SVG string
+console.log(cart.path);    // SVG path 'd' attribute
+console.log(cart.content); // Unicode codepoint
+
+// In React / JSX:
+function CartButton() {
+  return (
+    <button>
+      <span dangerouslySetInnerHTML={{ __html: cart.svg }} />
+      <span>Checkout</span>
+    </button>
+  );
+}
+```
+
+### 4. Direct Standalone SVG Files
+
+Every icon is also exported as an optimized standalone `.svg` file ready for SVG loaders, `<img>` tags, or build pipelines:
 
 ```html
-<!-- Core webfont & sizing classes (less than 1 KB) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css">
-
-<!-- Then add category glyphs without duplicate font-face declarations -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/communication-only.min.css">
+<!-- In Vite / Webpack / Next.js -->
+<img src="node_modules/haticons/dist/svg/cart.svg" alt="Cart" width="24" height="24" />
 ```
 
-### 3. Modular SCSS / Sass
+Or via CDN:
+```html
+<img src="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/svg/cart.svg" alt="Cart" />
+```
 
-If your project uses SCSS, customize font paths and import only required modules:
+### 5. Modular SCSS / Sass
+
+Customize font paths and compile only the categories you need:
 
 ```scss
 // Override variables if needed
@@ -112,7 +147,6 @@ $hi-prefix: "hi-";
 
 // Import only the categories you need
 @import "haticons/scss/categories/commerce";
-@import "haticons/scss/categories/communication";
 @import "haticons/scss/categories/directional";
 ```
 
@@ -150,7 +184,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 
 ## 🔍 JavaScript & TypeScript API
 
-Haticons also exports icon metadata, unicode codepoints, and category querying utilities:
+For dynamic apps, search bars, or metadata inspect:
 
 ```javascript
 import { icons, categories, getIcon, getByCategory } from 'haticons';
@@ -158,7 +192,7 @@ import { icons, categories, getIcon, getByCategory } from 'haticons';
 // Find icon by name or class
 const icon = getIcon('hi-cart');
 console.log(icon);
-// { class: 'hi-cart', name: 'cart', content: '\\f063', category: 'commerce' }
+// { class: 'hi-cart', name: 'cart', content: '\\e918', category: 'commerce' }
 
 // Get all icons in a category
 const commerceIcons = getByCategory('commerce');
@@ -179,6 +213,12 @@ npm run build
 # Run tests
 npm test
 ```
+
+---
+
+## 📋 Changelog
+
+Detailed release notes and migration guides can be found in [CHANGELOG.md](CHANGELOG.md) or online at [haticons.com/changelogs.html](https://haticons.com/changelogs.html).
 
 ---
 

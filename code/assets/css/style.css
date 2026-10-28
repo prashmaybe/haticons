@@ -192,12 +192,19 @@ body {
 }
 
 [data-theme="dark"] .install-bar {
-  background-color: var(--hi-bg-card) !important;
+  background: rgba(21, 29, 47, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
 }
 
 [data-theme="dark"] .install-code-box {
-  background-color: var(--hi-bg-elevated) !important;
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
   color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .install-code-box:hover {
+  border-color: rgba(168, 85, 247, 0.4) !important;
 }
 
 [data-theme="dark"] header.bg-white {
@@ -501,7 +508,39 @@ body {
 }
 
 .install-bar {
-  max-width: 720px;
+  max-width: 780px;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.install-code-box {
+  min-width: 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.install-code-box:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.install-code-box code,
+.install-code-box .install-text {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.cdn-truncate {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
 }
 
 .search-input-wrap {

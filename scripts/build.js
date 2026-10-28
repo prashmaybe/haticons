@@ -102,18 +102,30 @@ export default _default;
 });
 console.log(`Generated ${svgGeneratedCount} individual SVG files and tree-shakeable icon modules.`);
 
-// Copy font assets
+// Copy & generate font assets (including ultra-compact WOFF2)
 const fontFiles = ['haticons.eot', 'haticons.svg', 'haticons.ttf', 'haticons.woff'];
 fontFiles.forEach(file => {
   const src = path.join(FONTS_SRC, file);
   const dest = path.join(DIST_FONTS, file);
   if (fs.existsSync(src)) fs.copyFileSync(src, dest);
 });
-console.log(`Copied ${fontFiles.length} font files to dist/fonts.`);
 
-// Save enriched icons JSON & categorized metadata
-fs.writeFileSync(path.join(DIST_DATA, 'icons.json'), JSON.stringify(icons, null, 2));
-fs.writeFileSync(path.join(DIST_DATA, 'categories.json'), JSON.stringify(categories, null, 2));
+// Generate WOFF2 font
+try {
+  const woff2 = require('woff2');
+  const ttfBuffer = fs.readFileSync(path.join(FONTS_SRC, 'haticons.ttf'));
+  const woff2Buffer = woff2.encode(ttfBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff2'), woff2Buffer);
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.woff2'), woff2Buffer);
+  console.log(`Generated ultra-compact WOFF2 font (${(woff2Buffer.length / 1024).toFixed(1)} KB)`);
+} catch (err) {
+  console.warn('woff2 generation skipped:', err.message);
+}
+console.log(`Copied and prepared font files in dist/fonts.`);
+
+// Save enriched icons JSON & categorized metadata (compact minified)
+fs.writeFileSync(path.join(DIST_DATA, 'icons.json'), JSON.stringify(icons));
+fs.writeFileSync(path.join(DIST_DATA, 'categories.json'), JSON.stringify(categories));
 fs.writeFileSync(path.join(ROOT_DIR, 'code', 'data', 'icons.json'), JSON.stringify(icons, null, 2));
 
 console.log('Categories overview:');

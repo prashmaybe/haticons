@@ -14,6 +14,7 @@
     "index.mjs",
     "index.d.ts",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "exports": {
@@ -30,6 +31,13 @@
     "./css/core.min.css": "./dist/css/core.min.css",
     "./css/categories/*": "./dist/css/categories/*",
     "./categories/*": "./dist/css/categories/*",
+    "./icons/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.mjs",
+      "require": "./dist/icons/*.js",
+      "default": "./dist/icons/*.js"
+    },
+    "./svg/*": "./dist/svg/*",
     "./data/icons.json": "./dist/data/icons.json",
     "./data/categories.json": "./dist/data/categories.json",
     "./scss/*": "./scss/*",
@@ -37,7 +45,7 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "test": "node -e \"const h = require('./index.js'); console.log('Icons count (CJS):', h.icons.length); if (h.icons.length !== 494) process.exit(1);\" && node --input-type=module -e \"import { icons } from './index.mjs'; console.log('Icons count (ESM):', icons.length); if (icons.length !== 494) process.exit(1);\"",
+    "test": "node -e \"const h = require('./index.js'); const cart = require('./dist/icons/cart.js'); console.log('Icons count (CJS):', h.icons.length, 'Cart icon:', cart.name); if (h.icons.length !== 494 || cart.name !== 'cart') process.exit(1);\" && node --input-type=module -e \"import { icons } from './index.mjs'; import cart from './dist/icons/cart.mjs'; console.log('Icons count (ESM):', icons.length, 'Cart icon (ESM):', cart.name); if (icons.length !== 494 || cart.name !== 'cart') process.exit(1);\"",
     "prepublishOnly": "npm run test && npm run build"
   },
   "repository": {
@@ -66,6 +74,7 @@
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
-    "sass": "^1.106.1"
+    "sass": "^1.106.1",
+    "woff2": "^1.0.0"
   }
 }

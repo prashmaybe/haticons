@@ -182,6 +182,12 @@ npm test
 
 ---
 
+## 📋 Changelog
+
+Detailed release notes and migration guides can be found in [CHANGELOG.md](CHANGELOG.md) or online at [haticons.com/changelogs.html](https://haticons.com/changelogs.html).
+
+---
+
 ## 📄 License
 
 GPL-3.0 License. See [LICENSE](LICENSE) for details.
