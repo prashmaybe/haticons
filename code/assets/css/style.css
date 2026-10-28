@@ -276,7 +276,8 @@ body {
 }
 
 .step-badge {
-  min-width: 24px;
+  min-width: 42px;
+  height: 42px;
 }
 
 /* Categories Pills Bar */

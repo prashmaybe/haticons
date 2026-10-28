@@ -14,3 +14,11 @@ export declare const icons: Haticon[];
 export declare const categories: Record<string, CategoryInfo>;
 export declare function getIcon(className: string): Haticon | undefined;
 export declare function getByCategory(category: string): Haticon[];
+
+declare const _default: {
+  icons: Haticon[];
+  categories: Record<string, CategoryInfo>;
+  getIcon: (className: string) => Haticon | undefined;
+  getByCategory: (category: string) => Haticon[];
+};
+export default _default;

@@ -76,6 +76,20 @@ module.exports = {
 `;
 fs.writeFileSync(path.join(DIST_DIR, 'index.js'), distJsIndex);
 
+const distMjsIndex = `/**
+ * haticons - Modern SVG and Webfont Icon Pack by PebbleBenders (ESM)
+ */
+import cjs from './index.js';
+
+export const icons = cjs.icons;
+export const categories = cjs.categories;
+export const getIcon = cjs.getIcon;
+export const getByCategory = cjs.getByCategory;
+
+export default cjs;
+`;
+fs.writeFileSync(path.join(DIST_DIR, 'index.mjs'), distMjsIndex);
+
 const rootJsIndex = `/**
  * haticons - Modern SVG and Webfont Icon Pack by PebbleBenders
  */
@@ -107,6 +121,20 @@ module.exports = {
 `;
 fs.writeFileSync(path.join(ROOT_DIR, 'index.js'), rootJsIndex);
 
+const rootMjsIndex = `/**
+ * haticons - Modern SVG and Webfont Icon Pack by PebbleBenders (ESM)
+ */
+import cjs from './index.js';
+
+export const icons = cjs.icons;
+export const categories = cjs.categories;
+export const getIcon = cjs.getIcon;
+export const getByCategory = cjs.getByCategory;
+
+export default cjs;
+`;
+fs.writeFileSync(path.join(ROOT_DIR, 'index.mjs'), rootMjsIndex);
+
 const dts = `export interface Haticon {
   class: string;
   name: string;
@@ -123,6 +151,14 @@ export declare const icons: Haticon[];
 export declare const categories: Record<string, CategoryInfo>;
 export declare function getIcon(className: string): Haticon | undefined;
 export declare function getByCategory(category: string): Haticon[];
+
+declare const _default: {
+  icons: Haticon[];
+  categories: Record<string, CategoryInfo>;
+  getIcon: (className: string) => Haticon | undefined;
+  getByCategory: (category: string) => Haticon[];
+};
+export default _default;
 `;
 fs.writeFileSync(path.join(DIST_DIR, 'index.d.ts'), dts);
 fs.writeFileSync(path.join(ROOT_DIR, 'index.d.ts'), dts);

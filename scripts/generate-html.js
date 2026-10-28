@@ -131,13 +131,13 @@ ${getNavbar('home')}
 
             <div class="row g-4 justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card p-3 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-1 mb-3">
+                    <div class="card p-2 rounded-4 border bg-light shadow-2xs">
+                        <div class="d-flex align-items-center gap-1 mb-2">
                             <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">1</span>
                             <h3 class="h5 fw-bold text-dark mb-0">Install or CDN</h3>
                         </div>
-                        <p class="text-muted text-sm mb-3">Add Haticons to your project with npm or load directly via CDN link:</p>
-                        <div class="bg-dark text-light p-3 rounded-3 font-monospace text-xs overflow-x-auto mb-2 code-box">
+                        <p class="text-muted text-sm mb-1">Add Haticons to your project with npm or load directly via CDN link:</p>
+                        <div class="bg-dark text-light p-2 rounded-3 font-monospace text-xs overflow-x-auto code-box">
                             <span class="text-muted">&lt;!-- via CDN --&gt;</span><br>
                             &lt;link rel="stylesheet"<br>
                             &nbsp;&nbsp;href="https://cdn.jsdelivr.net/npm/<br>
@@ -148,13 +148,13 @@ ${getNavbar('home')}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card p-3 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-1 mb-3">
+                    <div class="card p-2 rounded-4 border bg-light shadow-2xs">
+                        <div class="d-flex align-items-center gap-1 mb-2">
                             <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">2</span>
                             <h3 class="h5 fw-bold text-dark mb-0">Insert Any Icon</h3>
                         </div>
-                        <p class="text-muted text-sm mb-3">Use the standard <code>&lt;i&gt;</code> element with any <code>hi-[name]</code> class:</p>
-                        <div class="bg-dark text-light p-3 rounded-3 font-monospace text-xs overflow-x-auto mb-2 code-box">
+                        <p class="text-muted text-sm mb-1">Use the standard <code>&lt;i&gt;</code> element with any <code>hi-[name]</code> class:</p>
+                        <div class="bg-dark text-light p-2 rounded-3 font-monospace text-xs overflow-x-auto code-box">
                             <span class="text-muted">&lt;!-- Example usage --&gt;</span><br>
                             &lt;i class="hi-search"&gt;&lt;/i&gt;<br>
                             &lt;i class="hi-heart text-danger"&gt;&lt;/i&gt;<br>
@@ -164,13 +164,13 @@ ${getNavbar('home')}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card p-3 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-1 mb-3">
+                    <div class="card p-2 rounded-4 border bg-light shadow-2xs">
+                        <div class="d-flex align-items-center gap-1 mb-2">
                             <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">3</span>
                             <h3 class="h5 fw-bold text-dark mb-0">Scale &amp; Colorize</h3>
                         </div>
-                        <p class="text-muted text-sm mb-3">Inherits CSS <code>font-size</code> and <code>color</code> seamlessly with built-in utility multipliers:</p>
-                        <div class="bg-dark text-light p-3 rounded-3 font-monospace text-xs overflow-x-auto mb-2 code-box">
+                        <p class="text-muted text-sm mb-1">Inherits CSS <code>font-size</code> and <code>color</code> seamlessly with built-in utility multipliers:</p>
+                        <div class="bg-dark text-light p-2 rounded-3 font-monospace text-xs overflow-x-auto code-box">
                             <span class="text-muted">&lt;!-- Sizing classes --&gt;</span><br>
                             &lt;i class="hi-haticons hi-lg"&gt;&lt;/i&gt;<br>
                             &lt;i class="hi-haticons hi-2x"&gt;&lt;/i&gt;<br>
