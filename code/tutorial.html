@@ -26,6 +26,14 @@
     <!-- Haticons CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
+    <script>
+      (function(){
+        var t=localStorage.getItem('haticons_theme_preference')||'system';
+        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
+        document.documentElement.setAttribute('data-theme',d);
+        document.documentElement.setAttribute('data-theme-setting',t);
+      })();
+    </script>
 </head>
 
 <body class="bg-light text-dark">
@@ -60,9 +68,13 @@
                 <a href="/reference.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     <i class="hi-document"></i> Reference
                 </a>
-                <a href="/changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
+                <a href="/changelogs.html"
+                    class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                    <i class="hi-sun theme-toggle-icon fs-5"></i>
+                </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
                     class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
@@ -81,8 +93,9 @@
                 <span>Getting Started &amp; Integration Guide</span>
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-3">Haticons Tutorial</h1>
-            <p class="lead text-muted mx-auto" style="max-width: 640px;">
-                Learn how to install, import modular category stylesheets, compile with Sass, and build modern interfaces with Haticons.
+            <p class="lead text-muted mx-auto header-subtitle-constrained">
+                Learn how to install, import modular category stylesheets, compile with Sass, and build modern
+                interfaces with Haticons.
             </p>
         </div>
     </header>
@@ -92,7 +105,7 @@
         <div class="row g-5">
             <!-- Sidebar Table of Contents -->
             <aside class="col-12 col-lg-3">
-                <div class="sticky-top" style="top: 90px;">
+                <div class="sticky-top sticky-top-nav">
                     <div class="card p-1 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">On this page</div>
                         <nav class="nav flex-column gap-1  text-sm">
@@ -111,7 +124,7 @@
                                 JavaScript
                                 / TypeScript API</a>
                         </nav>
-                        <hr class="my-3">
+                        <hr class="my-1">
                         <a href="/reference.html"
                             class="btn btn-outline-primary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1 ">
                             <i class="hi-document"></i>
@@ -298,7 +311,7 @@
                     </div>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2">B. Search Input Group</h3>
-                    <div class="p-3 bg-white border rounded-3 mb-3" style="max-width: 400px;">
+                    <div class="p-3 bg-white border rounded-3 mb-3 tutorial-sample-card">
                         <div class="input-group">
                             <span class="input-group-text bg-light border-end-0"><i
                                     class="hi-search text-muted"></i></span>
@@ -346,8 +359,7 @@
         <div class="container">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
                 <span
-                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary"
-                    style="width: 32px; height: 32px;">
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
                     <i class="hi-haticons fs-5"></i>
                 </span>
                 <span class="fs-5 fw-bold text-dark">Haticons</span>
@@ -379,6 +391,7 @@
 
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
 
 </html>

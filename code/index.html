@@ -21,6 +21,14 @@
     <!-- Haticons CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css" />
+    <script>
+      (function(){
+        var t=localStorage.getItem('haticons_theme_preference')||'system';
+        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
+        document.documentElement.setAttribute('data-theme',d);
+        document.documentElement.setAttribute('data-theme-setting',t);
+      })();
+    </script>
 </head>
 
 <body class="bg-light text-dark">
@@ -55,6 +63,9 @@
                 <a href="changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                    <i class="hi-sun theme-toggle-icon fs-5"></i>
+                </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
                     <span>npm install</span>
@@ -81,7 +92,7 @@
                 Beautifully Crafted <span class="text-gradient-purple">Font &amp; SVG Icons</span>
             </h1>
             
-            <p class="lead text-muted mx-auto mb-4 hero-subtitle" style="max-width: 680px;">
+            <p class="lead text-muted mx-auto mb-4 hero-subtitle">
                 A super-optimized, modular icon suite for Web, iOS, Android, and Desktop apps. Inspired by <strong>Ionicons</strong>, <strong>FontAwesome</strong>, and <strong>Glyphicons</strong>.
             </p>
 
@@ -97,7 +108,7 @@
             </div>
 
             <!-- Install / CDN Pills -->
-            <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-center gap-2" style="max-width: 720px;">
+            <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-center gap-2">
                 <div class="install-code-box flex-grow-1 px-3 py-2 text-start font-monospace text-xs text-dark w-100 rounded-3 bg-light d-flex align-items-center justify-content-between">
                     <span class="user-select-all" id="npmCmd">npm install haticons</span>
                     <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="npm install haticons" title="Copy command">
@@ -181,7 +192,7 @@
                 </div>
                 
                 <!-- Search Input Bar -->
-                <div class="search-input-wrap position-relative" style="min-width: 300px;">
+                <div class="search-input-wrap position-relative">
                     <i class="hi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
                     <input type="text" id="iconSearchInput" name="search-haticon" class="form-control rounded-pill ps-5 pe-4 py-2" placeholder="Search by name, brand, action...">
                 </div>
@@ -8637,7 +8648,7 @@
             <div class="modal-content rounded-4 border-0 shadow-lg">
                 <div class="modal-header border-bottom px-4 pt-4 pb-3">
                     <div class="d-flex align-items-center gap-3">
-                        <div class="modal-icon-preview rounded-3 bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center" style="width: 56px; height: 56px;">
+                        <div class="modal-icon-preview rounded-3 bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center">
                             <i id="modalGlyph" class="hi-haticons fs-1"></i>
                         </div>
                         <div>
@@ -8694,7 +8705,7 @@
     <footer class="py-5 bg-white border-top text-center">
         <div class="container">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
-                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary" style="width: 32px; height: 32px;">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
                     <i class="hi-haticons fs-5"></i>
                 </span>
                 <span class="fs-5 fw-bold text-dark">Haticons</span>
@@ -8702,7 +8713,7 @@
             <p class="text-xs text-muted mb-3">
                 An open-source icon system by <strong class="text-dark">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
             </p>
-            <p class="text-muted text-sm mx-auto mb-3" style="max-width: 520px;">
+            <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
                 494 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
             </p>
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 text-sm text-muted mb-4">
@@ -8743,6 +8754,7 @@
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/theme.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 </html>

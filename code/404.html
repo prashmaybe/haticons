@@ -24,6 +24,14 @@
     <!-- Haticons CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
+    <script>
+      (function(){
+        var t=localStorage.getItem('haticons_theme_preference')||'system';
+        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
+        document.documentElement.setAttribute('data-theme',d);
+        document.documentElement.setAttribute('data-theme-setting',t);
+      })();
+    </script>
 </head>
 
 <body class="bg-light text-dark d-flex flex-column min-vh-100">
@@ -53,6 +61,9 @@
                     class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     Tutorial
                 </a>
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                    <i class="hi-sun theme-toggle-icon fs-5"></i>
+                </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
                     class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
@@ -65,9 +76,8 @@
     <!-- 404 Hero Section -->
     <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
         <div class="container text-center py-4">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary mb-4 p-4 shadow-xs"
-                style="width: 120px; height: 120px;">
-                <i class="hi-search fs-1" style="font-size: 3.5rem !important;"></i>
+            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary mb-4 p-4 shadow-xs not-found-icon-wrap">
+                <i class="hi-search fs-hero-icon"></i>
             </div>
 
             <div
@@ -79,7 +89,7 @@
                 Oops! Icon Lost in Transit
             </h1>
 
-            <p class="lead text-muted mx-auto mb-4" style="max-width: 540px;">
+            <p class="lead text-muted mx-auto mb-4 not-found-desc-constrained">
                 The page or resource you're searching for does not exist, has been relocated, or is taking a break in
                 another category.
             </p>
@@ -98,7 +108,7 @@
             </div>
 
             <!-- Quick Popular Categories -->
-            <div class="card p-4 mx-auto rounded-4 border bg-white shadow-xs" style="max-width: 620px;">
+            <div class="card p-4 mx-auto rounded-4 border bg-white shadow-xs not-found-card-constrained">
                 <h2 class="h6 fw-bold text-dark mb-3 text-uppercase tracking-wider text-xs">
                     Popular Icon Categories
                 </h2>
@@ -136,6 +146,7 @@
 
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
 
 </html>

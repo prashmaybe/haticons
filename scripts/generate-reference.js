@@ -8,29 +8,29 @@ const categories = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'dist', 'data'
 // Group icons by category
 const catGroups = {};
 Object.keys(categories).forEach(cat => {
-    catGroups[cat] = [];
+  catGroups[cat] = [];
 });
 icons.forEach(i => {
-    const c = i.category || 'interface';
-    if (!catGroups[c]) catGroups[c] = [];
-    catGroups[c].push(i);
+  const c = i.category || 'interface';
+  if (!catGroups[c]) catGroups[c] = [];
+  catGroups[c].push(i);
 });
 
 let categoryRowsHtml = '';
 Object.keys(categories).sort().forEach(catKey => {
-    const meta = categories[catKey];
-    const list = catGroups[catKey] || [];
+  const meta = categories[catKey];
+  const list = catGroups[catKey] || [];
 
-    let iconsListHtml = '';
-    list.forEach(item => {
-        iconsListHtml += `
+  let iconsListHtml = '';
+  list.forEach(item => {
+    iconsListHtml += `
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="p-1 border rounded-3 bg-white d-flex align-items-center gap-1 reference-icon-item" 
              data-class="${item.class}" 
              data-name="${item.name}" 
              data-unicode="${item.content}"
              title="Click to copy <i class='${item.class}'></i>">
-          <div class="reference-icon-icon-wrap d-flex align-items-center justify-content-center rounded-2 bg-light text-primary flex-shrink-0" style="width: 42px; height: 42px;">
+          <div class="reference-icon-icon-wrap d-flex align-items-center justify-content-center rounded-2 bg-light text-primary flex-shrink-0">
             <i class="${item.class} fs-3"></i>
           </div>
           <div class="overflow-hidden flex-grow-1">
@@ -42,9 +42,9 @@ Object.keys(categories).sort().forEach(catKey => {
           </div>
         </div>
       </div>`;
-    });
+  });
 
-    categoryRowsHtml += `
+  categoryRowsHtml += `
     <div class="category-reference-block mb-5 pb-4 border-bottom" id="cat-${catKey}">
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
         <div>
@@ -68,9 +68,9 @@ Object.keys(categories).sort().forEach(catKey => {
 
 let categoryNavLinks = '';
 Object.keys(categories).sort().forEach(catKey => {
-    const meta = categories[catKey];
-    const list = catGroups[catKey] || [];
-    categoryNavLinks += `<a class="nav-link text-muted py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
+  const meta = categories[catKey];
+  const list = catGroups[catKey] || [];
+  categoryNavLinks += `<a class="nav-link text-muted py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
     <span>${meta.name}</span>
     <span class="badge bg-light text-muted border rounded-pill">${list.length}</span>
   </a>`;
@@ -99,6 +99,14 @@ const html = `<!DOCTYPE html>
     <!-- Haticons CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
+    <script>
+      (function(){
+        var t=localStorage.getItem('haticons_theme_preference')||'system';
+        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
+        document.documentElement.setAttribute('data-theme',d);
+        document.documentElement.setAttribute('data-theme-setting',t);
+      })();
+    </script>
 </head>
 
 <body class="bg-light text-dark">
@@ -133,6 +141,9 @@ const html = `<!DOCTYPE html>
                 <a href="/changelogs.html" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                    <i class="hi-sun theme-toggle-icon fs-5"></i>
+                </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
                     <span>npm</span>
@@ -149,7 +160,7 @@ const html = `<!DOCTYPE html>
                 <span>Complete Icon Catalog &amp; Codepoint Reference</span>
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-3">Haticons Reference</h1>
-            <p class="lead text-muted mx-auto" style="max-width: 640px;">
+            <p class="lead text-muted mx-auto header-subtitle-constrained">
                 Direct reference for all <strong>494 icons</strong> organized by category, including CSS unicode values, partial files, and class names.
             </p>
         </div>
@@ -160,7 +171,7 @@ const html = `<!DOCTYPE html>
         <div class="row g-5">
             <!-- Sidebar Navigation -->
             <aside class="col-12 col-lg-3">
-                <div class="sticky-top" style="top: 90px;">
+                <div class="sticky-top sticky-top-nav">
                     <div class="card p-1 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">Categories (14)</div>
                         <nav class="nav flex-column gap-1  text-sm">
@@ -186,7 +197,7 @@ const html = `<!DOCTYPE html>
     <footer class="py-5 bg-white border-top text-center mt-5">
         <div class="container">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
-                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary" style="width: 32px; height: 32px;">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
                     <i class="hi-haticons fs-5"></i>
                 </span>
                 <span class="fs-5 fw-bold text-dark">Haticons</span>
@@ -213,6 +224,7 @@ const html = `<!DOCTYPE html>
 
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="/assets/js/theme.js"></script>
     <script>
       function showToast(message) {
         let toast = document.getElementById('reference-toast');

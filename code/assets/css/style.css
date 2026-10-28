@@ -5,20 +5,212 @@
   --hi-primary-rgb: 124, 58, 237;
   --hi-primary-soft: rgba(124, 58, 237, 0.08);
   --hi-text: #1e293b;
-  --hi-muted: #64748b;
+  --hi-text-muted: #64748b;
   --hi-border: #e2e8f0;
+  --hi-bg-page: #f8fafc;
+  --hi-bg-surface: #ffffff;
+  --hi-bg-card: #ffffff;
+  --hi-bg-elevated: #ffffff;
+  --hi-bg-light: #f1f5f9;
+  --hi-code-bg: #0f172a;
+  --hi-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --hi-card-hover-shadow: 0 12px 24px -6px rgba(124, 58, 237, 0.16);
+  --hi-card-border-hover: #7c3aed;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --hi-primary: #a855f7;
+  --hi-primary-rgb: 168, 85, 247;
+  --hi-primary-soft: rgba(168, 85, 247, 0.15);
+  --hi-text: #f1f5f9;
+  --hi-text-muted: #94a3b8;
+  --hi-border: #334155;
+  --hi-bg-page: #0b0f19;
+  --hi-bg-surface: #111827;
+  --hi-bg-card: #151d2f;
+  --hi-bg-elevated: #1e293b;
+  --hi-bg-light: #1e293b;
+  --hi-code-bg: #020617;
+  --hi-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --hi-card-hover-shadow: 0 12px 24px -4px rgba(168, 85, 247, 0.28);
+  --hi-card-border-hover: #a855f7;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--hi-text);
-  background-color: #f8fafc;
+  background-color: var(--hi-bg-page) !important;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Theme Adaptive Surface Classes */
+[data-theme="dark"] .bg-white {
+  background-color: var(--hi-bg-card) !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: var(--hi-bg-light) !important;
+}
+
+[data-theme="dark"] .border,
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-start,
+[data-theme="dark"] .border-end {
+  border-color: var(--hi-border) !important;
+}
+
+[data-theme="dark"] .text-dark {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--hi-text-muted) !important;
+}
+
+[data-theme="dark"] .navbar.bg-white,
+[data-theme="dark"] .navbar {
+  background-color: rgba(17, 24, 39, 0.95) !important;
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--hi-bg-card);
+  border-color: var(--hi-border) !important;
+  color: var(--hi-text);
+}
+
+[data-theme="dark"] .form-control {
+  background-color: var(--hi-bg-elevated);
+  border-color: var(--hi-border);
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .form-control:focus {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: var(--hi-primary);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #64748b;
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: var(--hi-bg-surface);
+  border: 1px solid var(--hi-border) !important;
+}
+
+[data-theme="dark"] .modal-footer {
+  background-color: var(--hi-bg-card) !important;
+  border-top-color: var(--hi-border) !important;
+}
+
+[data-theme="dark"] .input-group-text {
+  background-color: var(--hi-bg-elevated) !important;
+  border-color: var(--hi-border) !important;
+  color: var(--hi-text-muted);
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+  border-color: var(--hi-border);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+  background-color: var(--hi-bg-elevated);
+  border-color: #64748b;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .btn-ghost {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-theme="dark"] .category-filter-btn {
+  border-color: var(--hi-border);
+  background-color: var(--hi-bg-surface);
+  color: var(--hi-text-muted);
+}
+
+[data-theme="dark"] .category-filter-btn:hover {
+  background-color: var(--hi-bg-elevated);
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .haticon-card {
+  background-color: var(--hi-bg-card);
+  border-color: var(--hi-border);
+}
+
+[data-theme="dark"] .haticon-card:hover {
+  background-color: #1a233a;
+  border-color: var(--hi-primary);
+  box-shadow: var(--hi-card-hover-shadow);
+}
+
+[data-theme="dark"] .haticon-card .icon-glyph-wrap i {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .haticon-card:hover .icon-glyph-wrap i {
+  color: var(--hi-primary);
+}
+
+[data-theme="dark"] .haticon-card .icon-name-text {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .reference-icon-item {
+  background-color: var(--hi-bg-card) !important;
+  border-color: var(--hi-border);
+}
+
+[data-theme="dark"] .reference-icon-item:hover {
+  background-color: #1a233a !important;
+  border-color: var(--hi-primary) !important;
+}
+
+[data-theme="dark"] .reference-icon-icon-wrap {
+  background-color: var(--hi-bg-elevated) !important;
+  color: var(--hi-primary) !important;
+}
+
+[data-theme="dark"] .hero-section {
+  background: radial-gradient(circle at 50% 10%, rgba(168, 85, 247, 0.12) 0%, rgba(11, 15, 25, 1) 75%) !important;
+}
+
+[data-theme="dark"] .install-bar {
+  background-color: var(--hi-bg-card) !important;
+}
+
+[data-theme="dark"] .install-code-box {
+  background-color: var(--hi-bg-elevated) !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] header.bg-white {
+  background-color: var(--hi-bg-surface) !important;
+}
+
+[data-theme="dark"] footer.bg-white {
+  background-color: var(--hi-bg-surface) !important;
 }
 
 /* Gradients and Soft Colors */
 .text-gradient-purple {
-  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -201,6 +393,8 @@ body {
 }
 
 .reference-icon-icon-wrap {
+  width: 42px;
+  height: 42px;
   transition: all 0.2s ease;
 }
 
@@ -232,7 +426,103 @@ body {
   transform: translateY(-1px) scale(0.99);
 }
 
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--hi-border);
+  background: var(--hi-bg-surface);
+  color: var(--hi-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--hi-bg-light);
+  color: var(--hi-primary);
+  border-color: var(--hi-primary);
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background: var(--hi-bg-card);
+  color: #f8fafc;
+  border-color: var(--hi-border);
+}
+
+/* Sidebar & Sticky elements */
+.sticky-top-nav {
+  top: 90px;
+}
+
+/* Icon preview & Brand badge sizes */
+.icon-badge-sm {
+  width: 32px;
+  height: 32px;
+}
+
+.modal-icon-preview {
+  width: 56px;
+  height: 56px;
+}
+
+/* Layout max-widths & responsive constraints */
+.hero-subtitle {
+  max-width: 680px;
+}
+
+.header-subtitle-constrained {
+  max-width: 640px;
+}
+
+.footer-desc-constrained {
+  max-width: 520px;
+}
+
+.install-bar {
+  max-width: 720px;
+}
+
+.search-input-wrap {
+  min-width: 300px;
+}
+
+.changelogs-main-container {
+  max-width: 840px;
+}
+
+.tutorial-sample-card {
+  max-width: 400px;
+}
+
+/* 404 illustration & constrained boxes */
+.not-found-icon-wrap {
+  width: 120px;
+  height: 120px;
+}
+
+.fs-hero-icon {
+  font-size: 3.5rem !important;
+}
+
+.not-found-desc-constrained {
+  max-width: 540px;
+}
+
+.not-found-card-constrained {
+  max-width: 620px;
+}
+
 /* Legacy fallback overrides */
 .hidden {
   display: none !important;
 }
+

@@ -25,6 +25,14 @@
     <!-- Haticons CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
+    <script>
+      (function(){
+        var t=localStorage.getItem('haticons_theme_preference')||'system';
+        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
+        document.documentElement.setAttribute('data-theme',d);
+        document.documentElement.setAttribute('data-theme-setting',t);
+      })();
+    </script>
 </head>
 
 <body class="bg-light text-dark">
@@ -62,6 +70,9 @@
                     class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                    <i class="hi-sun theme-toggle-icon fs-5"></i>
+                </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
                     class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1 ">
                     <i class="hi-npm"></i>
@@ -80,14 +91,14 @@
                 <span>Release History &amp; Updates</span>
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-3">Changelogs</h1>
-            <p class="lead text-muted mx-auto" style="max-width: 640px;">
+            <p class="lead text-muted mx-auto header-subtitle-constrained">
                 Detailed release notes, enhancements, breaking changes, and migration guides for Haticons.
             </p>
         </div>
     </header>
 
     <!-- Main Changelog Timeline -->
-    <main class="container py-5" style="max-width: 840px;">
+    <main class="container py-5 changelogs-main-container">
         <!-- Release 1.0.0 -->
         <article class="card p-4 p-md-5 rounded-4 border bg-white shadow-xs mb-4">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
@@ -166,8 +177,7 @@
         <div class="container">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
                 <span
-                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary"
-                    style="width: 32px; height: 32px;">
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
                     <i class="hi-haticons fs-5"></i>
                 </span>
                 <span class="fs-5 fw-bold text-dark">Haticons</span>
@@ -201,6 +211,7 @@
 
     <!-- boodoo JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
 
 </html>
