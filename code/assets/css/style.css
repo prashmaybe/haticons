@@ -311,14 +311,24 @@ body {
 }
 
 /* Cheatsheet Icons Grid */
-.haticons-set-grid {
+.haticons-set-grid,
+.haticon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 1rem;
 }
 
+@media (max-width: 576px) {
+  .haticons-set-grid,
+  .haticon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+    gap: 0.75rem;
+  }
+}
+
 @media (min-width: 992px) {
-  .haticons-set-grid {
+  .haticons-set-grid,
+  .haticon-grid {
     grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
     gap: 1.25rem;
   }
@@ -326,16 +336,21 @@ body {
 
 .haticon-card {
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   position: relative;
   border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0.75rem !important;
 }
 
 .haticon-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px -8px rgba(124, 58, 237, 0.15);
-  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px -6px rgba(124, 58, 237, 0.18), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #7c3aed;
 }
 
 .haticon-card:hover .icon-glyph-wrap i {
