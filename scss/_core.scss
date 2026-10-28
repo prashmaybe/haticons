@@ -38,6 +38,15 @@
   transform: scale(0.98);
   display: inline-block;
 }
+.#{$hi-prefix}duotone {
+  opacity: var(--hi-duotone-opacity, 0.45);
+  filter: drop-shadow(0 0 0.5px currentColor);
+  display: inline-block;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.85;
+  }
+}
 
 // Optional utility sizing & transforms
 .#{$hi-prefix}sm { font-size: 0.875em; }
@@ -49,11 +58,46 @@
 .#{$hi-prefix}4x { font-size: 4em; }
 .#{$hi-prefix}5x { font-size: 5em; }
 .#{$hi-prefix}fw { text-align: center; width: 1.25em; display: inline-block; }
+
+// Animation Micro-interactions
 .#{$hi-prefix}spin {
   animation: hi-spin 2s infinite linear;
   display: inline-block;
 }
+.#{$hi-prefix}pulse {
+  animation: hi-pulse 1.6s infinite ease-in-out;
+  display: inline-block;
+}
+.#{$hi-prefix}bounce {
+  animation: hi-bounce 1.4s infinite ease-in-out;
+  display: inline-block;
+}
+.#{$hi-prefix}shake {
+  animation: hi-shake 0.8s infinite ease-in-out;
+  display: inline-block;
+}
+.#{$hi-prefix}hover-rotate {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  &:hover {
+    transform: rotate(90deg) scale(1.1);
+  }
+}
+
 @keyframes hi-spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(359deg); }
+}
+@keyframes hi-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.82; }
+}
+@keyframes hi-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22%); }
+}
+@keyframes hi-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-3px); }
+  40%, 80% { transform: translateX(3px); }
 }

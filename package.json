@@ -13,16 +13,50 @@
     "index.js",
     "index.mjs",
     "index.d.ts",
+    "bin",
     "README.md",
     "CHANGELOG.md",
     "LICENSE"
   ],
+  "bin": {
+    "haticons": "./bin/haticons.js"
+  },
   "exports": {
     ".": {
       "types": "./index.d.ts",
       "import": "./index.mjs",
       "require": "./index.js",
       "default": "./index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.mjs",
+      "require": "./dist/react/index.js",
+      "default": "./dist/react/index.js"
+    },
+    "./react/*": {
+      "types": "./dist/react/*.d.ts",
+      "import": "./dist/react/*.mjs",
+      "require": "./dist/react/*.js",
+      "default": "./dist/react/*.js"
+    },
+    "./vue": {
+      "types": "./dist/vue/index.d.ts",
+      "import": "./dist/vue/index.mjs",
+      "require": "./dist/vue/index.js",
+      "default": "./dist/vue/index.js"
+    },
+    "./vue/*": {
+      "types": "./dist/vue/*.d.ts",
+      "import": "./dist/vue/*.mjs",
+      "require": "./dist/vue/*.js",
+      "default": "./dist/vue/*.js"
+    },
+    "./resolver": {
+      "types": "./dist/resolver/index.d.ts",
+      "import": "./dist/resolver/index.mjs",
+      "require": "./dist/resolver/index.js",
+      "default": "./dist/resolver/index.js"
     },
     "./css": "./dist/css/haticons.min.css",
     "./css/haticons.css": "./dist/css/haticons.css",
@@ -44,7 +78,7 @@
     "./fonts/*": "./dist/fonts/*"
   },
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && node scripts/generate-packages.js",
     "test": "node -e \"const h = require('./index.js'); const cart = require('./dist/icons/cart.js'); const snap = h.getIcon('snapchat'); console.log('Icons count (CJS):', h.icons.length, 'Cart icon:', cart.name, 'Snapchat alias resolved:', snap ? snap.name : null); if (h.icons.length !== 494 || cart.name !== 'cart' || !snap || snap.name !== 'spanchat') process.exit(1);\" && node --input-type=module -e \"import { icons, getIcon } from './index.mjs'; import cart from './dist/icons/cart.mjs'; const snap = getIcon('snapchat'); console.log('Icons count (ESM):', icons.length, 'Cart icon (ESM):', cart.name, 'Snapchat alias resolved:', snap ? snap.name : null); if (icons.length !== 494 || cart.name !== 'cart' || !snap || snap.name !== 'spanchat') process.exit(1);\"",
     "prepublishOnly": "npm run test && npm run build"
   },

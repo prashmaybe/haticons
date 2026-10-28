@@ -97,13 +97,13 @@ ${getNavbar('home')}
                         <i class="hi-npm me-1"></i> npm Package (Recommended)
                     </button>
                     <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-cdn">
-                        <i class="hi-globe me-1"></i> Web CDN
+                        <i class="hi-cloudflare me-1"></i> Web CDN
                     </button>
                     <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-frameworks">
-                        <i class="hi-code me-1"></i> React &amp; Vue
+                        <i class="hi-javascript me-1"></i> React &amp; Vue
                     </button>
                     <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-desktop">
-                        <i class="hi-devices me-1"></i> Desktop &amp; SVG
+                        <i class="hi-monitor me-1"></i> Desktop &amp; SVG
                     </button>
                 </div>
             </div>
@@ -148,7 +148,7 @@ ${getNavbar('home')}
                     <div class="col-12 col-md-4">
                         <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="hi-package fs-2 text-warning"></i>
+                                <i class="hi-archive fs-2 text-warning"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">pnpm</h3>
                             </div>
                             <p class="text-muted text-xs mb-3">Disk-space efficient symlinked install:</p>
@@ -172,7 +172,7 @@ ${getNavbar('home')}
                         <div class="col-12 col-lg-6">
                             <div class="code-snippet-box">
                                 <div class="code-snippet-header">
-                                    <span class="code-lang-label"><i class="hi-code"></i> CSS / Webfont Import</span>
+                                    <span class="code-lang-label"><i class="hi-css3"></i> CSS / Webfont Import</span>
                                     <button type="button" class="code-copy-btn" data-code="import 'haticons/dist/css/haticons.min.css';">
                                         <i class="hi-paste"></i> <span>Copy</span>
                                     </button>
@@ -184,7 +184,7 @@ ${getNavbar('home')}
                         <div class="col-12 col-lg-6">
                             <div class="code-snippet-box">
                                 <div class="code-snippet-header">
-                                    <span class="code-lang-label"><i class="hi-code"></i> Tree-Shakeable SVG</span>
+                                    <span class="code-lang-label"><i class="hi-html5"></i> Tree-Shakeable SVG</span>
                                     <button type="button" class="code-copy-btn" data-code="import cart from 'haticons/icons/cart';">
                                         <i class="hi-paste"></i> <span>Copy</span>
                                     </button>
@@ -212,7 +212,7 @@ ${getNavbar('home')}
                             </p>
                             <div class="code-snippet-box mb-4">
                                 <div class="code-snippet-header">
-                                    <span class="code-lang-label"><i class="hi-globe"></i> HTML Head</span>
+                                    <span class="code-lang-label"><i class="hi-cloudflare"></i> HTML Head</span>
                                     <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css"&gt;'>
                                         <i class="hi-paste"></i> <span>Copy Snippet</span>
                                     </button>
@@ -229,7 +229,7 @@ ${getNavbar('home')}
                             </p>
                             <div class="code-snippet-box">
                                 <div class="code-snippet-header">
-                                    <span class="code-lang-label"><i class="hi-code"></i> HTML Body</span>
+                                    <span class="code-lang-label"><i class="hi-html5"></i> HTML Body</span>
                                     <button type="button" class="code-copy-btn" data-code='&lt;i class="hi-cart"&gt;&lt;/i&gt;
 &lt;i class="hi-heart-fill text-danger fs-2"&gt;&lt;/i&gt;
 &lt;i class="hi-search-outline text-primary fs-2"&gt;&lt;/i&gt;
@@ -296,7 +296,7 @@ ${getNavbar('home')}
                     <div class="col-12 col-md-4">
                         <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="hi-react fs-2 text-info"></i>
+                                <i class="hi-visualstudiocode fs-2 text-info"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">React / Next.js</h3>
                             </div>
                             <p class="text-muted text-xs mb-3">Add to your root <code>pages/_app.js</code> or <code>app/layout.tsx</code>:</p>
@@ -367,7 +367,7 @@ createApp(App).mount('#app');</code></pre>
                     <div class="col-12 col-md-6">
                         <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="hi-brush fs-2 text-purple"></i>
+                                <i class="hi-paintbox fs-2 text-purple"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Figma, Sketch &amp; Illustrator</h3>
                             </div>
                             <p class="text-muted text-sm mb-3">

@@ -104,7 +104,7 @@ ${getNavbar('other')}
     <header class="py-5 bg-white border-bottom text-center">
         <div class="container">
             <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-3 border border-primary-subtle">
-                <i class="hi-security"></i>
+                <i class="hi-lock"></i>
                 <span>Privacy &amp; Data Protection</span>
             </div>
             <h1 class="display-5 fw-extrabold text-dark mb-2">Privacy Policy</h1>
@@ -226,7 +226,7 @@ ${getNavbar('other')}
         <!-- Third-Party Trademarks & Brand Icons Notice -->
         <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
             <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
-                <i class="hi-shield text-primary"></i>
+                <i class="hi-lock text-primary"></i>
                 <span>Brand Icons &amp; Third-Party Trademarks</span>
             </h2>
             <p class="text-muted text-xs mb-0">

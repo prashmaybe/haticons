@@ -157,8 +157,16 @@
             var refItem = e.target.closest('.reference-icon-item');
             if (refItem) {
                 var cls = refItem.getAttribute('data-class');
-                var snippet = '<i class="' + cls + '"></i>';
-                window.copyHaticonsText(snippet, 'Copied: &lt;i class="' + cls + '"&gt;&lt;/i&gt;');
+                var name = refItem.getAttribute('data-name');
+                var unicode = refItem.getAttribute('data-unicode');
+                var pathD = refItem.getAttribute('data-path') || '';
+
+                if (window.openHaticonsCustomizer) {
+                    window.openHaticonsCustomizer({ cls: cls, name: name, unicode: unicode, path: pathD });
+                } else {
+                    var snippet = '<i class="' + cls + '"></i>';
+                    window.copyHaticonsText(snippet, 'Copied: &lt;i class="' + cls + '"&gt;&lt;/i&gt;');
+                }
                 return;
             }
 
@@ -513,6 +521,332 @@
                     refSearchInput.focus();
                 });
             }
+        }
+
+        // ---------------------------------------------------------
+        // 7. Interactive Style Preview Filter (Normal, Duotone, Spin, Pulse, Bounce, Shake)
+        // ---------------------------------------------------------
+        var stylePreviewButtons = document.querySelectorAll('.ref-style-btn');
+        if (stylePreviewButtons.length > 0) {
+            stylePreviewButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    stylePreviewButtons.forEach(function (b) {
+                        b.classList.remove('active', 'btn-primary');
+                        b.classList.add('btn-outline-secondary');
+                    });
+                    btn.classList.add('active', 'btn-primary');
+                    btn.classList.remove('btn-outline-secondary');
+
+                    var selectedStyle = btn.getAttribute('data-style');
+                    var refIcons = document.querySelectorAll('.reference-icon-item i');
+                    
+                    refIcons.forEach(function (icon) {
+                        // Remove all dynamic modifier classes
+                        icon.classList.remove('hi-duotone', 'hi-spin', 'hi-pulse', 'hi-bounce', 'hi-shake');
+                        if (selectedStyle && selectedStyle !== 'default') {
+                            icon.classList.add('hi-' + selectedStyle);
+                        }
+                    });
+                });
+            });
+        }
+
+        // ---------------------------------------------------------
+        // 8. In-Browser SVG Customizer & Subset Tray Manager
+        // ---------------------------------------------------------
+        var selectedSubset = new Set();
+        var currentCustomizerData = null;
+
+        function updateSubsetUI() {
+            var count = selectedSubset.size;
+            var statusEl = document.getElementById('subsetStatusText');
+            var exportBtn = document.getElementById('openSubsetModalBtn');
+            var toggleBtn = document.getElementById('custToggleSubsetBtn');
+            var toggleText = document.getElementById('custSubsetText');
+
+            if (statusEl) {
+                statusEl.innerHTML = 'Subset Tray: <strong>' + count + '</strong> icons';
+            }
+            if (exportBtn) {
+                exportBtn.disabled = count === 0;
+            }
+            if (currentCustomizerData && toggleBtn && toggleText) {
+                if (selectedSubset.has(currentCustomizerData.name)) {
+                    toggleBtn.classList.remove('btn-outline-info');
+                    toggleBtn.classList.add('btn-info', 'text-white');
+                    toggleText.textContent = 'In Subset (Remove)';
+                } else {
+                    toggleBtn.classList.remove('btn-info', 'text-white');
+                    toggleBtn.classList.add('btn-outline-info');
+                    toggleText.textContent = 'Add to Subset';
+                }
+            }
+        }
+
+        window.openHaticonsCustomizer = function (data) {
+            currentCustomizerData = data;
+            var modalEl = document.getElementById('customizerModal');
+            if (!modalEl) {
+                // Fallback copy if modal is not present
+                var snippet = '<i class="' + data.cls + '"></i>';
+                window.copyHaticonsText(snippet, 'Copied: &lt;i class="' + data.cls + '"&gt;&lt;/i&gt;');
+                return;
+            }
+
+            var modalTitle = document.getElementById('custModalTitle');
+            var badgeName = document.getElementById('custBadgeName');
+            var svgPath = document.getElementById('custSvgPath');
+            var svgPreview = document.getElementById('custSvgPreview');
+            var sizeRange = document.getElementById('custSizeRange');
+            var sizeVal = document.getElementById('custSizeVal');
+            var colorPicker = document.getElementById('custColorPicker');
+
+            if (modalTitle) {
+                modalTitle.innerHTML = '<i class="hi-paintbox text-primary"></i> <span>Customizer: ' + data.cls + '</span>';
+            }
+            if (badgeName) {
+                badgeName.textContent = data.cls + ' (' + data.unicode + ')';
+            }
+            if (svgPath) {
+                svgPath.setAttribute('d', data.path || '');
+            }
+
+            // Sync controls
+            var curColor = colorPicker ? colorPicker.value : '#7c3aed';
+            var curSize = sizeRange ? sizeRange.value : '72';
+            if (svgPreview) {
+                svgPreview.setAttribute('width', curSize);
+                svgPreview.setAttribute('height', curSize);
+                svgPreview.setAttribute('fill', curColor);
+            }
+            if (sizeVal) {
+                sizeVal.textContent = curSize + 'px';
+            }
+
+            updateSubsetUI();
+
+            // Open Modal
+            if (window.boodoo && window.boodoo.Modal) {
+                var bModal = window.boodoo.Modal.getOrCreateInstance ? window.boodoo.Modal.getOrCreateInstance(modalEl) : new window.boodoo.Modal(modalEl);
+                bModal.show();
+            } else if (window.bootstrap && window.bootstrap.Modal) {
+                var bsModal = new window.bootstrap.Modal(modalEl);
+                bsModal.show();
+            } else {
+                modalEl.classList.add('show');
+                modalEl.style.display = 'block';
+                document.body.classList.add('modal-open');
+                var bd = document.createElement('div');
+                bd.className = 'modal-backdrop fade show';
+                bd.id = 'customBackdrop';
+                document.body.appendChild(bd);
+            }
+        };
+
+        // Live Controls Event Listeners
+        var sizeRange = document.getElementById('custSizeRange');
+        var sizeVal = document.getElementById('custSizeVal');
+        var svgPreview = document.getElementById('custSvgPreview');
+        var colorPicker = document.getElementById('custColorPicker');
+
+        if (sizeRange && svgPreview) {
+            sizeRange.addEventListener('input', function () {
+                var sz = sizeRange.value;
+                svgPreview.setAttribute('width', sz);
+                svgPreview.setAttribute('height', sz);
+                if (sizeVal) sizeVal.textContent = sz + 'px';
+            });
+        }
+
+        if (colorPicker && svgPreview) {
+            colorPicker.addEventListener('input', function () {
+                svgPreview.setAttribute('fill', colorPicker.value);
+            });
+        }
+
+        document.querySelectorAll('.quick-color').forEach(function (qbtn) {
+            qbtn.addEventListener('click', function () {
+                var col = qbtn.getAttribute('data-color');
+                if (colorPicker) colorPicker.value = col;
+                if (svgPreview) svgPreview.setAttribute('fill', col);
+            });
+        });
+
+        // Copy JSX button
+        var copyJsxBtn = document.getElementById('custCopyJsxBtn');
+        if (copyJsxBtn) {
+            copyJsxBtn.addEventListener('click', function () {
+                if (!currentCustomizerData) return;
+                var color = colorPicker ? colorPicker.value : '#7c3aed';
+                var size = sizeRange ? sizeRange.value : '24';
+                var path = currentCustomizerData.path || '';
+                var jsx = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="' + size + '" height="' + size + '" fill="' + color + '">\n' +
+                          '  <g transform="scale(1, -1) translate(0, -960)">\n' +
+                          '    <path d="' + path + '" />\n' +
+                          '  </g>\n' +
+                          '</svg>';
+                window.copyHaticonsText(jsx, 'Copied ' + currentCustomizerData.cls + ' JSX component code!');
+            });
+        }
+
+        // Copy SVG button
+        var copySvgBtn = document.getElementById('custCopySvgBtn');
+        if (copySvgBtn) {
+            copySvgBtn.addEventListener('click', function () {
+                if (!currentCustomizerData) return;
+                var color = colorPicker ? colorPicker.value : '#7c3aed';
+                var size = sizeRange ? sizeRange.value : '24';
+                var path = currentCustomizerData.path || '';
+                var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="' + size + '" height="' + size + '" fill="' + color + '">\n' +
+                          '  <g transform="scale(1, -1) translate(0, -960)">\n' +
+                          '    <path d="' + path + '" />\n' +
+                          '  </g>\n' +
+                          '</svg>';
+                window.copyHaticonsText(svg, 'Copied ' + currentCustomizerData.cls + ' SVG code!');
+            });
+        }
+
+        // Download SVG button
+        var downloadSvgBtn = document.getElementById('custDownloadSvgBtn');
+        if (downloadSvgBtn) {
+            downloadSvgBtn.addEventListener('click', function () {
+                if (!currentCustomizerData) return;
+                var color = colorPicker ? colorPicker.value : '#7c3aed';
+                var size = sizeRange ? sizeRange.value : '1024';
+                var path = currentCustomizerData.path || '';
+                var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="' + size + '" height="' + size + '" fill="' + color + '">\n' +
+                          '  <g transform="scale(1, -1) translate(0, -960)">\n' +
+                          '    <path d="' + path + '" />\n' +
+                          '  </g>\n' +
+                          '</svg>';
+                var blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = (currentCustomizerData.name || 'icon') + '.svg';
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(function () {
+                    a.remove();
+                    URL.revokeObjectURL(url);
+                }, 100);
+            });
+        }
+
+        // Toggle Subset button in customizer
+        var toggleSubsetBtn = document.getElementById('custToggleSubsetBtn');
+        if (toggleSubsetBtn) {
+            toggleSubsetBtn.addEventListener('click', function () {
+                if (!currentCustomizerData) return;
+                var name = currentCustomizerData.name;
+                if (selectedSubset.has(name)) {
+                    selectedSubset.delete(name);
+                } else {
+                    selectedSubset.add(name);
+                }
+                updateSubsetUI();
+            });
+        }
+
+        // Export Subset Modal Triggers & Handlers
+        var openSubsetModalBtn = document.getElementById('openSubsetModalBtn');
+        var subsetExportModal = document.getElementById('subsetExportModal');
+        var subsetSelectedTags = document.getElementById('subsetSelectedTags');
+        var subsetModalCount = document.getElementById('subsetModalCount');
+        var subsetCliCmd = document.getElementById('subsetCliCmd');
+        var subsetCssOutput = document.getElementById('subsetCssOutput');
+        var clearSubsetTrayBtn = document.getElementById('clearSubsetTrayBtn');
+        var copySubsetCliBtn = document.getElementById('copySubsetCliBtn');
+        var copySubsetCssBtn = document.getElementById('copySubsetCssBtn');
+
+        if (openSubsetModalBtn && subsetExportModal) {
+            openSubsetModalBtn.addEventListener('click', function () {
+                var iconList = Array.from(selectedSubset);
+                if (subsetModalCount) subsetModalCount.textContent = iconList.length;
+
+                // Render tags
+                if (subsetSelectedTags) {
+                    subsetSelectedTags.innerHTML = iconList.map(function (ic) {
+                        return '<span class="badge bg-white text-dark border rounded-pill px-2 py-1"><i class="hi-' + ic + ' me-1 text-primary"></i>' + ic + '</span>';
+                    }).join(' ');
+                }
+
+                // CLI command
+                var cliCmd = 'npx haticons subset --icons=' + iconList.join(',');
+                if (subsetCliCmd) subsetCliCmd.value = cliCmd;
+
+                // Generate standalone subset CSS
+                var cssLines = [
+                    '/* Haticons Custom Subset (' + iconList.length + ' icons) */',
+                    '@font-face {',
+                    '  font-family: "haticons";',
+                    '  src: url("https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/fonts/haticons.woff2") format("woff2");',
+                    '  font-display: swap;',
+                    '}',
+                    '[class^="hi-"], [class*=" hi-"] {',
+                    '  font-family: "haticons" !important;',
+                    '  speak: never;',
+                    '  font-style: normal;',
+                    '  font-weight: normal;',
+                    '  font-variant: normal;',
+                    '  text-transform: none;',
+                    '  line-height: 1;',
+                    '  -webkit-font-smoothing: antialiased;',
+                    '}'
+                ];
+
+                iconList.forEach(function (ic) {
+                    var el = document.querySelector('.reference-icon-item[data-name="' + ic + '"]');
+                    var code = el ? el.getAttribute('data-unicode') : '\\f101';
+                    cssLines.push('.hi-' + ic + ':before { content: "' + code + '"; }');
+                });
+
+                if (subsetCssOutput) subsetCssOutput.value = cssLines.join('\n');
+
+                if (window.boodoo && window.boodoo.Modal) {
+                    var bModal = window.boodoo.Modal.getOrCreateInstance ? window.boodoo.Modal.getOrCreateInstance(subsetExportModal) : new window.boodoo.Modal(subsetExportModal);
+                    bModal.show();
+                } else if (window.bootstrap && window.bootstrap.Modal) {
+                    var bsModal = new window.bootstrap.Modal(subsetExportModal);
+                    bsModal.show();
+                } else {
+                    subsetExportModal.classList.add('show');
+                    subsetExportModal.style.display = 'block';
+                    document.body.classList.add('modal-open');
+                }
+            });
+        }
+
+        if (copySubsetCliBtn && subsetCliCmd) {
+            copySubsetCliBtn.addEventListener('click', function () {
+                window.copyHaticonsText(subsetCliCmd.value, 'Copied CLI subset command!');
+            });
+        }
+
+        if (copySubsetCssBtn && subsetCssOutput) {
+            copySubsetCssBtn.addEventListener('click', function () {
+                window.copyHaticonsText(subsetCssOutput.value, 'Copied standalone subset CSS!');
+            });
+        }
+
+        if (clearSubsetTrayBtn) {
+            clearSubsetTrayBtn.addEventListener('click', function () {
+                selectedSubset.clear();
+                updateSubsetUI();
+                if (subsetExportModal) {
+                    if (window.boodoo && window.boodoo.Modal) {
+                        var bModal = window.boodoo.Modal.getInstance(subsetExportModal);
+                        if (bModal) bModal.hide();
+                    } else if (window.bootstrap && window.bootstrap.Modal) {
+                        var bsModal = window.bootstrap.Modal.getInstance(subsetExportModal);
+                        if (bsModal) bsModal.hide();
+                    } else {
+                        subsetExportModal.classList.remove('show');
+                        subsetExportModal.style.display = 'none';
+                        document.body.classList.remove('modal-open');
+                    }
+                }
+            });
         }
     });
 })();

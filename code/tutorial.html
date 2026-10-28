@@ -113,7 +113,7 @@
                 <div class="sticky-top sticky-top-nav">
                     <div class="card p-3 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2 px-1">
-                            <i class="hi-list me-1 text-primary"></i> On this page
+                            <i class="hi-bullet-list me-1 text-primary"></i> On this page
                         </div>
                         <nav class="nav flex-column gap-1 text-sm tutorial-toc" id="tutorialToc">
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#installation">
@@ -125,20 +125,32 @@
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#modular-css">
                                 3. Modular Category CSS
                             </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#framework-components">
+                                4. React &amp; Vue 3 Components
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#unplugin-resolver">
+                                5. Auto-Import Bundler Resolver
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#cli-subsetting">
+                                6. Custom Subsetting &amp; Scan CLI
+                            </a>
+                            <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#animations-duotone">
+                                7. Animations &amp; Duotone Engine
+                            </a>
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#sass-workflow">
-                                4. Sass / SCSS Workflow
+                                8. Sass / SCSS Workflow
                             </a>
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#boodoo-pairing">
-                                5. Pairing with boodoo
+                                9. Pairing with boodoo
                             </a>
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#js-api">
-                                6. JavaScript / TypeScript API
+                                10. JavaScript / TypeScript API
                             </a>
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#accessibility">
-                                7. Accessibility &amp; Screen Readers
+                                11. Accessibility &amp; Screen Readers
                             </a>
                             <a class="nav-link text-muted py-1 px-2 rounded hover-bg-light" href="#cross-platform">
-                                8. Cross-Platform &amp; Native Apps
+                                12. Cross-Platform &amp; Native Apps
                             </a>
                         </nav>
                         <hr class="my-3">
@@ -168,12 +180,12 @@
                     </p>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
-                        <i class="hi-package text-primary"></i> A. Via Package Manager
+                        <i class="hi-archive text-primary"></i> A. Via Package Manager
                     </h3>
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> bash / terminal</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> bash / terminal</span>
                             <button type="button" class="code-copy-btn" data-code="npm install haticons">
                                 <i class="hi-paste"></i>
                                 <span>Copy</span>
@@ -190,13 +202,13 @@
                     </div>
 
                     <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
-                        <i class="hi-cloud text-primary"></i> B. Via CDN (Quickest for static sites)
+                        <i class="hi-cloudflare text-primary"></i> B. Via CDN (Quickest for static sites)
                     </h3>
                     <p class="text-muted text-sm">Add the full minified stylesheet to your HTML <code>&lt;head&gt;</code>:</p>
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css"&gt;'>
                                 <i class="hi-paste"></i>
                                 <span>Copy</span>
@@ -222,7 +234,7 @@
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <div class="d-flex align-items-center gap-1">
                                 <button type="button" class="code-codepen-btn" data-title="Haticons - Basic HTML Usage" data-html='<div class="p-4 d-flex align-items-center gap-3">
   <i class="hi-cart fs-1 text-primary"></i>
@@ -230,7 +242,7 @@
   <i class="hi-search fs-1 text-info"></i>
   <i class="hi-refresh hi-spin fs-1 text-success"></i>
 </div>'>
-                                    <i class="hi-codepen"></i>
+                                    <i class="hi-play"></i>
                                     <span>CodePen</span>
                                 </button>
                                 <button type="button" class="code-copy-btn" data-code='&lt;i class="hi-cart"&gt;&lt;/i&gt;
@@ -359,7 +371,7 @@
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <button type="button" class="code-copy-btn" data-code='&lt;!-- Commerce & Payments only (~1.5 KB) --&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce.min.css"&gt;'>
                                 <i class="hi-paste"></i>
@@ -376,7 +388,7 @@
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <button type="button" class="code-copy-btn" data-code='&lt;!-- 1. Core webfont & sizing utilities (&lt; 1 KB) --&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/core.min.css"&gt;
 
@@ -397,9 +409,242 @@
                 </section>
 
                 <!-- Section 4 -->
-                <section id="sass-workflow" class="tutorial-section mb-5 pb-4 border-bottom">
+                <section id="framework-components" class="tutorial-section mb-5 pb-4 border-bottom">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="section-number-badge">4</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">React &amp; Vue 3 Components</h2>
+                            <p class="text-muted text-sm mb-0">First-class, typed component libraries with zero webfont payload</p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        Haticons ships with 494 individual SVG components for React and Vue 3. Each component renders inline crisp vector paths with customizable <code>size</code>, <code>color</code>, and native SVG props.
+                    </p>
+
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-react text-primary"></i> A. React Component Usage (<code>haticons/react</code>)
+                    </h3>
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-react"></i> React / TSX</span>
+                            <button type="button" class="code-copy-btn" data-code='import React from "react";
+import { HiCart, HiHeart, HiSearch } from "haticons/react";
+
+export function HeaderCart() {
+  return (
+    &lt;div className="d-flex gap-2"&gt;
+      &lt;button className="btn btn-primary d-flex align-items-center gap-1"&gt;
+        &lt;HiCart size={20} color="#ffffff" /&gt;
+        &lt;span&gt;Checkout&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;HiHeart size={24} color="#ef4444" className="cursor-pointer" /&gt;
+    &lt;/div&gt;
+  );
+}'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-keyword">import</span> React <span class="code-token-keyword">from</span> <span class="code-token-string">"react"</span>;
+<span class="code-token-keyword">import</span> { HiCart, HiHeart, HiSearch } <span class="code-token-keyword">from</span> <span class="code-token-string">"haticons/react"</span>;
+
+<span class="code-token-keyword">export function</span> <span class="code-token-tag">HeaderCart</span>() {
+  <span class="code-token-keyword">return</span> (
+    &lt;<span class="code-token-tag">div</span> <span class="code-token-attr">className</span>=<span class="code-token-string">"d-flex gap-2"</span>&gt;
+      &lt;<span class="code-token-tag">button</span> <span class="code-token-attr">className</span>=<span class="code-token-string">"btn btn-primary d-flex align-items-center gap-1"</span>&gt;
+        &lt;<span class="code-token-tag">HiCart</span> <span class="code-token-attr">size</span>={20} <span class="code-token-attr">color</span>=<span class="code-token-string">"#ffffff"</span> /&gt;
+        &lt;<span class="code-token-tag">span</span>&gt;Checkout&lt;/<span class="code-token-tag">span</span>&gt;
+      &lt;/<span class="code-token-tag">button</span>&gt;
+      &lt;<span class="code-token-tag">HiHeart</span> <span class="code-token-attr">size</span>={24} <span class="code-token-attr">color</span>=<span class="code-token-string">"#ef4444"</span> /&gt;
+    &lt;/<span class="code-token-tag">div</span>&gt;
+  );
+}</code></pre>
+                    </div>
+
+                    <h3 class="h6 fw-bold text-dark mt-4 mb-2 d-flex align-items-center gap-1">
+                        <i class="hi-vue text-primary"></i> B. Vue 3 Component Usage (<code>haticons/vue</code>)
+                    </h3>
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-vue"></i> Vue 3 (Composition API)</span>
+                            <button type="button" class="code-copy-btn" data-code='&lt;script setup&gt;
+import { HiCart, HiHeart } from "haticons/vue";
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="d-flex align-items-center gap-2"&gt;
+    &lt;button class="btn btn-primary d-flex align-items-center gap-1"&gt;
+      &lt;HiCart :size="20" color="#ffffff" /&gt;
+      &lt;span&gt;Checkout&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code>&lt;<span class="code-token-tag">script</span> <span class="code-token-attr">setup</span>&gt;
+<span class="code-token-keyword">import</span> { HiCart, HiHeart } <span class="code-token-keyword">from</span> <span class="code-token-string">"haticons/vue"</span>;
+&lt;/<span class="code-token-tag">script</span>&gt;
+
+&lt;<span class="code-token-tag">template</span>&gt;
+  &lt;<span class="code-token-tag">div</span> <span class="code-token-attr">class</span>=<span class="code-token-string">"d-flex align-items-center gap-2"</span>&gt;
+    &lt;<span class="code-token-tag">button</span> <span class="code-token-attr">class</span>=<span class="code-token-string">"btn btn-primary d-flex align-items-center gap-1"</span>&gt;
+      &lt;<span class="code-token-tag">HiCart</span> :<span class="code-token-attr">size</span>=<span class="code-token-string">"20"</span> <span class="code-token-attr">color</span>=<span class="code-token-string">"#ffffff"</span> /&gt;
+      &lt;<span class="code-token-tag">span</span>&gt;Checkout&lt;/<span class="code-token-tag">span</span>&gt;
+    &lt;/<span class="code-token-tag">button</span>&gt;
+  &lt;/<span class="code-token-tag">div</span>&gt;
+&lt;/<span class="code-token-tag">template</span>&gt;</code></pre>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="unplugin-resolver" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">5</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Modern Auto-Import Bundler Resolver</h2>
+                            <p class="text-muted text-sm mb-0">Zero manual imports in Vite, Webpack, Rollup, and Nuxt</p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        With <code>unplugin-vue-components</code> or <code>unplugin-auto-import</code>, use any Haticons component directly inside templates without writing explicit <code>import</code> statements:
+                    </p>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-javascript"></i> vite.config.js</span>
+                            <button type="button" class="code-copy-btn" data-code='import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import Components from "unplugin-vue-components/vite";
+import { HaticonsResolver } from "haticons/resolver";
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [
+        HaticonsResolver({ framework: "vue", prefix: "Hi" })
+      ]
+    })
+  ]
+});'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-keyword">import</span> { defineConfig } <span class="code-token-keyword">from</span> <span class="code-token-string">"vite"</span>;
+<span class="code-token-keyword">import</span> vue <span class="code-token-keyword">from</span> <span class="code-token-string">"@vitejs/plugin-vue"</span>;
+<span class="code-token-keyword">import</span> Components <span class="code-token-keyword">from</span> <span class="code-token-string">"unplugin-vue-components/vite"</span>;
+<span class="code-token-keyword">import</span> { HaticonsResolver } <span class="code-token-keyword">from</span> <span class="code-token-string">"haticons/resolver"</span>;
+
+<span class="code-token-keyword">export default</span> <span class="code-token-tag">defineConfig</span>({
+  plugins: [
+    <span class="code-token-tag">vue</span>(),
+    <span class="code-token-tag">Components</span>({
+      resolvers: [
+        <span class="code-token-tag">HaticonsResolver</span>({ framework: <span class="code-token-string">"vue"</span>, prefix: <span class="code-token-string">"Hi"</span> })
+      ]
+    })
+  ]
+});</code></pre>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="cli-subsetting" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">6</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Custom Subsetting &amp; Scan CLI</h2>
+                            <p class="text-muted text-sm mb-0">Generate minimal zero-waste CSS and SVG bundles with one command</p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        Need only 10 specific icons for your landing page or web app? The <code>haticons</code> CLI tool generates a dedicated custom subset CSS and SVG collection.
+                    </p>
+
+                    <div class="code-snippet-box">
+                        <div class="code-snippet-header">
+                            <span class="code-lang-label"><i class="hi-monitor"></i> Terminal</span>
+                            <button type="button" class="code-copy-btn" data-code='npx haticons subset --icons=cart,heart,search,bell --out=./src/assets/haticons-subset'>
+                                <i class="hi-paste"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-snippet-body"><code><span class="code-token-comment"># 1. Subset specific icons</span>
+<span class="code-token-keyword">npx</span> haticons subset --icons=cart,heart,search,bell --out=./src/assets/haticons-subset
+
+<span class="code-token-comment"># 2. Automatically scan your workspace (.js, .jsx, .tsx, .vue, .html)</span>
+<span class="code-token-keyword">npx</span> haticons scan --src=./src --out=./src/assets/haticons-subset
+
+<span class="code-token-comment"># 3. List all 494 icons and categories</span>
+<span class="code-token-keyword">npx</span> haticons list</code></pre>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="animations-duotone" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">7</span>
+                        <div>
+                            <h2 class="h3 fw-bold text-dark mb-0">Animations &amp; Duotone Engine</h2>
+                            <p class="text-muted text-sm mb-0">Built-in micro-animations and two-tone styling</p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        Bring your interfaces to life using Haticons animation utilities and the modern duotone layer:
+                    </p>
+
+                    <div class="table-responsive bg-white rounded-3 border mb-4">
+                        <table class="table table-hover align-middle mb-0 text-sm">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Behavior</th>
+                                    <th>Live Preview</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>.hi-spin</code></td>
+                                    <td>Continuous 360&deg; rotation</td>
+                                    <td><i class="hi-refresh fs-4 text-primary hi-spin"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><code>.hi-pulse</code></td>
+                                    <td>Gentle rhythmic pulsing heartbeat</td>
+                                    <td><i class="hi-heart fs-4 text-danger hi-pulse"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><code>.hi-bounce</code></td>
+                                    <td>Dynamic attention-grabbing bounce</td>
+                                    <td><i class="hi-bell fs-4 text-warning hi-bounce"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><code>.hi-shake</code></td>
+                                    <td>Alert / error notification shake</td>
+                                    <td><i class="hi-warning fs-4 text-danger hi-shake"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><code>.hi-hover-rotate</code></td>
+                                    <td>Smooth 90&deg; spin on cursor hover</td>
+                                    <td><i class="hi-settings fs-4 text-primary hi-hover-rotate"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><code>.hi-duotone</code></td>
+                                    <td>Modern dual-tone visual depth</td>
+                                    <td><i class="hi-cart fs-4 text-primary hi-duotone"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 8 -->
+                <section id="sass-workflow" class="tutorial-section mb-5 pb-4 border-bottom">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="section-number-badge">8</span>
                         <div>
                             <h2 class="h3 fw-bold text-dark mb-0">Sass / SCSS Workflow</h2>
                             <p class="text-muted text-sm mb-0">Compile modular partials into your existing SCSS architecture</p>
@@ -412,7 +657,7 @@
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> SCSS</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> SCSS</span>
                             <button type="button" class="code-copy-btn" data-code='// Custom font path if needed
 $hi-font-path: "~haticons/dist/fonts";
 $hi-prefix: "hi-";
@@ -444,10 +689,10 @@ $hi-prefix: "hi-";
                     </div>
                 </section>
 
-                <!-- Section 5 -->
+                <!-- Section 9 -->
                 <section id="boodoo-pairing" class="tutorial-section mb-5 pb-4 border-bottom">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <span class="section-number-badge">5</span>
+                        <span class="section-number-badge">9</span>
                         <div>
                             <h2 class="h3 fw-bold text-dark mb-0">Pairing with boodoo Framework</h2>
                             <p class="text-muted text-sm mb-0">Seamlessly integrate with buttons, forms, and input groups</p>
@@ -479,7 +724,7 @@ $hi-prefix: "hi-";
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <div class="d-flex align-items-center gap-1">
                                 <button type="button" class="code-codepen-btn" data-title="Haticons + boodoo - Button with Icon" data-html='<div class="p-4 d-flex flex-wrap gap-2">
   <button class="btn btn-primary d-inline-flex align-items-center gap-1">
@@ -495,7 +740,7 @@ $hi-prefix: "hi-";
     <span>Verified</span>
   </button>
 </div>'>
-                                    <i class="hi-codepen"></i>
+                                    <i class="hi-play"></i>
                                     <span>CodePen</span>
                                 </button>
                                 <button type="button" class="code-copy-btn" data-code='&lt;button class="btn btn-primary d-inline-flex align-items-center gap-1"&gt;
@@ -527,7 +772,7 @@ $hi-prefix: "hi-";
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <div class="d-flex align-items-center gap-1">
                                 <button type="button" class="code-codepen-btn" data-title="Haticons + boodoo - Search Input Group" data-html='<div class="p-4" style="max-width: 400px;">
   <div class="input-group">
@@ -535,7 +780,7 @@ $hi-prefix: "hi-";
     <input type="text" class="form-control border-start-0" placeholder="Search icons...">
   </div>
 </div>'>
-                                    <i class="hi-codepen"></i>
+                                    <i class="hi-play"></i>
                                     <span>CodePen</span>
                                 </button>
                                 <button type="button" class="code-copy-btn" data-code='&lt;div class="input-group"&gt;
@@ -554,10 +799,10 @@ $hi-prefix: "hi-";
                     </div>
                 </section>
 
-                <!-- Section 6 -->
+                <!-- Section 10 -->
                 <section id="js-api" class="tutorial-section mb-5 pb-4 border-bottom">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <span class="section-number-badge">6</span>
+                        <span class="section-number-badge">10</span>
                         <div>
                             <h2 class="h3 fw-bold text-dark mb-0">JavaScript / TypeScript API</h2>
                             <p class="text-muted text-sm mb-0">Access icon dictionaries and codepoint lookups in code</p>
@@ -570,7 +815,7 @@ $hi-prefix: "hi-";
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> TypeScript / JavaScript</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> TypeScript / JavaScript</span>
                             <button type="button" class="code-copy-btn" data-code="import { icons, categories, getIcon, getByCategory } from 'haticons';
 
 // Lookup specific icon
@@ -596,10 +841,10 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
                     </div>
                 </section>
 
-                <!-- Section 7 -->
+                <!-- Section 11 -->
                 <section id="accessibility" class="tutorial-section mb-5 pb-4 border-bottom">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <span class="section-number-badge">7</span>
+                        <span class="section-number-badge">11</span>
                         <div>
                             <h2 class="h3 fw-bold text-dark mb-0">Accessibility &amp; Screen Readers</h2>
                             <p class="text-muted text-sm mb-0">Best practices for decorative vs meaningful icons, screen reader support, and focus states</p>
@@ -618,7 +863,7 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <button type="button" class="code-copy-btn" data-code='&lt;button class="btn btn-primary"&gt;
     &lt;i class="hi-cart" aria-hidden="true"&gt;&lt;/i&gt;
     &lt;span&gt;Add to Cart&lt;/span&gt;
@@ -642,7 +887,7 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
 
                     <div class="code-snippet-box">
                         <div class="code-snippet-header">
-                            <span class="code-lang-label"><i class="hi-code"></i> HTML</span>
+                            <span class="code-lang-label"><i class="hi-html5"></i> HTML</span>
                             <button type="button" class="code-copy-btn" data-code='&lt;!-- Option 1: aria-label on interactive element --&gt;
 &lt;button class="btn btn-outline-secondary" aria-label="Search icon catalogue"&gt;
     &lt;i class="hi-search" aria-hidden="true"&gt;&lt;/i&gt;
@@ -670,10 +915,10 @@ console<span class="code-token-punct">.</span>log<span class="code-token-punct">
                     </div>
                 </section>
 
-                <!-- Section 8 -->
+                <!-- Section 12 -->
                 <section id="cross-platform" class="tutorial-section">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <span class="section-number-badge">8</span>
+                        <span class="section-number-badge">12</span>
                         <div>
                             <h2 class="h3 fw-bold text-dark mb-0">Cross-Platform &amp; Native Apps</h2>
                             <p class="text-muted text-sm mb-0">Integration details for Web, iOS, Android, React Native, and Flutter</p>

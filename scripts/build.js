@@ -316,7 +316,11 @@ export default _default;
 fs.writeFileSync(path.join(DIST_DIR, 'index.d.ts'), dts);
 fs.writeFileSync(path.join(ROOT_DIR, 'index.d.ts'), dts);
 
-// 4. Generate HTML documentation
+// 4. Generate Framework packages (React, Vue, Unplugin Resolver)
+console.log('Generating React & Vue packages...');
+require('./generate-packages.js');
+
+// 5. Generate HTML documentation
 console.log('Generating code/index.html...');
 require('./generate-html.js');
 
@@ -327,3 +331,4 @@ console.log('Generating legal pages (terms, privacy, license)...');
 require('./generate-legal.js');
 
 console.log('Build completed successfully!');
+

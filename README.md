@@ -139,6 +139,117 @@ Or via CDN:
 <img src="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/svg/cart.svg" alt="Cart" />
 ```
 
+---
+
+## ⚛️ React & Vue Component Packages
+
+Haticons includes first-class, fully typed component packages for React and Vue 3 with zero runtime overhead and automatic tree-shaking:
+
+### React (`haticons/react`)
+```tsx
+import { HiCart, HiHeart, HiSearch } from 'haticons/react';
+
+export function CartWidget() {
+  return (
+    <button className="btn btn-primary">
+      <HiCart size={20} color="#fff" />
+      <span>Checkout</span>
+    </button>
+  );
+}
+```
+
+### Vue 3 (`haticons/vue`)
+```vue
+<script setup>
+import { HiCart, HiHeart } from 'haticons/vue';
+</script>
+
+<template>
+  <button class="btn btn-primary">
+    <HiCart :size="20" color="#fff" />
+    <span>Checkout</span>
+  </button>
+</template>
+```
+
+---
+
+## 🔌 Modern Bundler Auto-Import Resolver (`unplugin`)
+
+Use the bundled `HaticonsResolver` with `unplugin-vue-components` or `unplugin-auto-import` to use Haticons components anywhere in your templates without manual import statements!
+
+```javascript
+// vite.config.js
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import Components from 'unplugin-vue-components/vite';
+import { HaticonsResolver } from 'haticons/resolver';
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [
+        HaticonsResolver({ framework: 'vue', prefix: 'Hi' })
+      ]
+    })
+  ]
+});
+```
+
+---
+
+## ⚡ Custom Subsetting & Codebase Scanner CLI
+
+Create hyper-optimized, zero-waste font and CSS subsets containing **only the icons your project actually uses**:
+
+```bash
+# 1. Generate a custom subset from a list of icons
+npx haticons subset --icons=cart,heart,search,bell --out=./src/assets/haticons-subset
+
+# 2. Automatically scan your project source files (jsx, tsx, vue, html, svelte) and build a subset
+npx haticons scan --src=./src --out=./src/assets/haticons-subset
+
+# 3. List all available 494 icons and categories
+npx haticons list
+```
+
+---
+
+## 🎬 Micro-Animations & Duotone Engine
+
+Haticons provides built-in CSS animations and duotone variants out of the box:
+
+```html
+<!-- Spinning / Loading -->
+<i class="hi-refresh hi-spin"></i>
+
+<!-- Soft pulse -->
+<i class="hi-heart hi-pulse"></i>
+
+<!-- Attention bounce -->
+<i class="hi-bell hi-bounce"></i>
+
+<!-- Alert shake -->
+<i class="hi-warning hi-shake"></i>
+
+<!-- Hover rotate -->
+<i class="hi-settings hi-hover-rotate"></i>
+
+<!-- Modern Duotone Variant -->
+<i class="hi-cart hi-duotone"></i>
+```
+
+You can customize the secondary opacity of duotone icons using CSS variables:
+```css
+:root {
+  --hi-duotone-opacity: 0.35;
+}
+```
+
+---
+
 ### 5. Modular SCSS / Sass
 
 Customize font paths and compile only the categories you need:
