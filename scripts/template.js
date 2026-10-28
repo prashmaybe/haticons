@@ -67,10 +67,11 @@ function getAnnouncementBar() {
 
 /**
  * Main Navigation Bar
- * @param {'home'|'tutorial'|'reference'|'changelogs'|'other'} activePage
+ * @param {'home'|'cheatsheet'|'tutorial'|'reference'|'changelogs'|'other'} activePage
  */
 function getNavbar(activePage = 'home') {
   const isHome = activePage === 'home';
+  const isCheatsheet = activePage === 'cheatsheet';
   const isTutorial = activePage === 'tutorial';
   const isReference = activePage === 'reference';
   const isChangelogs = activePage === 'changelogs';
@@ -89,6 +90,9 @@ function getNavbar(activePage = 'home') {
             <div class="d-flex align-items-center gap-1">
                 <a href="${isHome ? '#quickstart' : '/'}" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1">
                     <i class="hi-home"></i> ${isHome ? 'Quickstart' : 'Home'}
+                </a>
+                <a href="/cheatsheet.html" class="btn btn-ghost ${isCheatsheet ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
+                    <i class="hi-search"></i> Cheatsheet
                 </a>
                 <a href="/tutorial.html" class="btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center gap-1">
                     <i class="hi-bulb"></i> Tutorial
@@ -113,7 +117,7 @@ function getNavbar(activePage = 'home') {
 
 /**
  * Shared Global Footer
- * @param {'home'|'tutorial'|'reference'|'changelogs'|'other'} activePage
+ * @param {'home'|'cheatsheet'|'tutorial'|'reference'|'changelogs'|'other'} activePage
  */
 function getFooter(activePage = 'home') {
   return `    <!-- Footer -->
@@ -134,6 +138,10 @@ function getFooter(activePage = 'home') {
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="/" class="text-decoration-none ${activePage === 'home' ? 'text-primary fw-semibold' : 'text-muted'}">
                     <i class="hi-home me-1"></i> Homepage
+                </a>
+                <span>&bull;</span>
+                <a href="/cheatsheet.html" class="text-decoration-none ${activePage === 'cheatsheet' ? 'text-primary fw-semibold' : 'text-muted'}">
+                    <i class="hi-search me-1"></i> Cheatsheet
                 </a>
                 <span>&bull;</span>
                 <a href="/tutorial.html" class="text-decoration-none ${activePage === 'tutorial' ? 'text-primary fw-semibold' : 'text-muted'}">
@@ -159,6 +167,13 @@ function getFooter(activePage = 'home') {
                 <a href="/download/haticons.zip" class="text-decoration-none text-muted">
                     <i class="hi-download me-1"></i> Download ZIP
                 </a>
+            </div>
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-xs text-muted mb-3 pt-2 border-top">
+                <a href="/terms.html" class="text-decoration-none ${activePage === 'terms' ? 'text-primary fw-semibold' : 'text-muted'}">Terms of Use</a>
+                <span>&bull;</span>
+                <a href="/privacy.html" class="text-decoration-none ${activePage === 'privacy' ? 'text-primary fw-semibold' : 'text-muted'}">Privacy Policy</a>
+                <span>&bull;</span>
+                <a href="/license.html" class="text-decoration-none ${activePage === 'license' ? 'text-primary fw-semibold' : 'text-muted'}">License (GPL-3.0)</a>
             </div>
             <p class="text-xs text-muted mb-0">
                 Released under GPL-3.0 License &middot; Designed &amp; Crafted by <strong class="text-dark">PebbleBenders</strong>

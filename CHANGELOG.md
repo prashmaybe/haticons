@@ -33,10 +33,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Full SCSS source files and mixins in `scss/` and `scss/categories/`.
 - **Programmatic Query API**: Helper methods `getIcon(className)` and `getByCategory(categoryName)` to query icon definitions and unicode glyph points dynamically.
 - **Modern Documentation & Web Application**:
-  - Transitioned website to high-performance static HTML documentation (`index.html`, `tutorial.html`, `reference.html`, `changelogs.html`, `404.html`).
+  - High-performance multi-page documentation website deployed with dedicated pages:
+    - **[Homepage](https://haticons.com/)** (`index.html`): Hero quickstart, CDN & npm installation pill, and 2-minute starter tutorial.
+    - **[Interactive Cheat Sheet](https://haticons.com/cheatsheet.html)** (`cheatsheet.html`): Dedicated searchable cheatsheet featuring live keyword filtering across 494 icons, category tabs, and interactive detail modals.
+    - **[Icon Reference Catalog](https://haticons.com/reference.html)** (`reference.html`): Categorized list of all 14 icon groups with click-to-copy HTML classes, CSS Unicode codepoints, and sticky sidebar navigation.
+    - **[Tutorial & Integration Guide](https://haticons.com/tutorial.html)** (`tutorial.html`): Real-world examples with boodoo UI, Vanilla CSS, Sass customization, React, Vue, and standalone SVG imports.
+    - **[Changelogs](https://haticons.com/changelogs.html)** (`changelogs.html`): Detailed timeline and release notes.
   - Integrated [boodoo CSS Framework](https://www.boodooframework.com/) design system tokens, responsive navigation, search modals, and toasts.
   - Interactive theme switcher supporting System, Light, and Dark modes.
-  - LLM integration index (`llms.txt`) for developer tooling and AI assistants.
+  - Automated link validation and sitemap indexation (`sitemap.xml`, `llms.txt`).
 - **Governance & Open Source Identity**: Established repository licensing under GNU General Public License v3.0, maintained by **PebbleBenders**.
 
 ---

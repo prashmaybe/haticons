@@ -248,7 +248,13 @@ fs.writeFileSync(path.join(ROOT_DIR, 'index.d.ts'), dts);
 console.log('Generating code/index.html...');
 require('./generate-html.js');
 
+console.log('Generating code/cheatsheet.html...');
+require('./generate-cheatsheet.js');
+
 console.log('Generating code/reference.html...');
 require('./generate-reference.js');
+
+console.log('Generating legal pages (terms, privacy, license)...');
+require('./generate-legal.js');
 
 console.log('Build completed successfully!');

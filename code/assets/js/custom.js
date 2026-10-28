@@ -107,6 +107,52 @@
                 return;
             }
 
+            // B2. CodePen Launch Buttons (.code-codepen-btn / .modal-codepen-btn)
+            var codepenBtn = e.target.closest('.code-codepen-btn, .modal-codepen-btn');
+            if (codepenBtn) {
+                e.preventDefault();
+                var title = codepenBtn.getAttribute('data-title') || 'Haticons Example';
+                var htmlCode = codepenBtn.getAttribute('data-html');
+                var cssCode = codepenBtn.getAttribute('data-css') || '';
+                var jsCode = codepenBtn.getAttribute('data-js') || '';
+                var cssExt = codepenBtn.getAttribute('data-css-external') || 'https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css;https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css';
+
+                if (!htmlCode) {
+                    var pbox = codepenBtn.closest('.code-snippet-box');
+                    var pcode = pbox ? pbox.querySelector('code') : null;
+                    htmlCode = pcode ? pcode.innerText : '';
+                }
+
+                var penData = {
+                    title: title,
+                    description: 'Haticons interactive code example',
+                    html: htmlCode,
+                    css: cssCode,
+                    js: jsCode,
+                    css_external: cssExt,
+                    editors: '100'
+                };
+
+                var form = document.createElement('form');
+                form.action = 'https://codepen.io/pen/define';
+                form.method = 'POST';
+                form.target = '_blank';
+                form.style.display = 'none';
+
+                var input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = 'data';
+                input.value = JSON.stringify(penData);
+
+                form.appendChild(input);
+                document.body.appendChild(form);
+                form.submit();
+                setTimeout(function () {
+                    form.remove();
+                }, 1000);
+                return;
+            }
+
             // C. Reference Page Icon Item Click
             var refItem = e.target.closest('.reference-icon-item');
             if (refItem) {
@@ -260,6 +306,12 @@
                 if (htmlCodeEl) htmlCodeEl.value = '<i class="' + cls + '"></i>';
                 if (cssCodeEl) cssCodeEl.value = 'content: "' + unicode + '";';
                 if (catLinkEl) catLinkEl.textContent = 'dist/css/categories/' + cat + '.min.css';
+
+                var cpBtn = document.getElementById('modalCodePenBtn');
+                if (cpBtn) {
+                    cpBtn.setAttribute('data-title', 'Haticons - ' + cls);
+                    cpBtn.setAttribute('data-html', '<div class="p-5 text-center">\n  <i class="' + cls + ' fs-1 text-primary"></i>\n  <h2 class="mt-3 font-monospace h4">' + cls + '</h2>\n  <p class="text-muted">Unicode codepoint: <code>' + unicode + '</code></p>\n</div>');
+                }
 
                 var modalEl = document.getElementById('iconDetailModal');
                 if (!modalEl) return;

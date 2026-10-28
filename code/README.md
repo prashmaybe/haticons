@@ -18,6 +18,14 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License" /></a>
 </p>
 
+<p align="center">
+  <a href="https://haticons.com/"><strong>Homepage</strong></a> &middot;
+  <a href="https://haticons.com/cheatsheet.html"><strong>Interactive Cheat Sheet</strong></a> &middot;
+  <a href="https://haticons.com/reference.html"><strong>Full Icon Reference</strong></a> &middot;
+  <a href="https://haticons.com/tutorial.html"><strong>Tutorial &amp; Usage Guide</strong></a> &middot;
+  <a href="https://haticons.com/changelogs.html"><strong>Changelogs</strong></a>
+</p>
+
 ---
 
 ## 🚀 Features
@@ -179,6 +187,18 @@ npm run build
 # Run tests
 npm test
 ```
+
+---
+
+## 📖 Documentation, Examples & Reference
+ 
+Visit the official documentation website for live examples, cheat sheets, and integration guides:
+
+- 🌐 **[Official Website](https://haticons.com/)** - Overview, CDN links, and 2-minute quickstart.
+- ⚡ **[Interactive Cheat Sheet](https://haticons.com/cheatsheet.html)** - Live search all 494 icons, filter by 14 categories, and click to inspect HTML snippets, Unicode codepoints, and modular CSS bundle links.
+- 📚 **[Full Icon Reference Catalog](https://haticons.com/reference.html)** - Comprehensive categorization index with quick-copy tags, unicode values, and category sidebar scrollspy.
+- 💡 **[Step-by-Step Tutorial](https://haticons.com/tutorial.html)** - In-depth examples for vanilla HTML, boodoo UI components, Vue, React, Angular, Sass customization, and tree-shaking individual SVG modules.
+- 📝 **[Changelogs](https://haticons.com/changelogs.html)** - Version history, migration guides, and release notes.
 
 ---
 
