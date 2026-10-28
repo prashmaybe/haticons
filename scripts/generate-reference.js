@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  ROOT_DIR,
-  loadIcons,
-  loadCategories,
-  getHtmlHead,
-  getAnnouncementBar,
-  getNavbar,
-  getFooter,
-  getToast
+    ROOT_DIR,
+    loadIcons,
+    loadCategories,
+    getHtmlHead,
+    getAnnouncementBar,
+    getNavbar,
+    getFooter,
+    getToast
 } = require('./template.js');
 
 const icons = loadIcons();
@@ -18,19 +18,19 @@ const { ICON_ALIASES } = require('./categories.js');
 // Invert aliases for easy lookup by target name
 const targetToAliases = {};
 Object.entries(ICON_ALIASES).forEach(([aliasName, targetName]) => {
-  if (!targetToAliases[targetName]) targetToAliases[targetName] = [];
-  targetToAliases[targetName].push(aliasName);
+    if (!targetToAliases[targetName]) targetToAliases[targetName] = [];
+    targetToAliases[targetName].push(aliasName);
 });
 
 // Group icons by category
 const catGroups = {};
 Object.keys(categories).forEach(cat => {
-  catGroups[cat] = [];
+    catGroups[cat] = [];
 });
 icons.forEach(i => {
-  const c = i.category || 'interface';
-  if (!catGroups[c]) catGroups[c] = [];
-  catGroups[c].push(i);
+    const c = i.category || 'interface';
+    if (!catGroups[c]) catGroups[c] = [];
+    catGroups[c].push(i);
 });
 
 // Parse SVG font to extract glyph path definitions
@@ -40,29 +40,29 @@ const glyphRe = /<glyph\s+([^>]+)>/g;
 let m;
 const glyphPaths = {};
 while ((m = glyphRe.exec(svgFontContent)) !== null) {
-  const attr = m[1];
-  const nameM = attr.match(/glyph-name="([^"]+)"/);
-  const dM = attr.match(/d="([^"]*)"/);
-  if (nameM && dM && dM[1]) {
-    glyphPaths[nameM[1]] = dM[1];
-  }
+    const attr = m[1];
+    const nameM = attr.match(/glyph-name="([^"]+)"/);
+    const dM = attr.match(/d="([^"]*)"/);
+    if (nameM && dM && dM[1]) {
+        glyphPaths[nameM[1]] = dM[1];
+    }
 }
 
 let categoryRowsHtml = '';
 Object.keys(categories).sort().forEach(catKey => {
-  const meta = categories[catKey];
-  const list = catGroups[catKey] || [];
+    const meta = categories[catKey];
+    const list = catGroups[catKey] || [];
 
-  let iconsListHtml = '';
-  list.forEach(item => {
-    const itemAliases = targetToAliases[item.name] || [];
-    const searchTerms = [item.name, item.class, ...itemAliases].join(' ');
-    const pathD = (glyphPaths[item.name] || '').replace(/"/g, '&quot;');
-    const aliasBadge = itemAliases.length > 0 
-      ? `<span class="badge bg-light text-muted border text-2xs rounded-pill" title="Canonical alias: ${itemAliases.map(a => 'hi-' + a).join(', ')}">${itemAliases[0]}</span>`
-      : '';
+    let iconsListHtml = '';
+    list.forEach(item => {
+        const itemAliases = targetToAliases[item.name] || [];
+        const searchTerms = [item.name, item.class, ...itemAliases].join(' ');
+        const pathD = (glyphPaths[item.name] || '').replace(/"/g, '&quot;');
+        const aliasBadge = itemAliases.length > 0
+            ? `<span class="badge bg-light text-muted border text-2xs rounded-pill" title="Canonical alias: ${itemAliases.map(a => 'hi-' + a).join(', ')}">${itemAliases[0]}</span>`
+            : '';
 
-    iconsListHtml += `
+        iconsListHtml += `
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="p-1 border rounded-3 bg-white d-flex align-items-center gap-1 reference-icon-item" 
              data-class="${item.class}" 
@@ -86,9 +86,9 @@ Object.keys(categories).sort().forEach(catKey => {
           </div>
         </div>
       </div>`;
-  });
+    });
 
-  categoryRowsHtml += `
+    categoryRowsHtml += `
     <div class="category-reference-block mb-4 pb-5 border-bottom" id="cat-${catKey}">
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
         <div>
@@ -112,9 +112,9 @@ Object.keys(categories).sort().forEach(catKey => {
 
 let categoryNavLinks = '';
 Object.keys(categories).sort().forEach(catKey => {
-  const meta = categories[catKey];
-  const list = catGroups[catKey] || [];
-  categoryNavLinks += `<a class="nav-link text-muted py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
+    const meta = categories[catKey];
+    const list = catGroups[catKey] || [];
+    categoryNavLinks += `<a class="nav-link text-muted py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
     <span>${meta.name}</span>
     <span class="badge bg-light text-muted border rounded-pill">${list.length}</span>
   </a>`;
@@ -124,9 +124,9 @@ const html = `<!DOCTYPE html>
 <html lang="en" data-boodoo-theme="light">
 <head>
 ${getHtmlHead(
-  'Icon Reference &amp; Cheat Sheet | Haticons by PebbleBenders',
-  'Browse the full categorized icon catalog of 494+ vector icons, copy HTML snippets, Unicode values, and reference partial bundle paths.',
-  'haticons reference, icon catalog, css unicode, icon cheatsheet, vector icons list'
+    'Icon Reference &amp; Cheat Sheet | Haticons by PebbleBenders',
+    'Browse the full categorized icon catalog of 494+ vector icons, copy HTML snippets, Unicode values, and reference partial bundle paths.',
+    'haticons reference, icon catalog, css unicode, icon cheatsheet, vector icons list'
 )}
 </head>
 
@@ -306,7 +306,7 @@ ${getNavbar('reference')}
                     <button type="button" class="btn-close" data-bs-dismiss="modal" data-boodoo-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <p class="text-muted text-sm mb-3">
+                    <p class="text-muted text-sm">
                         You have selected <strong id="subsetModalCount" class="text-primary">0</strong> icons for your custom zero-waste bundle.
                     </p>
                     <div id="subsetSelectedTags" class="d-flex flex-wrap gap-1 p-3 bg-light rounded-3 border mb-3 text-xs" style="max-height: 140px; overflow-y: auto;"></div>

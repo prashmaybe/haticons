@@ -112,15 +112,15 @@ ${getNavbar('home')}
             <div class="setup-tab-pane" id="tab-npm">
                 <div class="row g-4">
                     <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
+                        <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-npm fs-2 text-danger"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">npm</h3>
                             </div>
-                            <p class="text-muted text-xs mb-3">Install in any Node, Webpack, or Vite project:</p>
-                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
+                            <p class="text-muted text-xs mb-1">Install in any Node, Webpack, or Vite project:</p>
+                            <div class="install-code-box p-1 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-1 border">
                                 <span>npm install haticons</span>
-                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="npm install haticons">
+                                <button class="btn btn-sm btn-ghost text-muted copy-btn" data-copy="npm install haticons">
                                     <i class="hi-paste"></i>
                                 </button>
                             </div>
@@ -129,15 +129,15 @@ ${getNavbar('home')}
                     </div>
 
                     <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
+                        <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-yarn fs-2 text-info"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Yarn</h3>
                             </div>
-                            <p class="text-muted text-xs mb-3">Add as project dependency using Yarn:</p>
-                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
+                            <p class="text-muted text-xs mb-1">Add as project dependency using Yarn:</p>
+                            <div class="install-code-box p-1 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-1 border">
                                 <span>yarn add haticons</span>
-                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="yarn add haticons">
+                                <button class="btn btn-sm btn-ghost text-muted copy-btn" data-copy="yarn add haticons">
                                     <i class="hi-paste"></i>
                                 </button>
                             </div>
@@ -146,15 +146,15 @@ ${getNavbar('home')}
                     </div>
 
                     <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border start-setup-card h-100 shadow-2xs">
+                        <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-archive fs-2 text-warning"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">pnpm</h3>
                             </div>
-                            <p class="text-muted text-xs mb-3">Disk-space efficient symlinked install:</p>
-                            <div class="install-code-box p-2 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-3 border">
+                            <p class="text-muted text-xs mb-1">Disk-space efficient symlinked install:</p>
+                            <div class="install-code-box p-1 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-1 border">
                                 <span>pnpm add haticons</span>
-                                <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn" data-copy="pnpm add haticons">
+                                <button class="btn btn-sm btn-ghost text-muted copy-btn" data-copy="pnpm add haticons">
                                     <i class="hi-paste"></i>
                                 </button>
                             </div>
@@ -163,9 +163,9 @@ ${getNavbar('home')}
                     </div>
                 </div>
 
-                <div class="mt-4 p-4 rounded-4 bg-white border shadow-2xs">
+                <div class="mt-4 p-2 rounded-4 bg-white border shadow-2xs">
                     <h4 class="h6 fw-bold text-dark mb-2">Bundler &amp; Framework Integration (Vite, Webpack, Next.js):</h4>
-                    <p class="text-muted text-sm mb-3">
+                    <p class="text-muted text-sm">
                         Import CSS or individual tree-shakeable SVG icons directly in your JavaScript / TypeScript files:
                     </p>
                     <div class="row g-3">
@@ -207,7 +207,7 @@ ${getNavbar('home')}
                                 <span class="start-step-number bg-primary text-white d-inline-flex align-items-center justify-content-center shadow-xs">1</span>
                                 <h3 class="h5 fw-bold text-dark mb-0">Add Stylesheet to &lt;head&gt;</h3>
                             </div>
-                            <p class="text-muted text-sm mb-3">
+                            <p class="text-muted text-sm">
                                 Just like a FontAwesome Kit or CDN embed, paste this single line inside your HTML <code>&lt;head&gt;</code> to immediately access all 494 icons:
                             </p>
                             <div class="code-snippet-box mb-4">
@@ -224,7 +224,7 @@ ${getNavbar('home')}
                                 <span class="start-step-number bg-primary text-white d-inline-flex align-items-center justify-content-center shadow-xs">2</span>
                                 <h3 class="h5 fw-bold text-dark mb-0">Drop Icons into HTML</h3>
                             </div>
-                            <p class="text-muted text-sm mb-3">
+                            <p class="text-muted text-sm">
                                 Place icon tags anywhere in your layout. Supports default, Fill, Outline, and Sharp styles:
                             </p>
                             <div class="code-snippet-box">
@@ -299,7 +299,7 @@ ${getNavbar('home')}
                                 <i class="hi-visualstudiocode fs-2 text-info"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">React / Next.js</h3>
                             </div>
-                            <p class="text-muted text-xs mb-3">Add to your root <code>pages/_app.js</code> or <code>app/layout.tsx</code>:</p>
+                            <p class="text-muted text-xs mb-1">Add to your root <code>pages/_app.js</code> or <code>app/layout.tsx</code>:</p>
                             <pre class="p-2 rounded bg-white border font-monospace text-2xs text-dark mb-3 user-select-all"><code>import 'haticons/dist/css/haticons.min.css';
 
 export default function App() {
@@ -315,7 +315,7 @@ export default function App() {
                                 <i class="hi-vue-js fs-2 text-success"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Vue 3 / Nuxt / Vite</h3>
                             </div>
-                            <p class="text-muted text-xs mb-3">Include in your <code>main.js</code> or <code>nuxt.config.ts</code>:</p>
+                            <p class="text-muted text-xs mb-1">Include in your <code>main.js</code> or <code>nuxt.config.ts</code>:</p>
                             <pre class="p-2 rounded bg-white border font-monospace text-2xs text-dark mb-3 user-select-all"><code>import { createApp } from 'vue';
 import 'haticons/css';
 import App from './App.vue';
@@ -331,7 +331,7 @@ createApp(App).mount('#app');</code></pre>
                                 <i class="hi-angular fs-2 text-danger"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Angular</h3>
                             </div>
-                            <p class="text-muted text-xs mb-3">Add stylesheet reference in <code>angular.json</code>:</p>
+                            <p class="text-muted text-xs mb-1">Add stylesheet reference in <code>angular.json</code>:</p>
                             <pre class="p-2 rounded bg-white border font-monospace text-2xs text-dark mb-3 user-select-all"><code>"styles": [
   "node_modules/haticons/dist/css/haticons.min.css",
   "src/styles.css"
@@ -351,7 +351,7 @@ createApp(App).mount('#app');</code></pre>
                                 <i class="hi-download fs-2 text-primary"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Download Offline Bundle</h3>
                             </div>
-                            <p class="text-muted text-sm mb-3">
+                            <p class="text-muted text-sm">
                                 Complete bundle containing all individual vector SVG files, compiled web fonts (WOFF2, TTF, EOT, WOFF), Sass sources, and minified CSS stylesheets.
                             </p>
                             <div class="d-flex flex-wrap gap-2 mb-3">
@@ -370,7 +370,7 @@ createApp(App).mount('#app');</code></pre>
                                 <i class="hi-paintbox fs-2 text-purple"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Figma, Sketch &amp; Illustrator</h3>
                             </div>
-                            <p class="text-muted text-sm mb-3">
+                            <p class="text-muted text-sm">
                                 Install <code>dist/fonts/haticons.ttf</code> into macOS Font Book or Windows Fonts. Type icon glyphs directly or drag-and-drop vector SVGs into your design canvases.
                             </p>
                             <div class="p-3 bg-white rounded-3 border text-xs text-muted mb-3">
