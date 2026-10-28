@@ -48,13 +48,13 @@ Object.keys(categories).sort().forEach(catKey => {
     <div class="category-reference-block mb-5 pb-4 border-bottom" id="cat-${catKey}">
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
         <div>
-          <h3 class="h4 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+          <h3 class="h4 fw-bold text-dark mb-1 d-flex align-items-center gap-1">
             <span>${meta.name}</span>
             <span class="badge bg-primary-soft text-primary rounded-pill text-xs">${list.length} icons</span>
           </h3>
           <p class="text-muted text-sm mb-0">${meta.description}</p>
         </div>
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-1">
           <span class="badge bg-light text-muted border font-monospace text-2xs">
             dist/css/categories/${catKey}.min.css
           </span>
@@ -120,15 +120,15 @@ const html = `<!DOCTYPE html>
     <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="/">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
                     <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                         <i class="hi-haticons fs-4"></i>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-1">
                 <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-home"></i> Home
                 </a>
@@ -205,7 +205,7 @@ const html = `<!DOCTYPE html>
             <p class="text-xs text-muted mb-3">
                 An open-source icon system by <strong class="text-dark">PebbleBenders</strong> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
             </p>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 text-sm text-muted mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="/" class="text-decoration-none text-muted">Homepage</a>
                 <span>&bull;</span>
                 <a href="/tutorial.html" class="text-decoration-none text-muted">Tutorial</a>

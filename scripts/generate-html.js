@@ -87,15 +87,15 @@ const html = `<!DOCTYPE html>
     <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="#">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="#">
                     <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                         <i class="hi-haticons fs-4"></i>
                     </span>
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-1">
                 <a href="#quickstart" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     Quickstart
                 </a>
@@ -245,7 +245,7 @@ const html = `<!DOCTYPE html>
 
             <!-- Categories Tabs -->
             <div id="categories" class="category-tabs-wrap mb-4 overflow-auto pb-2">
-                <div class="d-flex align-items-center gap-2 category-pill-group">
+                <div class="d-flex align-items-center gap-1 category-pill-group">
                     ${categoryTabsHtml}
                 </div>
             </div>
@@ -279,7 +279,7 @@ const html = `<!DOCTYPE html>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0 shadow-lg">
                 <div class="modal-header border-bottom px-4 pt-4 pb-3">
-                    <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center">
                         <div class="modal-icon-preview rounded-3 bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center">
                             <i id="modalGlyph" class="hi-haticons fs-1"></i>
                         </div>
@@ -321,7 +321,7 @@ const html = `<!DOCTYPE html>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer border-top px-4 py-3 bg-light rounded-bottom-4">
+                <div class="modal-footer border-top px-2 py-1 bg-light rounded-bottom-4">
                     <button type="button" class="btn btn-primary btn-sm rounded-pill px-4" data-bs-dismiss="modal" data-boodoo-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -348,7 +348,7 @@ const html = `<!DOCTYPE html>
             <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
                 494 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
             </p>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 text-sm text-muted mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="tutorial.html" class="text-decoration-none text-muted">
                     <i class="hi-bulb me-1"></i> Tutorial
                 </a>

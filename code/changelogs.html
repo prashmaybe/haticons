@@ -26,12 +26,12 @@
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
     <script>
-      (function(){
-        var t=localStorage.getItem('haticons_theme_preference')||'system';
-        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
-        document.documentElement.setAttribute('data-theme',d);
-        document.documentElement.setAttribute('data-theme-setting',t);
-      })();
+        (function () {
+            var t = localStorage.getItem('haticons_theme_preference') || 'system';
+            var d = t === 'system' ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
+            document.documentElement.setAttribute('data-theme', d);
+            document.documentElement.setAttribute('data-theme-setting', t);
+        })();
     </script>
 </head>
 
@@ -47,8 +47,8 @@
     <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="/">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
                     <span
                         class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                         <i class="hi-haticons fs-4"></i>
@@ -56,7 +56,7 @@
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-1">
                 <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-home"></i> Home
                 </a>
@@ -70,7 +70,8 @@
                     class="btn btn-ghost text-primary fw-semibold d-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
-                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme"
+                    title="Toggle theme (System / Light / Dark)">
                     <i class="hi-sun theme-toggle-icon fs-5"></i>
                 </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
@@ -102,7 +103,7 @@
         <!-- Release 1.0.0 -->
         <article class="card p-4 p-md-5 rounded-4 border bg-white shadow-xs mb-4">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center gap-1">
                     <span class="badge bg-primary text-white fs-6 rounded-pill px-3 py-1">v1.0.0</span>
                     <span
                         class="badge bg-success-soft text-success border border-success-subtle rounded-pill text-xs">Latest
@@ -187,7 +188,7 @@
                     href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank"
                     rel="noopener">boodoo Framework</a>
             </p>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 text-sm text-muted mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="/" class="text-decoration-none text-muted">Homepage</a>
                 <span>&bull;</span>
                 <a href="/tutorial.html" class="text-decoration-none text-muted">Tutorial</a>

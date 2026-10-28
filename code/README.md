@@ -134,7 +134,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 </button>
 
 <!-- Navigation link with Haticon -->
-<a href="#settings" class="nav-link d-flex align-items-center gap-2">
+<a href="#settings" class="nav-link d-flex align-items-center gap-1">
   <i class="hi-settings text-primary"></i>
   <span>Account Settings</span>
 </a>

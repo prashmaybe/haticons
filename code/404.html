@@ -25,12 +25,12 @@
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
     <script>
-      (function(){
-        var t=localStorage.getItem('haticons_theme_preference')||'system';
-        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
-        document.documentElement.setAttribute('data-theme',d);
-        document.documentElement.setAttribute('data-theme-setting',t);
-      })();
+        (function () {
+            var t = localStorage.getItem('haticons_theme_preference') || 'system';
+            var d = t === 'system' ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
+            document.documentElement.setAttribute('data-theme', d);
+            document.documentElement.setAttribute('data-theme-setting', t);
+        })();
     </script>
 </head>
 
@@ -39,8 +39,8 @@
     <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="/">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
                     <span
                         class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                         <i class="hi-haticons fs-4"></i>
@@ -48,7 +48,7 @@
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-1">
                 <a href="/#quickstart"
                     class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     Quickstart
@@ -57,11 +57,11 @@
                     class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     Browse Icons
                 </a>
-                <a href="/tutorial.html"
-                    class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
+                <a href="/tutorial.html" class="btn btn-ghost text-muted d-inline-flex align-items-center gap-1 ">
                     Tutorial
                 </a>
-                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme"
+                    title="Toggle theme (System / Light / Dark)">
                     <i class="hi-sun theme-toggle-icon fs-5"></i>
                 </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
@@ -76,7 +76,8 @@
     <!-- 404 Hero Section -->
     <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
         <div class="container text-center py-4">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary mb-4 p-4 shadow-xs not-found-icon-wrap">
+            <div
+                class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary mb-4 p-4 shadow-xs not-found-icon-wrap">
                 <i class="hi-search fs-hero-icon"></i>
             </div>
 

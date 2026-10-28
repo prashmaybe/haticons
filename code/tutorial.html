@@ -27,12 +27,12 @@
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
     <script>
-      (function(){
-        var t=localStorage.getItem('haticons_theme_preference')||'system';
-        var d=t==='system'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;
-        document.documentElement.setAttribute('data-theme',d);
-        document.documentElement.setAttribute('data-theme-setting',t);
-      })();
+        (function () {
+            var t = localStorage.getItem('haticons_theme_preference') || 'system';
+            var d = t === 'system' ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
+            document.documentElement.setAttribute('data-theme', d);
+            document.documentElement.setAttribute('data-theme-setting', t);
+        })();
     </script>
 </head>
 
@@ -48,8 +48,8 @@
     <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-0" href="/">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
                     <span
                         class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                         <i class="hi-haticons fs-4"></i>
@@ -57,7 +57,7 @@
                     <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
                 </a>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-1">
                 <a href="/" class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-home"></i> Home
                 </a>
@@ -72,7 +72,8 @@
                     class="btn btn-ghost text-muted d-none d-md-inline-flex align-items-center gap-1 ">
                     <i class="hi-time"></i> Changelogs
                 </a>
-                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                <button type="button" class="theme-toggle-btn ms-1" aria-label="Toggle color theme"
+                    title="Toggle theme (System / Light / Dark)">
                     <i class="hi-sun theme-toggle-icon fs-5"></i>
                 </button>
                 <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
@@ -138,7 +139,7 @@
             <main class="col-12 col-lg-9">
                 <!-- Section 1 -->
                 <section id="installation" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
                         <span class="badge bg-primary text-white rounded-circle p-2 fs-6">1</span>
                         <span>Installation Options</span>
                     </h2>
@@ -169,7 +170,7 @@
 
                 <!-- Section 2 -->
                 <section id="basic-usage" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
                         <span class="badge bg-primary text-white rounded-circle p-2 fs-6">2</span>
                         <span>Basic HTML Usage</span>
                     </h2>
@@ -221,7 +222,7 @@
 
                 <!-- Section 3 -->
                 <section id="modular-css" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
                         <span class="badge bg-primary text-white rounded-circle p-2 fs-6">3</span>
                         <span>Modular Category CSS (Zero Waste)</span>
                     </h2>
@@ -255,7 +256,7 @@
 
                 <!-- Section 4 -->
                 <section id="sass-workflow" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
                         <span class="badge bg-primary text-white rounded-circle p-2 fs-6">4</span>
                         <span>Sass / SCSS Workflow</span>
                     </h2>
@@ -279,7 +280,7 @@
 
                 <!-- Section 5 -->
                 <section id="boodoo-pairing" class="mb-5 pb-4 border-bottom">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
                         <span class="badge bg-primary text-white rounded-circle p-2 fs-6">5</span>
                         <span>Pairing with boodoo Framework</span>
                     </h2>
@@ -329,7 +330,7 @@
 
                 <!-- Section 6 -->
                 <section id="js-api">
-                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <h2 class="h3 fw-bold text-dark mb-3 d-flex align-items-center gap-1">
                         <span class="badge bg-primary text-white rounded-circle p-2 fs-6">6</span>
                         <span>JavaScript / TypeScript API</span>
                     </h2>
@@ -369,7 +370,7 @@
                     href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank"
                     rel="noopener">boodoo Framework</a>
             </p>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 text-sm text-muted mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="/" class="text-decoration-none text-muted">Homepage</a>
                 <span>&bull;</span>
                 <a href="/tutorial.html" class="text-decoration-none text-primary fw-semibold">Tutorial</a>
