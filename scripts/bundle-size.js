@@ -137,3 +137,4 @@ console.log('\n--- BUNDLE SIZE SUMMARY ---');
     console.log(`${item.name.padEnd(42)} | Raw: ${formatKb(s.raw).padStart(9)} | Gzip: ${formatKb(s.gz).padStart(9)} | Br: ${formatKb(s.br).padStart(9)}`);
   }
 });
+

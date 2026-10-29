@@ -82,3 +82,4 @@ While embedding Haticons in your applications does not require public credit und
 <!-- In your README or application credits -->
 Icons by <a href="https://haticons.com/">Haticons</a> by <a href="https://pebblebenders.com/">PebbleBenders</a>.
 ```
+
