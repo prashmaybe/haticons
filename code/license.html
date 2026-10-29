@@ -1,156 +1,182 @@
 <!DOCTYPE html>
 <html lang="en" data-boodoo-theme="light">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="/assets/images/favicon.png" rel="shortcut icon">
-    <title>License (GPL-3.0) | Haticons by PebbleBenders</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Open source license details for Haticons - GNU General Public License v3.0.">
-    <meta name="keywords" content="haticons license, gpl 3.0, open source icon license, pebblebenders" />
-    <meta name="theme-color" content="#7c3aed">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="/assets/images/favicon.png" rel="shortcut icon">
+  <title>License (GPL-3.0) | Haticons by PebbleBenders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open source license details for Haticons - GNU General Public License v3.0.">
+  <meta name="keywords" content="haticons license, gpl 3.0, open source icon license, pebblebenders" />
+  <meta name="theme-color" content="#7c3aed">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
-    <!-- boodoo CSS Framework -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css">
+  <!-- boodoo CSS Framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css">
 
-    <!-- Haticons CSS -->
-    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
-    <script>
-        (function () {
-            var t = localStorage.getItem('haticons_theme_preference') || 'system';
-            var d = t === 'system' ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
-            document.documentElement.setAttribute('data-theme', d);
-            document.documentElement.setAttribute('data-boodoo-theme', d);
-            document.documentElement.setAttribute('data-theme-setting', t);
-        })();
-    </script>
+  <!-- Haticons CSS -->
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
+  <script>
+    (function () {
+      var t = localStorage.getItem('haticons_theme_preference') || 'system';
+      var d = t === 'system' ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
+      document.documentElement.setAttribute('data-theme', d);
+      document.documentElement.setAttribute('data-boodoo-theme', d);
+      document.documentElement.setAttribute('data-theme-setting', t);
+    })();
+  </script>
 </head>
 
 <body class="bg-light text-dark">
 
-    <!-- Top Announcement Bar -->
-    <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
-        <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.1</span>
-        <span>569+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
+  <!-- Top Announcement Bar -->
+  <div
+    class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
+    <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.1</span>
+    <span>569+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
+        <span
+          class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
+          <i class="hi-haticons fs-4"></i>
+        </span>
+        <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
+      </a>
+
+      <!-- Mobile Controls (Theme Toggle + Navbar Toggler) -->
+      <div class="d-flex align-items-center gap-1 d-lg-none">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme"
+          title="Toggle theme (System / Light / Dark)">
+          <i class="hi-sun theme-toggle-icon fs-5"></i>
+        </button>
+        <button class="navbar-toggler border-0 p-2" type="button" data-boodoo-toggle="collapse"
+          data-boodoo-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Collapsible Navigation Menu -->
+      <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="mainNavbarCollapse">
+        <div
+          class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 py-2 py-lg-0">
+          <a href="/#start"
+            class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+            <i class="hi-play"></i> Set Up
+          </a>
+          <a href="/reference.html"
+            class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+            <i class="hi-document"></i> Reference
+          </a>
+          <a href="/tutorial.html"
+            class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+            <i class="hi-bulb"></i> Tutorial
+          </a>
+          <a href="/changelogs.html"
+            class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+            <i class="hi-time"></i> Changelogs
+          </a>
+          <button type="button" class="theme-toggle-btn ms-lg-1 d-none d-lg-inline-flex" aria-label="Toggle color theme"
+            title="Toggle theme (System / Light / Dark)">
+            <i class="hi-sun theme-toggle-icon fs-5"></i>
+          </button>
+          <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener"
+            class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center justify-content-center gap-1 mt-2 mt-lg-0">
+            <i class="hi-npm"></i>
+            <span>npm</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="py-5 bg-white border-bottom text-center">
+    <div class="container">
+      <div
+        class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+        <i class="hi-check-circle"></i>
+        <span>GNU General Public License v3.0</span>
+      </div>
+      <h1 class="display-5 fw-extrabold text-dark mb-2">Open Source License</h1>
+      <p class="lead text-muted mx-auto header-subtitle-constrained mb-0">
+        Haticons is 100% free and open-source software, maintained with pride by <a href="https://pebblebenders.com/"
+          class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container py-5 changelogs-main-container">
+    <!-- Quick Summary Card -->
+    <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
+      <h2 class="h5 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+        <i class="hi-bulb text-primary"></i>
+        <span>GPL-3.0 License Summary</span>
+      </h2>
+      <div class="row g-3 text-sm">
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-light rounded-3 border">
+            <strong class="text-success d-block mb-1"><i class="hi-check-circle me-1"></i> Permissions</strong>
+            <span class="text-muted text-xs">Commercial use, modification, distribution, private use, and patent
+              use.</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-light rounded-3 border">
+            <strong class="text-primary d-block mb-1"><i class="hi-document me-1"></i> Conditions</strong>
+            <span class="text-muted text-xs">Disclose source, license and copyright notice, state changes, same license
+              (GPLv3).</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-light rounded-3 border">
+            <strong class="text-danger d-block mb-1"><i class="hi-warning me-1"></i> Limitations</strong>
+            <span class="text-muted text-xs">No liability, no warranty. Software provided "as is".</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Main Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
-                <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
-                    <i class="hi-haticons fs-4"></i>
-                </span>
-                <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
-            </a>
+    <!-- Third-Party Trademarks & Brand Icons Notice -->
+    <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
+      <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
+        <i class="hi-lock text-primary"></i>
+        <span>Brand Icons &amp; Third-Party Trademarks</span>
+      </h2>
+      <p class="text-muted text-xs mb-0">
+        All third-party company, product, and service brand logos included in the <code>brands</code> category (e.g.
+        Apple, Google, GitHub, Twitter, Favro, etc.) are trademarks or registered trademarks of their respective owners.
+        Their inclusion in Haticons does not constitute or imply any affiliation, sponsorship, or endorsement. The GNU
+        General Public License applies to the Haticons font library engine, build tooling, and original vector paths.
+        When embedding brand logos, you are responsible for complying with the respective trademark owner's brand asset
+        and usage guidelines.
+      </p>
+    </div>
 
-            <!-- Mobile Controls (Theme Toggle + Navbar Toggler) -->
-            <div class="d-flex align-items-center gap-1 d-lg-none">
-                <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
-                    <i class="hi-sun theme-toggle-icon fs-5"></i>
-                </button>
-                <button class="navbar-toggler border-0 p-2" type="button" data-boodoo-toggle="collapse" data-boodoo-target="#mainNavbarCollapse" aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-
-            <!-- Collapsible Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="mainNavbarCollapse">
-                <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 py-2 py-lg-0">
-                    <a href="/#start" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-play"></i> Set Up
-                    </a>
-                    <a href="/reference.html" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-document"></i> Reference
-                    </a>
-                    <a href="/tutorial.html" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-bulb"></i> Tutorial
-                    </a>
-                    <a href="/changelogs.html" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-time"></i> Changelogs
-                    </a>
-                    <button type="button" class="theme-toggle-btn ms-lg-1 d-none d-lg-inline-flex" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
-                        <i class="hi-sun theme-toggle-icon fs-5"></i>
-                    </button>
-                    <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center justify-content-center gap-1 mt-2 mt-lg-0">
-                        <i class="hi-npm"></i>
-                        <span>npm</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header Banner -->
-    <header class="py-5 bg-white border-bottom text-center">
-        <div class="container">
-            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-3 border border-primary-subtle">
-                <i class="hi-check-circle"></i>
-                <span>GNU General Public License v3.0</span>
-            </div>
-            <h1 class="display-5 fw-extrabold text-dark mb-2">Open Source License</h1>
-            <p class="lead text-muted mx-auto header-subtitle-constrained mb-0">
-                Haticons is 100% free and open-source software, maintained with pride by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>.
-            </p>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container py-5 changelogs-main-container">
-        <!-- Quick Summary Card -->
-        <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
-            <h2 class="h5 fw-bold text-dark mb-3 d-flex align-items-center gap-2">
-                <i class="hi-bulb text-primary"></i>
-                <span>GPL-3.0 License Summary</span>
-            </h2>
-            <div class="row g-3 text-sm">
-                <div class="col-12 col-md-4">
-                    <div class="p-3 bg-light rounded-3 border">
-                        <strong class="text-success d-block mb-1"><i class="hi-check-circle me-1"></i> Permissions</strong>
-                        <span class="text-muted text-xs">Commercial use, modification, distribution, private use, and patent use.</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="p-3 bg-light rounded-3 border">
-                        <strong class="text-primary d-block mb-1"><i class="hi-document me-1"></i> Conditions</strong>
-                        <span class="text-muted text-xs">Disclose source, license and copyright notice, state changes, same license (GPLv3).</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="p-3 bg-light rounded-3 border">
-                        <strong class="text-danger d-block mb-1"><i class="hi-warning me-1"></i> Limitations</strong>
-                        <span class="text-muted text-xs">No liability, no warranty. Software provided "as is".</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Third-Party Trademarks & Brand Icons Notice -->
-        <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
-            <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
-                <i class="hi-lock text-primary"></i>
-                <span>Brand Icons &amp; Third-Party Trademarks</span>
-            </h2>
-            <p class="text-muted text-xs mb-0">
-                All third-party company, product, and service brand logos included in the <code>brands</code> category (e.g. Apple, Google, GitHub, Twitter, Favro, etc.) are trademarks or registered trademarks of their respective owners. Their inclusion in Haticons does not constitute or imply any affiliation, sponsorship, or endorsement. The GNU General Public License applies to the Haticons font library engine, build tooling, and original vector paths. When embedding brand logos, you are responsible for complying with the respective trademark owner's brand asset and usage guidelines.
-            </p>
-        </div>
-
-        <!-- Full License Text -->
-        <div class="card p-4 p-md-5 rounded-4 border bg-white shadow-xs">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-                <h3 class="h5 fw-bold text-dark mb-0 font-monospace">GNU GENERAL PUBLIC LICENSE (GPL-3.0)</h3>
-                <a href="/download/haticons.zip" class="btn btn-sm btn-outline-primary rounded-pill d-inline-flex align-items-center gap-1">
-                    <i class="hi-download"></i> Download Sources
-                </a>
-            </div>
-            <pre class="bg-light p-3 rounded-3 text-xs font-monospace text-dark overflow-auto mb-0" style="max-height: 480px; white-space: pre-wrap; line-height: 1.5;">GNU GENERAL PUBLIC LICENSE
+    <!-- Full License Text -->
+    <div class="card p-4 p-md-5 rounded-4 border bg-white shadow-xs">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h3 class="h5 fw-bold text-dark mb-0 font-monospace">GNU GENERAL PUBLIC LICENSE (GPL-3.0)</h3>
+        <a href="/download/haticons.zip"
+          class="btn btn-sm btn-outline-primary rounded-pill d-inline-flex align-items-center gap-1">
+          <i class="hi-download"></i> Download Sources
+        </a>
+      </div>
+      <pre class="bg-light p-3 rounded-3 text-xs font-monospace text-dark overflow-auto mb-0"
+        style="max-height: 480px; white-space: pre-wrap; line-height: 1.5;">GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;
@@ -825,46 +851,54 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 &lt;https://www.gnu.org/licenses/why-not-lgpl.html&gt;.
 </pre>
-        </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-white border-top text-center">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
-                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
-                    <i class="hi-haticons fs-5"></i>
-                </span>
-                <span class="fs-5 fw-bold text-dark">Haticons</span>
-            </div>
-            <p class="text-xs text-muted mb-3">
-                An open-source icon system by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
-            </p>
-            <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
-                569 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
-            </p>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
-                <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 bg-white text-muted d-inline-flex align-items-center gap-1 shadow-2xs">
-                    <i class="hi-download"></i>
-                    <span>Download ZIP</span>
-                </a>
-            </div>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-xs text-muted mb-3 pt-2 border-top">
-                <a href="/terms.html" class="text-decoration-none text-muted">Terms of Use</a>
-                <span>&bull;</span>
-                <a href="/privacy.html" class="text-decoration-none text-muted">Privacy Policy</a>
-                <span>&bull;</span>
-                <a href="/license.html" class="text-decoration-none text-primary fw-semibold">License (GPL-3.0)</a>
-            </div>
-            <p class="text-xs text-muted mb-0">
-                Released under GPL-3.0 License &middot; Designed &amp; Crafted by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>
-            </p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="py-5 bg-white border-top text-center">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+        <span
+          class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
+          <i class="hi-haticons fs-5"></i>
+        </span>
+        <span class="fs-5 fw-bold text-dark">Haticons</span>
+      </div>
+      <p class="text-xs text-muted mb-3">
+        An open-source icon system by <a href="https://pebblebenders.com/"
+          class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a> &middot; Made
+        with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank"
+          rel="noopener">boodoo Framework</a>
+      </p>
+      <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
+        569 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
+      </p>
+      <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
+        <a href="/download/haticons.zip"
+          class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 bg-white text-muted d-inline-flex align-items-center gap-1 shadow-2xs">
+          <i class="hi-download"></i>
+          <span>Download ZIP</span>
+        </a>
+      </div>
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-xs text-muted mb-3 pt-2 border-top">
+        <a href="/terms.html" class="text-decoration-none text-muted">Terms of Use</a>
+        <span>&bull;</span>
+        <a href="/privacy.html" class="text-decoration-none text-muted">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="/license.html" class="text-decoration-none text-primary fw-semibold">License (GPL-3.0)</a>
+      </div>
+      <p class="text-xs text-muted mb-0">
+        Released under GPL-3.0 License &middot; Designed &amp; Crafted by <a href="https://pebblebenders.com/"
+          class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>
+      </p>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
-    <script type="text/javascript" src="/assets/js/theme.js"></script>
-    <script type="text/javascript" src="/assets/js/custom.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+  <script type="text/javascript" src="/assets/js/theme.js"></script>
+  <script type="text/javascript" src="/assets/js/custom.js"></script>
 </body>
+
 </html>

@@ -141,7 +141,7 @@ ${getNavbar('reference')}
     <!-- Header Banner -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-3 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                 <i class="hi-document"></i>
                 <span>Complete Icon Catalog &amp; Codepoint Reference</span>
             </div>

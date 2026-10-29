@@ -65,13 +65,13 @@ ${getNavbar('home')}
 
             <!-- Install / CDN Pills -->
             <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-stretch gap-2">
-                <div class="install-code-box flex-fill px-2 py-1 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
+                <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate install-text" id="npmCmd">npm install haticons</span>
                     <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
-                <div class="install-code-box flex-fill px-2 py-1 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
+                <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css</span>
                     <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" title="Copy CDN URL">
                         <i class="hi-paste"></i>
@@ -85,7 +85,7 @@ ${getNavbar('home')}
     <section id="start" class="py-5 bg-white border-top border-bottom">
         <div class="container">
             <div class="text-center mb-5">
-                <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-3 border border-primary-subtle">
+                <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                     <i class="hi-play"></i>
                     <span>Setup Guide &bull; FontAwesome Alternative</span>
                 </div>
