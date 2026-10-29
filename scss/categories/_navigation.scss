@@ -1,10 +1,37 @@
 // Haticons - Category: Navigation & Places (9 icons)
-.hi-map:before { content: "\f035"; }
-.hi-location:before { content: "\f074"; }
-.hi-nav:before { content: "\f094"; }
-.hi-bus:before { content: "\f107"; }
-.hi-car:before { content: "\f109"; }
-.hi-id-card-vertical:before { content: "\e941"; }
-.hi-id-card:before { content: "\e942"; }
-.hi-pin:before { content: "\e95c"; }
-.hi-pinned:before { content: "\e95d"; }
+.hi-map:before,
+.hi-map-fill:before,
+.hi-map-outline:before,
+.hi-map-sharp:before { content: "\f035"; }
+.hi-location:before,
+.hi-location-fill:before,
+.hi-location-outline:before,
+.hi-location-sharp:before { content: "\f074"; }
+.hi-nav:before,
+.hi-nav-fill:before,
+.hi-nav-outline:before,
+.hi-nav-sharp:before { content: "\f094"; }
+.hi-bus:before,
+.hi-bus-fill:before,
+.hi-bus-outline:before,
+.hi-bus-sharp:before { content: "\f107"; }
+.hi-car:before,
+.hi-car-fill:before,
+.hi-car-outline:before,
+.hi-car-sharp:before { content: "\f109"; }
+.hi-id-card-vertical:before,
+.hi-id-card-vertical-fill:before,
+.hi-id-card-vertical-outline:before,
+.hi-id-card-vertical-sharp:before { content: "\e941"; }
+.hi-id-card:before,
+.hi-id-card-fill:before,
+.hi-id-card-outline:before,
+.hi-id-card-sharp:before { content: "\e942"; }
+.hi-pin:before,
+.hi-pin-fill:before,
+.hi-pin-outline:before,
+.hi-pin-sharp:before { content: "\e95c"; }
+.hi-pinned:before,
+.hi-pinned-fill:before,
+.hi-pinned-outline:before,
+.hi-pinned-sharp:before { content: "\e95d"; }

@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A set of beautifully crafted, lightweight, modular Webfont and SVG Icons.</strong><br>
-  An open-source project by <strong>PebbleBenders</strong>.<br>
+  An open-source project by <strong><a href="https://pebblebenders.com/">PebbleBenders</a></strong>.<br>
   Inspired by <em>Ionicons</em>, <em>FontAwesome</em>, and <em>Glyphicons</em> &middot; <strong>Made with <a href="https://www.boodooframework.com/">boodoo Framework</a></strong>.
 </p>
 
@@ -14,13 +14,12 @@
   <a href="https://www.npmjs.com/package/haticons"><img src="https://img.shields.io/npm/v/haticons.svg?color=7c3aed" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/haticons"><img src="https://img.shields.io/npm/dm/haticons.svg" alt="npm downloads" /></a>
   <a href="https://www.boodooframework.com/"><img src="https://img.shields.io/badge/made%20with-boodoo-7c3aed.svg" alt="Made with boodoo" /></a>
-  <img src="https://img.shields.io/badge/by-PebbleBenders-0f172a.svg" alt="by PebbleBenders" />
+  <a href="https://pebblebenders.com/"><img src="https://img.shields.io/badge/by-PebbleBenders-0f172a.svg" alt="by PebbleBenders" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License" /></a>
 </p>
 
 <p align="center">
   <a href="https://haticons.com/"><strong>Homepage</strong></a> &middot;
-  <a href="https://haticons.com/cheatsheet.html"><strong>Interactive Cheat Sheet</strong></a> &middot;
   <a href="https://haticons.com/reference.html"><strong>Full Icon Reference</strong></a> &middot;
   <a href="https://haticons.com/tutorial.html"><strong>Tutorial &amp; Usage Guide</strong></a> &middot;
   <a href="https://haticons.com/changelogs.html"><strong>Changelogs</strong></a>
@@ -68,7 +67,7 @@ Or use directly via CDN (jsDelivr / unpkg):
 
 ```html
 <!-- Full bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
 ```
 
 ---
@@ -83,13 +82,13 @@ Every category is available as a standalone CSS file (including font definitions
 
 ```html
 <!-- Load only Commerce & Payment icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce.min.css">
 
 <!-- Load only Directional & Arrow icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/directional.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/directional.min.css">
 
 <!-- Load only Media icons (~1.4 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/media.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/media.min.css">
 ```
 
 ### 2. Shared Core + Category-Only CSS (Optimal for Multi-Category Sites)
@@ -98,17 +97,18 @@ If you use multiple categories, load `core.min.css` once, then load only the ico
 
 ```html
 <!-- Core webfont & sizing classes (less than 1 KB) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/core.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/core.min.css">
 
 <!-- Then add category glyphs without duplicate font-face declarations -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/commerce-only.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/categories/communication-only.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce-only.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/communication-only.min.css">
 ```
 
-### 3. Modular SCSS / Sass
+### 3. Modular SCSS / Sass & LESS
 
-If your project uses SCSS, customize font paths and import only required modules:
+If your project uses SCSS or LESS, customize font paths and import only required modules:
 
+#### SCSS / Sass:
 ```scss
 // Override variables if needed
 $hi-font-path: "~haticons/dist/fonts";
@@ -124,6 +124,22 @@ $hi-prefix: "hi-";
 @import "haticons/scss/categories/directional";
 ```
 
+#### LESS:
+```less
+// Override variables if needed
+@hi-font-path: "~haticons/dist/fonts";
+@hi-prefix: ~"hi-";
+
+// Import core font-face & utilities
+@import "haticons/less/variables.less";
+@import "haticons/less/core.less";
+
+// Import only the categories you need
+@import "haticons/less/categories/commerce.less";
+@import "haticons/less/categories/communication.less";
+@import "haticons/less/categories/directional.less";
+```
+
 ---
 
 ## 🎨 Using with boodoo Framework
@@ -133,7 +149,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 ```html
 <!-- Include boodoo CSS & Haticons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@latest/dist/css/boodoo.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
 
 <!-- Button with Haticon -->
 <button class="btn btn-primary d-inline-flex align-items-center gap-1">
@@ -195,7 +211,6 @@ npm test
 Visit the official documentation website for live examples, cheat sheets, and integration guides:
 
 - 🌐 **[Official Website](https://haticons.com/)** - Overview, CDN links, and 2-minute quickstart.
-- ⚡ **[Interactive Cheat Sheet](https://haticons.com/cheatsheet.html)** - Live search all 494 icons, filter by 14 categories, and click to inspect HTML snippets, Unicode codepoints, and modular CSS bundle links.
 - 📚 **[Full Icon Reference Catalog](https://haticons.com/reference.html)** - Comprehensive categorization index with quick-copy tags, unicode values, and category sidebar scrollspy.
 - 💡 **[Step-by-Step Tutorial](https://haticons.com/tutorial.html)** - In-depth examples for vanilla HTML, boodoo UI components, Vue, React, Angular, Sass customization, and tree-shaking individual SVG modules.
 - 📝 **[Changelogs](https://haticons.com/changelogs.html)** - Version history, migration guides, and release notes.
@@ -211,4 +226,4 @@ Detailed release notes and migration guides can be found in [CHANGELOG.md](CHANG
 ## 📄 License
 
 GPL-3.0 License. See [LICENSE](LICENSE) for details.
-HatIcons by PebbleBenders &middot; Made with boodoo Framework.
+HatIcons by [PebbleBenders](https://pebblebenders.com/) &middot; Made with boodoo Framework.

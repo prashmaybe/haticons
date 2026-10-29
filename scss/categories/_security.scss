@@ -1,9 +1,45 @@
-// Haticons - Category: Security & Access (8 icons)
-.hi-block:before { content: "\f076"; }
-.hi-key:before { content: "\f0f5"; }
-.hi-incognito:before { content: "\f116"; }
-.hi-lock1:before { content: "\f11a"; }
-.hi-unlock:before { content: "\f126"; }
-.hi-ban:before { content: "\e911"; }
-.hi-clock:before { content: "\e923"; }
-.hi-lock:before { content: "\e948"; }
+// Haticons - Category: Security & Access (10 icons)
+.hi-block:before,
+.hi-block-fill:before,
+.hi-block-outline:before,
+.hi-block-sharp:before { content: "\f076"; }
+.hi-key:before,
+.hi-key-fill:before,
+.hi-key-outline:before,
+.hi-key-sharp:before { content: "\f0f5"; }
+.hi-incognito:before,
+.hi-incognito-fill:before,
+.hi-incognito-outline:before,
+.hi-incognito-sharp:before { content: "\f116"; }
+.hi-lock1:before,
+.hi-lock1-fill:before,
+.hi-lock1-outline:before,
+.hi-lock1-sharp:before,
+.hi-lock-alt:before,
+.hi-lock-alt-fill:before,
+.hi-lock-alt-outline:before,
+.hi-lock-alt-sharp:before { content: "\f11a"; }
+.hi-unlock:before,
+.hi-unlock-fill:before,
+.hi-unlock-outline:before,
+.hi-unlock-sharp:before { content: "\f126"; }
+.hi-ban:before,
+.hi-ban-fill:before,
+.hi-ban-outline:before,
+.hi-ban-sharp:before { content: "\e911"; }
+.hi-clock:before,
+.hi-clock-fill:before,
+.hi-clock-outline:before,
+.hi-clock-sharp:before { content: "\e923"; }
+.hi-lock:before,
+.hi-lock-fill:before,
+.hi-lock-outline:before,
+.hi-lock-sharp:before { content: "\e948"; }
+.hi-shield:before,
+.hi-shield-fill:before,
+.hi-shield-outline:before,
+.hi-shield-sharp:before { content: "\f1cd"; }
+.hi-shield-check:before,
+.hi-shield-check-fill:before,
+.hi-shield-check-outline:before,
+.hi-shield-check-sharp:before { content: "\f1ce"; }

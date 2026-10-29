@@ -31,7 +31,11 @@ const BRAND_EXACT = new Set([
   'ubuntu', 'udacity', 'udemy', 'unity', 'upwork', 'viadeo', 'viber-icon', 'vim', 'vimeo', 'vine', 
   'visualstudiocode', 'vk', 'vlcmediaplayer', 'vue-js', 'webstorm', 'wechat', 'whatsapp', 'wheniwork', 
   'wholensole', 'wikipedia', 'windows', 'wix', 'wordpress', 'xbox', 'xcode', 'xing', 'yammer', 'yandex', 
-  'yarn', 'yash-raj', 'ycombinator', 'youtube-play', 'zendesk', 'zerply', 'zillow', 'zomato', 'zorin'
+  'yarn', 'yash-raj', 'ycombinator', 'youtube-play', 'zendesk', 'zerply', 'zillow', 'zomato', 'zorin',
+  'anthropic', 'antigravity', 'astro', 'bluesky', 'boodoo', 'bun', 'canva', 'claude', 'copilot', 'cursor', 'deepseek', 'discord', 'docker', 'figma', 'firebase', 'gemini', 'golang', 
+  'google-cloud', 'graphql', 'groq', 'huggingface', 'kubernetes', 'langchain', 'linear', 'mistral', 'mongodb', 'nextjs', 'notion', 'ollama', 'openai', 'patreon', 
+  'perplexity', 'pinterest', 'pnpm', 'postgresql', 'postman', 'prisma', 'react', 'redis', 'replit', 'resend', 'shadcn', 'signal', 'stripe', 'supabase', 
+  'svelte', 'tailwind', 'telegram', 'threads', 'trae', 'v0', 'vercel', 'vite', 'windsurf', 'x-twitter', 'zoom'
 ]);
 
 const CATEGORY_META = {
@@ -54,20 +58,94 @@ const CATEGORY_META = {
 function classifyIcon(cls) {
   const c = cls.replace(/^hi-/, '');
   if (BRAND_EXACT.has(c)) return 'brands';
-  if (['credit-card', 'credit-card1', 'cart', 'fill-bag', 'empty-bag', 'fat-bag', 'bean-bag', 'wallet', 'master-card', 'visa', 'paypal', 'paytm', 'applepay', 'googlepay', 'samsungpay', 'bitcoin', 'maestro'].includes(c)) return 'commerce';
+  if (['credit-card', 'credit-card1', 'cart', 'fill-bag', 'empty-bag', 'fat-bag', 'bean-bag', 'wallet', 'master-card', 'visa', 'paypal', 'paytm', 'applepay', 'googlepay', 'samsungpay', 'bitcoin', 'maestro', 'qrcode'].includes(c)) return 'commerce';
   if (/arrow|chevron|turn-|next|previous/.test(c)) return 'directional';
-  if (/play|music|camera|mic|volume|speaker|mute|video|presentation|game|gaming-console/.test(c)) return 'media';
+  if (/play|pause|stop|music|camera|mic|volume|speaker|mute|video|presentation|game|gaming-console/.test(c)) return 'media';
   if (/file|folder|document|archive|paste|attachment/.test(c)) return 'files';
-  if (/align-|list|edit|pencil|quotes|cut|copy|tag|paint-bucket|paintbox|marker/.test(c)) return 'editor';
-  if (/monitor|hard-disk|sim_card|landline|phone|electric|power|washing-machine|robot|network/.test(c)) return 'devices';
+  if (/align-|list|edit|pencil|quotes|cut|copy|tag|paint-bucket|paintbox|marker|code/.test(c)) return 'editor';
+  if (/monitor|hard-disk|sim_card|landline|phone|electric|power|washing-machine|robot|network|terminal|database|cpu|wifi/.test(c)) return 'devices';
   if (/chat|message|envelope|mail|paper-plane|speech-bubble|share/.test(c)) return 'communication';
   if (/user|users|profile|doctor|hand-index/.test(c)) return 'users';
-  if (/map|location|pin|pinned|nav|compass|bus|car/.test(c)) return 'navigation';
-  if (/lock|unlock|key|incognito|ban|block/.test(c)) return 'security';
-  if (/clock|time|calendar|date|alarm/.test(c)) return 'time';
-  if (/warning|info|help|question|check|cross|close|bell/.test(c)) return 'feedback';
+  if (/map|location|\bpin\b|\bpinned\b|nav|compass|bus|car/.test(c)) return 'navigation';
+  if (/lock|unlock|key|incognito|ban|block|shield/.test(c)) return 'security';
+  if (/clock|time|calendar|date|alarm|history/.test(c)) return 'time';
+  if (/warning|info|help|question|check|cross|close|bell|spinner/.test(c)) return 'feedback';
   return 'interface';
 }
+
+const ICON_ALIASES = {
+  'snapchat': 'spanchat',
+  'share-alt': 'share1',
+  'credit-card-alt': 'credit-card1',
+  'folder-alt': 'folder1',
+  'pencil-alt': 'pencil1',
+  'star-alt': 'star1',
+  'star-outline-alt': 'star-o1',
+  'redo-alt': 'redo1',
+  'undo-alt': 'undo1',
+  'trash-alt': 'trash1',
+  'attachment-alt': 'attachment1',
+  'zoom-out-alt': 'zoom-out1',
+  'zoom-in-alt': 'zoom-in1',
+  'bell-alt': 'bell1',
+  'search-alt': 'search1',
+  'letterboxd-alt': 'letterboxd1',
+  'envelope-alt': 'envelope1',
+  'paper-plane-alt': 'paper-plane1',
+  'user-alt': 'user1',
+  'users-alt': 'users1',
+  'check-alt': 'check1',
+  'camera-alt': 'camera1',
+  'flag-alt': 'flag1',
+  'info-alt': 'info1',
+  'lock-alt': 'lock1',
+  'calendar-alt': 'calendar1',
+  'time-alt': 'time1',
+  'x': 'x-twitter',
+  'twitter-x': 'x-twitter',
+  'chatgpt': 'openai',
+  'cusror': 'cursor',
+  'antogravity': 'antigravity',
+  'google-antigravity': 'antigravity',
+  'googleantigravity': 'antigravity',
+  'agy': 'antigravity',
+  'boodooframework': 'boodoo',
+  'boodoo-framework': 'boodoo',
+  'codeium': 'windsurf',
+  'codeium-windsurf': 'windsurf',
+  'claude-ai': 'claude',
+  'claudecode': 'claude',
+  'google-gemini': 'gemini',
+  'googlegemini': 'gemini',
+  'github-copilot': 'copilot',
+  'githubcopilot': 'copilot',
+  'deepseek-ai': 'deepseek',
+  'perplexity-ai': 'perplexity',
+  'mistral-ai': 'mistral',
+  'hugging-face': 'huggingface',
+  'hf': 'huggingface',
+  'v0-dev': 'v0',
+  'shadcn-ui': 'shadcn',
+  'shadcnui': 'shadcn',
+  'next-js': 'nextjs',
+  'tailwindcss': 'tailwind',
+  'k8s': 'kubernetes',
+  'gcp': 'google-cloud',
+  'postgres': 'postgresql',
+  'mongo': 'mongodb',
+  'go': 'golang',
+  'dark-mode': 'moon',
+  'ai': 'sparkles',
+  'magic': 'sparkles',
+  'lightning': 'bolt',
+  'web': 'globe',
+  'qr-code': 'qrcode',
+  'arrow-up': 'arrow-top',
+  'arrow-down': 'arrow-bottom',
+  'chevron-up': 'chevron-top',
+  'chevron-down': 'chevron-bottom',
+  'loading': 'spinner'
+};
 
 function enrichIcons(rawIcons) {
   const seen = new Set();
@@ -97,13 +175,16 @@ function enrichIcons(rawIcons) {
   return {
     icons: enrichedIcons,
     categorized,
-    categories: CATEGORY_META
+    categories: CATEGORY_META,
+    aliases: ICON_ALIASES
   };
 }
 
 module.exports = {
   BRAND_EXACT,
   CATEGORY_META,
+  ICON_ALIASES,
   classifyIcon,
   enrichIcons
 };
+

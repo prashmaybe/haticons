@@ -1,14 +1,65 @@
-// Haticons - Category: Media & Audio (13 icons)
-.hi-play:before { content: "\f001"; }
-.hi-music:before { content: "\f037"; }
-.hi-gaming-console:before { content: "\f07a"; }
-.hi-camera1:before { content: "\f108"; }
-.hi-camera:before { content: "\e917"; }
-.hi-game:before { content: "\e93c"; }
-.hi-mic:before { content: "\e94e"; }
-.hi-mute:before { content: "\e952"; }
-.hi-presentation:before { content: "\e95f"; }
-.hi-speaker:before { content: "\e96d"; }
-.hi-video-camera:before { content: "\e97f"; }
-.hi-volume-down:before { content: "\e980"; }
-.hi-volume-up:before { content: "\e981"; }
+// Haticons - Category: Media & Audio (15 icons)
+.hi-play:before,
+.hi-play-fill:before,
+.hi-play-outline:before,
+.hi-play-sharp:before { content: "\f001"; }
+.hi-music:before,
+.hi-music-fill:before,
+.hi-music-outline:before,
+.hi-music-sharp:before { content: "\f037"; }
+.hi-gaming-console:before,
+.hi-gaming-console-fill:before,
+.hi-gaming-console-outline:before,
+.hi-gaming-console-sharp:before { content: "\f07a"; }
+.hi-camera1:before,
+.hi-camera1-fill:before,
+.hi-camera1-outline:before,
+.hi-camera1-sharp:before,
+.hi-camera-alt:before,
+.hi-camera-alt-fill:before,
+.hi-camera-alt-outline:before,
+.hi-camera-alt-sharp:before { content: "\f108"; }
+.hi-camera:before,
+.hi-camera-fill:before,
+.hi-camera-outline:before,
+.hi-camera-sharp:before { content: "\e917"; }
+.hi-game:before,
+.hi-game-fill:before,
+.hi-game-outline:before,
+.hi-game-sharp:before { content: "\e93c"; }
+.hi-mic:before,
+.hi-mic-fill:before,
+.hi-mic-outline:before,
+.hi-mic-sharp:before { content: "\e94e"; }
+.hi-mute:before,
+.hi-mute-fill:before,
+.hi-mute-outline:before,
+.hi-mute-sharp:before { content: "\e952"; }
+.hi-presentation:before,
+.hi-presentation-fill:before,
+.hi-presentation-outline:before,
+.hi-presentation-sharp:before { content: "\e95f"; }
+.hi-speaker:before,
+.hi-speaker-fill:before,
+.hi-speaker-outline:before,
+.hi-speaker-sharp:before { content: "\e96d"; }
+.hi-video-camera:before,
+.hi-video-camera-fill:before,
+.hi-video-camera-outline:before,
+.hi-video-camera-sharp:before { content: "\e97f"; }
+.hi-volume-down:before,
+.hi-volume-down-fill:before,
+.hi-volume-down-outline:before,
+.hi-volume-down-sharp:before { content: "\e980"; }
+.hi-volume-up:before,
+.hi-volume-up-fill:before,
+.hi-volume-up-outline:before,
+.hi-volume-up-sharp:before { content: "\e981"; }
+.hi-pause:before,
+.hi-pause-fill:before,
+.hi-pause-outline:before,
+.hi-pause-sharp:before { content: "\f1c4"; }
+.hi-stop:before,
+.hi-stop-fill:before,
+.hi-stop-outline:before,
+.hi-stop-sharp:before { content: "\f1c5"; }

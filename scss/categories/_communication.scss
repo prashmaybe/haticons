@@ -1,12 +1,57 @@
 // Haticons - Category: Communication (11 icons)
-.hi-share1:before { content: "\f003"; }
-.hi-message:before { content: "\f036"; }
-.hi-envelope1:before { content: "\f09b"; }
-.hi-envelope-open:before { content: "\f09c"; }
-.hi-paper-plane1:before { content: "\f09d"; }
-.hi-mail:before { content: "\f130"; }
-.hi-chat:before { content: "\e91a"; }
-.hi-envelope:before { content: "\e930"; }
-.hi-paper-plane:before { content: "\e957"; }
-.hi-share:before { content: "\e96c"; }
-.hi-speech-bubble:before { content: "\e96e"; }
+.hi-share1:before,
+.hi-share1-fill:before,
+.hi-share1-outline:before,
+.hi-share1-sharp:before,
+.hi-share-alt:before,
+.hi-share-alt-fill:before,
+.hi-share-alt-outline:before,
+.hi-share-alt-sharp:before { content: "\f003"; }
+.hi-message:before,
+.hi-message-fill:before,
+.hi-message-outline:before,
+.hi-message-sharp:before { content: "\f036"; }
+.hi-envelope1:before,
+.hi-envelope1-fill:before,
+.hi-envelope1-outline:before,
+.hi-envelope1-sharp:before,
+.hi-envelope-alt:before,
+.hi-envelope-alt-fill:before,
+.hi-envelope-alt-outline:before,
+.hi-envelope-alt-sharp:before { content: "\f09b"; }
+.hi-envelope-open:before,
+.hi-envelope-open-fill:before,
+.hi-envelope-open-outline:before,
+.hi-envelope-open-sharp:before { content: "\f09c"; }
+.hi-paper-plane1:before,
+.hi-paper-plane1-fill:before,
+.hi-paper-plane1-outline:before,
+.hi-paper-plane1-sharp:before,
+.hi-paper-plane-alt:before,
+.hi-paper-plane-alt-fill:before,
+.hi-paper-plane-alt-outline:before,
+.hi-paper-plane-alt-sharp:before { content: "\f09d"; }
+.hi-mail:before,
+.hi-mail-fill:before,
+.hi-mail-outline:before,
+.hi-mail-sharp:before { content: "\f130"; }
+.hi-chat:before,
+.hi-chat-fill:before,
+.hi-chat-outline:before,
+.hi-chat-sharp:before { content: "\e91a"; }
+.hi-envelope:before,
+.hi-envelope-fill:before,
+.hi-envelope-outline:before,
+.hi-envelope-sharp:before { content: "\e930"; }
+.hi-paper-plane:before,
+.hi-paper-plane-fill:before,
+.hi-paper-plane-outline:before,
+.hi-paper-plane-sharp:before { content: "\e957"; }
+.hi-share:before,
+.hi-share-fill:before,
+.hi-share-outline:before,
+.hi-share-sharp:before { content: "\e96c"; }
+.hi-speech-bubble:before,
+.hi-speech-bubble-fill:before,
+.hi-speech-bubble-outline:before,
+.hi-speech-bubble-sharp:before { content: "\e96e"; }

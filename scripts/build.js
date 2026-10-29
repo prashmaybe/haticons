@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { enrichIcons } = require('./categories.js');
-const { generateScssFiles, compileCssBundles } = require('./compiler.js');
+const { generateScssFiles, generateLessFiles, compileCssBundles } = require('./compiler.js');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DATA_FILE = path.join(ROOT_DIR, 'code', 'data', 'icons.json');
@@ -22,18 +22,20 @@ const DIST_DATA = path.join(DIST_DIR, 'data');
 
 const SCSS_DIR = path.join(ROOT_DIR, 'scss');
 const SCSS_CATEGORIES = path.join(SCSS_DIR, 'categories');
+const LESS_DIR = path.join(ROOT_DIR, 'less');
+const LESS_CATEGORIES = path.join(LESS_DIR, 'categories');
 
 // Ensure output directories exist
 const DIST_SVG = path.join(DIST_DIR, 'svg');
 const DIST_ICONS = path.join(DIST_DIR, 'icons');
-[DIST_DIR, DIST_CSS, DIST_CATEGORIES_CSS, DIST_FONTS, DIST_DATA, DIST_SVG, DIST_ICONS, SCSS_DIR, SCSS_CATEGORIES].forEach(dir => {
+[DIST_DIR, DIST_CSS, DIST_CATEGORIES_CSS, DIST_FONTS, DIST_DATA, DIST_SVG, DIST_ICONS, SCSS_DIR, SCSS_CATEGORIES, LESS_DIR, LESS_CATEGORIES].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
 // 1. Load icon dataset and categorize
 const rawData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-const { icons, categorized, categories } = enrichIcons(rawData);
-console.log(`Loaded ${icons.length} unique icons across ${Object.keys(categories).length} categories.`);
+const { icons, categorized, categories, aliases } = enrichIcons(rawData);
+console.log(`Loaded ${icons.length} unique icons across ${Object.keys(categories).length} categories with ${Object.keys(aliases).length} backward-compatible aliases.`);
 
 // Parse SVG font to extract glyph path definitions
 const svgFontContent = fs.readFileSync(path.join(FONTS_SRC, 'haticons.svg'), 'utf-8');
@@ -100,32 +102,102 @@ export default _default;
   fs.writeFileSync(path.join(DIST_ICONS, `${icon.name}.d.ts`), iconDts);
   svgGeneratedCount++;
 });
-console.log(`Generated ${svgGeneratedCount} individual SVG files and tree-shakeable icon modules.`);
 
-// Copy & generate font assets (including ultra-compact WOFF2)
-const fontFiles = ['haticons.eot', 'haticons.svg', 'haticons.ttf', 'haticons.woff'];
-fontFiles.forEach(file => {
-  const src = path.join(FONTS_SRC, file);
-  const dest = path.join(DIST_FONTS, file);
-  if (fs.existsSync(src)) fs.copyFileSync(src, dest);
+// Also create alias SVG files and icon modules so imports like `haticons/icons/snapchat` work smoothly
+Object.entries(aliases).forEach(([aliasName, targetName]) => {
+  const targetIcon = icons.find(i => i.name === targetName);
+  if (targetIcon) {
+    const d = glyphPaths[targetName] || '';
+    const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor">
+  <g transform="scale(1, -1) translate(0, -960)">
+    <path d="${d}" />
+  </g>
+</svg>`;
+    fs.writeFileSync(path.join(DIST_SVG, `${aliasName}.svg`), svgContent);
+
+    const aliasJs = `module.exports = {
+  name: ${JSON.stringify(aliasName)},
+  class: ${JSON.stringify(`hi-${aliasName}`)},
+  category: ${JSON.stringify(targetIcon.category)},
+  content: ${JSON.stringify(targetIcon.content)},
+  path: ${JSON.stringify(d)},
+  svg: ${JSON.stringify(svgContent)},
+  target: ${JSON.stringify(targetName)}
+};
+`;
+    const aliasMjs = `export const name = ${JSON.stringify(aliasName)};
+export const className = ${JSON.stringify(`hi-${aliasName}`)};
+export const category = ${JSON.stringify(targetIcon.category)};
+export const content = ${JSON.stringify(targetIcon.content)};
+export const path = ${JSON.stringify(d)};
+export const svg = ${JSON.stringify(svgContent)};
+export const target = ${JSON.stringify(targetName)};
+export default { name, class: className, category, content, path, svg, target };
+`;
+    const aliasDts = `export declare const name: string;
+export declare const className: string;
+export declare const category: string;
+export declare const content: string;
+export declare const path: string;
+export declare const svg: string;
+export declare const target: string;
+declare const _default: {
+  name: string;
+  class: string;
+  category: string;
+  content: string;
+  path: string;
+  svg: string;
+  target: string;
+};
+export default _default;
+`;
+    fs.writeFileSync(path.join(DIST_ICONS, `${aliasName}.js`), aliasJs);
+    fs.writeFileSync(path.join(DIST_ICONS, `${aliasName}.mjs`), aliasMjs);
+    fs.writeFileSync(path.join(DIST_ICONS, `${aliasName}.d.ts`), aliasDts);
+  }
 });
+console.log(`Generated ${svgGeneratedCount} individual SVG files and tree-shakeable icon modules (with ${Object.keys(aliases).length} alias modules).`);
 
-// Generate WOFF2 font
+// Compile & generate full font assets suite (TTF, WOFF, EOT, WOFF2) from haticons.svg
 try {
+  const svg2ttf = require('svg2ttf');
+  const ttf2woff = require('ttf2woff');
+  const ttf2eot = require('ttf2eot');
   const woff2 = require('woff2');
-  const ttfBuffer = fs.readFileSync(path.join(FONTS_SRC, 'haticons.ttf'));
+
+  const svgFontContent = fs.readFileSync(path.join(FONTS_SRC, 'haticons.svg'), 'utf-8');
+  const ttfBuffer = Buffer.from(svg2ttf(svgFontContent, {}).buffer);
+  const woffBuffer = Buffer.from(ttf2woff(ttfBuffer).buffer);
+  const eotBuffer = Buffer.from(ttf2eot(ttfBuffer).buffer);
   const woff2Buffer = woff2.encode(ttfBuffer);
-  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff2'), woff2Buffer);
+
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.ttf'), ttfBuffer);
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.woff'), woffBuffer);
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.eot'), eotBuffer);
   fs.writeFileSync(path.join(FONTS_SRC, 'haticons.woff2'), woff2Buffer);
-  console.log(`Generated ultra-compact WOFF2 font (${(woff2Buffer.length / 1024).toFixed(1)} KB)`);
+
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.svg'), svgFontContent);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.ttf'), ttfBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff'), woffBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.eot'), eotBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff2'), woff2Buffer);
+  console.log(`Compiled font formats: TTF (${(ttfBuffer.length / 1024).toFixed(1)} KB), WOFF (${(woffBuffer.length / 1024).toFixed(1)} KB), EOT (${(eotBuffer.length / 1024).toFixed(1)} KB), WOFF2 (${(woff2Buffer.length / 1024).toFixed(1)} KB)`);
 } catch (err) {
-  console.warn('woff2 generation skipped:', err.message);
+  console.warn('Font compilation warning:', err.message);
+  const fontFiles = ['haticons.eot', 'haticons.svg', 'haticons.ttf', 'haticons.woff', 'haticons.woff2'];
+  fontFiles.forEach(file => {
+    const src = path.join(FONTS_SRC, file);
+    const dest = path.join(DIST_FONTS, file);
+    if (fs.existsSync(src)) fs.copyFileSync(src, dest);
+  });
 }
 console.log(`Copied and prepared font files in dist/fonts.`);
 
-// Save enriched icons JSON & categorized metadata (compact minified)
+// Save enriched icons JSON, aliases, & categorized metadata (compact minified)
 fs.writeFileSync(path.join(DIST_DATA, 'icons.json'), JSON.stringify(icons));
 fs.writeFileSync(path.join(DIST_DATA, 'categories.json'), JSON.stringify(categories));
+fs.writeFileSync(path.join(DIST_DATA, 'aliases.json'), JSON.stringify(aliases));
 fs.writeFileSync(path.join(ROOT_DIR, 'code', 'data', 'icons.json'), JSON.stringify(icons, null, 2));
 
 console.log('Categories overview:');
@@ -133,8 +205,9 @@ Object.entries(categorized).forEach(([cat, list]) => {
   console.log(`  ${cat.padEnd(16)} : ${list.length} icons`);
 });
 
-// 2. Generate SCSS and compile CSS
-generateScssFiles({ ROOT_DIR, SCSS_DIR, SCSS_CATEGORIES, categorized, categories, icons });
+// 2. Generate SCSS & LESS, and compile CSS
+generateScssFiles({ ROOT_DIR, SCSS_DIR, SCSS_CATEGORIES, categorized, categories, icons, aliases });
+generateLessFiles({ ROOT_DIR, LESS_DIR, LESS_CATEGORIES, categorized, categories, icons, aliases });
 compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, categorized });
 
 // 3. Generate npm module exports & TypeScript definition files
@@ -143,12 +216,16 @@ const distJsIndex = `/**
  */
 const icons = require('./data/icons.json');
 const categories = require('./data/categories.json');
+const aliases = require('./data/aliases.json');
 
 module.exports = {
   icons,
   categories,
+  aliases,
   getIcon(className) {
-    return icons.find(i => i.class === className || i.name === className);
+    const raw = className.replace(/^hi-/, '');
+    const resolvedName = aliases[raw] || raw;
+    return icons.find(i => i.class === className || i.name === className || i.name === resolvedName || i.class === 'hi-' + resolvedName);
   },
   getByCategory(category) {
     return icons.filter(i => i.category === category);
@@ -164,6 +241,7 @@ import cjs from './index.js';
 
 export const icons = cjs.icons;
 export const categories = cjs.categories;
+export const aliases = cjs.aliases;
 export const getIcon = cjs.getIcon;
 export const getByCategory = cjs.getByCategory;
 
@@ -185,15 +263,23 @@ let categoriesPath = path.join(__dirname, 'dist', 'data', 'categories.json');
 if (!fs.existsSync(categoriesPath)) {
   categoriesPath = path.join(__dirname, 'data', 'categories.json');
 }
+let aliasesPath = path.join(__dirname, 'dist', 'data', 'aliases.json');
+if (!fs.existsSync(aliasesPath)) {
+  aliasesPath = path.join(__dirname, 'data', 'aliases.json');
+}
 
 const icons = require(iconsPath);
 const categories = require(categoriesPath);
+const aliases = fs.existsSync(aliasesPath) ? require(aliasesPath) : {};
 
 module.exports = {
   icons,
   categories,
+  aliases,
   getIcon(className) {
-    return icons.find(i => i.class === className || i.name === className);
+    const raw = className.replace(/^hi-/, '');
+    const resolvedName = aliases[raw] || raw;
+    return icons.find(i => i.class === className || i.name === className || i.name === resolvedName || i.class === 'hi-' + resolvedName);
   },
   getByCategory(category) {
     return icons.filter(i => i.category === category);
@@ -209,6 +295,7 @@ import cjs from './index.js';
 
 export const icons = cjs.icons;
 export const categories = cjs.categories;
+export const aliases = cjs.aliases;
 export const getIcon = cjs.getIcon;
 export const getByCategory = cjs.getByCategory;
 
@@ -230,12 +317,14 @@ export interface CategoryInfo {
 
 export declare const icons: Haticon[];
 export declare const categories: Record<string, CategoryInfo>;
+export declare const aliases: Record<string, string>;
 export declare function getIcon(className: string): Haticon | undefined;
 export declare function getByCategory(category: string): Haticon[];
 
 declare const _default: {
   icons: Haticon[];
   categories: Record<string, CategoryInfo>;
+  aliases: Record<string, string>;
   getIcon: (className: string) => Haticon | undefined;
   getByCategory: (category: string) => Haticon[];
 };
@@ -244,12 +333,13 @@ export default _default;
 fs.writeFileSync(path.join(DIST_DIR, 'index.d.ts'), dts);
 fs.writeFileSync(path.join(ROOT_DIR, 'index.d.ts'), dts);
 
-// 4. Generate HTML documentation & cheatsheets
+// 4. Generate Framework packages (React, Vue, Unplugin Resolver)
+console.log('Generating React & Vue packages...');
+require('./generate-packages.js');
+
+// 5. Generate HTML documentation
 console.log('Generating code/index.html...');
 require('./generate-html.js');
-
-console.log('Generating code/cheatsheet.html...');
-require('./generate-cheatsheet.js');
 
 console.log('Generating code/reference.html...');
 require('./generate-reference.js');
@@ -258,3 +348,4 @@ console.log('Generating legal pages (terms, privacy, license)...');
 require('./generate-legal.js');
 
 console.log('Build completed successfully!');
+

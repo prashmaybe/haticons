@@ -5,6 +5,7 @@ import cjs from './index.js';
 
 export const icons = cjs.icons;
 export const categories = cjs.categories;
+export const aliases = cjs.aliases;
 export const getIcon = cjs.getIcon;
 export const getByCategory = cjs.getByCategory;
 

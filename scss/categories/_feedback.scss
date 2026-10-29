@@ -1,21 +1,101 @@
-// Haticons - Category: Feedback & Status (20 icons)
-.hi-bell1:before { content: "\f073"; }
-.hi-help:before { content: "\f095"; }
-.hi-check1:before { content: "\f101"; }
-.hi-close:before { content: "\f102"; }
-.hi-checkbox-unchecked:before { content: "\f10b"; }
-.hi-checked:before { content: "\f10c"; }
-.hi-info1:before { content: "\f118"; }
-.hi-radio-checked:before { content: "\f121"; }
-.hi-bell:before { content: "\e912"; }
-.hi-check-circle:before { content: "\e91b"; }
-.hi-check:before { content: "\e91c"; }
-.hi-checkbox:before { content: "\e91d"; }
-.hi-cross-circle:before { content: "\e926"; }
-.hi-cross:before { content: "\e927"; }
-.hi-info-square:before { content: "\e944"; }
-.hi-info:before { content: "\e945"; }
-.hi-question-circle-big:before { content: "\e962"; }
-.hi-question-circle:before { content: "\e963"; }
-.hi-warning-o:before { content: "\e982"; }
-.hi-warning:before { content: "\e983"; }
+// Haticons - Category: Feedback & Status (21 icons)
+.hi-bell1:before,
+.hi-bell1-fill:before,
+.hi-bell1-outline:before,
+.hi-bell1-sharp:before,
+.hi-bell-alt:before,
+.hi-bell-alt-fill:before,
+.hi-bell-alt-outline:before,
+.hi-bell-alt-sharp:before { content: "\f073"; }
+.hi-help:before,
+.hi-help-fill:before,
+.hi-help-outline:before,
+.hi-help-sharp:before { content: "\f095"; }
+.hi-check1:before,
+.hi-check1-fill:before,
+.hi-check1-outline:before,
+.hi-check1-sharp:before,
+.hi-check-alt:before,
+.hi-check-alt-fill:before,
+.hi-check-alt-outline:before,
+.hi-check-alt-sharp:before { content: "\f101"; }
+.hi-close:before,
+.hi-close-fill:before,
+.hi-close-outline:before,
+.hi-close-sharp:before { content: "\f102"; }
+.hi-checkbox-unchecked:before,
+.hi-checkbox-unchecked-fill:before,
+.hi-checkbox-unchecked-outline:before,
+.hi-checkbox-unchecked-sharp:before { content: "\f10b"; }
+.hi-checked:before,
+.hi-checked-fill:before,
+.hi-checked-outline:before,
+.hi-checked-sharp:before { content: "\f10c"; }
+.hi-info1:before,
+.hi-info1-fill:before,
+.hi-info1-outline:before,
+.hi-info1-sharp:before,
+.hi-info-alt:before,
+.hi-info-alt-fill:before,
+.hi-info-alt-outline:before,
+.hi-info-alt-sharp:before { content: "\f118"; }
+.hi-radio-checked:before,
+.hi-radio-checked-fill:before,
+.hi-radio-checked-outline:before,
+.hi-radio-checked-sharp:before { content: "\f121"; }
+.hi-bell:before,
+.hi-bell-fill:before,
+.hi-bell-outline:before,
+.hi-bell-sharp:before { content: "\e912"; }
+.hi-check-circle:before,
+.hi-check-circle-fill:before,
+.hi-check-circle-outline:before,
+.hi-check-circle-sharp:before { content: "\e91b"; }
+.hi-check:before,
+.hi-check-fill:before,
+.hi-check-outline:before,
+.hi-check-sharp:before { content: "\e91c"; }
+.hi-checkbox:before,
+.hi-checkbox-fill:before,
+.hi-checkbox-outline:before,
+.hi-checkbox-sharp:before { content: "\e91d"; }
+.hi-cross-circle:before,
+.hi-cross-circle-fill:before,
+.hi-cross-circle-outline:before,
+.hi-cross-circle-sharp:before { content: "\e926"; }
+.hi-cross:before,
+.hi-cross-fill:before,
+.hi-cross-outline:before,
+.hi-cross-sharp:before { content: "\e927"; }
+.hi-info-square:before,
+.hi-info-square-fill:before,
+.hi-info-square-outline:before,
+.hi-info-square-sharp:before { content: "\e944"; }
+.hi-info:before,
+.hi-info-fill:before,
+.hi-info-outline:before,
+.hi-info-sharp:before { content: "\e945"; }
+.hi-question-circle-big:before,
+.hi-question-circle-big-fill:before,
+.hi-question-circle-big-outline:before,
+.hi-question-circle-big-sharp:before { content: "\e962"; }
+.hi-question-circle:before,
+.hi-question-circle-fill:before,
+.hi-question-circle-outline:before,
+.hi-question-circle-sharp:before { content: "\e963"; }
+.hi-warning-o:before,
+.hi-warning-o-fill:before,
+.hi-warning-o-outline:before,
+.hi-warning-o-sharp:before { content: "\e982"; }
+.hi-warning:before,
+.hi-warning-fill:before,
+.hi-warning-outline:before,
+.hi-warning-sharp:before { content: "\e983"; }
+.hi-spinner:before,
+.hi-spinner-fill:before,
+.hi-spinner-outline:before,
+.hi-spinner-sharp:before,
+.hi-loading:before,
+.hi-loading-fill:before,
+.hi-loading-outline:before,
+.hi-loading-sharp:before { content: "\f1d6"; }

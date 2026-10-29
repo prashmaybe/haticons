@@ -7,6 +7,74 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.3] - 2026-10-29
+
+### Added
+- **20 New AI & Developer Brand Icons**: Expanded library from 549 to 569 icons (+20 brand icons in the `brands` category):
+  - **Cursor** (`hi-cursor`, alias `cusror`): Cursor AI code editor icon.
+  - **Trae** (`hi-trae`): Trae adaptive AI IDE by ByteDance icon.
+  - **Antigravity** (`hi-antigravity`, aliases `antogravity`, `google-antigravity`, `googleantigravity`, `agy`): Google Antigravity agentic coding platform icon.
+  - **Boodoo** (`hi-boodoo`, aliases `boodooframework`, `boodoo-framework`): Boodoo Design Framework official emblem (https://boodooframework.com/).
+  - **Windsurf** (`hi-windsurf`, aliases `codeium`, `codeium-windsurf`): Codeium Windsurf AI IDE icon.
+  - **Claude** (`hi-claude`, aliases `claude-ai`, `claudecode`): Official Anthropic Claude AI starburst emblem.
+  - **Copilot** (`hi-copilot`, aliases `github-copilot`, `githubcopilot`): GitHub Copilot developer icon.
+  - **DeepSeek** (`hi-deepseek`, alias `deepseek-ai`): DeepSeek AI icon.
+  - **Ollama** (`hi-ollama`): Ollama local AI platform icon.
+  - **Perplexity** (`hi-perplexity`, alias `perplexity-ai`): Perplexity AI search icon.
+  - **Mistral** (`hi-mistral`, alias `mistral-ai`): Mistral AI iconic pixel cat emblem.
+  - **Groq** (`hi-groq`): Groq LPU high-speed AI inference icon.
+  - **Replit** (`hi-replit`): Replit development environment icon.
+  - **Hugging Face** (`hi-huggingface`, aliases `hugging-face`, `hf`): Hugging Face open-source AI icon.
+  - **v0** (`hi-v0`, alias `v0-dev`): Vercel v0 generative UI platform icon.
+  - **LangChain** (`hi-langchain`): LangChain AI orchestration framework icon.
+  - **Astro** (`hi-astro`): Astro web framework icon.
+  - **Prisma** (`hi-prisma`): Prisma modern ORM icon.
+  - **Resend** (`hi-resend`): Resend modern email API icon.
+  - **shadcn/ui** (`hi-shadcn`, aliases `shadcn-ui`, `shadcnui`): shadcn/ui UI component library icon.
+  - **Gemini Enhancements** (`hi-gemini`, aliases `google-gemini`, `googlegemini`): Added canonical aliases for Google Gemini.
+- **Framework Components**: Generated React (`HiCursor`, `HiTrae`, `HiAntigravity`, `HiBoodoo`, `HiWindsurf`, `HiClaude`, etc.) and Vue 3 components with complete TypeScript declarations.
+- **Font Assets**: Updated full webfont suite (TTF, WOFF, EOT, WOFF2) and individual tree-shakeable SVG & JS modules.
+
+---
+
+## [1.0.2] - 2026-10-29
+
+### Added
+- **55 New Brand and Required Icons**: Expanded icon set from 494 to 549 icons (+55 icons across 8 categories):
+  - **Modern Brands, AI & Tech Stacks (36 new icons)**: Added `react`, `x-twitter` (with `x` and `twitter-x` aliases), `threads`, `discord`, `telegram`, `bluesky`, `openai` (`chatgpt`), `anthropic` (`claude`), `gemini`, `figma`, `canva`, `notion`, `linear`, `supabase`, `firebase`, `vercel`, `nextjs` (`next-js`), `tailwind` (`tailwindcss`), `svelte`, `bun`, `docker`, `kubernetes` (`k8s`), `stripe`, `zoom`, `signal`, `pinterest`, `patreon`, `postman`, `google-cloud` (`gcp`), `pnpm`, `vite`, `graphql`, `postgresql` (`postgres`), `mongodb` (`mongo`), `redis`, and `golang` (`go`).
+  - **Essential Media Controls**: Added `pause` and `stop` to complete the multimedia player set alongside `play`.
+  - **Modern UI & Theme Controls**: Added `moon` (with `dark-mode` alias) for night/dark theme switchers, `sparkles` (`ai`, `magic` aliases) for modern AI enhancements, `bolt` (`lightning`), and `globe` (`web`).
+  - **Developer, System & Hardware**: Added `code`, `terminal`, `database`, `cpu`, and `wifi`.
+  - **Security & Commerce**: Added `shield`, `shield-check`, and `qrcode` (`qr-code`).
+  - **Workflow & Productivity**: Added `copy` (clipboard companion to `paste`), `external-link`, `filter`, `history`, and `spinner` (`loading`).
+- **Automated Webfont Compilation**: Integrated build step that synchronizes and generates TTF, WOFF, EOT, and WOFF2 webfonts directly from SVG font sources.
+- **Convenient Modern Aliases**: Added aliases including `dark-mode`, `ai`, `magic`, `x`, `chatgpt`, `claude`, `arrow-up`, `arrow-down`, `chevron-up`, and `chevron-down`.
+
+---
+
+## [1.0.1] - 2026-10-28
+
+### Added
+- **Full LESS Support**: Added complete modular LESS preprocessor sources under `less/`, including `variables.less`, `core.less`, 14 category files (`less/categories/*.less`), and bundle entry `haticons.less`.
+- **Package Exports for LESS**: Configured package entry `"less": "less/haticons.less"` and `./less/*` exports mapping in `package.json`.
+- **Official CLI Tool**: Introduced `haticons` command-line utility (`bin/haticons.js` / `npx haticons`) for searching icons, category exploration, metadata inspection, and SVG extraction.
+- **React & Vue 3 Component Packages**: Generated first-class framework component packages (`haticons/react` and `haticons/vue`) with full TypeScript declarations (`index.d.ts`), ESM, and CommonJS support.
+- **Auto-Import Bundler Resolver**: Added `haticons/resolver` for automatic on-demand component loading with `unplugin-vue-components`, Vite, and Webpack.
+- **Style Variant Addon Classes**: Added style variant suffixes and helper classes (`.hi-*-fill` / `.hi-fill`, `.hi-*-outline` / `.hi-outline`, `.hi-*-sharp` / `.hi-sharp`) for solid, outline, and sharp icon variants.
+- **Built-in Sizing & Animation Modifiers**: Added size multiplier classes (`.hi-xs`, `.hi-sm`, `.hi-md`, `.hi-lg`, `.hi-xl`, `.hi-2x`, `.hi-3x`, `.hi-4x`, `.hi-5x`), animation utilities (`.hi-spin`, `.hi-pulse`), rotation & flip transforms (`.hi-rotate-*`, `.hi-flip-*`), and fixed-width alignment (`.hi-fw`).
+- **Comprehensive Documentation & Reference Suite**:
+  - Added dedicated **Icon Reference Catalog** (`reference.html`) featuring real-time search, SVG preview modals, and category index navigation.
+  - Added **In-Depth Tutorial & Integration Guide** (`tutorial.html`) covering React, Vue, Sass, LESS, Vanilla CSS, CDN, and SVG sprites.
+  - Added dedicated **Changelogs Timeline** (`changelogs.html`).
+  - Added official legal pages: **Terms of Use** (`terms.html`), **Privacy Policy** (`privacy.html`), and **License** (`license.html`).
+- **Server Caching & Security**: Added Apache `.htaccess` server configuration featuring Gzip/Brotli compression, Webfont CORS headers (`Access-Control-Allow-Origin: *`), and browser cache headers.
+
+### Fixed
+- **Clean Build Output**: Silenced Dart Sass `@import` deprecation warnings during standalone and category bundle compilation pipelines (`scripts/compiler.js`).
+- **CDN Version References**: Updated documentation and interactive snippets to reference version 1.0.1.
+
+---
+
 ## [1.0.0] - 2026-10-27
 
 ### Added
@@ -42,7 +110,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Integrated [boodoo CSS Framework](https://www.boodooframework.com/) design system tokens, responsive navigation, search modals, and toasts.
   - Interactive theme switcher supporting System, Light, and Dark modes.
   - Automated link validation and sitemap indexation (`sitemap.xml`, `llms.txt`).
-- **Governance & Open Source Identity**: Established repository licensing under GNU General Public License v3.0, maintained by **PebbleBenders**.
+- **Governance & Open Source Identity**: Established repository licensing under GNU General Public License v3.0, maintained by **[PebbleBenders](https://pebblebenders.com/)**.
 
 ---
 

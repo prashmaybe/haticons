@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {
     ROOT_DIR,
+    loadIcons,
     getHtmlHead,
     getAnnouncementBar,
     getNavbar,
@@ -11,12 +12,14 @@ const {
 
 
 
+const totalIcons = loadIcons().length;
+
 const html = `<!DOCTYPE html>
 <html lang="en" data-boodoo-theme="light">
 <head>
 ${getHtmlHead(
     'Haticons | Beautiful Free Vector &amp; Font Icons for Modern Apps',
-    'A set of 494+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
+    'A set of ${totalIcons}+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
     'haticons, haticon, font icons, icon fonts, web fonts, font awesome alternative, ionicons, glyphicons, svg icons, boodoo framework, boodoo css'
 )}
 </head>
@@ -33,7 +36,7 @@ ${getNavbar('home')}
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
                 <span class="px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
                     <i class="hi-star"></i>
-                    <span>494+ Modern Vector Icons</span>
+                    <span>${totalIcons}+ Modern Vector Icons</span>
                 </span>
                 <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
                     <i class="hi-check-circle text-success"></i>
@@ -50,9 +53,9 @@ ${getNavbar('home')}
             </p>
 
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-4">
-                <a href="/cheatsheet.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
+                <a href="/reference.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
                     <i class="hi-search"></i>
-                    <span>Browse 494 Icons</span>
+                    <span>Browse ${totalIcons} Icons</span>
                 </a>
                 <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-lg rounded-pill px-4 d-inline-flex align-items-center gap-2 bg-white">
                     <i class="hi-download"></i>
@@ -62,15 +65,15 @@ ${getNavbar('home')}
 
             <!-- Install / CDN Pills -->
             <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-stretch gap-2">
-                <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-2 overflow-hidden">
+                <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate install-text" id="npmCmd">npm install haticons</span>
-                    <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
+                    <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
-                <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-2 overflow-hidden">
-                    <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css</span>
-                    <button class="btn btn-sm btn-ghost text-muted py-0 px-2 copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.0/dist/css/haticons.min.css" title="Copy CDN URL">
+                <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
+                    <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css</span>
+                    <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" title="Copy CDN URL">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
@@ -78,70 +81,314 @@ ${getNavbar('home')}
         </div>
     </section>
 
-    <!-- Quickstart Guide -->
-    <section id="quickstart" class="py-5 bg-white border-top border-bottom">
+    <!-- Start & Setup Hub Section (Inspired by FontAwesome /start) -->
+    <section id="start" class="py-5 bg-white border-top border-bottom">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="h3 fw-bold text-dark mb-2">Getting Started in 2 Minutes</h2>
-                <p class="text-muted text-sm mx-auto mb-0 quickstart-subtitle-constrained">
-                    Include the stylesheet and drop semantic icon elements right into your HTML, Vue, React, or Angular templates.
+                <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+                    <i class="hi-play"></i>
+                    <span>Setup Guide &bull; FontAwesome Alternative</span>
+                </div>
+                <h2 class="display-6 fw-extrabold text-dark mb-2">Set Up Haticons in Seconds</h2>
+                <p class="lead text-muted mx-auto mb-4 header-subtitle-constrained">
+                    Choose the workflow that fits your project. Embed with a single line of CDN code, install via your package manager, or use offline vector assets in Figma.
                 </p>
-            </div>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card p-2 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-1 mb-2">
-                            <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">1</span>
-                            <h3 class="h5 fw-bold text-dark mb-0">Install or CDN</h3>
-                        </div>
-                        <p class="text-muted text-sm mb-1">Add Haticons to your project with npm or load directly via CDN link:</p>
-                        <div class="bg-dark text-light p-2 rounded-3 font-monospace text-xs overflow-x-auto code-box">
-                            <span class="text-muted">&lt;!-- via CDN --&gt;</span><br>
-                            &lt;link rel="stylesheet"<br>
-                            &nbsp;&nbsp;href="https://cdn.jsdelivr.net/npm/<br>
-                            &nbsp;&nbsp;haticons@1.0.0/dist/css/<br>
-                            &nbsp;&nbsp;haticons.min.css"&gt;
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card p-2 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-1 mb-2">
-                            <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">2</span>
-                            <h3 class="h5 fw-bold text-dark mb-0">Insert Any Icon</h3>
-                        </div>
-                        <p class="text-muted text-sm mb-1">Use the standard <code>&lt;i&gt;</code> element with any <code>hi-[name]</code> class:</p>
-                        <div class="bg-dark text-light p-2 rounded-3 font-monospace text-xs overflow-x-auto code-box">
-                            <span class="text-muted">&lt;!-- Example usage --&gt;</span><br>
-                            &lt;i class="hi-search"&gt;&lt;/i&gt;<br>
-                            &lt;i class="hi-heart text-danger"&gt;&lt;/i&gt;<br>
-                            &lt;i class="hi-cart text-primary"&gt;&lt;/i&gt;
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card p-2 rounded-4 border bg-light shadow-2xs">
-                        <div class="d-flex align-items-center gap-1 mb-2">
-                            <span class="step-badge rounded-circle bg-primary text-white fw-bold d-inline-flex align-items-center justify-content-center">3</span>
-                            <h3 class="h5 fw-bold text-dark mb-0">Scale &amp; Colorize</h3>
-                        </div>
-                        <p class="text-muted text-sm mb-1">Inherits CSS <code>font-size</code> and <code>color</code> seamlessly with built-in utility multipliers:</p>
-                        <div class="bg-dark text-light p-2 rounded-3 font-monospace text-xs overflow-x-auto code-box">
-                            <span class="text-muted">&lt;!-- Sizing classes --&gt;</span><br>
-                            &lt;i class="hi-haticons hi-lg"&gt;&lt;/i&gt;<br>
-                            &lt;i class="hi-haticons hi-2x"&gt;&lt;/i&gt;<br>
-                            &lt;i class="hi-refresh hi-spin"&gt;&lt;/i&gt;
-                        </div>
-                    </div>
+                <!-- Method Switcher Pills -->
+                <div class="d-inline-flex flex-wrap p-1 rounded-pill bg-light border shadow-2xs gap-1" id="setupTabGroup">
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab active" data-target="#tab-npm">
+                        <i class="hi-npm me-1"></i> npm Package
+                    </button>
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-cdn">
+                        <i class="hi-cloudflare me-1"></i> Web CDN
+                    </button>
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-frameworks">
+                        <i class="hi-javascript me-1"></i> React &amp; Vue
+                    </button>
+                    <button type="button" class="btn btn-sm rounded-pill px-2 start-method-tab text-muted" data-target="#tab-desktop">
+                        <i class="hi-monitor me-1"></i> Desktop &amp; SVG
+                    </button>
                 </div>
             </div>
+
+            <!-- Tab 1: npm Package Manager -->
+            <div class="setup-tab-pane" id="tab-npm">
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-npm fs-2 text-danger"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">npm</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-1">Install in any Node, Webpack, or Vite project:</p>
+                            <div class="install-code-box p-1 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-1 border">
+                                <span>npm install haticons</span>
+                                <button class="btn btn-sm btn-ghost text-muted copy-btn" data-copy="npm install haticons">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="text-muted text-2xs">Includes TypeScript <code>index.d.ts</code> declarations out of the box.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-yarn fs-2 text-info"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">Yarn</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-1">Add as project dependency using Yarn:</p>
+                            <div class="install-code-box p-1 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-1 border">
+                                <span>yarn add haticons</span>
+                                <button class="btn btn-sm btn-ghost text-muted copy-btn" data-copy="yarn add haticons">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="text-muted text-2xs">Fast, reproducible dependencies with package lock support.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-archive fs-2 text-warning"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">pnpm</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-1">Disk-space efficient symlinked install:</p>
+                            <div class="install-code-box p-1 rounded-3 bg-white font-monospace text-xs text-dark d-flex align-items-center justify-content-between mb-1 border">
+                                <span>pnpm add haticons</span>
+                                <button class="btn btn-sm btn-ghost text-muted copy-btn" data-copy="pnpm add haticons">
+                                    <i class="hi-paste"></i>
+                                </button>
+                            </div>
+                            <div class="text-muted text-2xs">Saves gigabytes of node_modules disk space across monorepos.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-2 rounded-4 bg-white border shadow-2xs">
+                    <h4 class="h6 fw-bold text-dark mb-2">Bundler &amp; Framework Integration (Vite, Webpack, Next.js):</h4>
+                    <p class="text-muted text-sm">
+                        Import CSS or individual tree-shakeable SVG icons directly in your JavaScript / TypeScript files:
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-6">
+                            <div class="code-snippet-box">
+                                <div class="code-snippet-header">
+                                    <span class="code-lang-label"><i class="hi-css3"></i> CSS / Webfont Import</span>
+                                    <button type="button" class="code-copy-btn" data-code="import 'haticons/dist/css/haticons.min.css';">
+                                        <i class="hi-paste"></i> <span>Copy</span>
+                                    </button>
+                                </div>
+                                <pre class="code-snippet-body"><code><span class="code-token-comment">// In your index.js / main.ts entry:</span>
+<span class="code-token-keyword">import</span> <span class="code-token-string">'haticons/dist/css/haticons.min.css'</span>;</code></pre>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="code-snippet-box">
+                                <div class="code-snippet-header">
+                                    <span class="code-lang-label"><i class="hi-html5"></i> Tree-Shakeable SVG</span>
+                                    <button type="button" class="code-copy-btn" data-code="import cart from 'haticons/icons/cart';">
+                                        <i class="hi-paste"></i> <span>Copy</span>
+                                    </button>
+                                </div>
+                                <pre class="code-snippet-body"><code><span class="code-token-comment">// Zero webfont overhead:</span>
+<span class="code-token-keyword">import</span> cart <span class="code-token-keyword">from</span> <span class="code-token-string">'haticons/icons/cart'</span>;
+<span class="code-token-comment">// cart.svg &amp; cart.path available</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Web CDN -->
+            <div class="setup-tab-pane d-none" id="tab-cdn">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-12 col-lg-7">
+                        <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="start-step-number bg-primary text-white d-inline-flex align-items-center justify-content-center shadow-xs">1</span>
+                                <h3 class="h5 fw-bold text-dark mb-0">Add Stylesheet to &lt;head&gt;</h3>
+                            </div>
+                            <p class="text-muted text-sm">
+                                Just like a FontAwesome Kit or CDN embed, paste this single line inside your HTML <code>&lt;head&gt;</code> to immediately access all ${totalIcons} icons:
+                            </p>
+                            <div class="code-snippet-box mb-4">
+                                <div class="code-snippet-header">
+                                    <span class="code-lang-label"><i class="hi-cloudflare"></i> HTML Head</span>
+                                    <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css"&gt;'>
+                                        <i class="hi-paste"></i> <span>Copy Snippet</span>
+                                    </button>
+                                </div>
+                                <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="start-step-number bg-primary text-white d-inline-flex align-items-center justify-content-center shadow-xs">2</span>
+                                <h3 class="h5 fw-bold text-dark mb-0">Drop Icons into HTML</h3>
+                            </div>
+                            <p class="text-muted text-sm">
+                                Place icon tags anywhere in your layout. Supports default, Fill, Outline, and Sharp styles:
+                            </p>
+                            <div class="code-snippet-box">
+                                <div class="code-snippet-header">
+                                    <span class="code-lang-label"><i class="hi-html5"></i> HTML Body</span>
+                                    <button type="button" class="code-copy-btn" data-code='&lt;i class="hi-cart"&gt;&lt;/i&gt;
+&lt;i class="hi-heart-fill text-danger fs-2"&gt;&lt;/i&gt;
+&lt;i class="hi-search-outline text-primary fs-2"&gt;&lt;/i&gt;
+&lt;i class="hi-refresh hi-spin"&gt;&lt;/i&gt;'>
+                                        <i class="hi-paste"></i> <span>Copy</span>
+                                    </button>
+                                </div>
+                                <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-cart"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-heart-fill text-danger fs-2"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-search-outline text-primary fs-2"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span>
+<span class="code-token-punct">&lt;</span><span class="code-token-tag">i</span> <span class="code-token-attr">class</span><span class="code-token-punct">=</span><span class="code-token-string">"hi-refresh hi-spin"</span><span class="code-token-punct">&gt;&lt;/</span><span class="code-token-tag">i</span><span class="code-token-punct">&gt;</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <div class="card p-2 rounded-4 bg-white border d-flex flex-column justify-content-between shadow-2xs">
+                            <div>
+                                <div class="d-flex align-items-center gap-1 mb-1">
+                                    <span class="badge bg-primary text-white rounded-pill px-3 py-1 text-xs fw-bold">Live Preview</span>
+                                </div>
+                                <h4 class="h5 fw-bold text-dark mb-2">Interactive Icon Demo</h4>
+                                <p class="text-muted text-sm mb-2">
+                                    Icons render crisp vector typography instantly, inheriting currentColor and font sizing.
+                                </p>
+                                <div class="p-2 rounded-4 bg-light border text-center mb-2">
+                                    <div class="d-flex align-items-center justify-content-center gap-1 mb-2">
+                                        <div class="text-center">
+                                            <i class="hi-cart fs-1 text-primary d-block mb-1"></i>
+                                            <span class="text-2xs text-muted font-monospace">hi-cart</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="hi-heart-fill fs-1 text-danger d-block mb-1"></i>
+                                            <span class="text-2xs text-muted font-monospace">hi-heart-fill</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="hi-star-outline fs-1 text-warning d-block mb-1"></i>
+                                            <span class="text-2xs text-muted font-monospace">hi-star-outline</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="hi-refresh hi-spin fs-1 text-success d-block mb-1"></i>
+                                            <span class="text-2xs text-muted font-monospace">hi-spin</span>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-white text-muted border text-2xs rounded-pill px-3 py-1">Auto-rendered via Haticons webfont</span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="/reference.html" class="btn btn-primary rounded-pill btn-sm px-2 flex-fill text-center">
+                                    <i class="hi-search me-1"></i> Browse Reference
+                                </a>
+                                <a href="/tutorial.html" class="btn btn-outline-secondary rounded-pill btn-sm px-2 flex-fill text-center bg-white">
+                                    <i class="hi-bulb me-1"></i> Full Tutorial
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Frameworks (React, Vue, Angular) -->
+            <div class="setup-tab-pane d-none" id="tab-frameworks">
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-visualstudiocode fs-2 text-info"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">React / Next.js</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-1">Add to your root <code>pages/_app.js</code> or <code>app/layout.tsx</code>:</p>
+                            <pre class="p-1 rounded bg-white border font-monospace text-2xs text-dark mb-2 user-select-all"><code>import 'haticons/dist/css/haticons.min.css';
+
+export default function App() {
+  return &lt;i className="hi-cart" /&gt;;
+}</code></pre>
+                            <span class="badge bg-primary-soft py-1 text-primary rounded-pill text-2xs">SSR &amp; Hydration Safe</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-vue-js fs-2 text-success"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">Vue 3 / Nuxt / Vite</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-1">Include in your <code>main.js</code> or <code>nuxt.config.ts</code>:</p>
+                            <pre class="p-1 rounded bg-white border font-monospace text-2xs text-dark mb-2 user-select-all"><code>import { createApp } from 'vue';
+import 'haticons/css';
+import App from './App.vue';
+
+createApp(App).mount('#app');</code></pre>
+                            <span class="badge bg-white py-1 text-success rounded-pill text-2xs">Zero Config Needed</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-angular fs-2 text-danger"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">Angular</h3>
+                            </div>
+                            <p class="text-muted text-xs mb-1">Add stylesheet reference in <code>angular.json</code>:</p>
+                            <pre class="p-1 rounded bg-white border font-monospace text-2xs text-dark mb-2 user-select-all"><code>"styles": [
+  "node_modules/haticons/dist/css/haticons.min.css",
+  "src/styles.css"
+]</code></pre>
+                            <span class="badge bg-white py-1 text-danger rounded-pill text-2xs">Built into Angular CLI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Desktop & Offline SVG Assets -->
+            <div class="setup-tab-pane d-none" id="tab-desktop">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-download fs-2 text-primary"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">Download Offline Bundle</h3>
+                            </div>
+                            <p class="text-muted text-sm">
+                                Complete bundle containing all individual vector SVG files, compiled web fonts (WOFF2, TTF, EOT, WOFF), Sass sources, and minified CSS stylesheets.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <a href="/download/haticons.zip" class="btn btn-primary rounded-pill px-2 d-inline-flex align-items-center gap-1 shadow-sm">
+                                    <i class="hi-download"></i>
+                                    <span>Download ZIP (~1.4MB)</span>
+                                </a>
+                            </div>
+                            <div class="text-muted text-2xs">Version 1.0.1 &bull; Released under GPL-3.0 License</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <i class="hi-paintbox fs-2 text-purple"></i>
+                                <h3 class="h5 fw-bold text-dark mb-0">Figma, Sketch &amp; Illustrator</h3>
+                            </div>
+                            <p class="text-muted text-sm">
+                                Install <code>dist/fonts/haticons.ttf</code> into macOS Font Book or Windows Fonts. Type icon glyphs directly or drag-and-drop vector SVGs into your design canvases.
+                            </p>
+                            <div class="p-1 bg-white rounded-3 border text-xs text-muted mb-1">
+                                <strong>Tip:</strong> Copy Unicode codepoints directly from the <a href="/reference.html" class="text-primary fw-semibold">Reference</a> catalog to paste into design text layers.
+                            </div>
+                            <a href="/reference.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3 bg-white">
+                                <i class="hi-search me-1"></i> Open Reference
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-
-${getToast('copyToast')}
 
 ${getFooter('home')}
 
