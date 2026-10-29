@@ -1103,3 +1103,108 @@ body {
 .hidden {
   display: none !important;
 }
+
+
+/* Spacing Utilities */
+.py-05, .py-0\.5 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
+.px-05, .px-0\.5 { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+.p-05, .p-0\.5 { padding: 0.25rem !important; }
+.gap-05, .gap-0\.5 { gap: 0.25rem !important; }
+
+/* Interactive Playground Canvas */
+.playground-canvas {
+  background-color: #f8fafc;
+  background-image: radial-gradient(rgba(124, 58, 237, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .playground-canvas {
+  background-color: #0b0f19 !important;
+  background-image: radial-gradient(rgba(168, 85, 247, 0.2) 1px, transparent 1px);
+  border-color: var(--hi-border) !important;
+}
+
+#pgIconDisplay {
+  transition: font-size 0.15s ease, color 0.15s ease, transform 0.2s ease;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Category Showcase Cards */
+.category-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(124, 58, 237, 0.16);
+  border-color: var(--hi-primary) !important;
+}
+
+[data-theme="dark"] .category-card {
+  background-color: var(--hi-bg-card);
+  border-color: var(--hi-border);
+}
+
+[data-theme="dark"] .category-card:hover {
+  background-color: #1a233a;
+  border-color: var(--hi-primary) !important;
+}
+
+/* Hero Highlights Ribbon */
+.hero-highlights-ribbon .badge {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.hero-highlights-ribbon .badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--hi-primary) !important;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.15);
+}
+
+/* Top Announcement Bar */
+.top-announcement-bar {
+  letter-spacing: 0.01em;
+}
+
+/* Nav Subset Button */
+.nav-subset-btn {
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.nav-subset-btn:hover {
+  background-color: var(--hi-primary-soft);
+  color: var(--hi-primary) !important;
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 575.98px) {
+  .haticons-set-grid,
+  .haticon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .haticon-card {
+    padding: 0.85rem 0.5rem !important;
+  }
+
+  .haticon-display-icon {
+    font-size: 1.85rem;
+  }
+
+  .icon-glyph-wrap {
+    height: 44px;
+    width: 44px;
+  }
+
+  .hero-title {
+    font-size: 2.25rem !important;
+  }
+
+  .cust-export-actions {
+    grid-template-columns: 1fr !important;
+  }
+}

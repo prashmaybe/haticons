@@ -60,9 +60,11 @@ function getHtmlHead(title, description, keywords, canonicalPath = '') {
 function getAnnouncementBar() {
     const count = loadIcons().length;
     return `    <!-- Top Announcement Bar -->
-    <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
-        <span class="badge bg-white text-primary rounded-pill px-1 py-0.5 fw-bold">v1.0.1</span>
+    <div class="py-1 px-3 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2 top-announcement-bar">
+        <span class="badge bg-white text-primary rounded-pill px-2 py-05 fw-bold">v1.0.1</span>
         <span>${count}+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
+        <span class="d-none d-md-inline text-white-50">&bull;</span>
+        <span class="d-none d-md-inline text-white-50">Free &amp; Open Source (GPL-3.0)</span>
     </div>`;
 }
 
@@ -77,17 +79,21 @@ function getNavbar(activePage = 'home') {
     const isChangelogs = activePage === 'changelogs';
 
     return `    <!-- Main Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-2 shadow-xs" id="mainHeaderNav">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-1 text-decoration-none me-0" href="/">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-2" href="/">
                 <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
                     <i class="hi-haticons fs-4"></i>
                 </span>
                 <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
             </a>
 
-            <!-- Mobile Controls (Theme Toggle + Navbar Toggler) -->
+            <!-- Mobile Controls (Subset + Theme Toggle + Navbar Toggler) -->
             <div class="d-flex align-items-center gap-1 d-lg-none">
+                <button type="button" class="btn btn-ghost p-1 text-muted nav-subset-btn" aria-label="Open custom subset tray" title="Subset tray">
+                    <i class="hi-archive fs-5"></i>
+                    <span class="badge bg-primary text-white rounded-pill px-1 text-2xs nav-subset-count">0</span>
+                </button>
                 <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
                     <i class="hi-sun theme-toggle-icon fs-5"></i>
                 </button>
@@ -99,6 +105,15 @@ function getNavbar(activePage = 'home') {
             <!-- Collapsible Navigation Menu -->
             <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="mainNavbarCollapse">
                 <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 py-2 py-lg-0">
+                    <a href="${isHome ? '#explore' : '/#explore'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+                        <i class="hi-search"></i> Icons
+                    </a>
+                    <a href="${isHome ? '#playground' : '/#playground'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+                        <i class="hi-paintbox"></i> Playground
+                    </a>
+                    <a href="${isHome ? '#features' : '/#features'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+                        <i class="hi-star"></i> Features
+                    </a>
                     <a href="${isHome ? '#start' : '/#start'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
                         <i class="hi-play"></i> Set Up
                     </a>
@@ -111,13 +126,24 @@ function getNavbar(activePage = 'home') {
                     <a href="/changelogs.html" class="btn btn-ghost ${isChangelogs ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
                         <i class="hi-time"></i> Changelogs
                     </a>
-                    <button type="button" class="theme-toggle-btn ms-lg-1 d-none d-lg-inline-flex" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
-                        <i class="hi-sun theme-toggle-icon fs-5"></i>
-                    </button>
-                    <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center justify-content-center gap-1 mt-2 mt-lg-0">
-                        <i class="hi-npm"></i>
-                        <span>npm</span>
-                    </a>
+
+                    <!-- Desktop Actions -->
+                    <div class="d-none d-lg-flex align-items-center gap-1 ms-lg-2">
+                        <button type="button" class="btn btn-ghost text-muted px-2 py-1 nav-subset-btn" title="Open custom subset tray" aria-label="Open custom subset tray">
+                            <i class="hi-archive fs-5"></i>
+                            <span class="badge bg-primary text-white rounded-pill px-1 text-2xs nav-subset-count ms-1">0</span>
+                        </button>
+                        <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                            <i class="hi-sun theme-toggle-icon fs-5"></i>
+                        </button>
+                        <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-1 rounded-circle" title="View on GitHub" aria-label="View on GitHub">
+                            <i class="hi-github fs-5"></i>
+                        </a>
+                        <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center justify-content-center gap-1 ms-1">
+                            <i class="hi-npm"></i>
+                            <span>npm</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,36 +157,67 @@ function getNavbar(activePage = 'home') {
 function getFooter(activePage = 'home') {
     const count = loadIcons().length;
     return `    <!-- Footer -->
-    <footer class="py-5 bg-white border-top text-center">
+    <footer class="py-5 bg-white border-top">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
-                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
-                    <i class="hi-haticons fs-5"></i>
-                </span>
-                <span class="fs-5 fw-bold text-dark">Haticons</span>
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
+                            <i class="hi-haticons fs-5"></i>
+                        </span>
+                        <span class="fs-5 fw-bold text-dark">Haticons</span>
+                    </div>
+                    <p class="text-muted text-sm mb-3">
+                        A beautifully crafted, modular open-source icon suite featuring ${count}+ vector and webfont icons for modern Web, iOS, Android, and Desktop apps.
+                    </p>
+                    <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
+                        <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm rounded-pill px-2 d-inline-flex align-items-center gap-1" title="GitHub Repository">
+                            <i class="hi-github"></i> GitHub
+                        </a>
+                        <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm rounded-pill px-2 d-inline-flex align-items-center gap-1" title="npm Package">
+                            <i class="hi-npm text-danger"></i> npm
+                        </a>
+                        <a href="/download/haticons.zip" class="btn btn-primary btn-sm rounded-pill px-2 d-inline-flex align-items-center gap-1">
+                            <i class="hi-download"></i> Download ZIP
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 offset-md-1">
+                    <h6 class="fw-bold text-dark text-xs text-uppercase tracking-wider mb-3">Documentation</h6>
+                    <ul class="list-unstyled text-sm mb-0 d-flex flex-column gap-2">
+                        <li><a href="/reference.html" class="text-decoration-none ${activePage === 'reference' ? 'text-primary fw-semibold' : 'text-muted'}">Icon Reference</a></li>
+                        <li><a href="/tutorial.html" class="text-decoration-none ${activePage === 'tutorial' ? 'text-primary fw-semibold' : 'text-muted'}">Integration Guide</a></li>
+                        <li><a href="/tutorial.html#modular-css" class="text-decoration-none text-muted">Modular Categories</a></li>
+                        <li><a href="/changelogs.html" class="text-decoration-none ${activePage === 'changelogs' ? 'text-primary fw-semibold' : 'text-muted'}">Changelogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold text-dark text-xs text-uppercase tracking-wider mb-3">Ecosystem</h6>
+                    <ul class="list-unstyled text-sm mb-0 d-flex flex-column gap-2">
+                        <li><a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="text-decoration-none text-muted">npm Package</a></li>
+                        <li><a href="/tutorial.html#framework-components" class="text-decoration-none text-muted">React &amp; Vue 3</a></li>
+                        <li><a href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" target="_blank" rel="noopener" class="text-decoration-none text-muted">jsDelivr CDN</a></li>
+                        <li><a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-decoration-none text-muted">boodoo Framework</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h6 class="fw-bold text-dark text-xs text-uppercase tracking-wider mb-3">Legal &amp; Open Source</h6>
+                    <ul class="list-unstyled text-sm mb-0 d-flex flex-column gap-2">
+                        <li><a href="/license.html" class="text-decoration-none ${activePage === 'license' ? 'text-primary fw-semibold' : 'text-muted'}">License (GPL-3.0)</a></li>
+                        <li><a href="/terms.html" class="text-decoration-none ${activePage === 'terms' ? 'text-primary fw-semibold' : 'text-muted'}">Terms of Use</a></li>
+                        <li><a href="/privacy.html" class="text-decoration-none ${activePage === 'privacy' ? 'text-primary fw-semibold' : 'text-muted'}">Privacy Policy</a></li>
+                        <li><a href="https://pebblebenders.com/" target="_blank" rel="noopener" class="text-decoration-none text-muted">PebbleBenders Studio</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-xs text-muted mb-3">
-                An open-source icon system by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
-            </p>
-            <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
-                ${count} free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
-            </p>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
-                <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 bg-white text-muted d-inline-flex align-items-center gap-1 shadow-2xs">
-                    <i class="hi-download"></i>
-                    <span>Download ZIP</span>
-                </a>
+            <div class="pt-3 border-top d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 text-xs text-muted">
+                <div>
+                    Released under <strong>GPL-3.0 License</strong> &middot; Designed &amp; Crafted by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>
+                </div>
+                <div>
+                    Powered by <a href="https://www.boodooframework.com/" class="text-primary fw-semibold text-decoration-none" target="_blank" rel="noopener">boodoo CSS Framework</a>
+                </div>
             </div>
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-xs text-muted mb-3 pt-2 border-top">
-                <a href="/terms.html" class="text-decoration-none ${activePage === 'terms' ? 'text-primary fw-semibold' : 'text-muted'}">Terms of Use</a>
-                <span>&bull;</span>
-                <a href="/privacy.html" class="text-decoration-none ${activePage === 'privacy' ? 'text-primary fw-semibold' : 'text-muted'}">Privacy Policy</a>
-                <span>&bull;</span>
-                <a href="/license.html" class="text-decoration-none ${activePage === 'license' ? 'text-primary fw-semibold' : 'text-muted'}">License (GPL-3.0)</a>
-            </div>
-            <p class="text-xs text-muted mb-0">
-                Released under GPL-3.0 License &middot; Designed &amp; Crafted by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>
-            </p>
         </div>
     </footer>`;
 }

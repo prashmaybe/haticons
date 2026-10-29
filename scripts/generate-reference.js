@@ -278,8 +278,14 @@ ${getNavbar('reference')}
                             </div>
 
                             <!-- Export Actions -->
-                            <div class="d-grid gap-2 pt-2 border-top cust-export-actions" style="grid-template-columns: repeat(2, 1fr);">
-                                <button type="button" class="btn btn-sm btn-primary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopyJsxBtn">
+                            <div class="d-grid gap-2 pt-2 border-top cust-export-actions">
+                                <button type="button" class="btn btn-sm btn-primary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopyHtmlBtn">
+                                    <i class="hi-paste"></i> Copy HTML
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopyClassBtn">
+                                    <i class="hi-paste"></i> Copy Class
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopyJsxBtn">
                                     <i class="hi-paste"></i> Copy JSX
                                 </button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopySvgBtn">
