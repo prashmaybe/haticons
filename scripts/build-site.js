@@ -20,3 +20,4 @@ console.log('3. Packaging website for shared hosting deployment...');
 execSync('python scripts/package-site.py', { cwd: ROOT_DIR, stdio: 'inherit' });
 
 console.log('\nWebsite build and shared hosting deployment package ready: site-deploy.zip');
+
