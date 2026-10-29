@@ -255,7 +255,7 @@ ${getNavbar('home')}
                                     <span class="badge bg-primary text-white rounded-pill px-3 py-1 text-xs fw-bold">Live Preview</span>
                                 </div>
                                 <h4 class="h5 fw-bold text-dark mb-2">Interactive Icon Demo</h4>
-                                <p class="text-muted text-sm mb-4">
+                                <p class="text-muted text-sm mb-2">
                                     Icons render crisp vector typography instantly, inheriting currentColor and font sizing.
                                 </p>
                                 <div class="p-2 rounded-4 bg-light border text-center mb-2">
