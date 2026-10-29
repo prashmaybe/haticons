@@ -19,7 +19,7 @@ const html = `<!DOCTYPE html>
 <head>
 ${getHtmlHead(
     'Haticons | Beautiful Free Vector &amp; Font Icons for Modern Apps',
-    'A set of ${totalIcons}+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
+    `A set of ${totalIcons}+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.`,
     'haticons, haticon, font icons, icon fonts, web fonts, font awesome alternative, ionicons, glyphicons, svg icons, boodoo framework, boodoo css'
 )}
 </head>
