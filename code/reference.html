@@ -13566,7 +13566,7 @@
     <div class="modal fade" id="customizerModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-4 border shadow-lg overflow-hidden">
-                <div class="modal-header bg-light border-bottom p-3">
+                <div class="modal-header bg-light border-bottom px-2">
                     <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2" id="custModalTitle">
                         <i class="hi-paintbox text-primary"></i>
                         <span>Icon Customizer &amp; Exporter</span>
@@ -13600,36 +13600,37 @@
                                 <input type="range" class="form-range" id="custSizeRange" min="16" max="144" value="72" step="4">
                             </div>
 
-                            <!-- Color Pickers -->
-                            <div class="row g-2 mb-3">
-                                <div class="col-6">
-                                    <label class="form-label text-xs text-muted mb-1">Fill Color:</label>
-                                    <input type="color" class="form-control form-control-color w-100 rounded-3 border p-1" id="custColorPicker" value="#7c3aed">
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label text-xs text-muted mb-1">Quick Color:</label>
-                                    <div class="d-flex gap-1 pt-1">
-                                        <button type="button" class="btn btn-xs rounded-circle p-2 border quick-color" style="background:#7c3aed;" data-color="#7c3aed"></button>
-                                        <button type="button" class="btn btn-xs rounded-circle p-2 border quick-color" style="background:#0284c7;" data-color="#0284c7"></button>
-                                        <button type="button" class="btn btn-xs rounded-circle p-2 border quick-color" style="background:#10b981;" data-color="#10b981"></button>
-                                        <button type="button" class="btn btn-xs rounded-circle p-2 border quick-color" style="background:#ef4444;" data-color="#ef4444"></button>
-                                        <button type="button" class="btn btn-xs rounded-circle p-2 border quick-color" style="background:#0f172a;" data-color="#0f172a"></button>
-                                    </div>
+                            <!-- Color Picker & Quick Swatches -->
+                            <div class="mb-3">
+                                <label class="form-label text-xs text-muted mb-1">Fill Color:</label>
+                                <input type="color" class="form-control form-control-color w-100 rounded-3 border p-1 mb-2" id="custColorPicker" value="#7c3aed" style="height: 38px;">
+                                <label class="form-label text-xs text-muted mb-1 d-block">Quick Colors:</label>
+                                <div class="quick-colors-grid">
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#7c3aed;" data-color="#7c3aed" title="Purple (#7c3aed)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#0284c7;" data-color="#0284c7" title="Sky Blue (#0284c7)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#10b981;" data-color="#10b981" title="Emerald (#10b981)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#f59e0b;" data-color="#f59e0b" title="Amber (#f59e0b)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#ef4444;" data-color="#ef4444" title="Red (#ef4444)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#6366f1;" data-color="#6366f1" title="Indigo (#6366f1)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#06b6d4;" data-color="#06b6d4" title="Cyan (#06b6d4)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#ec4899;" data-color="#ec4899" title="Pink (#ec4899)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#64748b;" data-color="#64748b" title="Slate Gray (#64748b)"></button>
+                                    <button type="button" class="btn p-0 rounded-circle quick-color" style="background:#0f172a;" data-color="#0f172a" title="Dark Slate (#0f172a)"></button>
                                 </div>
                             </div>
 
                             <!-- Export Actions -->
-                            <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                                <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 d-inline-flex align-items-center gap-1" id="custCopyJsxBtn">
+                            <div class="d-grid gap-2 pt-2 border-top cust-export-actions" style="grid-template-columns: repeat(2, 1fr);">
+                                <button type="button" class="btn btn-sm btn-primary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopyJsxBtn">
                                     <i class="hi-paste"></i> Copy JSX
                                 </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-1" id="custCopySvgBtn">
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custCopySvgBtn">
                                     <i class="hi-paste"></i> Copy SVG
                                 </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-1" id="custDownloadSvgBtn">
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custDownloadSvgBtn">
                                     <i class="hi-download"></i> Download SVG
                                 </button>
-                                <button type="button" class="btn btn-sm btn-outline-info rounded-pill px-3 d-inline-flex align-items-center gap-1" id="custToggleSubsetBtn">
+                                <button type="button" class="btn btn-sm btn-outline-info rounded-pill px-2 d-inline-flex align-items-center justify-content-center gap-1" id="custToggleSubsetBtn">
                                     <i class="hi-star"></i> <span id="custSubsetText">Add to Subset</span>
                                 </button>
                             </div>
@@ -13644,7 +13645,7 @@
     <div class="modal fade" id="subsetExportModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border shadow-lg">
-                <div class="modal-header bg-light border-bottom p-3">
+                <div class="modal-header bg-light border-bottom px-2">
                     <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2">
                         <i class="hi-archive text-primary"></i>
                         <span>Export Custom Subset</span>
