@@ -159,24 +159,38 @@ export default _default;
 });
 console.log(`Generated ${svgGeneratedCount} individual SVG files and tree-shakeable icon modules (with ${Object.keys(aliases).length} alias modules).`);
 
-// Copy & generate font assets (including ultra-compact WOFF2)
-const fontFiles = ['haticons.eot', 'haticons.svg', 'haticons.ttf', 'haticons.woff'];
-fontFiles.forEach(file => {
-  const src = path.join(FONTS_SRC, file);
-  const dest = path.join(DIST_FONTS, file);
-  if (fs.existsSync(src)) fs.copyFileSync(src, dest);
-});
-
-// Generate WOFF2 font
+// Compile & generate full font assets suite (TTF, WOFF, EOT, WOFF2) from haticons.svg
 try {
+  const svg2ttf = require('svg2ttf');
+  const ttf2woff = require('ttf2woff');
+  const ttf2eot = require('ttf2eot');
   const woff2 = require('woff2');
-  const ttfBuffer = fs.readFileSync(path.join(FONTS_SRC, 'haticons.ttf'));
+
+  const svgFontContent = fs.readFileSync(path.join(FONTS_SRC, 'haticons.svg'), 'utf-8');
+  const ttfBuffer = Buffer.from(svg2ttf(svgFontContent, {}).buffer);
+  const woffBuffer = Buffer.from(ttf2woff(ttfBuffer).buffer);
+  const eotBuffer = Buffer.from(ttf2eot(ttfBuffer).buffer);
   const woff2Buffer = woff2.encode(ttfBuffer);
-  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff2'), woff2Buffer);
+
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.ttf'), ttfBuffer);
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.woff'), woffBuffer);
+  fs.writeFileSync(path.join(FONTS_SRC, 'haticons.eot'), eotBuffer);
   fs.writeFileSync(path.join(FONTS_SRC, 'haticons.woff2'), woff2Buffer);
-  console.log(`Generated ultra-compact WOFF2 font (${(woff2Buffer.length / 1024).toFixed(1)} KB)`);
+
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.svg'), svgFontContent);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.ttf'), ttfBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff'), woffBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.eot'), eotBuffer);
+  fs.writeFileSync(path.join(DIST_FONTS, 'haticons.woff2'), woff2Buffer);
+  console.log(`Compiled font formats: TTF (${(ttfBuffer.length / 1024).toFixed(1)} KB), WOFF (${(woffBuffer.length / 1024).toFixed(1)} KB), EOT (${(eotBuffer.length / 1024).toFixed(1)} KB), WOFF2 (${(woff2Buffer.length / 1024).toFixed(1)} KB)`);
 } catch (err) {
-  console.warn('woff2 generation skipped:', err.message);
+  console.warn('Font compilation warning:', err.message);
+  const fontFiles = ['haticons.eot', 'haticons.svg', 'haticons.ttf', 'haticons.woff', 'haticons.woff2'];
+  fontFiles.forEach(file => {
+    const src = path.join(FONTS_SRC, file);
+    const dest = path.join(DIST_FONTS, file);
+    if (fs.existsSync(src)) fs.copyFileSync(src, dest);
+  });
 }
 console.log(`Copied and prepared font files in dist/fonts.`);
 

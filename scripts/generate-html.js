@@ -16,7 +16,7 @@ const html = `<!DOCTYPE html>
 <head>
 ${getHtmlHead(
     'Haticons | Beautiful Free Vector &amp; Font Icons for Modern Apps',
-    'A set of 494+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
+    'A set of 549+ beautifully crafted, modular free premium font icons and SVG icons for Web, iOS, Android, and Desktop apps. Styled with boodoo framework.',
     'haticons, haticon, font icons, icon fonts, web fonts, font awesome alternative, ionicons, glyphicons, svg icons, boodoo framework, boodoo css'
 )}
 </head>
@@ -33,7 +33,7 @@ ${getNavbar('home')}
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
                 <span class="px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
                     <i class="hi-star"></i>
-                    <span>494+ Modern Vector Icons</span>
+                    <span>549+ Modern Vector Icons</span>
                 </span>
                 <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
                     <i class="hi-check-circle text-success"></i>
@@ -52,7 +52,7 @@ ${getNavbar('home')}
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-4">
                 <a href="/reference.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
                     <i class="hi-search"></i>
-                    <span>Browse 494 Icons</span>
+                    <span>Browse 549 Icons</span>
                 </a>
                 <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-lg rounded-pill px-4 d-inline-flex align-items-center gap-2 bg-white">
                     <i class="hi-download"></i>
@@ -208,7 +208,7 @@ ${getNavbar('home')}
                                 <h3 class="h5 fw-bold text-dark mb-0">Add Stylesheet to &lt;head&gt;</h3>
                             </div>
                             <p class="text-muted text-sm">
-                                Just like a FontAwesome Kit or CDN embed, paste this single line inside your HTML <code>&lt;head&gt;</code> to immediately access all 494 icons:
+                                Just like a FontAwesome Kit or CDN embed, paste this single line inside your HTML <code>&lt;head&gt;</code> to immediately access all 549 icons:
                             </p>
                             <div class="code-snippet-box mb-4">
                                 <div class="code-snippet-header">

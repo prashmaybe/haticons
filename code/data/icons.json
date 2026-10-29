@@ -2962,5 +2962,335 @@
     "content": "\\e985",
     "name": "zoom-out",
     "category": "interface"
+  },
+  {
+    "class": "hi-react",
+    "content": "\\f1a0",
+    "name": "react",
+    "category": "brands"
+  },
+  {
+    "class": "hi-x-twitter",
+    "content": "\\f1a1",
+    "name": "x-twitter",
+    "category": "brands"
+  },
+  {
+    "class": "hi-threads",
+    "content": "\\f1a2",
+    "name": "threads",
+    "category": "brands"
+  },
+  {
+    "class": "hi-discord",
+    "content": "\\f1a3",
+    "name": "discord",
+    "category": "brands"
+  },
+  {
+    "class": "hi-telegram",
+    "content": "\\f1a4",
+    "name": "telegram",
+    "category": "brands"
+  },
+  {
+    "class": "hi-bluesky",
+    "content": "\\f1a5",
+    "name": "bluesky",
+    "category": "brands"
+  },
+  {
+    "class": "hi-openai",
+    "content": "\\f1a6",
+    "name": "openai",
+    "category": "brands"
+  },
+  {
+    "class": "hi-anthropic",
+    "content": "\\f1a7",
+    "name": "anthropic",
+    "category": "brands"
+  },
+  {
+    "class": "hi-gemini",
+    "content": "\\f1a8",
+    "name": "gemini",
+    "category": "brands"
+  },
+  {
+    "class": "hi-figma",
+    "content": "\\f1a9",
+    "name": "figma",
+    "category": "brands"
+  },
+  {
+    "class": "hi-canva",
+    "content": "\\f1aa",
+    "name": "canva",
+    "category": "brands"
+  },
+  {
+    "class": "hi-notion",
+    "content": "\\f1ab",
+    "name": "notion",
+    "category": "brands"
+  },
+  {
+    "class": "hi-linear",
+    "content": "\\f1ac",
+    "name": "linear",
+    "category": "brands"
+  },
+  {
+    "class": "hi-supabase",
+    "content": "\\f1ad",
+    "name": "supabase",
+    "category": "brands"
+  },
+  {
+    "class": "hi-firebase",
+    "content": "\\f1ae",
+    "name": "firebase",
+    "category": "brands"
+  },
+  {
+    "class": "hi-vercel",
+    "content": "\\f1af",
+    "name": "vercel",
+    "category": "brands"
+  },
+  {
+    "class": "hi-nextjs",
+    "content": "\\f1b0",
+    "name": "nextjs",
+    "category": "brands"
+  },
+  {
+    "class": "hi-tailwind",
+    "content": "\\f1b1",
+    "name": "tailwind",
+    "category": "brands"
+  },
+  {
+    "class": "hi-svelte",
+    "content": "\\f1b2",
+    "name": "svelte",
+    "category": "brands"
+  },
+  {
+    "class": "hi-bun",
+    "content": "\\f1b3",
+    "name": "bun",
+    "category": "brands"
+  },
+  {
+    "class": "hi-docker",
+    "content": "\\f1b4",
+    "name": "docker",
+    "category": "brands"
+  },
+  {
+    "class": "hi-kubernetes",
+    "content": "\\f1b5",
+    "name": "kubernetes",
+    "category": "brands"
+  },
+  {
+    "class": "hi-stripe",
+    "content": "\\f1b6",
+    "name": "stripe",
+    "category": "brands"
+  },
+  {
+    "class": "hi-zoom",
+    "content": "\\f1b7",
+    "name": "zoom",
+    "category": "brands"
+  },
+  {
+    "class": "hi-signal",
+    "content": "\\f1b8",
+    "name": "signal",
+    "category": "brands"
+  },
+  {
+    "class": "hi-pinterest",
+    "content": "\\f1b9",
+    "name": "pinterest",
+    "category": "brands"
+  },
+  {
+    "class": "hi-patreon",
+    "content": "\\f1ba",
+    "name": "patreon",
+    "category": "brands"
+  },
+  {
+    "class": "hi-postman",
+    "content": "\\f1bb",
+    "name": "postman",
+    "category": "brands"
+  },
+  {
+    "class": "hi-google-cloud",
+    "content": "\\f1bc",
+    "name": "google-cloud",
+    "category": "brands"
+  },
+  {
+    "class": "hi-pnpm",
+    "content": "\\f1bd",
+    "name": "pnpm",
+    "category": "brands"
+  },
+  {
+    "class": "hi-vite",
+    "content": "\\f1be",
+    "name": "vite",
+    "category": "brands"
+  },
+  {
+    "class": "hi-graphql",
+    "content": "\\f1bf",
+    "name": "graphql",
+    "category": "brands"
+  },
+  {
+    "class": "hi-postgresql",
+    "content": "\\f1c0",
+    "name": "postgresql",
+    "category": "brands"
+  },
+  {
+    "class": "hi-mongodb",
+    "content": "\\f1c1",
+    "name": "mongodb",
+    "category": "brands"
+  },
+  {
+    "class": "hi-redis",
+    "content": "\\f1c2",
+    "name": "redis",
+    "category": "brands"
+  },
+  {
+    "class": "hi-golang",
+    "content": "\\f1c3",
+    "name": "golang",
+    "category": "brands"
+  },
+  {
+    "class": "hi-pause",
+    "content": "\\f1c4",
+    "name": "pause",
+    "category": "media"
+  },
+  {
+    "class": "hi-stop",
+    "content": "\\f1c5",
+    "name": "stop",
+    "category": "media"
+  },
+  {
+    "class": "hi-moon",
+    "content": "\\f1c6",
+    "name": "moon",
+    "category": "interface"
+  },
+  {
+    "class": "hi-sparkles",
+    "content": "\\f1c7",
+    "name": "sparkles",
+    "category": "interface"
+  },
+  {
+    "class": "hi-code",
+    "content": "\\f1c8",
+    "name": "code",
+    "category": "editor"
+  },
+  {
+    "class": "hi-terminal",
+    "content": "\\f1c9",
+    "name": "terminal",
+    "category": "devices"
+  },
+  {
+    "class": "hi-database",
+    "content": "\\f1ca",
+    "name": "database",
+    "category": "devices"
+  },
+  {
+    "class": "hi-cpu",
+    "content": "\\f1cb",
+    "name": "cpu",
+    "category": "devices"
+  },
+  {
+    "class": "hi-wifi",
+    "content": "\\f1cc",
+    "name": "wifi",
+    "category": "devices"
+  },
+  {
+    "class": "hi-shield",
+    "content": "\\f1cd",
+    "name": "shield",
+    "category": "security"
+  },
+  {
+    "class": "hi-shield-check",
+    "content": "\\f1ce",
+    "name": "shield-check",
+    "category": "security"
+  },
+  {
+    "class": "hi-bolt",
+    "content": "\\f1cf",
+    "name": "bolt",
+    "category": "interface"
+  },
+  {
+    "class": "hi-globe",
+    "content": "\\f1d0",
+    "name": "globe",
+    "category": "interface"
+  },
+  {
+    "class": "hi-qrcode",
+    "content": "\\f1d1",
+    "name": "qrcode",
+    "category": "commerce"
+  },
+  {
+    "class": "hi-copy",
+    "content": "\\f1d2",
+    "name": "copy",
+    "category": "editor"
+  },
+  {
+    "class": "hi-external-link",
+    "content": "\\f1d3",
+    "name": "external-link",
+    "category": "interface"
+  },
+  {
+    "class": "hi-filter",
+    "content": "\\f1d4",
+    "name": "filter",
+    "category": "interface"
+  },
+  {
+    "class": "hi-history",
+    "content": "\\f1d5",
+    "name": "history",
+    "category": "time"
+  },
+  {
+    "class": "hi-spinner",
+    "content": "\\f1d6",
+    "name": "spinner",
+    "category": "feedback"
   }
 ]

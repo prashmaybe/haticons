@@ -1956,6 +1956,302 @@
   content: "\f19f";
 }
 
+.hi-react:before,
+.hi-react-fill:before,
+.hi-react-outline:before,
+.hi-react-sharp:before {
+  content: "\f1a0";
+}
+
+.hi-x-twitter:before,
+.hi-x-twitter-fill:before,
+.hi-x-twitter-outline:before,
+.hi-x-twitter-sharp:before,
+.hi-x:before,
+.hi-x-fill:before,
+.hi-x-outline:before,
+.hi-x-sharp:before,
+.hi-twitter-x:before,
+.hi-twitter-x-fill:before,
+.hi-twitter-x-outline:before,
+.hi-twitter-x-sharp:before {
+  content: "\f1a1";
+}
+
+.hi-threads:before,
+.hi-threads-fill:before,
+.hi-threads-outline:before,
+.hi-threads-sharp:before {
+  content: "\f1a2";
+}
+
+.hi-discord:before,
+.hi-discord-fill:before,
+.hi-discord-outline:before,
+.hi-discord-sharp:before {
+  content: "\f1a3";
+}
+
+.hi-telegram:before,
+.hi-telegram-fill:before,
+.hi-telegram-outline:before,
+.hi-telegram-sharp:before {
+  content: "\f1a4";
+}
+
+.hi-bluesky:before,
+.hi-bluesky-fill:before,
+.hi-bluesky-outline:before,
+.hi-bluesky-sharp:before {
+  content: "\f1a5";
+}
+
+.hi-openai:before,
+.hi-openai-fill:before,
+.hi-openai-outline:before,
+.hi-openai-sharp:before,
+.hi-chatgpt:before,
+.hi-chatgpt-fill:before,
+.hi-chatgpt-outline:before,
+.hi-chatgpt-sharp:before {
+  content: "\f1a6";
+}
+
+.hi-anthropic:before,
+.hi-anthropic-fill:before,
+.hi-anthropic-outline:before,
+.hi-anthropic-sharp:before,
+.hi-claude:before,
+.hi-claude-fill:before,
+.hi-claude-outline:before,
+.hi-claude-sharp:before {
+  content: "\f1a7";
+}
+
+.hi-gemini:before,
+.hi-gemini-fill:before,
+.hi-gemini-outline:before,
+.hi-gemini-sharp:before {
+  content: "\f1a8";
+}
+
+.hi-figma:before,
+.hi-figma-fill:before,
+.hi-figma-outline:before,
+.hi-figma-sharp:before {
+  content: "\f1a9";
+}
+
+.hi-canva:before,
+.hi-canva-fill:before,
+.hi-canva-outline:before,
+.hi-canva-sharp:before {
+  content: "\f1aa";
+}
+
+.hi-notion:before,
+.hi-notion-fill:before,
+.hi-notion-outline:before,
+.hi-notion-sharp:before {
+  content: "\f1ab";
+}
+
+.hi-linear:before,
+.hi-linear-fill:before,
+.hi-linear-outline:before,
+.hi-linear-sharp:before {
+  content: "\f1ac";
+}
+
+.hi-supabase:before,
+.hi-supabase-fill:before,
+.hi-supabase-outline:before,
+.hi-supabase-sharp:before {
+  content: "\f1ad";
+}
+
+.hi-firebase:before,
+.hi-firebase-fill:before,
+.hi-firebase-outline:before,
+.hi-firebase-sharp:before {
+  content: "\f1ae";
+}
+
+.hi-vercel:before,
+.hi-vercel-fill:before,
+.hi-vercel-outline:before,
+.hi-vercel-sharp:before {
+  content: "\f1af";
+}
+
+.hi-nextjs:before,
+.hi-nextjs-fill:before,
+.hi-nextjs-outline:before,
+.hi-nextjs-sharp:before,
+.hi-next-js:before,
+.hi-next-js-fill:before,
+.hi-next-js-outline:before,
+.hi-next-js-sharp:before {
+  content: "\f1b0";
+}
+
+.hi-tailwind:before,
+.hi-tailwind-fill:before,
+.hi-tailwind-outline:before,
+.hi-tailwind-sharp:before,
+.hi-tailwindcss:before,
+.hi-tailwindcss-fill:before,
+.hi-tailwindcss-outline:before,
+.hi-tailwindcss-sharp:before {
+  content: "\f1b1";
+}
+
+.hi-svelte:before,
+.hi-svelte-fill:before,
+.hi-svelte-outline:before,
+.hi-svelte-sharp:before {
+  content: "\f1b2";
+}
+
+.hi-bun:before,
+.hi-bun-fill:before,
+.hi-bun-outline:before,
+.hi-bun-sharp:before {
+  content: "\f1b3";
+}
+
+.hi-docker:before,
+.hi-docker-fill:before,
+.hi-docker-outline:before,
+.hi-docker-sharp:before {
+  content: "\f1b4";
+}
+
+.hi-kubernetes:before,
+.hi-kubernetes-fill:before,
+.hi-kubernetes-outline:before,
+.hi-kubernetes-sharp:before,
+.hi-k8s:before,
+.hi-k8s-fill:before,
+.hi-k8s-outline:before,
+.hi-k8s-sharp:before {
+  content: "\f1b5";
+}
+
+.hi-stripe:before,
+.hi-stripe-fill:before,
+.hi-stripe-outline:before,
+.hi-stripe-sharp:before {
+  content: "\f1b6";
+}
+
+.hi-zoom:before,
+.hi-zoom-fill:before,
+.hi-zoom-outline:before,
+.hi-zoom-sharp:before {
+  content: "\f1b7";
+}
+
+.hi-signal:before,
+.hi-signal-fill:before,
+.hi-signal-outline:before,
+.hi-signal-sharp:before {
+  content: "\f1b8";
+}
+
+.hi-pinterest:before,
+.hi-pinterest-fill:before,
+.hi-pinterest-outline:before,
+.hi-pinterest-sharp:before {
+  content: "\f1b9";
+}
+
+.hi-patreon:before,
+.hi-patreon-fill:before,
+.hi-patreon-outline:before,
+.hi-patreon-sharp:before {
+  content: "\f1ba";
+}
+
+.hi-postman:before,
+.hi-postman-fill:before,
+.hi-postman-outline:before,
+.hi-postman-sharp:before {
+  content: "\f1bb";
+}
+
+.hi-google-cloud:before,
+.hi-google-cloud-fill:before,
+.hi-google-cloud-outline:before,
+.hi-google-cloud-sharp:before,
+.hi-gcp:before,
+.hi-gcp-fill:before,
+.hi-gcp-outline:before,
+.hi-gcp-sharp:before {
+  content: "\f1bc";
+}
+
+.hi-pnpm:before,
+.hi-pnpm-fill:before,
+.hi-pnpm-outline:before,
+.hi-pnpm-sharp:before {
+  content: "\f1bd";
+}
+
+.hi-vite:before,
+.hi-vite-fill:before,
+.hi-vite-outline:before,
+.hi-vite-sharp:before {
+  content: "\f1be";
+}
+
+.hi-graphql:before,
+.hi-graphql-fill:before,
+.hi-graphql-outline:before,
+.hi-graphql-sharp:before {
+  content: "\f1bf";
+}
+
+.hi-postgresql:before,
+.hi-postgresql-fill:before,
+.hi-postgresql-outline:before,
+.hi-postgresql-sharp:before,
+.hi-postgres:before,
+.hi-postgres-fill:before,
+.hi-postgres-outline:before,
+.hi-postgres-sharp:before {
+  content: "\f1c0";
+}
+
+.hi-mongodb:before,
+.hi-mongodb-fill:before,
+.hi-mongodb-outline:before,
+.hi-mongodb-sharp:before,
+.hi-mongo:before,
+.hi-mongo-fill:before,
+.hi-mongo-outline:before,
+.hi-mongo-sharp:before {
+  content: "\f1c1";
+}
+
+.hi-redis:before,
+.hi-redis-fill:before,
+.hi-redis-outline:before,
+.hi-redis-sharp:before {
+  content: "\f1c2";
+}
+
+.hi-golang:before,
+.hi-golang-fill:before,
+.hi-golang-outline:before,
+.hi-golang-sharp:before,
+.hi-go:before,
+.hi-go-fill:before,
+.hi-go-outline:before,
+.hi-go-sharp:before {
+  content: "\f1c3";
+}
+
 .hi-paypal:before,
 .hi-paypal-fill:before,
 .hi-paypal-outline:before,
@@ -2077,6 +2373,17 @@
 .hi-fill-bag-outline:before,
 .hi-fill-bag-sharp:before {
   content: "\e935";
+}
+
+.hi-qrcode:before,
+.hi-qrcode-fill:before,
+.hi-qrcode-outline:before,
+.hi-qrcode-sharp:before,
+.hi-qr-code:before,
+.hi-qr-code-fill:before,
+.hi-qr-code-outline:before,
+.hi-qr-code-sharp:before {
+  content: "\f1d1";
 }
 
 .hi-share1:before,
@@ -2238,10 +2545,42 @@
   content: "\e95e";
 }
 
+.hi-terminal:before,
+.hi-terminal-fill:before,
+.hi-terminal-outline:before,
+.hi-terminal-sharp:before {
+  content: "\f1c9";
+}
+
+.hi-database:before,
+.hi-database-fill:before,
+.hi-database-outline:before,
+.hi-database-sharp:before {
+  content: "\f1ca";
+}
+
+.hi-cpu:before,
+.hi-cpu-fill:before,
+.hi-cpu-outline:before,
+.hi-cpu-sharp:before {
+  content: "\f1cb";
+}
+
+.hi-wifi:before,
+.hi-wifi-fill:before,
+.hi-wifi-outline:before,
+.hi-wifi-sharp:before {
+  content: "\f1cc";
+}
+
 .hi-arrow-bottom:before,
 .hi-arrow-bottom-fill:before,
 .hi-arrow-bottom-outline:before,
-.hi-arrow-bottom-sharp:before {
+.hi-arrow-bottom-sharp:before,
+.hi-arrow-down:before,
+.hi-arrow-down-fill:before,
+.hi-arrow-down-outline:before,
+.hi-arrow-down-sharp:before {
   content: "\e908";
 }
 
@@ -2290,14 +2629,22 @@
 .hi-arrow-top:before,
 .hi-arrow-top-fill:before,
 .hi-arrow-top-outline:before,
-.hi-arrow-top-sharp:before {
+.hi-arrow-top-sharp:before,
+.hi-arrow-up:before,
+.hi-arrow-up-fill:before,
+.hi-arrow-up-outline:before,
+.hi-arrow-up-sharp:before {
   content: "\e90f";
 }
 
 .hi-chevron-bottom:before,
 .hi-chevron-bottom-fill:before,
 .hi-chevron-bottom-outline:before,
-.hi-chevron-bottom-sharp:before {
+.hi-chevron-bottom-sharp:before,
+.hi-chevron-down:before,
+.hi-chevron-down-fill:before,
+.hi-chevron-down-outline:before,
+.hi-chevron-down-sharp:before {
   content: "\e91e";
 }
 
@@ -2318,7 +2665,11 @@
 .hi-chevron-top:before,
 .hi-chevron-top-fill:before,
 .hi-chevron-top-outline:before,
-.hi-chevron-top-sharp:before {
+.hi-chevron-top-sharp:before,
+.hi-chevron-up:before,
+.hi-chevron-up-fill:before,
+.hi-chevron-up-outline:before,
+.hi-chevron-up-sharp:before {
   content: "\e921";
 }
 
@@ -2473,6 +2824,20 @@
   content: "\e975";
 }
 
+.hi-code:before,
+.hi-code-fill:before,
+.hi-code-outline:before,
+.hi-code-sharp:before {
+  content: "\f1c8";
+}
+
+.hi-copy:before,
+.hi-copy-fill:before,
+.hi-copy-outline:before,
+.hi-copy-sharp:before {
+  content: "\f1d2";
+}
+
 .hi-bell1:before,
 .hi-bell1-fill:before,
 .hi-bell1-outline:before,
@@ -2623,6 +2988,17 @@
 .hi-warning-outline:before,
 .hi-warning-sharp:before {
   content: "\e983";
+}
+
+.hi-spinner:before,
+.hi-spinner-fill:before,
+.hi-spinner-outline:before,
+.hi-spinner-sharp:before,
+.hi-loading:before,
+.hi-loading-fill:before,
+.hi-loading-outline:before,
+.hi-loading-sharp:before {
+  content: "\f1d6";
 }
 
 .hi-folder1:before,
@@ -3376,6 +3752,68 @@
   content: "\e985";
 }
 
+.hi-moon:before,
+.hi-moon-fill:before,
+.hi-moon-outline:before,
+.hi-moon-sharp:before,
+.hi-dark-mode:before,
+.hi-dark-mode-fill:before,
+.hi-dark-mode-outline:before,
+.hi-dark-mode-sharp:before {
+  content: "\f1c6";
+}
+
+.hi-sparkles:before,
+.hi-sparkles-fill:before,
+.hi-sparkles-outline:before,
+.hi-sparkles-sharp:before,
+.hi-ai:before,
+.hi-ai-fill:before,
+.hi-ai-outline:before,
+.hi-ai-sharp:before,
+.hi-magic:before,
+.hi-magic-fill:before,
+.hi-magic-outline:before,
+.hi-magic-sharp:before {
+  content: "\f1c7";
+}
+
+.hi-bolt:before,
+.hi-bolt-fill:before,
+.hi-bolt-outline:before,
+.hi-bolt-sharp:before,
+.hi-lightning:before,
+.hi-lightning-fill:before,
+.hi-lightning-outline:before,
+.hi-lightning-sharp:before {
+  content: "\f1cf";
+}
+
+.hi-globe:before,
+.hi-globe-fill:before,
+.hi-globe-outline:before,
+.hi-globe-sharp:before,
+.hi-web:before,
+.hi-web-fill:before,
+.hi-web-outline:before,
+.hi-web-sharp:before {
+  content: "\f1d0";
+}
+
+.hi-external-link:before,
+.hi-external-link-fill:before,
+.hi-external-link-outline:before,
+.hi-external-link-sharp:before {
+  content: "\f1d3";
+}
+
+.hi-filter:before,
+.hi-filter-fill:before,
+.hi-filter-outline:before,
+.hi-filter-sharp:before {
+  content: "\f1d4";
+}
+
 .hi-play:before,
 .hi-play-fill:before,
 .hi-play-outline:before,
@@ -3469,6 +3907,20 @@
 .hi-volume-up-outline:before,
 .hi-volume-up-sharp:before {
   content: "\e981";
+}
+
+.hi-pause:before,
+.hi-pause-fill:before,
+.hi-pause-outline:before,
+.hi-pause-sharp:before {
+  content: "\f1c4";
+}
+
+.hi-stop:before,
+.hi-stop-fill:before,
+.hi-stop-outline:before,
+.hi-stop-sharp:before {
+  content: "\f1c5";
 }
 
 .hi-map:before,
@@ -3594,6 +4046,20 @@
   content: "\e948";
 }
 
+.hi-shield:before,
+.hi-shield-fill:before,
+.hi-shield-outline:before,
+.hi-shield-sharp:before {
+  content: "\f1cd";
+}
+
+.hi-shield-check:before,
+.hi-shield-check-fill:before,
+.hi-shield-check-outline:before,
+.hi-shield-check-sharp:before {
+  content: "\f1ce";
+}
+
 .hi-calendar1:before,
 .hi-calendar1-fill:before,
 .hi-calendar1-outline:before,
@@ -3642,6 +4108,13 @@
 .hi-time-outline:before,
 .hi-time-sharp:before {
   content: "\e976";
+}
+
+.hi-history:before,
+.hi-history-fill:before,
+.hi-history-outline:before,
+.hi-history-sharp:before {
+  content: "\f1d5";
 }
 
 .hi-doctor:before,

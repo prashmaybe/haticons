@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.2] - 2026-10-29
+
+### Added
+- **55 New Brand and Required Icons**: Expanded icon set from 494 to 549 icons (+55 icons across 8 categories):
+  - **Modern Brands, AI & Tech Stacks (36 new icons)**: Added `react`, `x-twitter` (with `x` and `twitter-x` aliases), `threads`, `discord`, `telegram`, `bluesky`, `openai` (`chatgpt`), `anthropic` (`claude`), `gemini`, `figma`, `canva`, `notion`, `linear`, `supabase`, `firebase`, `vercel`, `nextjs` (`next-js`), `tailwind` (`tailwindcss`), `svelte`, `bun`, `docker`, `kubernetes` (`k8s`), `stripe`, `zoom`, `signal`, `pinterest`, `patreon`, `postman`, `google-cloud` (`gcp`), `pnpm`, `vite`, `graphql`, `postgresql` (`postgres`), `mongodb` (`mongo`), `redis`, and `golang` (`go`).
+  - **Essential Media Controls**: Added `pause` and `stop` to complete the multimedia player set alongside `play`.
+  - **Modern UI & Theme Controls**: Added `moon` (with `dark-mode` alias) for night/dark theme switchers, `sparkles` (`ai`, `magic` aliases) for modern AI enhancements, `bolt` (`lightning`), and `globe` (`web`).
+  - **Developer, System & Hardware**: Added `code`, `terminal`, `database`, `cpu`, and `wifi`.
+  - **Security & Commerce**: Added `shield`, `shield-check`, and `qrcode` (`qr-code`).
+  - **Workflow & Productivity**: Added `copy` (clipboard companion to `paste`), `external-link`, `filter`, `history`, and `spinner` (`loading`).
+- **Automated Webfont Compilation**: Integrated build step that synchronizes and generates TTF, WOFF, EOT, and WOFF2 webfonts directly from SVG font sources.
+- **Convenient Modern Aliases**: Added aliases including `dark-mode`, `ai`, `magic`, `x`, `chatgpt`, `claude`, `arrow-up`, `arrow-down`, `chevron-up`, and `chevron-down`.
+
+---
+
 ## [1.0.1] - 2026-10-28
 
 ### Added

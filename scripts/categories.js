@@ -31,7 +31,11 @@ const BRAND_EXACT = new Set([
   'ubuntu', 'udacity', 'udemy', 'unity', 'upwork', 'viadeo', 'viber-icon', 'vim', 'vimeo', 'vine', 
   'visualstudiocode', 'vk', 'vlcmediaplayer', 'vue-js', 'webstorm', 'wechat', 'whatsapp', 'wheniwork', 
   'wholensole', 'wikipedia', 'windows', 'wix', 'wordpress', 'xbox', 'xcode', 'xing', 'yammer', 'yandex', 
-  'yarn', 'yash-raj', 'ycombinator', 'youtube-play', 'zendesk', 'zerply', 'zillow', 'zomato', 'zorin'
+  'yarn', 'yash-raj', 'ycombinator', 'youtube-play', 'zendesk', 'zerply', 'zillow', 'zomato', 'zorin',
+  'anthropic', 'bluesky', 'bun', 'canva', 'discord', 'docker', 'figma', 'firebase', 'gemini', 'golang', 
+  'google-cloud', 'graphql', 'kubernetes', 'linear', 'mongodb', 'nextjs', 'notion', 'openai', 'patreon', 
+  'pinterest', 'pnpm', 'postgresql', 'postman', 'react', 'redis', 'signal', 'stripe', 'supabase', 
+  'svelte', 'tailwind', 'telegram', 'threads', 'vercel', 'vite', 'x-twitter', 'zoom'
 ]);
 
 const CATEGORY_META = {
@@ -54,18 +58,18 @@ const CATEGORY_META = {
 function classifyIcon(cls) {
   const c = cls.replace(/^hi-/, '');
   if (BRAND_EXACT.has(c)) return 'brands';
-  if (['credit-card', 'credit-card1', 'cart', 'fill-bag', 'empty-bag', 'fat-bag', 'bean-bag', 'wallet', 'master-card', 'visa', 'paypal', 'paytm', 'applepay', 'googlepay', 'samsungpay', 'bitcoin', 'maestro'].includes(c)) return 'commerce';
+  if (['credit-card', 'credit-card1', 'cart', 'fill-bag', 'empty-bag', 'fat-bag', 'bean-bag', 'wallet', 'master-card', 'visa', 'paypal', 'paytm', 'applepay', 'googlepay', 'samsungpay', 'bitcoin', 'maestro', 'qrcode'].includes(c)) return 'commerce';
   if (/arrow|chevron|turn-|next|previous/.test(c)) return 'directional';
-  if (/play|music|camera|mic|volume|speaker|mute|video|presentation|game|gaming-console/.test(c)) return 'media';
+  if (/play|pause|stop|music|camera|mic|volume|speaker|mute|video|presentation|game|gaming-console/.test(c)) return 'media';
   if (/file|folder|document|archive|paste|attachment/.test(c)) return 'files';
-  if (/align-|list|edit|pencil|quotes|cut|copy|tag|paint-bucket|paintbox|marker/.test(c)) return 'editor';
-  if (/monitor|hard-disk|sim_card|landline|phone|electric|power|washing-machine|robot|network/.test(c)) return 'devices';
+  if (/align-|list|edit|pencil|quotes|cut|copy|tag|paint-bucket|paintbox|marker|code/.test(c)) return 'editor';
+  if (/monitor|hard-disk|sim_card|landline|phone|electric|power|washing-machine|robot|network|terminal|database|cpu|wifi/.test(c)) return 'devices';
   if (/chat|message|envelope|mail|paper-plane|speech-bubble|share/.test(c)) return 'communication';
   if (/user|users|profile|doctor|hand-index/.test(c)) return 'users';
-  if (/map|location|pin|pinned|nav|compass|bus|car/.test(c)) return 'navigation';
-  if (/lock|unlock|key|incognito|ban|block/.test(c)) return 'security';
-  if (/clock|time|calendar|date|alarm/.test(c)) return 'time';
-  if (/warning|info|help|question|check|cross|close|bell/.test(c)) return 'feedback';
+  if (/map|location|\bpin\b|\bpinned\b|nav|compass|bus|car/.test(c)) return 'navigation';
+  if (/lock|unlock|key|incognito|ban|block|shield/.test(c)) return 'security';
+  if (/clock|time|calendar|date|alarm|history/.test(c)) return 'time';
+  if (/warning|info|help|question|check|cross|close|bell|spinner/.test(c)) return 'feedback';
   return 'interface';
 }
 
@@ -96,7 +100,29 @@ const ICON_ALIASES = {
   'info-alt': 'info1',
   'lock-alt': 'lock1',
   'calendar-alt': 'calendar1',
-  'time-alt': 'time1'
+  'time-alt': 'time1',
+  'x': 'x-twitter',
+  'twitter-x': 'x-twitter',
+  'chatgpt': 'openai',
+  'claude': 'anthropic',
+  'next-js': 'nextjs',
+  'tailwindcss': 'tailwind',
+  'k8s': 'kubernetes',
+  'gcp': 'google-cloud',
+  'postgres': 'postgresql',
+  'mongo': 'mongodb',
+  'go': 'golang',
+  'dark-mode': 'moon',
+  'ai': 'sparkles',
+  'magic': 'sparkles',
+  'lightning': 'bolt',
+  'web': 'globe',
+  'qr-code': 'qrcode',
+  'arrow-up': 'arrow-top',
+  'arrow-down': 'arrow-bottom',
+  'chevron-up': 'chevron-top',
+  'chevron-down': 'chevron-bottom',
+  'loading': 'spinner'
 };
 
 function enrichIcons(rawIcons) {

@@ -29,24 +29,24 @@
 
 ## 🚀 Features
 
-- **494+ Crisp Vector Icons**: Specially tuned for clean rendering at 16px, 24px, 32px, 48px, and high-DPI displays.
+- **549+ Crisp Vector Icons**: Specially tuned for clean rendering at 16px, 24px, 32px, 48px, and high-DPI displays.
 - **📦 Modular & Zero Waste**: Don't want the full bundle? Import only the categories you need (e.g. `commerce.css`, `arrows.css`) or use raw SCSS partials.
 - **⚡ boodoo Framework Ready**: Designed to pair seamlessly with [boodoo CSS Framework](https://www.boodooframework.com/) utilities, buttons, badges, modals, and flexbox layout.
 - **🎯 14 Categorized Collections**:
-  - `brands` (257 icons) - Tech stacks, social platforms, and developer brands
-  - `commerce` (17 icons) - Carts, payment cards, wallets, and checkout symbols
+  - `brands` (293 icons) - Tech stacks, social platforms, AI tools, and developer brands
+  - `commerce` (18 icons) - Carts, payment cards, wallets, QR codes, and checkout symbols
   - `directional` (16 icons) - Chevrons, arrows, directions, and turns
-  - `media` (13 icons) - Players, volumes, cameras, music, and multimedia
-  - `editor` (17 icons) - Text alignment, lists, editing, tags, and markers
-  - `feedback` (20 icons) - Badges, checks, alerts, warnings, and notifications
+  - `media` (15 icons) - Players, pause/stop, volumes, cameras, music, and multimedia
+  - `editor` (19 icons) - Text alignment, lists, editing, code, copy, tags, and markers
+  - `feedback` (21 icons) - Badges, checks, alerts, warnings, spinners, and notifications
   - `files` (14 icons) - Files, folders, archives, and attachments
-  - `devices` (10 icons) - Screens, phones, networks, and hardware
+  - `devices` (14 icons) - Screens, phones, networks, CPUs, terminals, databases, wifi, and hardware
   - `communication` (11 icons) - Chat, messages, mails, and paper planes
   - `users` (9 icons) - Profiles, teams, roles, and contacts
   - `navigation` (9 icons) - Maps, pins, locations, cars, and vehicles
-  - `security` (8 icons) - Locks, unlocks, keys, and privacy
-  - `time` (6 icons) - Clocks, calendars, alarms, and dates
-  - `interface` (87 icons) - Menus, ratings, stars, hearts, controls, and UI symbols
+  - `security` (10 icons) - Locks, unlocks, keys, shields, and privacy
+  - `time` (7 icons) - Clocks, calendars, alarms, history, and dates
+  - `interface` (93 icons) - Menus, ratings, stars, hearts, moon, sparkles, bolt, globe, controls, and UI symbols
 
 ---
 
@@ -78,7 +78,7 @@ Users never need to bundle the entire library! Haticons is designed from the gro
 
 ### 1. Partial CSS Imports (Bundler or CDN)
 
-You can import **only** the categories you need (e.g. commerce, directional) without the rest of the 494 icons:
+You can import **only** the categories you need (e.g. commerce, directional) without the rest of the 549 icons:
 
 ```javascript
 // In your JS / React / Vue / Vite entry:
@@ -211,7 +211,7 @@ npx haticons subset --icons=cart,heart,search,bell --out=./src/assets/haticons-s
 # 2. Automatically scan your project source files (jsx, tsx, vue, html, svelte) and build a subset
 npx haticons scan --src=./src --out=./src/assets/haticons-subset
 
-# 3. List all available 494 icons and categories
+# 3. List all available 549 icons and categories
 npx haticons list
 ```
 
