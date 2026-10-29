@@ -6,24 +6,24 @@ const ICONS_PATH = path.join(ROOT_DIR, 'dist', 'data', 'icons.json');
 const CATEGORIES_PATH = path.join(ROOT_DIR, 'dist', 'data', 'categories.json');
 
 function loadIcons() {
-  if (fs.existsSync(ICONS_PATH)) {
-    return JSON.parse(fs.readFileSync(ICONS_PATH, 'utf-8'));
-  }
-  return JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'code', 'data', 'icons.json'), 'utf-8'));
+    if (fs.existsSync(ICONS_PATH)) {
+        return JSON.parse(fs.readFileSync(ICONS_PATH, 'utf-8'));
+    }
+    return JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'code', 'data', 'icons.json'), 'utf-8'));
 }
 
 function loadCategories() {
-  if (fs.existsSync(CATEGORIES_PATH)) {
-    return JSON.parse(fs.readFileSync(CATEGORIES_PATH, 'utf-8'));
-  }
-  return {};
+    if (fs.existsSync(CATEGORIES_PATH)) {
+        return JSON.parse(fs.readFileSync(CATEGORIES_PATH, 'utf-8'));
+    }
+    return {};
 }
 
 /**
  * Common HTML Head
  */
 function getHtmlHead(title, description, keywords, canonicalPath = '') {
-  return `    <meta charset="utf-8" />
+    return `    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="/assets/images/favicon.png" rel="shortcut icon">
     <title>${title}</title>
@@ -58,7 +58,7 @@ function getHtmlHead(title, description, keywords, canonicalPath = '') {
  * Top Announcement Bar
  */
 function getAnnouncementBar() {
-  return `    <!-- Top Announcement Bar -->
+    return `    <!-- Top Announcement Bar -->
     <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.1</span>
         <span>494+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
@@ -70,12 +70,12 @@ function getAnnouncementBar() {
  * @param {'home'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
  */
 function getNavbar(activePage = 'home') {
-  const isHome = activePage === 'home';
-  const isTutorial = activePage === 'tutorial';
-  const isReference = activePage === 'reference';
-  const isChangelogs = activePage === 'changelogs';
+    const isHome = activePage === 'home';
+    const isTutorial = activePage === 'tutorial';
+    const isReference = activePage === 'reference';
+    const isChangelogs = activePage === 'changelogs';
 
-  return `    <!-- Main Navigation Header -->
+    return `    <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-1 shadow-xs">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
@@ -116,8 +116,8 @@ function getNavbar(activePage = 'home') {
  * @param {'home'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
  */
 function getFooter(activePage = 'home') {
-  return `    <!-- Footer -->
-    <footer class="py-5 bg-white border-top text-center mt-5">
+    return `    <!-- Footer -->
+    <footer class="py-5 bg-white border-top text-center">
         <div class="container">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
                 <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
@@ -132,36 +132,9 @@ function getFooter(activePage = 'home') {
                 494 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
             </p>
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
-                <a href="/" class="text-decoration-none ${activePage === 'home' ? 'text-primary fw-semibold' : 'text-muted'}">
-                    <i class="hi-home me-1"></i> Homepage
-                </a>
-                <span>&bull;</span>
-                <a href="/#start" class="text-decoration-none text-muted">
-                    <i class="hi-play me-1"></i> Set Up
-                </a>
-                <span>&bull;</span>
-                <a href="/reference.html" class="text-decoration-none ${activePage === 'reference' ? 'text-primary fw-semibold' : 'text-muted'}">
-                    <i class="hi-document me-1"></i> Reference
-                </a>
-                <span>&bull;</span>
-                <a href="/tutorial.html" class="text-decoration-none ${activePage === 'tutorial' ? 'text-primary fw-semibold' : 'text-muted'}">
-                    <i class="hi-bulb me-1"></i> Tutorial
-                </a>
-                <span>&bull;</span>
-                <a href="/changelogs.html" class="text-decoration-none ${activePage === 'changelogs' ? 'text-primary fw-semibold' : 'text-muted'}">
-                    <i class="hi-time me-1"></i> Changelogs
-                </a>
-                <span>&bull;</span>
-                <a href="https://www.npmjs.com/package/haticons" class="text-decoration-none text-muted" target="_blank" rel="noopener">
-                    <i class="hi-npm me-1"></i> npm package
-                </a>
-                <span>&bull;</span>
-                <a href="https://www.boodooframework.com/" class="text-decoration-none text-primary fw-semibold" target="_blank" rel="noopener">
-                    <i class="hi-link me-1"></i> Made with boodoo
-                </a>
-                <span>&bull;</span>
-                <a href="/download/haticons.zip" class="text-decoration-none text-muted">
-                    <i class="hi-download me-1"></i> Download ZIP
+                <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 bg-white text-muted d-inline-flex align-items-center gap-1 shadow-2xs">
+                    <i class="hi-download"></i>
+                    <span>Download ZIP</span>
                 </a>
             </div>
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-xs text-muted mb-3 pt-2 border-top">
@@ -182,19 +155,19 @@ function getFooter(activePage = 'home') {
  * Standard Toast markup
  */
 function getToast(toastId = 'haticonsToast') {
-  return `    <!-- Toast Notification -->
+    return `    <!-- Toast Notification -->
     <div id="${toastId}" class="copy-toast d-none">
         <i class="hi-check-circle me-1"></i> Copied to clipboard!
     </div>`;
 }
 
 module.exports = {
-  ROOT_DIR,
-  loadIcons,
-  loadCategories,
-  getHtmlHead,
-  getAnnouncementBar,
-  getNavbar,
-  getFooter,
-  getToast
+    ROOT_DIR,
+    loadIcons,
+    loadCategories,
+    getHtmlHead,
+    getAnnouncementBar,
+    getNavbar,
+    getFooter,
+    getToast
 };

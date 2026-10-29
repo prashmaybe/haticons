@@ -387,8 +387,6 @@ createApp(App).mount('#app');</code></pre>
         </div>
     </section>
 
-${getToast('copyToast')}
-
 ${getFooter('home')}
 
     <!-- Scripts -->

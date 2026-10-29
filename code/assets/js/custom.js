@@ -12,9 +12,8 @@
 
     function getOrCreateToast() {
         var toast = document.getElementById('haticonsToast') ||
-                    document.getElementById('copyToast') ||
-                    document.getElementById('tutorialToast') ||
-                    document.getElementById('reference-toast');
+            document.getElementById('tutorialToast') ||
+            document.getElementById('reference-toast');
         if (!toast) {
             toast = document.createElement('div');
             toast.id = 'haticonsToast';
@@ -539,7 +538,7 @@
 
                     var selectedStyle = btn.getAttribute('data-style');
                     var refIcons = document.querySelectorAll('.reference-icon-item i');
-                    
+
                     refIcons.forEach(function (icon) {
                         // Remove all dynamic modifier classes
                         icon.classList.remove('hi-duotone', 'hi-spin', 'hi-pulse', 'hi-bounce', 'hi-shake');
@@ -681,10 +680,10 @@
                 var size = sizeRange ? sizeRange.value : '24';
                 var path = currentCustomizerData.path || '';
                 var jsx = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="' + size + '" height="' + size + '" fill="' + color + '">\n' +
-                          '  <g transform="scale(1, -1) translate(0, -960)">\n' +
-                          '    <path d="' + path + '" />\n' +
-                          '  </g>\n' +
-                          '</svg>';
+                    '  <g transform="scale(1, -1) translate(0, -960)">\n' +
+                    '    <path d="' + path + '" />\n' +
+                    '  </g>\n' +
+                    '</svg>';
                 window.copyHaticonsText(jsx, 'Copied ' + currentCustomizerData.cls + ' JSX component code!');
             });
         }
@@ -698,10 +697,10 @@
                 var size = sizeRange ? sizeRange.value : '24';
                 var path = currentCustomizerData.path || '';
                 var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="' + size + '" height="' + size + '" fill="' + color + '">\n' +
-                          '  <g transform="scale(1, -1) translate(0, -960)">\n' +
-                          '    <path d="' + path + '" />\n' +
-                          '  </g>\n' +
-                          '</svg>';
+                    '  <g transform="scale(1, -1) translate(0, -960)">\n' +
+                    '    <path d="' + path + '" />\n' +
+                    '  </g>\n' +
+                    '</svg>';
                 window.copyHaticonsText(svg, 'Copied ' + currentCustomizerData.cls + ' SVG code!');
             });
         }
@@ -715,10 +714,10 @@
                 var size = sizeRange ? sizeRange.value : '1024';
                 var path = currentCustomizerData.path || '';
                 var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="' + size + '" height="' + size + '" fill="' + color + '">\n' +
-                          '  <g transform="scale(1, -1) translate(0, -960)">\n' +
-                          '    <path d="' + path + '" />\n' +
-                          '  </g>\n' +
-                          '</svg>';
+                    '  <g transform="scale(1, -1) translate(0, -960)">\n' +
+                    '    <path d="' + path + '" />\n' +
+                    '  </g>\n' +
+                    '</svg>';
                 var blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
                 var url = URL.createObjectURL(blob);
                 var a = document.createElement('a');
