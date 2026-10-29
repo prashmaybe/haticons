@@ -132,12 +132,54 @@
                 <time class="text-muted text-xs font-monospace">October 28, 2026</time>
             </div>
 
-            <h2 class="h4 fw-bold text-dark mb-3">Build Warning Cleanups &amp; Compiler Optimization</h2>
+            <h2 class="fw-bold text-dark mb-2">LESS Support, CLI Tool, Framework Components &amp; Utility Addons</h2>
 
             <p class="text-muted text-sm mb-2">
-                Maintenance release addressing Dart Sass compiler warnings during category and standalone CSS bundle
-                builds, silencing deprecated import notifications in the build pipeline.
+                Feature and maintenance release introducing complete LESS preprocessor support, an official command-line
+                interface, React and Vue 3 component packages, bundler auto-import resolvers, style variant addon
+                classes and sizing modifiers, along with build pipeline optimizations and clean compilation output.
             </p>
+
+            <h3 class="fw-bold text-dark text-uppercase tracking-wider text-xs">🚀 New Features &amp; Addons</h3>
+            <ul class="text-sm text-muted mb-4">
+                <li><strong>Full LESS Preprocessor Support:</strong> Added complete modular LESS sources under
+                    <code>less/</code> (including <code>variables.less</code>, <code>core.less</code>, 14 category files
+                    in <code>less/categories/</code>, and bundle entry <code>haticons.less</code>), with
+                    <code>"less"</code> and <code>"./less/*"</code> package exports in <code>package.json</code>.
+                </li>
+                <li><strong>Official CLI Utility:</strong> Added the <code>haticons</code> executable
+                    (<code>bin/haticons.js</code> / <code>npx haticons</code>) for searching glyphs, querying icon
+                    categories, inspecting unicode codepoint metadata, and extracting standalone SVGs directly from the
+                    terminal.</li>
+                <li><strong>React &amp; Vue 3 Components:</strong> Published first-class component packages for React
+                    (<code>haticons/react</code>) and Vue 3 (<code>haticons/vue</code>) with complete TypeScript
+                    declarations (<code>.d.ts</code>), ESM, and CommonJS builds.</li>
+                <li><strong>Auto-Import Bundler Resolver:</strong> Added <code>haticons/resolver</code> compatible with
+                    <code>unplugin-vue-components</code>, Vite, and Webpack for automated on-demand component loading.
+                </li>
+                <li><strong>Style Variant Addon Classes:</strong> Added style variant suffixes and helper classes
+                    (<code>.hi-*-fill</code> / <code>.hi-fill</code>, <code>.hi-*-outline</code> /
+                    <code>.hi-outline</code>, and <code>.hi-*-sharp</code> / <code>.hi-sharp</code>) for rapid solid,
+                    outline, and sharp icon variants.
+                </li>
+                <li><strong>Built-in Sizing &amp; Animation Modifiers:</strong> Added standardized size multipliers
+                    (<code>.hi-xs</code>, <code>.hi-sm</code>, <code>.hi-md</code>, <code>.hi-lg</code>,
+                    <code>.hi-xl</code>, <code>.hi-2x</code>, <code>.hi-3x</code>, <code>.hi-4x</code>,
+                    <code>.hi-5x</code>), animation helpers (<code>.hi-spin</code>, <code>.hi-pulse</code>), transform
+                    utilities (<code>.hi-rotate-*</code>, <code>.hi-flip-*</code>), and fixed-width alignment
+                    (<code>.hi-fw</code>).
+                </li>
+                <li><strong>Interactive Documentation &amp; Reference Suite:</strong> Added the comprehensive <a
+                        href="/reference.html" class="text-primary fw-medium">Icon Reference Catalog</a> with live
+                    search and SVG export modals, an <a href="/tutorial.html" class="text-primary fw-medium">In-Depth
+                        Tutorial Guide</a>, and legal pages (<a href="/terms.html"
+                        class="text-primary fw-medium">Terms</a>, <a href="/privacy.html"
+                        class="text-primary fw-medium">Privacy</a>, <a href="/license.html"
+                        class="text-primary fw-medium">License</a>).</li>
+                <li><strong>Server Caching &amp; Compression:</strong> Added Apache <code>.htaccess</code> configuration
+                    with Gzip/Brotli compression rules, Webfont CORS headers
+                    (<code>Access-Control-Allow-Origin: *</code>), and browser caching directives.</li>
+            </ul>
 
             <h3 class="fw-bold text-dark text-uppercase tracking-wider text-xs">🔧 Fixes &amp; Improvements</h3>
             <ul class="text-sm text-muted mb-4">
@@ -164,7 +206,7 @@
                 <time class="text-muted text-xs font-monospace">October 27, 2026</time>
             </div>
 
-            <h2 class="h4 fw-bold text-dark mb-3">Official npm Release, Modular Architecture &amp; boodoo Integration
+            <h2 class="fw-bold text-dark mb-2">Official npm Release, Modular Architecture &amp; boodoo Integration
             </h2>
 
             <p class="text-muted text-sm mb-2">

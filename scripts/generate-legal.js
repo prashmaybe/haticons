@@ -42,12 +42,12 @@ ${getNavbar('other')}
     <!-- Main Content -->
     <main class="container py-5 changelogs-main-container">
         <div class="card p-4 p-md-5 rounded-4 border bg-white shadow-xs">
-            <h2 class="h4 fw-bold text-dark mb-3">1. Acceptance of Terms</h2>
+            <h2 class="fw-bold text-dark mb-2">1. Acceptance of Terms</h2>
             <p class="text-muted text-sm mb-2">
                 By accessing, browsing, downloading, or integrating <strong>Haticons</strong> (including our SVG assets, web fonts, stylesheets, JavaScript modules, documentation, and website at haticons.com), you agree to be bound by these Terms of Use and the associated GNU General Public License v3.0 (GPL-3.0). If you do not agree to these terms, please do not use Haticons.
             </p>
 
-            <h2 class="h4 fw-bold text-dark mb-3">2. Open Source License &amp; Permitted Uses</h2>
+            <h2 class="fw-bold text-dark mb-2">2. Open Source License &amp; Permitted Uses</h2>
             <p class="text-muted text-sm mb-2">
                 Haticons is distributed as free, open-source software under the <strong>GNU General Public License v3.0</strong>. You are welcome to:
             </p>
@@ -57,17 +57,17 @@ ${getNavbar('other')}
                 <li>Use CDN links (e.g., jsDelivr, unpkg) or package managers (npm, yarn, pnpm) to install and bundle the library.</li>
             </ul>
 
-            <h2 class="h4 fw-bold text-dark mb-3">3. Brand &amp; Trademark Notice</h2>
+            <h2 class="fw-bold text-dark mb-2">3. Brand &amp; Trademark Notice</h2>
             <p class="text-muted text-sm mb-2">
                 The "Haticons" name and logo are trademarks of <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a>. Icons within the <code>brands</code> category are trademarks and copyrighted properties of their respective trademark owners (such as Apple, Google, GitHub, Twitter/X, etc.). Haticons does not claim ownership or endorsement from third-party trademark holders. You are responsible for ensuring that your usage of brand logos complies with each respective brand's guidelines.
             </p>
 
-            <h2 class="h4 fw-bold text-dark mb-3">4. Disclaimer of Warranties</h2>
+            <h2 class="fw-bold text-dark mb-2">4. Disclaimer of Warranties</h2>
             <p class="text-muted text-sm mb-2">
                 Haticons is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS, PEBBLEBENDERS, OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE.
             </p>
 
-            <h2 class="h4 fw-bold text-dark mb-3">5. Changes &amp; Contact</h2>
+            <h2 class="fw-bold text-dark mb-2">5. Changes &amp; Contact</h2>
             <p class="text-muted text-sm mb-0">
                 We reserve the right to revise these Terms of Use from time to time. For any licensing inquiries, issues, or contributions, please open an issue on our official GitHub repository at <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="text-primary fw-medium">github.com/prashmaybe/haticons</a>.
             </p>
@@ -117,12 +117,12 @@ ${getNavbar('other')}
     <!-- Main Content -->
     <main class="container py-5 changelogs-main-container">
         <div class="card p-4 p-md-5 rounded-4 border bg-white shadow-xs">
-            <h2 class="h4 fw-bold text-dark mb-3">1. Information We Do Not Collect</h2>
+            <h2 class="fw-bold text-dark mb-2">1. Information We Do Not Collect</h2>
             <p class="text-muted text-sm mb-2">
                 <strong>Haticons does not collect, sell, rent, or monetize your personal data.</strong> We do not require accounts, sign-ups, email addresses, phone numbers, or credit card information to use Haticons, browse the icons, or download our ZIP packages.
             </p>
 
-            <h2 class="h4 fw-bold text-dark mb-3">2. Local Storage &amp; Cookies</h2>
+            <h2 class="fw-bold text-dark mb-2">2. Local Storage &amp; Cookies</h2>
             <p class="text-muted text-sm mb-2">
                 Haticons does not use advertising or tracking cookies. We utilize standard browser <code>localStorage</code> solely for saving your client-side UI preferences:
             </p>
@@ -130,17 +130,17 @@ ${getNavbar('other')}
                 <li><code>haticons_theme_preference</code>: Saves your preferred theme setting (<code>system</code>, <code>light</code>, or <code>dark</code>) so the website remembers your visual preference upon return.</li>
             </ul>
 
-            <h2 class="h4 fw-bold text-dark mb-3">3. Third-Party CDNs &amp; Infrastructure</h2>
+            <h2 class="fw-bold text-dark mb-2">3. Third-Party CDNs &amp; Infrastructure</h2>
             <p class="text-muted text-sm mb-2">
                 When you load Haticons via public Content Delivery Networks (such as <strong>jsDelivr</strong> or <strong>Google Fonts</strong> for web typography), your browser directly contacts those third-party networks. Those services operate under their own independent privacy policies (e.g., <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener" class="text-primary">jsDelivr Privacy Policy</a>).
             </p>
 
-            <h2 class="h4 fw-bold text-dark mb-3">4. External Links &amp; Sandboxes</h2>
+            <h2 class="fw-bold text-dark mb-2">4. External Links &amp; Sandboxes</h2>
             <p class="text-muted text-sm mb-2">
                 Our documentation contains buttons to launch live interactive demos on external developer platforms such as <strong>CodePen</strong>. Launching an interactive pen transmits standard HTML/CSS code snippet data to CodePen under CodePen's Terms of Service and Privacy Policy.
             </p>
 
-            <h2 class="h4 fw-bold text-dark mb-3">5. Contact Information</h2>
+            <h2 class="fw-bold text-dark mb-2">5. Contact Information</h2>
             <p class="text-muted text-sm mb-0">
                 If you have any questions or feedback regarding this Privacy Policy, please contact the <a href="https://pebblebenders.com/" class="text-primary fw-medium" target="_blank" rel="noopener">PebbleBenders</a> maintainers via GitHub at <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="text-primary fw-medium">github.com/prashmaybe/haticons</a>.
             </p>

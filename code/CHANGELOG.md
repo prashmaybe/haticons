@@ -12,6 +12,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Full LESS Support**: Added complete modular LESS preprocessor sources under `less/`, including `variables.less`, `core.less`, 14 category files (`less/categories/*.less`), and bundle entry `haticons.less`.
 - **Package Exports for LESS**: Configured package entry `"less": "less/haticons.less"` and `./less/*` exports mapping in `package.json`.
+- **Official CLI Tool**: Introduced `haticons` command-line utility (`bin/haticons.js` / `npx haticons`) for searching icons, category exploration, metadata inspection, and SVG extraction.
+- **React & Vue 3 Component Packages**: Generated first-class framework component packages (`haticons/react` and `haticons/vue`) with full TypeScript declarations (`index.d.ts`), ESM, and CommonJS support.
+- **Auto-Import Bundler Resolver**: Added `haticons/resolver` for automatic on-demand component loading with `unplugin-vue-components`, Vite, and Webpack.
+- **Style Variant Addon Classes**: Added style variant suffixes and helper classes (`.hi-*-fill` / `.hi-fill`, `.hi-*-outline` / `.hi-outline`, `.hi-*-sharp` / `.hi-sharp`) for solid, outline, and sharp icon variants.
+- **Built-in Sizing & Animation Modifiers**: Added size multiplier classes (`.hi-xs`, `.hi-sm`, `.hi-md`, `.hi-lg`, `.hi-xl`, `.hi-2x`, `.hi-3x`, `.hi-4x`, `.hi-5x`), animation utilities (`.hi-spin`, `.hi-pulse`), rotation & flip transforms (`.hi-rotate-*`, `.hi-flip-*`), and fixed-width alignment (`.hi-fw`).
+- **Comprehensive Documentation & Reference Suite**:
+  - Added dedicated **Icon Reference Catalog** (`reference.html`) featuring real-time search, SVG preview modals, and category index navigation.
+  - Added **In-Depth Tutorial & Integration Guide** (`tutorial.html`) covering React, Vue, Sass, LESS, Vanilla CSS, CDN, and SVG sprites.
+  - Added dedicated **Changelogs Timeline** (`changelogs.html`).
+  - Added official legal pages: **Terms of Use** (`terms.html`), **Privacy Policy** (`privacy.html`), and **License** (`license.html`).
+- **Server Caching & Security**: Added Apache `.htaccess` server configuration featuring Gzip/Brotli compression, Webfont CORS headers (`Access-Control-Allow-Origin: *`), and browser cache headers.
 
 ### Fixed
 - **Clean Build Output**: Silenced Dart Sass `@import` deprecation warnings during standalone and category bundle compilation pipelines (`scripts/compiler.js`).
