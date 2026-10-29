@@ -76,6 +76,37 @@ body {
   backdrop-filter: blur(8px);
 }
 
+/* Navbar Container Layout: Single-line alignment */
+.navbar > .container,
+.navbar > .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: inherit;
+}
+
+.navbar .navbar-brand {
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    flex-shrink: 0;
+  }
+}
+
 [data-theme="dark"] .navbar-toggler {
   color: var(--hi-text) !important;
   border-color: var(--hi-border) !important;
