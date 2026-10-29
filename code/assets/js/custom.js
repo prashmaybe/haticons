@@ -25,7 +25,11 @@
 
     window.showHaticonsToast = function (message) {
         var toast = getOrCreateToast();
-        toast.innerHTML = '<i class="hi-check-circle me-1"></i> ' + (message || 'Copied to clipboard!');
+        toast.textContent = '';
+        var icon = document.createElement('i');
+        icon.className = 'hi-check-circle me-1';
+        toast.appendChild(icon);
+        toast.appendChild(document.createTextNode(' ' + (message || 'Copied to clipboard!')));
         toast.classList.remove('d-none');
         toast.style.display = 'block';
 
@@ -95,12 +99,26 @@
                     codeText = codeEl ? codeEl.innerText : '';
                 }
                 window.copyHaticonsText(codeText, 'Snippet copied to clipboard!', function () {
-                    var origHtml = codeCopyBtn.innerHTML;
                     codeCopyBtn.classList.add('copied');
-                    codeCopyBtn.innerHTML = '<i class="hi-check"></i> <span>Copied!</span>';
+                    codeCopyBtn.textContent = '';
+                    var chkIcon = document.createElement('i');
+                    chkIcon.className = 'hi-check';
+                    var chkSpan = document.createElement('span');
+                    chkSpan.textContent = 'Copied!';
+                    codeCopyBtn.appendChild(chkIcon);
+                    codeCopyBtn.appendChild(document.createTextNode(' '));
+                    codeCopyBtn.appendChild(chkSpan);
+
                     setTimeout(function () {
                         codeCopyBtn.classList.remove('copied');
-                        codeCopyBtn.innerHTML = origHtml;
+                        codeCopyBtn.textContent = '';
+                        var pasteIcon = document.createElement('i');
+                        pasteIcon.className = 'hi-paste';
+                        var pasteSpan = document.createElement('span');
+                        pasteSpan.textContent = 'Copy';
+                        codeCopyBtn.appendChild(pasteIcon);
+                        codeCopyBtn.appendChild(document.createTextNode(' '));
+                        codeCopyBtn.appendChild(pasteSpan);
                     }, 2000);
                 });
                 return;
@@ -164,7 +182,7 @@
                     window.openHaticonsCustomizer({ cls: cls, name: name, unicode: unicode, path: pathD });
                 } else {
                     var snippet = '<i class="' + cls + '"></i>';
-                    window.copyHaticonsText(snippet, 'Copied: &lt;i class="' + cls + '"&gt;&lt;/i&gt;');
+                    window.copyHaticonsText(snippet, 'Copied: <i class="' + cls + '"></i>');
                 }
                 return;
             }
@@ -708,7 +726,12 @@
             var toggleText = document.getElementById('custSubsetText');
 
             if (statusEl) {
-                statusEl.innerHTML = 'Subset Tray: <strong>' + count + '</strong> icons';
+                statusEl.textContent = '';
+                statusEl.appendChild(document.createTextNode('Subset Tray: '));
+                var countStrong = document.createElement('strong');
+                countStrong.textContent = count;
+                statusEl.appendChild(countStrong);
+                statusEl.appendChild(document.createTextNode(' icons'));
             }
             if (exportBtn) {
                 exportBtn.disabled = count === 0;
@@ -732,7 +755,7 @@
             if (!modalEl) {
                 // Fallback copy if modal is not present
                 var snippet = '<i class="' + data.cls + '"></i>';
-                window.copyHaticonsText(snippet, 'Copied: &lt;i class="' + data.cls + '"&gt;&lt;/i&gt;');
+                window.copyHaticonsText(snippet, 'Copied: <i class="' + data.cls + '"></i>');
                 return;
             }
 
@@ -745,7 +768,14 @@
             var colorPicker = document.getElementById('custColorPicker');
 
             if (modalTitle) {
-                modalTitle.innerHTML = '<i class="hi-paintbox text-primary"></i> <span>Customizer: ' + data.cls + '</span>';
+                modalTitle.textContent = '';
+                var titleIcon = document.createElement('i');
+                titleIcon.className = 'hi-paintbox text-primary';
+                var titleSpan = document.createElement('span');
+                titleSpan.textContent = 'Customizer: ' + (data && data.cls ? data.cls : '');
+                modalTitle.appendChild(titleIcon);
+                modalTitle.appendChild(document.createTextNode(' '));
+                modalTitle.appendChild(titleSpan);
             }
             if (badgeName) {
                 badgeName.textContent = data.cls + ' (' + data.unicode + ')';
@@ -909,9 +939,17 @@
 
                 // Render tags
                 if (subsetSelectedTags) {
-                    subsetSelectedTags.innerHTML = iconList.map(function (ic) {
-                        return '<span class="badge bg-white text-dark border rounded-pill px-2 py-1"><i class="hi-' + ic + ' me-1 text-primary"></i>' + ic + '</span>';
-                    }).join(' ');
+                    subsetSelectedTags.textContent = '';
+                    iconList.forEach(function (ic) {
+                        var badge = document.createElement('span');
+                        badge.className = 'badge bg-white text-dark border rounded-pill px-2 py-1';
+                        var badgeIcon = document.createElement('i');
+                        badgeIcon.className = 'hi-' + ic + ' me-1 text-primary';
+                        badge.appendChild(badgeIcon);
+                        badge.appendChild(document.createTextNode(' ' + ic));
+                        subsetSelectedTags.appendChild(badge);
+                        subsetSelectedTags.appendChild(document.createTextNode(' '));
+                    });
                 }
 
                 // CLI command
