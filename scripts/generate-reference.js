@@ -227,7 +227,7 @@ ${getNavbar('reference')}
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" data-boodoo-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
+                <div class="modal-body p-3">
                     <div class="row g-4 align-items-center">
                         <div class="col-12 col-md-5 text-center">
                             <div class="p-4 bg-light rounded-4 border d-flex flex-column align-items-center justify-content-center position-relative" style="min-height: 240px;">
@@ -306,7 +306,7 @@ ${getNavbar('reference')}
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" data-boodoo-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
+                <div class="modal-body p-3">
                     <p class="text-muted text-sm">
                         You have selected <strong id="subsetModalCount" class="text-primary">0</strong> icons for your custom zero-waste bundle.
                     </p>
