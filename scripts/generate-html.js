@@ -116,7 +116,7 @@ ${getNavbar('home')}
                 <div class="row g-4">
                     <div class="col-12 col-md-4">
                         <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-npm fs-2 text-danger"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">npm</h3>
                             </div>
@@ -133,7 +133,7 @@ ${getNavbar('home')}
 
                     <div class="col-12 col-md-4">
                         <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-yarn fs-2 text-info"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Yarn</h3>
                             </div>
@@ -150,7 +150,7 @@ ${getNavbar('home')}
 
                     <div class="col-12 col-md-4">
                         <div class="card p-2 rounded-4 bg-light border start-setup-card shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-archive fs-2 text-warning"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">pnpm</h3>
                             </div>
@@ -298,12 +298,12 @@ ${getNavbar('home')}
                 <div class="row g-4">
                     <div class="col-12 col-md-4">
                         <div class="card p-2 rounded-4 bg-light border shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-visualstudiocode fs-2 text-info"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">React / Next.js</h3>
                             </div>
                             <p class="text-muted text-xs mb-1">Add to your root <code>pages/_app.js</code> or <code>app/layout.tsx</code>:</p>
-                            <pre class="p-2 rounded bg-white border font-monospace text-2xs text-dark mb-3 user-select-all"><code>import 'haticons/dist/css/haticons.min.css';
+                            <pre class="p-1 rounded bg-white border font-monospace text-2xs text-dark mb-2 user-select-all"><code>import 'haticons/dist/css/haticons.min.css';
 
 export default function App() {
   return &lt;i className="hi-cart" /&gt;;
@@ -314,12 +314,12 @@ export default function App() {
 
                     <div class="col-12 col-md-4">
                         <div class="card p-2 rounded-4 bg-light border shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-vue-js fs-2 text-success"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Vue 3 / Nuxt / Vite</h3>
                             </div>
                             <p class="text-muted text-xs mb-1">Include in your <code>main.js</code> or <code>nuxt.config.ts</code>:</p>
-                            <pre class="p-2 rounded bg-white border font-monospace text-2xs text-dark mb-3 user-select-all"><code>import { createApp } from 'vue';
+                            <pre class="p-1 rounded bg-white border font-monospace text-2xs text-dark mb-2 user-select-all"><code>import { createApp } from 'vue';
 import 'haticons/css';
 import App from './App.vue';
 
@@ -330,12 +330,12 @@ createApp(App).mount('#app');</code></pre>
 
                     <div class="col-12 col-md-4">
                         <div class="card p-2 rounded-4 bg-light border shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-angular fs-2 text-danger"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Angular</h3>
                             </div>
                             <p class="text-muted text-xs mb-1">Add stylesheet reference in <code>angular.json</code>:</p>
-                            <pre class="p-2 rounded bg-white border font-monospace text-2xs text-dark mb-3 user-select-all"><code>"styles": [
+                            <pre class="p-1 rounded bg-white border font-monospace text-2xs text-dark mb-2 user-select-all"><code>"styles": [
   "node_modules/haticons/dist/css/haticons.min.css",
   "src/styles.css"
 ]</code></pre>
@@ -350,14 +350,14 @@ createApp(App).mount('#app');</code></pre>
                 <div class="row g-4">
                     <div class="col-12 col-md-6">
                         <div class="card p-2 rounded-4 bg-light border shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-download fs-2 text-primary"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Download Offline Bundle</h3>
                             </div>
                             <p class="text-muted text-sm">
                                 Complete bundle containing all individual vector SVG files, compiled web fonts (WOFF2, TTF, EOT, WOFF), Sass sources, and minified CSS stylesheets.
                             </p>
-                            <div class="d-flex flex-wrap gap-2 mb-3">
+                            <div class="d-flex flex-wrap gap-1 mb-2">
                                 <a href="/download/haticons.zip" class="btn btn-primary rounded-pill px-4 d-inline-flex align-items-center gap-2 shadow-sm">
                                     <i class="hi-download"></i>
                                     <span>Download ZIP (~1.4MB)</span>
@@ -369,14 +369,14 @@ createApp(App).mount('#app');</code></pre>
 
                     <div class="col-12 col-md-6">
                         <div class="card p-2 rounded-4 bg-light border shadow-2xs">
-                            <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex align-items-center gap-1 mb-2">
                                 <i class="hi-paintbox fs-2 text-purple"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Figma, Sketch &amp; Illustrator</h3>
                             </div>
                             <p class="text-muted text-sm">
                                 Install <code>dist/fonts/haticons.ttf</code> into macOS Font Book or Windows Fonts. Type icon glyphs directly or drag-and-drop vector SVGs into your design canvases.
                             </p>
-                            <div class="p-1 bg-white rounded-3 border text-xs text-muted mb-3">
+                            <div class="p-1 bg-white rounded-3 border text-xs text-muted mb-1">
                                 <strong>Tip:</strong> Copy Unicode codepoints directly from the <a href="/reference.html" class="text-primary fw-semibold">Reference</a> catalog to paste into design text layers.
                             </div>
                             <a href="/reference.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3 bg-white">
