@@ -189,7 +189,17 @@ body {
 }
 
 [data-theme="dark"] .btn-close {
-  filter: invert(1) grayscale(100%) brightness(200%);
+  color: #94a3b8;
+  filter: none !important;
+}
+
+[data-theme="dark"] .btn-close:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .btn-close:empty {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cbd5e1'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 
 [data-theme="dark"] .category-filter-btn {
@@ -494,6 +504,52 @@ body {
 /* Detail Modal Customization */
 .modal-content {
   overflow: hidden;
+}
+
+.modal-header .btn-close,
+.btn-close {
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  min-width: 32px !important;
+  max-width: 32px;
+  min-height: 32px !important;
+  max-height: 32px;
+  padding: 0 !important;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--hi-text-muted, #64748b);
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: all 0.15s ease-in-out;
+}
+
+.modal-header .btn-close:hover,
+.btn-close:hover {
+  opacity: 1;
+  color: var(--hi-text-dark, #0f172a);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.modal-header .btn-close:focus-visible,
+.btn-close:focus-visible {
+  outline: none;
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+.btn-close:empty {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2364748b'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
 }
 
 .quick-colors-grid {

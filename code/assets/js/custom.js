@@ -215,14 +215,28 @@
         });
 
         function closeDetailModal() {
-            var modal = document.getElementById('iconDetailModal');
-            if (modal) {
-                modal.classList.remove('show');
-                modal.style.display = 'none';
-                document.body.classList.remove('modal-open');
-                var backdrop = document.getElementById('customBackdrop');
-                if (backdrop) backdrop.remove();
-            }
+            var modalIds = ['iconDetailModal', 'customizerModal', 'subsetExportModal'];
+            modalIds.forEach(function (id) {
+                var modal = document.getElementById(id);
+                if (modal) {
+                    if (window.boodoo && window.boodoo.Modal) {
+                        try {
+                            var inst = window.boodoo.Modal.getInstance ? window.boodoo.Modal.getInstance(modal) : null;
+                            if (inst && typeof inst.hide === 'function') {
+                                inst.hide();
+                            }
+                        } catch (err) {}
+                    }
+                    modal.classList.remove('show');
+                    modal.style.display = 'none';
+                }
+            });
+            document.body.classList.remove('modal-open');
+            var backdrop = document.getElementById('customBackdrop');
+            if (backdrop) backdrop.remove();
+            document.querySelectorAll('.modal-backdrop').forEach(function (bd) {
+                bd.remove();
+            });
         }
 
         // ---------------------------------------------------------
