@@ -351,7 +351,7 @@ function compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, 
 
   Object.keys(categorized).forEach(cat => {
     // Standalone bundle: includes variables, core font-face, and category icons
-    const bundleContent = `@import "../scss/variables";\n@import "../scss/core";\n@import "../scss/categories/${cat}";\n`;
+    const bundleContent = `$hi-font-path: "../../fonts";\n@import "../scss/variables";\n@import "../scss/core";\n@import "../scss/categories/${cat}";\n`;
     const bundleFile = path.join(TEMP_SCSS_DIR, `bundle_${cat}.scss`);
     fs.writeFileSync(bundleFile, bundleContent);
     const destCss = path.join(DIST_CATEGORIES_CSS, `${cat}.css`);

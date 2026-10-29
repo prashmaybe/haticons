@@ -15,14 +15,15 @@
   <a href="https://www.npmjs.com/package/haticons"><img src="https://img.shields.io/npm/dm/haticons.svg" alt="npm downloads" /></a>
   <a href="https://www.boodooframework.com/"><img src="https://img.shields.io/badge/made%20with-boodoo-7c3aed.svg" alt="Made with boodoo" /></a>
   <a href="https://pebblebenders.com/"><img src="https://img.shields.io/badge/by-PebbleBenders-0f172a.svg" alt="by PebbleBenders" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0%20w%2F%20Font%20Exception-blue.svg" alt="License" /></a>
 </p>
 
 <p align="center">
   <a href="https://haticons.com/"><strong>Homepage</strong></a> &middot;
   <a href="https://haticons.com/reference.html"><strong>Full Icon Reference</strong></a> &middot;
   <a href="https://haticons.com/tutorial.html"><strong>Tutorial &amp; Usage Guide</strong></a> &middot;
-  <a href="https://haticons.com/changelogs.html"><strong>Changelogs</strong></a>
+  <a href="https://haticons.com/changelogs.html"><strong>Changelogs</strong></a> &middot;
+  <a href="PROVENANCE.md"><strong>Asset Provenance</strong></a>
 </p>
 
 ---
@@ -30,8 +31,9 @@
 ## 🚀 Features
 
 - **569+ Crisp Vector Icons**: Specially tuned for clean rendering at 16px, 24px, 32px, 48px, and high-DPI displays.
-- **📦 Modular & Zero Waste**: Don't want the full bundle? Import only the categories you need (e.g. `commerce.css`, `arrows.css`) or use raw SCSS partials.
+- **📦 Modular & Zero Waste**: Don't want the full bundle? Import only the categories you need (e.g. `commerce.min.css`, `directional.min.css`) or use raw SCSS/LESS partials.
 - **⚡ boodoo Framework Ready**: Designed to pair seamlessly with [boodoo CSS Framework](https://www.boodooframework.com/) utilities, buttons, badges, modals, and flexbox layout.
+- **🛡️ Commercial & Proprietary Safe**: Distributed under GPL-3.0 with the **Font & Asset Embedding Exception**; embedding into SaaS or mobile apps carries zero copyleft contagion.
 - **🎯 14 Categorized Collections**:
   - `brands` (313 icons) - Tech stacks, social platforms, AI tools, and developer brands (Cursor, Trae, Antigravity, Boodoo, Windsurf, Claude, Gemini, DeepSeek, Copilot, Mistral, Ollama, Perplexity, Groq, Replit, Hugging Face, v0, etc.)
   - `commerce` (18 icons) - Carts, payment cards, wallets, QR codes, and checkout symbols
@@ -66,8 +68,8 @@ pnpm add haticons
 Or use directly via CDN (jsDelivr / unpkg):
 
 ```html
-<!-- Full bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
+<!-- Full bundle (v1.0.2) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/haticons.min.css">
 ```
 
 ---
@@ -87,8 +89,8 @@ import 'haticons/categories/directional.min.css';
 ```
 Or via HTML / CDN:
 ```html
-<!-- Load only Commerce & Payment icons (~1.5 KB minified) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/categories/commerce.min.css">
+<!-- Load only Commerce & Payment icons (~1.16 KB gzipped) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/categories/commerce.min.css">
 ```
 
 ### 2. Shared Core + Category Glyphs (Maximum Multi-Category Performance)
@@ -106,7 +108,7 @@ import 'haticons/categories/communication-only.min.css';
 If you only use 3 or 4 icons in a React, Vue, Svelte, or Next.js app, import **individual icon modules** directly. You don't even need to load a webfont!
 
 ```javascript
-// Imports ONLY the 'cart' and 'heart' icons (few bytes each!)
+// Imports ONLY the 'cart' and 'heart' icons (~800 bytes each gzipped!)
 import cart from 'haticons/icons/cart';
 import heart from 'haticons/icons/heart';
 
@@ -136,25 +138,45 @@ Every icon is also exported as an optimized standalone `.svg` file ready for SVG
 
 Or via CDN:
 ```html
-<img src="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/svg/cart.svg" alt="Cart" />
+<img src="https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/svg/cart.svg" alt="Cart" />
 ```
+
+---
+
+## 📊 Bundle Size & Performance Benchmarks
+
+Measured on production-built assets using Gzip and Brotli (level 9). See [BUNDLE_SIZE.md](BUNDLE_SIZE.md) for full breakdown:
+
+| Asset / Strategy | Description | Raw Size | Gzip Size | Brotli Size |
+| :--- | :--- | :---: | :---: | :---: |
+| **`core.min.css`** | Shared `@font-face` & utilities | 2.08 KB | **0.78 KB** | 0.70 KB |
+| **`commerce-only.min.css`** | Zero-waste category glyphs | 2.21 KB | **0.41 KB** | 0.34 KB |
+| **`commerce.min.css`** | Standalone commerce bundle | 4.29 KB | **1.16 KB** | 1.00 KB |
+| **Tree-Shaken `cart.svg`** | Standalone vector SVG | 2.72 KB | **0.83 KB** | 0.75 KB |
+| **React `<HiCart />`** | Individual tree-shaken component | 3.28 KB | **1.11 KB** | 0.95 KB |
+| **`haticons.min.css`** | Complete 569 icon styles | 72.11 KB | **11.65 KB** | 8.58 KB |
+| **`haticons.woff2`** | Complete 569 vector webfont | 100.12 KB | **100.17 KB** | 100.12 KB |
 
 ---
 
 ## ⚛️ React & Vue Component Packages
 
-Haticons includes first-class, fully typed component packages for React and Vue 3 with zero runtime overhead and automatic tree-shaking:
+Haticons provides first-class typed component packages for React and Vue 3 with support for both **named tree-shaken imports** and a **dynamic generic `<Haticon />` component**:
 
 ### React (`haticons/react`)
 ```tsx
-import { HiCart, HiHeart, HiSearch } from 'haticons/react';
+import { HiCart, HiHeart, HiSearch, Haticon } from 'haticons/react';
 
-export function CartWidget() {
+export function HeaderNav() {
   return (
-    <button className="btn btn-primary">
-      <HiCart size={20} color="#fff" />
-      <span>Checkout</span>
-    </button>
+    <nav className="flex items-center gap-2">
+      {/* 1. Direct named component (Tree-shaken, zero extra payload) */}
+      <HiCart size={20} color="#7c3aed" />
+
+      {/* 2. Generic dynamic component (Supports any icon name or alias) */}
+      <Haticon name="search" size={20} color="currentColor" />
+      <Haticon name="x" size={20} /> {/* Automatically resolves aliases */}
+    </nav>
   );
 }
 ```
@@ -162,22 +184,45 @@ export function CartWidget() {
 ### Vue 3 (`haticons/vue`)
 ```vue
 <script setup>
-import { HiCart, HiHeart } from 'haticons/vue';
+import { HiCart, HiHeart, Haticon } from 'haticons/vue';
 </script>
 
 <template>
-  <button class="btn btn-primary">
-    <HiCart :size="20" color="#fff" />
-    <span>Checkout</span>
-  </button>
+  <div class="d-flex align-items-center gap-2">
+    <!-- Named Component -->
+    <HiCart :size="20" color="#7c3aed" />
+
+    <!-- Dynamic Generic Component -->
+    <Haticon name="search" :size="20" color="currentColor" />
+  </div>
 </template>
+```
+
+### React Native (`react-native-svg`)
+
+Haticons provides standalone path data ready for React Native applications:
+
+```tsx
+import React from 'react';
+import Svg, { G, Path } from 'react-native-svg';
+import cart from 'haticons/icons/cart';
+
+export function CartIcon({ size = 24, color = '#000' }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 1024 1024">
+      <G transform="scale(1, -1) translate(0, -960)">
+        <Path d={cart.path} fill={color} />
+      </G>
+    </Svg>
+  );
+}
 ```
 
 ---
 
 ## 🔌 Modern Bundler Auto-Import Resolver (`unplugin`)
 
-Use the bundled `HaticonsResolver` with `unplugin-vue-components` or `unplugin-auto-import` to use Haticons components anywhere in your templates without manual import statements!
+Use the bundled `HaticonsResolver` with `unplugin-vue-components` or `unplugin-auto-import` to auto-import components in Vue or React templates without manual import statements:
 
 ```javascript
 // vite.config.js
@@ -197,6 +242,21 @@ export default defineConfig({
   ]
 });
 ```
+
+---
+
+## 📱 Cross-Platform Support Matrix
+
+| Platform | Support Status | Recommended Asset | Integration Method |
+| :--- | :---: | :--- | :--- |
+| **Web (HTML / CSS)** | First-Class | `haticons.min.css` or modular CSS | `<i class="hi-search"></i>` |
+| **React / Next.js / Remix** | First-Class | `haticons/react` or `dist/icons/*` | `<HiSearch />` or `<Haticon name="search" />` |
+| **Vue 3 / Nuxt 3** | First-Class | `haticons/vue` or `haticons/resolver` | `<HiSearch />` with auto-import |
+| **React Native** | First-Class | `haticons/icons/*` | Render via `react-native-svg` `<Path d={icon.path} />` |
+| **iOS (SwiftUI / UIKit)** | First-Class | `dist/fonts/haticons.ttf` or SVG | Custom font in `Info.plist` or vector Asset Catalog |
+| **Android (Compose / XML)** | First-Class | `dist/fonts/haticons.ttf` or SVG | TrueType font in `assets/fonts/` or Vector Drawables |
+| **Flutter** | First-Class | `dist/fonts/haticons.ttf` or SVGs | Custom TTF fontFamily or `flutter_svg` |
+| **Desktop (Electron / Tauri)**| First-Class | CSS webfonts or React/Vue packages | Standard webfont classes or native SVG components |
 
 ---
 
@@ -293,7 +353,7 @@ Haticons pairs naturally with **[boodoo Framework](https://www.boodooframework.c
 ```html
 <!-- Include boodoo CSS & Haticons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@latest/dist/css/boodoo.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/haticons.min.css">
 
 <!-- Button with Haticon -->
 <button class="btn btn-primary d-inline-flex align-items-center gap-1">
@@ -343,19 +403,10 @@ When a button or link has no visible text, supply an accessible label via `aria-
 ## 🔄 Canonical Names & Backward-Compatible Aliases
 
 To standardize icon naming without breaking existing code:
-- Legacy suffixes with `1` (such as `pencil1`, `search1`, `bell1`, `calendar1`, `check1`) now have standard canonical aliases (`pencil-alt`, `search-alt`, `bell-alt`, `calendar-alt`, `check-alt`).
+- Legacy suffixes with `1` (such as `pencil1`, `search1`, `bell1`, `calendar1`, `check1`) have canonical aliases (`pencil-alt`, `search-alt`, `bell-alt`, `calendar-alt`, `check-alt`).
 - Typo corrections like `snapchat` are supported as aliases pointing to `spanchat`.
+- AI and brand aliases like `chatgpt` (points to `openai`), `x` (points to `x-twitter`), and `claude` (points to `anthropic`) resolve seamlessly across JS and CSS.
 - The original classes and glyph Unicode codepoints remain 100% intact and functional for existing deployments.
-
----
-
-## 📱 Cross-Platform Integration
-
-Haticons is engineered for modern cross-platform development:
-- **Web (HTML, React, Vue, Next.js, Vite)**: Use the compact CSS webfont (`haticons.woff2`, ~34 KB) or modular category stylesheets.
-- **Modern JavaScript Tree-Shaking**: Import standalone SVG icon modules from `haticons/icons/*` with zero webfont payload.
-- **Mobile (React Native)**: Import path data via `import cart from 'haticons/icons/cart'` and render using `react-native-svg`.
-- **Flutter & Native Android/iOS**: Place `haticons.ttf` in your app font assets or import standalone SVGs into Android Vector Drawables / iOS Asset Catalogs.
 
 ---
 
@@ -373,10 +424,11 @@ console.log(icon);
 
 // Resolves canonical aliases seamlessly
 const snapchat = getIcon('snapchat'); // Resolves to 'spanchat'
+const x = getIcon('x');               // Resolves to 'x-twitter'
 
 // Get all icons in a category
 const commerceIcons = getByCategory('commerce');
-console.log(commerceIcons.length); // 17
+console.log(commerceIcons.length); // 18
 ```
 
 ---
@@ -390,8 +442,11 @@ npm install
 # Run full compilation & category generation
 npm run build
 
-# Run automated tests
+# Run automated quality gate test suite
 npm test
+
+# Generate bundle size report
+npm run build:size
 ```
 
 ---
@@ -413,9 +468,10 @@ Detailed release notes and migration guides can be found in [CHANGELOG.md](CHANG
 
 ---
 
-## 📄 License & Trademark Notice
+## 📄 License & Asset Provenance
 
-- **Software & Artwork**: Distributed under the **GNU General Public License v3.0 (GPL-3.0)**. See [LICENSE](LICENSE) for details.
-- **Third-Party Trademarks**: All company, product, and service logos in the `brands` category are trademarks of their respective owners. Their inclusion in Haticons does not imply endorsement or affiliation.
+- **Software & Build Tooling**: Distributed under the **GNU General Public License v3.0 (GPL-3.0)**. See [LICENSE](LICENSE) for details.
+- **Font & Asset Embedding Exception**: Embedding Haticons webfonts, SVGs, or framework components into commercial, proprietary, or closed-source web, mobile, or desktop applications does **not** trigger GPL copyleft on host application source code.
+- **Third-Party Trademarks**: All company, product, and service logos in the `brands` category are trademarks of their respective owners. Their inclusion in Haticons is solely for nominative fair use / developer UI identification and does not imply endorsement or affiliation.
+- **Asset Provenance Manifest**: See [PROVENANCE.md](PROVENANCE.md) for full category-by-category provenance, origin, and licensing documentation.
 - Crafted with pride by **[PebbleBenders](https://pebblebenders.com/)** &middot; Built with **[boodoo Framework](https://www.boodooframework.com/)**.
-

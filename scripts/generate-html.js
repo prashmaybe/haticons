@@ -11,6 +11,8 @@ const {
     getToast
 } = require('./template.js');
 const { ICON_ALIASES } = require('./categories.js');
+const PKG = require('../package.json');
+const VERSION = PKG.version;
 
 const icons = loadIcons();
 const categories = loadCategories();
@@ -167,8 +169,8 @@ ${getNavbar('home')}
                     </button>
                 </div>
                 <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
-                    <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css</span>
-                    <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" title="Copy CDN URL">
+                    <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css</span>
+                    <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css" title="Copy CDN URL">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
@@ -710,11 +712,11 @@ ${categoryCardsHtml}
                             <div class="code-snippet-box mb-4">
                                 <div class="code-snippet-header">
                                     <span class="code-lang-label"><i class="hi-cloudflare"></i> HTML Head</span>
-                                    <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css"&gt;'>
+                                    <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css"&gt;'>
                                         <i class="hi-paste"></i> <span>Copy Snippet</span>
                                     </button>
                                 </div>
-                                <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
+                                <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
                             </div>
 
                             <div class="d-flex align-items-center gap-2 mb-2">
@@ -857,7 +859,7 @@ createApp(App).mount('#app');</code></pre>
                                     <span>Download ZIP (~1.3MB)</span>
                                 </a>
                             </div>
-                            <div class="text-muted text-2xs">Version 1.0.1 &bull; Released under GPL-3.0 License</div>
+                            <div class="text-muted text-2xs">Version ${VERSION} &bull; Released under GPL-3.0 License</div>
                         </div>
                     </div>
 

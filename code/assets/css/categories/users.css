@@ -1,7 +1,7 @@
 @font-face {
   font-family: "haticons";
-  src: url("../fonts/haticons.eot?5zss7");
-  src: url("../fonts/haticons.eot?5zss7#iefix") format("embedded-opentype"), url("../fonts/haticons.woff2?5zss7") format("woff2"), url("../fonts/haticons.woff?5zss7") format("woff"), url("../fonts/haticons.ttf?5zss7") format("truetype"), url("../fonts/haticons.svg?5zss7#haticons") format("svg");
+  src: url("../../fonts/haticons.eot?5zss7");
+  src: url("../../fonts/haticons.eot?5zss7#iefix") format("embedded-opentype"), url("../../fonts/haticons.woff2?5zss7") format("woff2"), url("../../fonts/haticons.woff?5zss7") format("woff"), url("../../fonts/haticons.ttf?5zss7") format("truetype"), url("../../fonts/haticons.svg?5zss7#haticons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;

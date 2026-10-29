@@ -273,7 +273,7 @@
                 var cssCode = codepenBtn.getAttribute('data-css') || '';
                 var jsCode = codepenBtn.getAttribute('data-js') || '';
                 var cssExt = codepenBtn.getAttribute('data-css-external') ||
-                    'https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css;https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css';
+                    'https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/haticons.min.css;https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css';
 
                 if (!htmlCode) {
                     var pbox = codepenBtn.closest('.code-snippet-box');
@@ -943,7 +943,7 @@
                     '/* Haticons Custom Zero-Waste Subset (' + iconList.length + ' icons) */',
                     '@font-face {',
                     '  font-family: "haticons";',
-                    '  src: url("https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/fonts/haticons.woff2") format("woff2");',
+                    '  src: url("https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/fonts/haticons.woff2") format("woff2");',
                     '  font-display: swap;',
                     '}',
                     '[class^="hi-"], [class*=" hi-"] {',

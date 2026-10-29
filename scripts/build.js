@@ -198,6 +198,9 @@ console.log(`Copied and prepared font files in dist/fonts.`);
 fs.writeFileSync(path.join(DIST_DATA, 'icons.json'), JSON.stringify(icons));
 fs.writeFileSync(path.join(DIST_DATA, 'categories.json'), JSON.stringify(categories));
 fs.writeFileSync(path.join(DIST_DATA, 'aliases.json'), JSON.stringify(aliases));
+fs.writeFileSync(path.join(DIST_DATA, 'paths.json'), JSON.stringify(glyphPaths));
+fs.writeFileSync(path.join(DIST_DATA, 'paths.js'), 'module.exports = ' + JSON.stringify(glyphPaths) + ';\n');
+fs.writeFileSync(path.join(DIST_DATA, 'paths.mjs'), 'export default ' + JSON.stringify(glyphPaths) + ';\n');
 fs.writeFileSync(path.join(ROOT_DIR, 'code', 'data', 'icons.json'), JSON.stringify(icons, null, 2));
 
 console.log('Categories overview:');

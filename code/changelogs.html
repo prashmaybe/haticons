@@ -40,7 +40,7 @@
 
         <!-- Top Announcement Bar -->
     <div class="py-1 px-3 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2 top-announcement-bar">
-        <span class="badge bg-white text-primary rounded-pill px-2 py-05 fw-bold">v1.0.1</span>
+        <span class="badge bg-white text-primary rounded-pill px-2 py-05 fw-bold">v1.0.2</span>
         <span>569+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
         <span class="d-none d-md-inline text-white-50">&bull;</span>
         <span class="d-none d-md-inline text-white-50">Free &amp; Open Source (GPL-3.0)</span>
@@ -134,13 +134,61 @@
 
     <!-- Main Changelog Timeline -->
     <main class="container pt-5 changelogs-main-container">
+        <!-- Release 1.0.2 -->
+        <article class="card px-3 py-4 rounded-4 border bg-white shadow-xs mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                <div class="d-flex align-items-center gap-1">
+                    <span class="badge bg-primary text-white fs-6 rounded-pill px-1 py-0.5">v1.0.2</span>
+                    <span class="badge bg-success-soft text-white border border-success-subtle rounded-pill text-xs">Latest Release</span>
+                </div>
+                <time class="text-muted text-xs font-monospace">October 29, 2026</time>
+            </div>
+
+            <h2 class="fw-bold text-dark mb-2">AI &amp; Developer Brands, Asset Provenance, Dynamic Framework Components &amp; Quality Gate</h2>
+
+            <p class="text-muted text-sm mb-2">
+                Milestone release expanding the library to 569 vector icons (+75 new brand, developer, media, and UI icons), introducing the formal Asset Provenance Manifest (<code>PROVENANCE.md</code>) and Font &amp; Asset Embedding Exception in <code>LICENSE</code> for commercial adoption, dynamic generic <code>&lt;Haticon /&gt;</code> components for React and Vue, cross-platform support matrix, automated release quality checks, and real bundle size benchmarks.
+            </p>
+
+            <h3 class="fw-bold text-dark text-uppercase tracking-wider text-xs">🚀 New Features &amp; Addons</h3>
+            <ul class="text-sm text-muted mb-4">
+                <li><strong>75 New Vector Glyphs (Total 569 Icons):</strong>
+                    Expanded catalog across 8 categories:
+                    <ul>
+                        <li><strong>AI &amp; Developer Platforms (20 icons):</strong> Added Cursor (<code>hi-cursor</code>), Trae (<code>hi-trae</code>), Google Antigravity (<code>hi-antigravity</code>), Boodoo (<code>hi-boodoo</code>), Codeium Windsurf (<code>hi-windsurf</code>), Anthropic Claude (<code>hi-claude</code>), GitHub Copilot (<code>hi-copilot</code>), DeepSeek (<code>hi-deepseek</code>), Ollama (<code>hi-ollama</code>), Perplexity (<code>hi-perplexity</code>), Mistral (<code>hi-mistral</code>), Groq (<code>hi-groq</code>), Replit (<code>hi-replit</code>), Hugging Face (<code>hi-huggingface</code>), v0 (<code>hi-v0</code>), LangChain (<code>hi-langchain</code>), Astro (<code>hi-astro</code>), Prisma (<code>hi-prisma</code>), Resend (<code>hi-resend</code>), and shadcn/ui (<code>hi-shadcn</code>).</li>
+                        <li><strong>Modern Tech Stacks &amp; Services (36 icons):</strong> Added React, X/Twitter, Threads, Discord, Telegram, Bluesky, OpenAI (ChatGPT), Gemini, Figma, Canva, Notion, Linear, Supabase, Firebase, Vercel, Next.js, Tailwind, Svelte, Bun, Docker, Kubernetes, Stripe, Zoom, Signal, Pinterest, Patreon, Postman, Google Cloud, pnpm, Vite, GraphQL, PostgreSQL, MongoDB, Redis, and Golang.</li>
+                        <li><strong>Essential Media &amp; UI Controls:</strong> Added <code>pause</code>, <code>stop</code>, <code>moon</code> (dark mode switcher), <code>sparkles</code> (AI / magic), <code>bolt</code>, and <code>globe</code>.</li>
+                        <li><strong>Developer, Hardware &amp; Security:</strong> Added <code>code</code>, <code>terminal</code>, <code>database</code>, <code>cpu</code>, <code>wifi</code>, <code>shield</code>, <code>shield-check</code>, and <code>qrcode</code>.</li>
+                        <li><strong>Productivity:</strong> Added <code>copy</code>, <code>external-link</code>, <code>filter</code>, <code>history</code>, and <code>spinner</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Asset Provenance &amp; Font Embedding Exception:</strong> Added <code>PROVENANCE.md</code> establishing a 3-tier IP model. Formally attached the <strong>Font &amp; Asset Embedding Exception</strong> to <code>LICENSE</code>, ensuring that embedding Haticons webfonts, SVGs, or components into proprietary, SaaS, or commercial software carries zero copyleft risk. Formulated third-party brand trademark guidelines for nominative fair use.</li>
+                <li><strong>Dynamic &lt;Haticon /&gt; React &amp; Vue Components:</strong> Added unified <code>&lt;Haticon name="search" size={24} /&gt;</code> component alongside individual tree-shaken components (<code>HiSearch</code>, <code>HiCart</code>) in <code>haticons/react</code> and <code>haticons/vue</code> with full TypeScript autocomplete.</li>
+                <li><strong>Cross-Platform Support Matrix:</strong> Published comprehensive integration guidance for Web, React Native (<code>react-native-svg</code>), iOS (SwiftUI/UIKit), Android (Compose/XML), Flutter, and Desktop (Electron/Tauri).</li>
+                <li><strong>Automated Production Quality Gate:</strong> Added <code>scripts/verify-release.js</code> test suite and <code>scripts/bundle-size.js</code> with <code>BUNDLE_SIZE.md</code> performance report.</li>
+            </ul>
+
+            <h3 class="fw-bold text-dark text-uppercase tracking-wider text-xs">🔧 Fixes &amp; Improvements</h3>
+            <ul class="text-sm text-muted mb-4">
+                <li><strong>Category CSS Font Resolution:</strong> Corrected font URL paths (<code>../../fonts/</code>) in standalone category stylesheets (<code>dist/css/categories/*.css</code>) so webfonts resolve accurately.</li>
+                <li><strong>Unplugin Resolver Framework Selection:</strong> Added <code>framework: 'vue' | 'react'</code> option to <code>HaticonsResolver</code>.</li>
+                <li><strong>Release Consistency:</strong> Synchronized all package exports, README, documentation, and CDN links to version 1.0.2.</li>
+            </ul>
+
+            <h3 class="fw-bold text-dark text-uppercase tracking-wider text-xs">📦 Assets &amp; Deliverables</h3>
+            <div class="p-1 bg-light rounded-3 font-monospace text-xs text-dark">
+                npm i haticons@1.0.2<br>
+                CDN: https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/haticons.min.css
+            </div>
+        </article>
+
         <!-- Release 1.0.1 -->
         <article class="card px-3 py-4 rounded-4 border bg-white shadow-xs mb-4">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
                 <div class="d-flex align-items-center gap-1">
                     <span class="badge bg-primary text-white fs-6 rounded-pill px-1 py-0.5">v1.0.1</span>
                     <span
-                        class="badge bg-success-soft text-white border border-success-subtle rounded-pill text-xs">Latest
+                        class="badge bg-secondary text-white border border-secondary rounded-pill text-xs">Previous
                         Release</span>
                 </div>
                 <time class="text-muted text-xs font-monospace">October 28, 2026</time>
@@ -322,7 +370,7 @@
                     <ul class="list-unstyled text-sm mb-0 d-flex flex-column gap-2">
                         <li><a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="text-decoration-none text-muted">npm Package</a></li>
                         <li><a href="/tutorial.html#framework-components" class="text-decoration-none text-muted">React &amp; Vue 3</a></li>
-                        <li><a href="https://cdn.jsdelivr.net/npm/haticons@1.0.1/dist/css/haticons.min.css" target="_blank" rel="noopener" class="text-decoration-none text-muted">jsDelivr CDN</a></li>
+                        <li><a href="https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/haticons.min.css" target="_blank" rel="noopener" class="text-decoration-none text-muted">jsDelivr CDN</a></li>
                         <li><a href="https://www.boodooframework.com/" target="_blank" rel="noopener" class="text-decoration-none text-muted">boodoo Framework</a></li>
                     </ul>
                 </div>
