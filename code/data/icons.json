@@ -3292,5 +3292,125 @@
     "content": "\\f1d6",
     "name": "spinner",
     "category": "feedback"
+  },
+  {
+    "class": "hi-cursor",
+    "content": "\\f1d7",
+    "name": "cursor",
+    "category": "brands"
+  },
+  {
+    "class": "hi-trae",
+    "content": "\\f1d8",
+    "name": "trae",
+    "category": "brands"
+  },
+  {
+    "class": "hi-antigravity",
+    "content": "\\f1d9",
+    "name": "antigravity",
+    "category": "brands"
+  },
+  {
+    "class": "hi-boodoo",
+    "content": "\\f1da",
+    "name": "boodoo",
+    "category": "brands"
+  },
+  {
+    "class": "hi-windsurf",
+    "content": "\\f1db",
+    "name": "windsurf",
+    "category": "brands"
+  },
+  {
+    "class": "hi-claude",
+    "content": "\\f1dc",
+    "name": "claude",
+    "category": "brands"
+  },
+  {
+    "class": "hi-copilot",
+    "content": "\\f1dd",
+    "name": "copilot",
+    "category": "brands"
+  },
+  {
+    "class": "hi-deepseek",
+    "content": "\\f1de",
+    "name": "deepseek",
+    "category": "brands"
+  },
+  {
+    "class": "hi-ollama",
+    "content": "\\f1df",
+    "name": "ollama",
+    "category": "brands"
+  },
+  {
+    "class": "hi-perplexity",
+    "content": "\\f1e0",
+    "name": "perplexity",
+    "category": "brands"
+  },
+  {
+    "class": "hi-mistral",
+    "content": "\\f1e1",
+    "name": "mistral",
+    "category": "brands"
+  },
+  {
+    "class": "hi-groq",
+    "content": "\\f1e2",
+    "name": "groq",
+    "category": "brands"
+  },
+  {
+    "class": "hi-replit",
+    "content": "\\f1e3",
+    "name": "replit",
+    "category": "brands"
+  },
+  {
+    "class": "hi-huggingface",
+    "content": "\\f1e4",
+    "name": "huggingface",
+    "category": "brands"
+  },
+  {
+    "class": "hi-v0",
+    "content": "\\f1e5",
+    "name": "v0",
+    "category": "brands"
+  },
+  {
+    "class": "hi-langchain",
+    "content": "\\f1e6",
+    "name": "langchain",
+    "category": "brands"
+  },
+  {
+    "class": "hi-astro",
+    "content": "\\f1e7",
+    "name": "astro",
+    "category": "brands"
+  },
+  {
+    "class": "hi-prisma",
+    "content": "\\f1e8",
+    "name": "prisma",
+    "category": "brands"
+  },
+  {
+    "class": "hi-resend",
+    "content": "\\f1e9",
+    "name": "resend",
+    "category": "brands"
+  },
+  {
+    "class": "hi-shadcn",
+    "content": "\\f1ea",
+    "name": "shadcn",
+    "category": "brands"
   }
 ]

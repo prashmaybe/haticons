@@ -29,11 +29,11 @@
 
 ## 🚀 Features
 
-- **549+ Crisp Vector Icons**: Specially tuned for clean rendering at 16px, 24px, 32px, 48px, and high-DPI displays.
+- **569+ Crisp Vector Icons**: Specially tuned for clean rendering at 16px, 24px, 32px, 48px, and high-DPI displays.
 - **📦 Modular & Zero Waste**: Don't want the full bundle? Import only the categories you need (e.g. `commerce.css`, `arrows.css`) or use raw SCSS partials.
 - **⚡ boodoo Framework Ready**: Designed to pair seamlessly with [boodoo CSS Framework](https://www.boodooframework.com/) utilities, buttons, badges, modals, and flexbox layout.
 - **🎯 14 Categorized Collections**:
-  - `brands` (293 icons) - Tech stacks, social platforms, AI tools, and developer brands
+  - `brands` (313 icons) - Tech stacks, social platforms, AI tools, and developer brands (Cursor, Trae, Antigravity, Boodoo, Windsurf, Claude, Gemini, DeepSeek, Copilot, Mistral, Ollama, Perplexity, Groq, Replit, Hugging Face, v0, etc.)
   - `commerce` (18 icons) - Carts, payment cards, wallets, QR codes, and checkout symbols
   - `directional` (16 icons) - Chevrons, arrows, directions, and turns
   - `media` (15 icons) - Players, pause/stop, volumes, cameras, music, and multimedia
@@ -78,7 +78,7 @@ Users never need to bundle the entire library! Haticons is designed from the gro
 
 ### 1. Partial CSS Imports (Bundler or CDN)
 
-You can import **only** the categories you need (e.g. commerce, directional) without the rest of the 549 icons:
+You can import **only** the categories you need (e.g. commerce, directional) without the rest of the 569 icons:
 
 ```javascript
 // In your JS / React / Vue / Vite entry:
@@ -211,7 +211,7 @@ npx haticons subset --icons=cart,heart,search,bell --out=./src/assets/haticons-s
 # 2. Automatically scan your project source files (jsx, tsx, vue, html, svelte) and build a subset
 npx haticons scan --src=./src --out=./src/assets/haticons-subset
 
-# 3. List all available 549 icons and categories
+# 3. List all available 569 icons and categories
 npx haticons list
 ```
 

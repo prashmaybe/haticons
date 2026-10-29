@@ -58,10 +58,11 @@ function getHtmlHead(title, description, keywords, canonicalPath = '') {
  * Top Announcement Bar
  */
 function getAnnouncementBar() {
+    const count = loadIcons().length;
     return `    <!-- Top Announcement Bar -->
     <div class="py-1 px-2 text-center bg-primary text-white text-sm fw-medium d-flex flex-wrap align-items-center justify-content-center gap-2">
         <span class="badge bg-white text-primary rounded-pill px-2 py-1 fw-bold">v1.0.1</span>
-        <span>549+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
+        <span>${count}+ Modular Vector &amp; Font Icons for Web, iOS, Android, and Desktop</span>
     </div>`;
 }
 
@@ -128,6 +129,7 @@ function getNavbar(activePage = 'home') {
  * @param {'home'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
  */
 function getFooter(activePage = 'home') {
+    const count = loadIcons().length;
     return `    <!-- Footer -->
     <footer class="py-5 bg-white border-top text-center">
         <div class="container">
@@ -141,7 +143,7 @@ function getFooter(activePage = 'home') {
                 An open-source icon system by <a href="https://pebblebenders.com/" class="text-dark fw-bold text-decoration-none" target="_blank" rel="noopener">PebbleBenders</a> &middot; Made with <a href="https://www.boodooframework.com/" class="text-primary fw-semibold" target="_blank" rel="noopener">boodoo Framework</a>
             </p>
             <p class="text-muted text-sm mx-auto mb-3 footer-desc-constrained">
-                549 free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
+                ${count} free vector font icons. Distributed as an npm package with modular category stylesheets and Sass sources.
             </p>
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 text-sm text-muted mb-4">
                 <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 bg-white text-muted d-inline-flex align-items-center gap-1 shadow-2xs">

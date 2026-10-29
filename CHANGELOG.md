@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.3] - 2026-10-29
+
+### Added
+- **20 New AI & Developer Brand Icons**: Expanded library from 549 to 569 icons (+20 brand icons in the `brands` category):
+  - **Cursor** (`hi-cursor`, alias `cusror`): Cursor AI code editor icon.
+  - **Trae** (`hi-trae`): Trae adaptive AI IDE by ByteDance icon.
+  - **Antigravity** (`hi-antigravity`, aliases `antogravity`, `google-antigravity`, `googleantigravity`, `agy`): Google Antigravity agentic coding platform icon.
+  - **Boodoo** (`hi-boodoo`, aliases `boodooframework`, `boodoo-framework`): Boodoo Design Framework official emblem (https://boodooframework.com/).
+  - **Windsurf** (`hi-windsurf`, aliases `codeium`, `codeium-windsurf`): Codeium Windsurf AI IDE icon.
+  - **Claude** (`hi-claude`, aliases `claude-ai`, `claudecode`): Official Anthropic Claude AI starburst emblem.
+  - **Copilot** (`hi-copilot`, aliases `github-copilot`, `githubcopilot`): GitHub Copilot developer icon.
+  - **DeepSeek** (`hi-deepseek`, alias `deepseek-ai`): DeepSeek AI icon.
+  - **Ollama** (`hi-ollama`): Ollama local AI platform icon.
+  - **Perplexity** (`hi-perplexity`, alias `perplexity-ai`): Perplexity AI search icon.
+  - **Mistral** (`hi-mistral`, alias `mistral-ai`): Mistral AI iconic pixel cat emblem.
+  - **Groq** (`hi-groq`): Groq LPU high-speed AI inference icon.
+  - **Replit** (`hi-replit`): Replit development environment icon.
+  - **Hugging Face** (`hi-huggingface`, aliases `hugging-face`, `hf`): Hugging Face open-source AI icon.
+  - **v0** (`hi-v0`, alias `v0-dev`): Vercel v0 generative UI platform icon.
+  - **LangChain** (`hi-langchain`): LangChain AI orchestration framework icon.
+  - **Astro** (`hi-astro`): Astro web framework icon.
+  - **Prisma** (`hi-prisma`): Prisma modern ORM icon.
+  - **Resend** (`hi-resend`): Resend modern email API icon.
+  - **shadcn/ui** (`hi-shadcn`, aliases `shadcn-ui`, `shadcnui`): shadcn/ui UI component library icon.
+  - **Gemini Enhancements** (`hi-gemini`, aliases `google-gemini`, `googlegemini`): Added canonical aliases for Google Gemini.
+- **Framework Components**: Generated React (`HiCursor`, `HiTrae`, `HiAntigravity`, `HiBoodoo`, `HiWindsurf`, `HiClaude`, etc.) and Vue 3 components with complete TypeScript declarations.
+- **Font Assets**: Updated full webfont suite (TTF, WOFF, EOT, WOFF2) and individual tree-shakeable SVG & JS modules.
+
+---
+
 ## [1.0.2] - 2026-10-29
 
 ### Added

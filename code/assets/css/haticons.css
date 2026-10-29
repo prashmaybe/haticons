@@ -2020,18 +2020,22 @@
 .hi-anthropic:before,
 .hi-anthropic-fill:before,
 .hi-anthropic-outline:before,
-.hi-anthropic-sharp:before,
-.hi-claude:before,
-.hi-claude-fill:before,
-.hi-claude-outline:before,
-.hi-claude-sharp:before {
+.hi-anthropic-sharp:before {
   content: "\f1a7";
 }
 
 .hi-gemini:before,
 .hi-gemini-fill:before,
 .hi-gemini-outline:before,
-.hi-gemini-sharp:before {
+.hi-gemini-sharp:before,
+.hi-google-gemini:before,
+.hi-google-gemini-fill:before,
+.hi-google-gemini-outline:before,
+.hi-google-gemini-sharp:before,
+.hi-googlegemini:before,
+.hi-googlegemini-fill:before,
+.hi-googlegemini-outline:before,
+.hi-googlegemini-sharp:before {
   content: "\f1a8";
 }
 
@@ -2250,6 +2254,230 @@
 .hi-go-outline:before,
 .hi-go-sharp:before {
   content: "\f1c3";
+}
+
+.hi-cursor:before,
+.hi-cursor-fill:before,
+.hi-cursor-outline:before,
+.hi-cursor-sharp:before,
+.hi-cusror:before,
+.hi-cusror-fill:before,
+.hi-cusror-outline:before,
+.hi-cusror-sharp:before {
+  content: "\f1d7";
+}
+
+.hi-trae:before,
+.hi-trae-fill:before,
+.hi-trae-outline:before,
+.hi-trae-sharp:before {
+  content: "\f1d8";
+}
+
+.hi-antigravity:before,
+.hi-antigravity-fill:before,
+.hi-antigravity-outline:before,
+.hi-antigravity-sharp:before,
+.hi-antogravity:before,
+.hi-antogravity-fill:before,
+.hi-antogravity-outline:before,
+.hi-antogravity-sharp:before,
+.hi-google-antigravity:before,
+.hi-google-antigravity-fill:before,
+.hi-google-antigravity-outline:before,
+.hi-google-antigravity-sharp:before,
+.hi-googleantigravity:before,
+.hi-googleantigravity-fill:before,
+.hi-googleantigravity-outline:before,
+.hi-googleantigravity-sharp:before,
+.hi-agy:before,
+.hi-agy-fill:before,
+.hi-agy-outline:before,
+.hi-agy-sharp:before {
+  content: "\f1d9";
+}
+
+.hi-boodoo:before,
+.hi-boodoo-fill:before,
+.hi-boodoo-outline:before,
+.hi-boodoo-sharp:before,
+.hi-boodooframework:before,
+.hi-boodooframework-fill:before,
+.hi-boodooframework-outline:before,
+.hi-boodooframework-sharp:before,
+.hi-boodoo-framework:before,
+.hi-boodoo-framework-fill:before,
+.hi-boodoo-framework-outline:before,
+.hi-boodoo-framework-sharp:before {
+  content: "\f1da";
+}
+
+.hi-windsurf:before,
+.hi-windsurf-fill:before,
+.hi-windsurf-outline:before,
+.hi-windsurf-sharp:before,
+.hi-codeium:before,
+.hi-codeium-fill:before,
+.hi-codeium-outline:before,
+.hi-codeium-sharp:before,
+.hi-codeium-windsurf:before,
+.hi-codeium-windsurf-fill:before,
+.hi-codeium-windsurf-outline:before,
+.hi-codeium-windsurf-sharp:before {
+  content: "\f1db";
+}
+
+.hi-claude:before,
+.hi-claude-fill:before,
+.hi-claude-outline:before,
+.hi-claude-sharp:before,
+.hi-claude-ai:before,
+.hi-claude-ai-fill:before,
+.hi-claude-ai-outline:before,
+.hi-claude-ai-sharp:before,
+.hi-claudecode:before,
+.hi-claudecode-fill:before,
+.hi-claudecode-outline:before,
+.hi-claudecode-sharp:before {
+  content: "\f1dc";
+}
+
+.hi-copilot:before,
+.hi-copilot-fill:before,
+.hi-copilot-outline:before,
+.hi-copilot-sharp:before,
+.hi-github-copilot:before,
+.hi-github-copilot-fill:before,
+.hi-github-copilot-outline:before,
+.hi-github-copilot-sharp:before,
+.hi-githubcopilot:before,
+.hi-githubcopilot-fill:before,
+.hi-githubcopilot-outline:before,
+.hi-githubcopilot-sharp:before {
+  content: "\f1dd";
+}
+
+.hi-deepseek:before,
+.hi-deepseek-fill:before,
+.hi-deepseek-outline:before,
+.hi-deepseek-sharp:before,
+.hi-deepseek-ai:before,
+.hi-deepseek-ai-fill:before,
+.hi-deepseek-ai-outline:before,
+.hi-deepseek-ai-sharp:before {
+  content: "\f1de";
+}
+
+.hi-ollama:before,
+.hi-ollama-fill:before,
+.hi-ollama-outline:before,
+.hi-ollama-sharp:before {
+  content: "\f1df";
+}
+
+.hi-perplexity:before,
+.hi-perplexity-fill:before,
+.hi-perplexity-outline:before,
+.hi-perplexity-sharp:before,
+.hi-perplexity-ai:before,
+.hi-perplexity-ai-fill:before,
+.hi-perplexity-ai-outline:before,
+.hi-perplexity-ai-sharp:before {
+  content: "\f1e0";
+}
+
+.hi-mistral:before,
+.hi-mistral-fill:before,
+.hi-mistral-outline:before,
+.hi-mistral-sharp:before,
+.hi-mistral-ai:before,
+.hi-mistral-ai-fill:before,
+.hi-mistral-ai-outline:before,
+.hi-mistral-ai-sharp:before {
+  content: "\f1e1";
+}
+
+.hi-groq:before,
+.hi-groq-fill:before,
+.hi-groq-outline:before,
+.hi-groq-sharp:before {
+  content: "\f1e2";
+}
+
+.hi-replit:before,
+.hi-replit-fill:before,
+.hi-replit-outline:before,
+.hi-replit-sharp:before {
+  content: "\f1e3";
+}
+
+.hi-huggingface:before,
+.hi-huggingface-fill:before,
+.hi-huggingface-outline:before,
+.hi-huggingface-sharp:before,
+.hi-hugging-face:before,
+.hi-hugging-face-fill:before,
+.hi-hugging-face-outline:before,
+.hi-hugging-face-sharp:before,
+.hi-hf:before,
+.hi-hf-fill:before,
+.hi-hf-outline:before,
+.hi-hf-sharp:before {
+  content: "\f1e4";
+}
+
+.hi-v0:before,
+.hi-v0-fill:before,
+.hi-v0-outline:before,
+.hi-v0-sharp:before,
+.hi-v0-dev:before,
+.hi-v0-dev-fill:before,
+.hi-v0-dev-outline:before,
+.hi-v0-dev-sharp:before {
+  content: "\f1e5";
+}
+
+.hi-langchain:before,
+.hi-langchain-fill:before,
+.hi-langchain-outline:before,
+.hi-langchain-sharp:before {
+  content: "\f1e6";
+}
+
+.hi-astro:before,
+.hi-astro-fill:before,
+.hi-astro-outline:before,
+.hi-astro-sharp:before {
+  content: "\f1e7";
+}
+
+.hi-prisma:before,
+.hi-prisma-fill:before,
+.hi-prisma-outline:before,
+.hi-prisma-sharp:before {
+  content: "\f1e8";
+}
+
+.hi-resend:before,
+.hi-resend-fill:before,
+.hi-resend-outline:before,
+.hi-resend-sharp:before {
+  content: "\f1e9";
+}
+
+.hi-shadcn:before,
+.hi-shadcn-fill:before,
+.hi-shadcn-outline:before,
+.hi-shadcn-sharp:before,
+.hi-shadcn-ui:before,
+.hi-shadcn-ui-fill:before,
+.hi-shadcn-ui-outline:before,
+.hi-shadcn-ui-sharp:before,
+.hi-shadcnui:before,
+.hi-shadcnui-fill:before,
+.hi-shadcnui-outline:before,
+.hi-shadcnui-sharp:before {
+  content: "\f1ea";
 }
 
 .hi-paypal:before,

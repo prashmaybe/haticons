@@ -125,7 +125,7 @@ const html = `<!DOCTYPE html>
 <head>
 ${getHtmlHead(
     'Icon Reference &amp; Cheat Sheet | Haticons by PebbleBenders',
-    'Browse the full categorized icon catalog of 549+ vector icons, copy HTML snippets, Unicode values, and reference partial bundle paths.',
+    'Browse the full categorized icon catalog of ${icons.length}+ vector icons, copy HTML snippets, Unicode values, and reference partial bundle paths.',
     'haticons reference, icon catalog, css unicode, icon cheatsheet, vector icons list'
 )}
 </head>
