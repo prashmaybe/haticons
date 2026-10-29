@@ -376,6 +376,22 @@ function compileCssBundles({ ROOT_DIR, SCSS_DIR, DIST_CSS, DIST_CATEGORIES_CSS, 
   if (fs.existsSync(path.join(DIST_CSS, 'haticons.min.css'))) {
     fs.copyFileSync(path.join(DIST_CSS, 'haticons.min.css'), path.join(ROOT_DIR, 'code', 'assets', 'css', 'haticons.min.css'));
   }
+  if (fs.existsSync(path.join(DIST_CSS, 'core.css'))) {
+    fs.copyFileSync(path.join(DIST_CSS, 'core.css'), path.join(ROOT_DIR, 'code', 'assets', 'css', 'core.css'));
+  }
+  if (fs.existsSync(path.join(DIST_CSS, 'core.min.css'))) {
+    fs.copyFileSync(path.join(DIST_CSS, 'core.min.css'), path.join(ROOT_DIR, 'code', 'assets', 'css', 'core.min.css'));
+  }
+
+  const codeCategoriesCss = path.join(ROOT_DIR, 'code', 'assets', 'css', 'categories');
+  if (!fs.existsSync(codeCategoriesCss)) {
+    fs.mkdirSync(codeCategoriesCss, { recursive: true });
+  }
+  if (fs.existsSync(DIST_CATEGORIES_CSS)) {
+    fs.readdirSync(DIST_CATEGORIES_CSS).forEach(file => {
+      fs.copyFileSync(path.join(DIST_CATEGORIES_CSS, file), path.join(codeCategoriesCss, file));
+    });
+  }
 }
 
 module.exports = {

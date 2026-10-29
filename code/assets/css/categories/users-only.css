@@ -1,0 +1,70 @@
+.hi-doctor:before,
+.hi-doctor-fill:before,
+.hi-doctor-outline:before,
+.hi-doctor-sharp:before {
+  content: "\f016";
+}
+
+.hi-user1:before,
+.hi-user1-fill:before,
+.hi-user1-outline:before,
+.hi-user1-sharp:before,
+.hi-user-alt:before,
+.hi-user-alt-fill:before,
+.hi-user-alt-outline:before,
+.hi-user-alt-sharp:before {
+  content: "\f09e";
+}
+
+.hi-user-plus:before,
+.hi-user-plus-fill:before,
+.hi-user-plus-outline:before,
+.hi-user-plus-sharp:before {
+  content: "\f09f";
+}
+
+.hi-user-minus:before,
+.hi-user-minus-fill:before,
+.hi-user-minus-outline:before,
+.hi-user-minus-sharp:before {
+  content: "\f0f0";
+}
+
+.hi-user-check:before,
+.hi-user-check-fill:before,
+.hi-user-check-outline:before,
+.hi-user-check-sharp:before {
+  content: "\f0f1";
+}
+
+.hi-users1:before,
+.hi-users1-fill:before,
+.hi-users1-outline:before,
+.hi-users1-sharp:before,
+.hi-users-alt:before,
+.hi-users-alt-fill:before,
+.hi-users-alt-outline:before,
+.hi-users-alt-sharp:before {
+  content: "\f0f2";
+}
+
+.hi-hand-index:before,
+.hi-hand-index-fill:before,
+.hi-hand-index-outline:before,
+.hi-hand-index-sharp:before {
+  content: "\e93d";
+}
+
+.hi-user:before,
+.hi-user-fill:before,
+.hi-user-outline:before,
+.hi-user-sharp:before {
+  content: "\e97d";
+}
+
+.hi-users:before,
+.hi-users-fill:before,
+.hi-users-outline:before,
+.hi-users-sharp:before {
+  content: "\e97e";
+}

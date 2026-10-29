@@ -1,0 +1,105 @@
+.hi-folder1:before,
+.hi-folder1-fill:before,
+.hi-folder1-outline:before,
+.hi-folder1-sharp:before,
+.hi-folder-alt:before,
+.hi-folder-alt-fill:before,
+.hi-folder-alt-outline:before,
+.hi-folder-alt-sharp:before {
+  content: "\f023";
+}
+
+.hi-profile:before,
+.hi-profile-fill:before,
+.hi-profile-outline:before,
+.hi-profile-sharp:before {
+  content: "\f057";
+}
+
+.hi-attachment1:before,
+.hi-attachment1-fill:before,
+.hi-attachment1-outline:before,
+.hi-attachment1-sharp:before,
+.hi-attachment-alt:before,
+.hi-attachment-alt-fill:before,
+.hi-attachment-alt-outline:before,
+.hi-attachment-alt-sharp:before {
+  content: "\f05e";
+}
+
+.hi-archive:before,
+.hi-archive-fill:before,
+.hi-archive-outline:before,
+.hi-archive-sharp:before {
+  content: "\f070";
+}
+
+.hi-add-file:before,
+.hi-add-file-fill:before,
+.hi-add-file-outline:before,
+.hi-add-file-sharp:before {
+  content: "\e901";
+}
+
+.hi-add-folder:before,
+.hi-add-folder-fill:before,
+.hi-add-folder-outline:before,
+.hi-add-folder-sharp:before {
+  content: "\e902";
+}
+
+.hi-attachment:before,
+.hi-attachment-fill:before,
+.hi-attachment-outline:before,
+.hi-attachment-sharp:before {
+  content: "\e910";
+}
+
+.hi-delete-file:before,
+.hi-delete-file-fill:before,
+.hi-delete-file-outline:before,
+.hi-delete-file-sharp:before {
+  content: "\e929";
+}
+
+.hi-document:before,
+.hi-document-fill:before,
+.hi-document-outline:before,
+.hi-document-sharp:before {
+  content: "\e92b";
+}
+
+.hi-file:before,
+.hi-file-fill:before,
+.hi-file-outline:before,
+.hi-file-sharp:before {
+  content: "\e934";
+}
+
+.hi-folder:before,
+.hi-folder-fill:before,
+.hi-folder-outline:before,
+.hi-folder-sharp:before {
+  content: "\e93a";
+}
+
+.hi-media-file:before,
+.hi-media-file-fill:before,
+.hi-media-file-outline:before,
+.hi-media-file-sharp:before {
+  content: "\e94c";
+}
+
+.hi-paste:before,
+.hi-paste-fill:before,
+.hi-paste-outline:before,
+.hi-paste-sharp:before {
+  content: "\e959";
+}
+
+.hi-save-file:before,
+.hi-save-file-fill:before,
+.hi-save-file-outline:before,
+.hi-save-file-sharp:before {
+  content: "\e969";
+}

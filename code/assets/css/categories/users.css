@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "haticons";
+  src: url("../fonts/haticons.eot?5zss7");
+  src: url("../fonts/haticons.eot?5zss7#iefix") format("embedded-opentype"), url("../fonts/haticons.woff2?5zss7") format("woff2"), url("../fonts/haticons.woff?5zss7") format("woff"), url("../fonts/haticons.ttf?5zss7") format("truetype"), url("../fonts/haticons.svg?5zss7#haticons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=hi-], [class*=" hi-"] {
+  font-family: "haticons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hi-fill {
+  font-weight: normal;
+}
+
+.hi-outline {
+  -webkit-text-stroke: 1.1px currentColor;
+  paint-order: stroke fill;
+}
+
+.hi-sharp {
+  font-feature-settings: "ss01" on;
+  letter-spacing: -0.05em;
+  transform: scale(0.98);
+  display: inline-block;
+}
+
+.hi-duotone {
+  opacity: var(--hi-duotone-opacity, 0.45);
+  filter: drop-shadow(0 0 0.5px currentColor);
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+.hi-duotone:hover {
+  opacity: 0.85;
+}
+
+.hi-sm {
+  font-size: 0.875em;
+}
+
+.hi-md {
+  font-size: 1.15em;
+}
+
+.hi-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.hi-xl {
+  font-size: 1.75em;
+}
+
+.hi-2x {
+  font-size: 2em;
+}
+
+.hi-3x {
+  font-size: 3em;
+}
+
+.hi-4x {
+  font-size: 4em;
+}
+
+.hi-5x {
+  font-size: 5em;
+}
+
+.hi-fw {
+  text-align: center;
+  width: 1.25em;
+  display: inline-block;
+}
+
+.hi-spin {
+  animation: hi-spin 2s infinite linear;
+  display: inline-block;
+}
+
+.hi-pulse {
+  animation: hi-pulse 1.6s infinite ease-in-out;
+  display: inline-block;
+}
+
+.hi-bounce {
+  animation: hi-bounce 1.4s infinite ease-in-out;
+  display: inline-block;
+}
+
+.hi-shake {
+  animation: hi-shake 0.8s infinite ease-in-out;
+  display: inline-block;
+}
+
+.hi-hover-rotate {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hi-hover-rotate:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+@keyframes hi-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes hi-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.82;
+  }
+}
+@keyframes hi-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-22%);
+  }
+}
+@keyframes hi-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-3px);
+  }
+  40%, 80% {
+    transform: translateX(3px);
+  }
+}
+.hi-doctor:before,
+.hi-doctor-fill:before,
+.hi-doctor-outline:before,
+.hi-doctor-sharp:before {
+  content: "\f016";
+}
+
+.hi-user1:before,
+.hi-user1-fill:before,
+.hi-user1-outline:before,
+.hi-user1-sharp:before,
+.hi-user-alt:before,
+.hi-user-alt-fill:before,
+.hi-user-alt-outline:before,
+.hi-user-alt-sharp:before {
+  content: "\f09e";
+}
+
+.hi-user-plus:before,
+.hi-user-plus-fill:before,
+.hi-user-plus-outline:before,
+.hi-user-plus-sharp:before {
+  content: "\f09f";
+}
+
+.hi-user-minus:before,
+.hi-user-minus-fill:before,
+.hi-user-minus-outline:before,
+.hi-user-minus-sharp:before {
+  content: "\f0f0";
+}
+
+.hi-user-check:before,
+.hi-user-check-fill:before,
+.hi-user-check-outline:before,
+.hi-user-check-sharp:before {
+  content: "\f0f1";
+}
+
+.hi-users1:before,
+.hi-users1-fill:before,
+.hi-users1-outline:before,
+.hi-users1-sharp:before,
+.hi-users-alt:before,
+.hi-users-alt-fill:before,
+.hi-users-alt-outline:before,
+.hi-users-alt-sharp:before {
+  content: "\f0f2";
+}
+
+.hi-hand-index:before,
+.hi-hand-index-fill:before,
+.hi-hand-index-outline:before,
+.hi-hand-index-sharp:before {
+  content: "\e93d";
+}
+
+.hi-user:before,
+.hi-user-fill:before,
+.hi-user-outline:before,
+.hi-user-sharp:before {
+  content: "\e97d";
+}
+
+.hi-users:before,
+.hi-users-fill:before,
+.hi-users-outline:before,
+.hi-users-sharp:before {
+  content: "\e97e";
+}
