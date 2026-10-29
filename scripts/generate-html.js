@@ -308,7 +308,7 @@ ${getNavbar('home')}
 export default function App() {
   return &lt;i className="hi-cart" /&gt;;
 }</code></pre>
-                            <span class="badge bg-primary-soft text-primary rounded-pill text-2xs">SSR &amp; Hydration Safe</span>
+                            <span class="badge bg-primary-soft py-1 text-primary rounded-pill text-2xs">SSR &amp; Hydration Safe</span>
                         </div>
                     </div>
 
@@ -324,7 +324,7 @@ import 'haticons/css';
 import App from './App.vue';
 
 createApp(App).mount('#app');</code></pre>
-                            <span class="badge bg-success-soft text-success rounded-pill text-2xs">Zero Config Needed</span>
+                            <span class="badge bg-white py-1 text-success rounded-pill text-2xs">Zero Config Needed</span>
                         </div>
                     </div>
 
@@ -339,7 +339,7 @@ createApp(App).mount('#app');</code></pre>
   "node_modules/haticons/dist/css/haticons.min.css",
   "src/styles.css"
 ]</code></pre>
-                            <span class="badge bg-danger-soft text-danger rounded-pill text-2xs">Built into Angular CLI</span>
+                            <span class="badge bg-white py-1 text-danger rounded-pill text-2xs">Built into Angular CLI</span>
                         </div>
                     </div>
                 </div>
@@ -358,7 +358,7 @@ createApp(App).mount('#app');</code></pre>
                                 Complete bundle containing all individual vector SVG files, compiled web fonts (WOFF2, TTF, EOT, WOFF), Sass sources, and minified CSS stylesheets.
                             </p>
                             <div class="d-flex flex-wrap gap-1 mb-2">
-                                <a href="/download/haticons.zip" class="btn btn-primary rounded-pill px-4 d-inline-flex align-items-center gap-2 shadow-sm">
+                                <a href="/download/haticons.zip" class="btn btn-primary rounded-pill px-2 d-inline-flex align-items-center gap-1 shadow-sm">
                                     <i class="hi-download"></i>
                                     <span>Download ZIP (~1.4MB)</span>
                                 </a>
