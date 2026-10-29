@@ -205,7 +205,7 @@ ${getNavbar('home')}
             <div class="setup-tab-pane d-none" id="tab-cdn">
                 <div class="row g-4 align-items-stretch">
                     <div class="col-12 col-lg-7">
-                        <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-light border shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="start-step-number bg-primary text-white d-inline-flex align-items-center justify-content-center shadow-xs">1</span>
                                 <h3 class="h5 fw-bold text-dark mb-0">Add Stylesheet to &lt;head&gt;</h3>
@@ -249,7 +249,7 @@ ${getNavbar('home')}
                     </div>
 
                     <div class="col-12 col-lg-5">
-                        <div class="card p-4 rounded-4 bg-white border h-100 d-flex flex-column justify-content-between shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-white border d-flex flex-column justify-content-between shadow-2xs">
                             <div>
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <span class="badge bg-primary text-white rounded-pill px-3 py-1 text-xs fw-bold">Live Preview</span>
@@ -258,8 +258,8 @@ ${getNavbar('home')}
                                 <p class="text-muted text-sm mb-4">
                                     Icons render crisp vector typography instantly, inheriting currentColor and font sizing.
                                 </p>
-                                <div class="p-4 rounded-4 bg-light border text-center mb-4">
-                                    <div class="d-flex align-items-center justify-content-center gap-4 mb-3">
+                                <div class="p-2 rounded-4 bg-light border text-center mb-2">
+                                    <div class="d-flex align-items-center justify-content-center gap-1 mb-2">
                                         <div class="text-center">
                                             <i class="hi-cart fs-1 text-primary d-block mb-1"></i>
                                             <span class="text-2xs text-muted font-monospace">hi-cart</span>
@@ -297,7 +297,7 @@ ${getNavbar('home')}
             <div class="setup-tab-pane d-none" id="tab-frameworks">
                 <div class="row g-4">
                     <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-light border shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-visualstudiocode fs-2 text-info"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">React / Next.js</h3>
@@ -313,7 +313,7 @@ export default function App() {
                     </div>
 
                     <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-light border shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-vue-js fs-2 text-success"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Vue 3 / Nuxt / Vite</h3>
@@ -329,7 +329,7 @@ createApp(App).mount('#app');</code></pre>
                     </div>
 
                     <div class="col-12 col-md-4">
-                        <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-light border shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-angular fs-2 text-danger"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Angular</h3>
@@ -349,7 +349,7 @@ createApp(App).mount('#app');</code></pre>
             <div class="setup-tab-pane d-none" id="tab-desktop">
                 <div class="row g-4">
                     <div class="col-12 col-md-6">
-                        <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-light border shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-download fs-2 text-primary"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Download Offline Bundle</h3>
@@ -368,7 +368,7 @@ createApp(App).mount('#app');</code></pre>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="card p-4 rounded-4 bg-light border h-100 shadow-2xs">
+                        <div class="card p-4 rounded-4 bg-light border shadow-2xs">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <i class="hi-paintbox fs-2 text-purple"></i>
                                 <h3 class="h5 fw-bold text-dark mb-0">Figma, Sketch &amp; Illustrator</h3>
