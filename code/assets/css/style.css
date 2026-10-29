@@ -76,6 +76,29 @@ body {
   backdrop-filter: blur(8px);
 }
 
+[data-theme="dark"] .navbar-toggler {
+  color: var(--hi-text) !important;
+  border-color: var(--hi-border) !important;
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%) brightness(150%);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    border-top: 1px solid var(--hi-border);
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+  .navbar-collapse .btn-ghost {
+    padding: 0.625rem 0.75rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+}
+
+
 [data-theme="dark"] .card {
   background-color: var(--hi-bg-card);
   border-color: var(--hi-border) !important;
