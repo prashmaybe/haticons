@@ -473,6 +473,127 @@
         }
 
         // ---------------------------------------------------------
+        // 5b. Reference Page Left Nav Category Controller & Scrollspy
+        // ---------------------------------------------------------
+        var refNavLinks = document.querySelectorAll('#referenceCategoryNav .nav-link, .reference-category-nav .nav-link');
+        var refCatBlocks = document.querySelectorAll('.category-reference-block');
+        var updateRefScrollspy = null;
+
+        if (refNavLinks.length > 0 && refCatBlocks.length > 0) {
+            var isNavClickScrolling = false;
+            var navClickTimer = null;
+
+            function setActiveRefCategory(targetId) {
+                if (!targetId) return;
+                var cleanId = targetId.replace(/^#/, '');
+
+                refNavLinks.forEach(function (link) {
+                    var href = link.getAttribute('href') || '';
+                    var linkTarget = href.replace(/^#/, '');
+                    var badge = link.querySelector('.badge');
+
+                    if (linkTarget === cleanId) {
+                        link.classList.add('active');
+                        link.classList.remove('text-muted');
+                        if (badge) {
+                            badge.classList.remove('bg-light', 'text-muted');
+                            badge.classList.add('bg-primary-soft', 'text-primary');
+                        }
+                    } else {
+                        link.classList.remove('active');
+                        link.classList.add('text-muted');
+                        if (badge) {
+                            badge.classList.add('bg-light', 'text-muted');
+                            badge.classList.remove('bg-primary-soft', 'text-primary');
+                        }
+                    }
+                });
+            }
+
+            // Click handling: keep selected category nav item active & scroll into view
+            refNavLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var href = this.getAttribute('href');
+                    if (!href || href.charAt(0) !== '#') return;
+                    var targetId = href.substring(1);
+                    var targetBlock = document.getElementById(targetId);
+                    if (!targetBlock) return;
+
+                    e.preventDefault();
+                    setActiveRefCategory(targetId);
+
+                    isNavClickScrolling = true;
+                    clearTimeout(navClickTimer);
+                    navClickTimer = setTimeout(function () {
+                        isNavClickScrolling = false;
+                    }, 800);
+
+                    var headerOffset = 95;
+                    var elementTop = targetBlock.getBoundingClientRect().top;
+                    var targetScrollTop = elementTop + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: Math.max(0, targetScrollTop),
+                        behavior: 'smooth'
+                    });
+
+                    if (window.history && window.history.pushState) {
+                        window.history.pushState(null, null, href);
+                    } else {
+                        window.location.hash = href;
+                    }
+                });
+            });
+
+            // Scrollspy handling: update active category on scroll
+            updateRefScrollspy = function () {
+                if (isNavClickScrolling) return;
+
+                var visibleBlocks = [];
+                refCatBlocks.forEach(function (block) {
+                    if (!block.classList.contains('d-none') && block.offsetParent !== null) {
+                        visibleBlocks.push(block);
+                    }
+                });
+
+                if (visibleBlocks.length === 0) return;
+
+                var scrollPos = window.scrollY + 140;
+                var isBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
+                var activeId = '';
+
+                if (isBottom) {
+                    activeId = visibleBlocks[visibleBlocks.length - 1].getAttribute('id');
+                } else if (scrollPos < visibleBlocks[0].offsetTop) {
+                    activeId = visibleBlocks[0].getAttribute('id');
+                } else {
+                    for (var i = 0; i < visibleBlocks.length; i++) {
+                        var block = visibleBlocks[i];
+                        var top = block.offsetTop;
+                        var height = block.offsetHeight;
+                        if (scrollPos >= top && scrollPos < top + height) {
+                            activeId = block.getAttribute('id');
+                            break;
+                        }
+                    }
+                }
+
+                if (activeId) {
+                    setActiveRefCategory(activeId);
+                }
+            };
+
+            window.addEventListener('scroll', updateRefScrollspy, { passive: true });
+
+            // Initialize active item on load based on hash or initial position
+            if (window.location.hash && document.querySelector(window.location.hash)) {
+                setActiveRefCategory(window.location.hash);
+            } else {
+                updateRefScrollspy();
+            }
+        }
+
+        // ---------------------------------------------------------
         // 6. Live Search on Reference Page
         // ---------------------------------------------------------
         var refSearchInput = document.getElementById('referenceSearchInput');
@@ -507,10 +628,15 @@
                     });
 
                     // Hide the category header block if no icons match in that category
+                    var blockId = block.getAttribute('id');
+                    var navLink = document.querySelector('#referenceCategoryNav a[href="#' + blockId + '"], .reference-category-nav a[href="#' + blockId + '"]');
+
                     if (blockVisible === 0 && query) {
                         block.classList.add('d-none');
+                        if (navLink) navLink.classList.add('d-none');
                     } else {
                         block.classList.remove('d-none');
+                        if (navLink) navLink.classList.remove('d-none');
                     }
                 });
 
@@ -518,6 +644,10 @@
                 if (refNoResults) {
                     if (totalVisible === 0) refNoResults.classList.remove('d-none');
                     else refNoResults.classList.add('d-none');
+                }
+
+                if (typeof updateRefScrollspy === 'function') {
+                    updateRefScrollspy();
                 }
             }
 

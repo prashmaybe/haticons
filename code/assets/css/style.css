@@ -1024,6 +1024,53 @@ body {
   border-radius: 0 4px 4px 0 !important;
 }
 
+/* Active state for Reference Page Category Navigation */
+.category-reference-block {
+  scroll-margin-top: 100px;
+}
+
+.reference-category-nav .nav-link {
+  transition: all 0.15s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.reference-category-nav .nav-link:hover {
+  color: var(--hi-primary) !important;
+  background-color: var(--hi-primary-soft);
+}
+
+.reference-category-nav .nav-link.active {
+  color: var(--hi-primary) !important;
+  background-color: var(--hi-primary-soft) !important;
+  font-weight: 600;
+  border-left: 3px solid var(--hi-primary);
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.reference-category-nav .nav-link.active .badge {
+  background-color: var(--hi-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--hi-primary) !important;
+}
+
+[data-theme="dark"] .reference-category-nav .nav-link:hover {
+  color: #c4b5fd !important;
+  background-color: rgba(124, 58, 237, 0.15);
+}
+
+[data-theme="dark"] .reference-category-nav .nav-link.active {
+  color: #c4b5fd !important;
+  background-color: rgba(124, 58, 237, 0.22) !important;
+  border-left: 3px solid var(--hi-primary);
+}
+
+[data-theme="dark"] .reference-category-nav .nav-link.active .badge {
+  background-color: var(--hi-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--hi-primary) !important;
+}
+
 /* Callout Note Box */
 .tutorial-callout {
   border-left: 4px solid var(--hi-primary);

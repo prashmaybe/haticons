@@ -111,12 +111,14 @@ Object.keys(categories).sort().forEach(catKey => {
 });
 
 let categoryNavLinks = '';
-Object.keys(categories).sort().forEach(catKey => {
+const sortedCatKeys = Object.keys(categories).sort();
+sortedCatKeys.forEach((catKey, idx) => {
     const meta = categories[catKey];
     const list = catGroups[catKey] || [];
-    categoryNavLinks += `<a class="nav-link text-muted py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}">
+    const isFirst = idx === 0;
+    categoryNavLinks += `<a class="nav-link ${isFirst ? 'active' : 'text-muted'} py-05 px-1 rounded hover-bg-light d-flex justify-content-between align-items-center" href="#cat-${catKey}" data-category="${catKey}">
     <span>${meta.name}</span>
-    <span class="badge bg-light text-muted border rounded-pill">${list.length}</span>
+    <span class="badge ${isFirst ? 'bg-primary-soft text-primary' : 'bg-light text-muted'} border rounded-pill">${list.length}</span>
   </a>`;
 });
 
@@ -197,7 +199,7 @@ ${getNavbar('reference')}
                 <div class="sticky-top sticky-top-nav">
                     <div class="card p-1 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-1 px-1">Categories (${Object.keys(categories).length})</div>
-                        <nav class="nav flex-column gap-0.5 text-sm">
+                        <nav class="nav flex-column gap-0.5 text-sm reference-category-nav" id="referenceCategoryNav">
                             ${categoryNavLinks}
                         </nav>
                         <hr class="my-2">
