@@ -44,6 +44,10 @@
   opacity: 0.85;
 }
 
+.hi-xs {
+  font-size: 0.75em;
+}
+
 .hi-sm {
   font-size: 0.875em;
 }
@@ -81,6 +85,31 @@
 .hi-fw {
   text-align: center;
   width: 1.25em;
+  display: inline-block;
+}
+
+.hi-rotate-90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.hi-rotate-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.hi-rotate-270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+
+.hi-flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.hi-flip-vertical {
+  transform: scaleY(-1);
   display: inline-block;
 }
 
@@ -250,7 +279,15 @@
 .hi-drive:before,
 .hi-drive-fill:before,
 .hi-drive-outline:before,
-.hi-drive-sharp:before {
+.hi-drive-sharp:before,
+.hi-gdrive:before,
+.hi-gdrive-fill:before,
+.hi-gdrive-outline:before,
+.hi-gdrive-sharp:before,
+.hi-google-drive:before,
+.hi-google-drive-fill:before,
+.hi-google-drive-outline:before,
+.hi-google-drive-sharp:before {
   content: "\f018";
 }
 
@@ -355,7 +392,11 @@
 .hi-azurepipelines:before,
 .hi-azurepipelines-fill:before,
 .hi-azurepipelines-outline:before,
-.hi-azurepipelines-sharp:before {
+.hi-azurepipelines-sharp:before,
+.hi-azure:before,
+.hi-azure-fill:before,
+.hi-azure-outline:before,
+.hi-azure-sharp:before {
   content: "\f02c";
 }
 
@@ -569,7 +610,11 @@
 .hi-youtube-play:before,
 .hi-youtube-play-fill:before,
 .hi-youtube-play-outline:before,
-.hi-youtube-play-sharp:before {
+.hi-youtube-play-sharp:before,
+.hi-youtube:before,
+.hi-youtube-fill:before,
+.hi-youtube-outline:before,
+.hi-youtube-sharp:before {
   content: "\f053";
 }
 
@@ -709,7 +754,11 @@
 .hi-play-station:before,
 .hi-play-station-fill:before,
 .hi-play-station-outline:before,
-.hi-play-station-sharp:before {
+.hi-play-station-sharp:before,
+.hi-playstation:before,
+.hi-playstation-fill:before,
+.hi-playstation-outline:before,
+.hi-playstation-sharp:before {
   content: "\f080";
 }
 
@@ -881,7 +930,15 @@
 .hi-visualstudiocode:before,
 .hi-visualstudiocode-fill:before,
 .hi-visualstudiocode-outline:before,
-.hi-visualstudiocode-sharp:before {
+.hi-visualstudiocode-sharp:before,
+.hi-vscode:before,
+.hi-vscode-fill:before,
+.hi-vscode-outline:before,
+.hi-vscode-sharp:before,
+.hi-vs-code:before,
+.hi-vs-code-fill:before,
+.hi-vs-code-outline:before,
+.hi-vs-code-sharp:before {
   content: "\f0a6";
 }
 
@@ -895,14 +952,22 @@
 .hi-vlcmediaplayer:before,
 .hi-vlcmediaplayer-fill:before,
 .hi-vlcmediaplayer-outline:before,
-.hi-vlcmediaplayer-sharp:before {
+.hi-vlcmediaplayer-sharp:before,
+.hi-vlc:before,
+.hi-vlc-fill:before,
+.hi-vlc-outline:before,
+.hi-vlc-sharp:before {
   content: "\f0a8";
 }
 
 .hi-vue-js:before,
 .hi-vue-js-fill:before,
 .hi-vue-js-outline:before,
-.hi-vue-js-sharp:before {
+.hi-vue-js-sharp:before,
+.hi-vue:before,
+.hi-vue-fill:before,
+.hi-vue-outline:before,
+.hi-vue-sharp:before {
   content: "\f0a9";
 }
 
@@ -1434,7 +1499,15 @@
 .hi-internetexplorer:before,
 .hi-internetexplorer-fill:before,
 .hi-internetexplorer-outline:before,
-.hi-internetexplorer-sharp:before {
+.hi-internetexplorer-sharp:before,
+.hi-ie:before,
+.hi-ie-fill:before,
+.hi-ie-outline:before,
+.hi-ie-sharp:before,
+.hi-internet-explorer:before,
+.hi-internet-explorer-fill:before,
+.hi-internet-explorer-outline:before,
+.hi-internet-explorer-sharp:before {
   content: "\f153";
 }
 
@@ -1455,7 +1528,11 @@
 .hi-javascript:before,
 .hi-javascript-fill:before,
 .hi-javascript-outline:before,
-.hi-javascript-sharp:before {
+.hi-javascript-sharp:before,
+.hi-js:before,
+.hi-js-fill:before,
+.hi-js-outline:before,
+.hi-js-sharp:before {
   content: "\f156";
 }
 
@@ -1679,7 +1756,11 @@
 .hi-python:before,
 .hi-python-fill:before,
 .hi-python-outline:before,
-.hi-python-sharp:before {
+.hi-python-sharp:before,
+.hi-py:before,
+.hi-py-fill:before,
+.hi-py-outline:before,
+.hi-py-sharp:before {
   content: "\f177";
 }
 
@@ -1721,7 +1802,11 @@
 .hi-ruby:before,
 .hi-ruby-fill:before,
 .hi-ruby-outline:before,
-.hi-ruby-sharp:before {
+.hi-ruby-sharp:before,
+.hi-rb:before,
+.hi-rb-fill:before,
+.hi-rb-outline:before,
+.hi-rb-sharp:before {
   content: "\f17d";
 }
 
@@ -1931,7 +2016,11 @@
 .hi-typescript:before,
 .hi-typescript-fill:before,
 .hi-typescript-outline:before,
-.hi-typescript-sharp:before {
+.hi-typescript-sharp:before,
+.hi-ts:before,
+.hi-ts-fill:before,
+.hi-ts-outline:before,
+.hi-ts-sharp:before {
   content: "\f19c";
 }
 
@@ -2578,7 +2667,15 @@
 .hi-credit-card:before,
 .hi-credit-card-fill:before,
 .hi-credit-card-outline:before,
-.hi-credit-card-sharp:before {
+.hi-credit-card-sharp:before,
+.hi-card:before,
+.hi-card-fill:before,
+.hi-card-outline:before,
+.hi-card-sharp:before,
+.hi-creditcard:before,
+.hi-creditcard-fill:before,
+.hi-creditcard-outline:before,
+.hi-creditcard-sharp:before {
   content: "\e925";
 }
 
@@ -2678,14 +2775,22 @@
 .hi-envelope:before,
 .hi-envelope-fill:before,
 .hi-envelope-outline:before,
-.hi-envelope-sharp:before {
+.hi-envelope-sharp:before,
+.hi-email:before,
+.hi-email-fill:before,
+.hi-email-outline:before,
+.hi-email-sharp:before {
   content: "\e930";
 }
 
 .hi-paper-plane:before,
 .hi-paper-plane-fill:before,
 .hi-paper-plane-outline:before,
-.hi-paper-plane-sharp:before {
+.hi-paper-plane-sharp:before,
+.hi-send:before,
+.hi-send-fill:before,
+.hi-send-outline:before,
+.hi-send-sharp:before {
   content: "\e957";
 }
 
@@ -3098,7 +3203,15 @@
 .hi-close:before,
 .hi-close-fill:before,
 .hi-close-outline:before,
-.hi-close-sharp:before {
+.hi-close-sharp:before,
+.hi-times:before,
+.hi-times-fill:before,
+.hi-times-outline:before,
+.hi-times-sharp:before,
+.hi-x-mark:before,
+.hi-x-mark-fill:before,
+.hi-x-mark-outline:before,
+.hi-x-mark-sharp:before {
   content: "\f102";
 }
 
@@ -3137,7 +3250,11 @@
 .hi-bell:before,
 .hi-bell-fill:before,
 .hi-bell-outline:before,
-.hi-bell-sharp:before {
+.hi-bell-sharp:before,
+.hi-notification:before,
+.hi-notification-fill:before,
+.hi-notification-outline:before,
+.hi-notification-sharp:before {
   content: "\e912";
 }
 
@@ -3151,7 +3268,15 @@
 .hi-check:before,
 .hi-check-fill:before,
 .hi-check-outline:before,
-.hi-check-sharp:before {
+.hi-check-sharp:before,
+.hi-check-mark:before,
+.hi-check-mark-fill:before,
+.hi-check-mark-outline:before,
+.hi-check-mark-sharp:before,
+.hi-checkmark:before,
+.hi-checkmark-fill:before,
+.hi-checkmark-outline:before,
+.hi-checkmark-sharp:before {
   content: "\e91c";
 }
 
@@ -3186,7 +3311,11 @@
 .hi-info:before,
 .hi-info-fill:before,
 .hi-info-outline:before,
-.hi-info-sharp:before {
+.hi-info-sharp:before,
+.hi-info-circle:before,
+.hi-info-circle-fill:before,
+.hi-info-circle-outline:before,
+.hi-info-circle-sharp:before {
   content: "\e945";
 }
 
@@ -3200,14 +3329,22 @@
 .hi-question-circle:before,
 .hi-question-circle-fill:before,
 .hi-question-circle-outline:before,
-.hi-question-circle-sharp:before {
+.hi-question-circle-sharp:before,
+.hi-help-circle:before,
+.hi-help-circle-fill:before,
+.hi-help-circle-outline:before,
+.hi-help-circle-sharp:before {
   content: "\e963";
 }
 
 .hi-warning-o:before,
 .hi-warning-o-fill:before,
 .hi-warning-o-outline:before,
-.hi-warning-o-sharp:before {
+.hi-warning-o-sharp:before,
+.hi-warning-circle:before,
+.hi-warning-circle-fill:before,
+.hi-warning-circle-outline:before,
+.hi-warning-circle-sharp:before {
   content: "\e982";
 }
 
@@ -3885,7 +4022,11 @@
 .hi-search:before,
 .hi-search-fill:before,
 .hi-search-outline:before,
-.hi-search-sharp:before {
+.hi-search-sharp:before,
+.hi-find:before,
+.hi-find-fill:before,
+.hi-find-outline:before,
+.hi-find-sharp:before {
   content: "\e96a";
 }
 
@@ -3906,7 +4047,11 @@
 .hi-star-o:before,
 .hi-star-o-fill:before,
 .hi-star-o-outline:before,
-.hi-star-o-sharp:before {
+.hi-star-o-sharp:before,
+.hi-star-outline:before,
+.hi-star-outline-fill:before,
+.hi-star-outline-outline:before,
+.hi-star-outline-sharp:before {
   content: "\e970";
 }
 
@@ -3941,7 +4086,19 @@
 .hi-trash:before,
 .hi-trash-fill:before,
 .hi-trash-outline:before,
-.hi-trash-sharp:before {
+.hi-trash-sharp:before,
+.hi-trash-can:before,
+.hi-trash-can-fill:before,
+.hi-trash-can-outline:before,
+.hi-trash-can-sharp:before,
+.hi-delete:before,
+.hi-delete-fill:before,
+.hi-delete-outline:before,
+.hi-delete-sharp:before,
+.hi-remove:before,
+.hi-remove-fill:before,
+.hi-remove-outline:before,
+.hi-remove-sharp:before {
   content: "\e977";
 }
 

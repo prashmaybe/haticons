@@ -548,7 +548,11 @@
 .hi-search:before,
 .hi-search-fill:before,
 .hi-search-outline:before,
-.hi-search-sharp:before {
+.hi-search-sharp:before,
+.hi-find:before,
+.hi-find-fill:before,
+.hi-find-outline:before,
+.hi-find-sharp:before {
   content: "\e96a";
 }
 
@@ -569,7 +573,11 @@
 .hi-star-o:before,
 .hi-star-o-fill:before,
 .hi-star-o-outline:before,
-.hi-star-o-sharp:before {
+.hi-star-o-sharp:before,
+.hi-star-outline:before,
+.hi-star-outline-fill:before,
+.hi-star-outline-outline:before,
+.hi-star-outline-sharp:before {
   content: "\e970";
 }
 
@@ -604,7 +612,19 @@
 .hi-trash:before,
 .hi-trash-fill:before,
 .hi-trash-outline:before,
-.hi-trash-sharp:before {
+.hi-trash-sharp:before,
+.hi-trash-can:before,
+.hi-trash-can-fill:before,
+.hi-trash-can-outline:before,
+.hi-trash-can-sharp:before,
+.hi-delete:before,
+.hi-delete-fill:before,
+.hi-delete-outline:before,
+.hi-delete-sharp:before,
+.hi-remove:before,
+.hi-remove-fill:before,
+.hi-remove-outline:before,
+.hi-remove-sharp:before {
   content: "\e977";
 }
 

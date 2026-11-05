@@ -223,6 +223,20 @@ ${getNavbar('other')}
             </div>
         </div>
 
+        <!-- Font & Asset Embedding Exception -->
+        <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
+            <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
+                <i class="hi-shield text-success"></i>
+                <span>Font &amp; Asset Embedding Exception (Commercial &amp; Proprietary Safe)</span>
+            </h2>
+            <p class="text-muted text-xs mb-2">
+                Embedding Haticons webfonts (<code>.woff2</code>, <code>.woff</code>, <code>.ttf</code>), SVGs, or precompiled React and Vue components into commercial, proprietary, or closed-source web, mobile, and desktop applications does <strong>not</strong> trigger GPL-3.0 copyleft obligations on your host application or proprietary source code.
+            </p>
+            <div class="p-3 bg-light rounded-3 text-xs font-monospace text-dark border">
+                As a special exception, if you create a document, web application, mobile application (iOS, Android, React Native, Flutter), desktop application (Electron, Tauri), or digital artwork which uses this font or its compiled vector assets, and embed this font or compiled vector assets into the resulting application, bundle, or document, this font and vector assets do not by themselves cause the resulting application, document, or host source code to be covered by the GNU General Public License.
+            </div>
+        </div>
+
         <!-- Third-Party Trademarks & Brand Icons Notice -->
         <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
             <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
@@ -230,7 +244,7 @@ ${getNavbar('other')}
                 <span>Brand Icons &amp; Third-Party Trademarks</span>
             </h2>
             <p class="text-muted text-xs mb-0">
-                All third-party company, product, and service brand logos included in the <code>brands</code> category (e.g. Apple, Google, GitHub, Twitter, Favro, etc.) are trademarks or registered trademarks of their respective owners. Their inclusion in Haticons does not constitute or imply any affiliation, sponsorship, or endorsement. The GNU General Public License applies to the Haticons font library engine, build tooling, and original vector paths. When embedding brand logos, you are responsible for complying with the respective trademark owner's brand asset and usage guidelines.
+                All third-party company, product, and service brand logos included in the <code>brands</code> category (e.g. Apple, Google, GitHub, Twitter/X, Cursor, Trae, Antigravity, Boodoo, Claude, etc.) are trademarks or registered trademarks of their respective owners. Their inclusion in Haticons does not constitute or imply any affiliation, sponsorship, or endorsement. The GNU General Public License applies to the Haticons font library engine, build tooling, and original vector paths. When embedding brand logos, you are responsible for complying with the respective trademark owner's brand asset and usage guidelines. For a complete audited category inventory, see the <a href="https://github.com/prashmaybe/haticons/blob/release/1.0.2/PROVENANCE.md" target="_blank" rel="noopener" class="text-primary fw-medium">Asset Provenance Manifest</a>.
             </p>
         </div>
 

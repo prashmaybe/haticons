@@ -672,3 +672,41 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+
+======================================================================
+HATICONS FONT & ASSET EMBEDDING EXCEPTION
+======================================================================
+
+As a special exception, if you create a document, web application, mobile
+application (iOS, Android, React Native, Flutter), desktop application
+(Electron, Tauri), or digital artwork which uses this font or its compiled
+vector assets (including SVG, TTF, WOFF, WOFF2, EOT, JSON paths, or framework
+component wrappers such as React or Vue components), and embed this font or
+compiled vector assets into the resulting application, bundle, or document,
+this font and vector assets do not by themselves cause the resulting
+application, document, or host source code to be covered by the GNU General
+Public License.
+
+This exception does not however invalidate any other reasons why the document
+or executable work might be covered by the GNU General Public License.
+If you modify this font or its underlying vector glyph sources, you may extend
+this exception to your version of the font, but you are not obligated to do so.
+If you do not wish to do so, delete this exception statement from your version.
+
+
+======================================================================
+THIRD-PARTY BRAND & TRADEMARK ASSET NOTICE
+======================================================================
+
+Icons in the "brands" category represent third-party trademarks, company
+logos, and software products (e.g. Apple, Google, Microsoft, GitHub, React,
+Vue, OpenAI, Anthropic, Claude, Cursor, Trae, Antigravity, Boodoo, etc.).
+All product names, logos, and brands are property of their respective owners.
+All company, product, and service names used in this library are for
+identification and editorial purposes only. Use of these names, logos, and
+brands does not imply endorsement or affiliation.
+The GNU General Public License does not convey any trademark licenses for
+these third-party brand marks. You are responsible for ensuring that your
+use of any brand logo complies with each trademark owner's guidelines.
+See PROVENANCE.md for the complete asset provenance manifest.

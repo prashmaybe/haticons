@@ -96,7 +96,15 @@
 .hi-credit-card:before,
 .hi-credit-card-fill:before,
 .hi-credit-card-outline:before,
-.hi-credit-card-sharp:before {
+.hi-credit-card-sharp:before,
+.hi-card:before,
+.hi-card-fill:before,
+.hi-card-outline:before,
+.hi-card-sharp:before,
+.hi-creditcard:before,
+.hi-creditcard-fill:before,
+.hi-creditcard-outline:before,
+.hi-creditcard-sharp:before {
   content: "\e925";
 }
 

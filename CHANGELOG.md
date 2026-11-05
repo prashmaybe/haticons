@@ -7,48 +7,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.3] - 2026-10-29
+## [1.0.2] - 2026-11-05
 
 ### Added
-- **20 New AI & Developer Brand Icons**: Expanded library from 549 to 569 icons (+20 brand icons in the `brands` category):
-  - **Cursor** (`hi-cursor`, alias `cusror`): Cursor AI code editor icon.
-  - **Trae** (`hi-trae`): Trae adaptive AI IDE by ByteDance icon.
-  - **Antigravity** (`hi-antigravity`, aliases `antogravity`, `google-antigravity`, `googleantigravity`, `agy`): Google Antigravity agentic coding platform icon.
-  - **Boodoo** (`hi-boodoo`, aliases `boodooframework`, `boodoo-framework`): Boodoo Design Framework official emblem (https://boodooframework.com/).
-  - **Windsurf** (`hi-windsurf`, aliases `codeium`, `codeium-windsurf`): Codeium Windsurf AI IDE icon.
-  - **Claude** (`hi-claude`, aliases `claude-ai`, `claudecode`): Official Anthropic Claude AI starburst emblem.
-  - **Copilot** (`hi-copilot`, aliases `github-copilot`, `githubcopilot`): GitHub Copilot developer icon.
-  - **DeepSeek** (`hi-deepseek`, alias `deepseek-ai`): DeepSeek AI icon.
-  - **Ollama** (`hi-ollama`): Ollama local AI platform icon.
-  - **Perplexity** (`hi-perplexity`, alias `perplexity-ai`): Perplexity AI search icon.
-  - **Mistral** (`hi-mistral`, alias `mistral-ai`): Mistral AI iconic pixel cat emblem.
-  - **Groq** (`hi-groq`): Groq LPU high-speed AI inference icon.
-  - **Replit** (`hi-replit`): Replit development environment icon.
-  - **Hugging Face** (`hi-huggingface`, aliases `hugging-face`, `hf`): Hugging Face open-source AI icon.
-  - **v0** (`hi-v0`, alias `v0-dev`): Vercel v0 generative UI platform icon.
-  - **LangChain** (`hi-langchain`): LangChain AI orchestration framework icon.
-  - **Astro** (`hi-astro`): Astro web framework icon.
-  - **Prisma** (`hi-prisma`): Prisma modern ORM icon.
-  - **Resend** (`hi-resend`): Resend modern email API icon.
-  - **shadcn/ui** (`hi-shadcn`, aliases `shadcn-ui`, `shadcnui`): shadcn/ui UI component library icon.
-  - **Gemini Enhancements** (`hi-gemini`, aliases `google-gemini`, `googlegemini`): Added canonical aliases for Google Gemini.
-- **Framework Components**: Generated React (`HiCursor`, `HiTrae`, `HiAntigravity`, `HiBoodoo`, `HiWindsurf`, `HiClaude`, etc.) and Vue 3 components with complete TypeScript declarations.
-- **Font Assets**: Updated full webfont suite (TTF, WOFF, EOT, WOFF2) and individual tree-shakeable SVG & JS modules.
-
----
-
-## [1.0.2] - 2026-10-29
-
-### Added
-- **55 New Brand and Required Icons**: Expanded icon set from 494 to 549 icons (+55 icons across 8 categories):
-  - **Modern Brands, AI & Tech Stacks (36 new icons)**: Added `react`, `x-twitter` (with `x` and `twitter-x` aliases), `threads`, `discord`, `telegram`, `bluesky`, `openai` (`chatgpt`), `anthropic` (`claude`), `gemini`, `figma`, `canva`, `notion`, `linear`, `supabase`, `firebase`, `vercel`, `nextjs` (`next-js`), `tailwind` (`tailwindcss`), `svelte`, `bun`, `docker`, `kubernetes` (`k8s`), `stripe`, `zoom`, `signal`, `pinterest`, `patreon`, `postman`, `google-cloud` (`gcp`), `pnpm`, `vite`, `graphql`, `postgresql` (`postgres`), `mongodb` (`mongo`), `redis`, and `golang` (`go`).
+- **Rotation, Flip & Utility Transform Classes**: Added rotation helpers (`.hi-rotate-90`, `.hi-rotate-180`, `.hi-rotate-270`), directional flipping utilities (`.hi-flip-horizontal`, `.hi-flip-vertical`), and micro sizing modifier (`.hi-xs`) across LESS, SCSS, and compiled CSS bundles.
+- **High-Frequency Icon & Brand Canonical Aliases (103 Total Aliases)**:
+  - **Frameworks & Languages**: `vue` (`vue-js`), `js` (`javascript`), `ts` (`typescript`), `py` (`python`), `rb` (`ruby`), `vscode` / `vs-code` (`visualstudiocode`), `azure` (`azurepipelines`), `vlc` (`vlcmediaplayer`), `ie` / `internet-explorer` (`internetexplorer`), `playstation` (`play-station`), `youtube` (`youtube-play`), and `gdrive` / `google-drive` (`drive`).
+  - **UI Actions & Common Objects**: `email` (`envelope`), `send` (`paper-plane`), `notification` (`bell`), `trash-can` / `delete` / `remove` (`trash`), `card` / `creditcard` (`credit-card`), `find` (`search`), `times` / `x-mark` (`close`), `check-mark` / `checkmark` (`check`), `star-outline` (`star-o`), `warning-circle` (`warning-o`), `info-circle` (`info`), and `help-circle` (`question-circle`).
+- **75 New Icons Across 8 Categories (Total 569 Icons)**: Expanded library from 494 to 569 vector icons (+75 icons across categories):
+  - **20 AI & Developer Brand Icons**:
+    - **Cursor** (`hi-cursor`, alias `cusror`): Cursor AI code editor icon.
+    - **Trae** (`hi-trae`): Trae adaptive AI IDE by ByteDance icon.
+    - **Antigravity** (`hi-antigravity`, aliases `antogravity`, `google-antigravity`, `googleantigravity`, `agy`): Google Antigravity agentic coding platform icon.
+    - **Boodoo** (`hi-boodoo`, aliases `boodooframework`, `boodoo-framework`): Boodoo Design Framework official emblem (https://boodooframework.com/).
+    - **Windsurf** (`hi-windsurf`, aliases `codeium`, `codeium-windsurf`): Codeium Windsurf AI IDE icon.
+    - **Claude** (`hi-claude`, aliases `claude-ai`, `claudecode`): Anthropic Claude AI starburst emblem.
+    - **Copilot** (`hi-copilot`, aliases `github-copilot`, `githubcopilot`): GitHub Copilot developer icon.
+    - **DeepSeek** (`hi-deepseek`, alias `deepseek-ai`): DeepSeek AI icon.
+    - **Ollama** (`hi-ollama`): Ollama local AI platform icon.
+    - **Perplexity** (`hi-perplexity`, alias `perplexity-ai`): Perplexity AI search icon.
+    - **Mistral** (`hi-mistral`, alias `mistral-ai`): Mistral AI pixel cat emblem.
+    - **Groq** (`hi-groq`): Groq LPU high-speed AI inference icon.
+    - **Replit** (`hi-replit`): Replit development environment icon.
+    - **Hugging Face** (`hi-huggingface`, aliases `hugging-face`, `hf`): Hugging Face open-source AI icon.
+    - **v0** (`hi-v0`, alias `v0-dev`): Vercel v0 generative UI platform icon.
+    - **LangChain** (`hi-langchain`): LangChain AI orchestration framework icon.
+    - **Astro** (`hi-astro`): Astro web framework icon.
+    - **Prisma** (`hi-prisma`): Prisma modern ORM icon.
+    - **Resend** (`hi-resend`): Resend modern email API icon.
+    - **shadcn/ui** (`hi-shadcn`, aliases `shadcn-ui`, `shadcnui`): shadcn/ui UI component library icon.
+    - **Gemini Enhancements** (`hi-gemini`, aliases `google-gemini`, `googlegemini`): Added canonical aliases for Google Gemini.
+  - **Modern Brands, AI & Tech Stacks (36 icons)**: Added `react`, `x-twitter` (`x`, `twitter-x`), `threads`, `discord`, `telegram`, `bluesky`, `openai` (`chatgpt`), `anthropic` (`claude`), `gemini`, `figma`, `canva`, `notion`, `linear`, `supabase`, `firebase`, `vercel`, `nextjs` (`next-js`), `tailwind` (`tailwindcss`), `svelte`, `bun`, `docker`, `kubernetes` (`k8s`), `stripe`, `zoom`, `signal`, `pinterest`, `patreon`, `postman`, `google-cloud` (`gcp`), `pnpm`, `vite`, `graphql`, `postgresql` (`postgres`), `mongodb` (`mongo`), `redis`, and `golang` (`go`).
   - **Essential Media Controls**: Added `pause` and `stop` to complete the multimedia player set alongside `play`.
-  - **Modern UI & Theme Controls**: Added `moon` (with `dark-mode` alias) for night/dark theme switchers, `sparkles` (`ai`, `magic` aliases) for modern AI enhancements, `bolt` (`lightning`), and `globe` (`web`).
+  - **Modern UI & Theme Controls**: Added `moon` (`dark-mode` alias) for night/dark theme switchers, `sparkles` (`ai`, `magic` aliases) for AI enhancements, `bolt` (`lightning`), and `globe` (`web`).
   - **Developer, System & Hardware**: Added `code`, `terminal`, `database`, `cpu`, and `wifi`.
   - **Security & Commerce**: Added `shield`, `shield-check`, and `qrcode` (`qr-code`).
   - **Workflow & Productivity**: Added `copy` (clipboard companion to `paste`), `external-link`, `filter`, `history`, and `spinner` (`loading`).
-- **Automated Webfont Compilation**: Integrated build step that synchronizes and generates TTF, WOFF, EOT, and WOFF2 webfonts directly from SVG font sources.
-- **Convenient Modern Aliases**: Added aliases including `dark-mode`, `ai`, `magic`, `x`, `chatgpt`, `claude`, `arrow-up`, `arrow-down`, `chevron-up`, and `chevron-down`.
+- **Asset Provenance & Intellectual Property Manifest (`PROVENANCE.md`)**:
+  - Published comprehensive 3-tier IP manifest documenting all 14 categories, authorships, and commercial redistribution rights.
+  - Added **Font & Asset Embedding Exception** to `LICENSE`, guaranteeing that embedding Haticons webfonts, SVGs, or components in commercial and proprietary software does not subject the host application to GPL copyleft.
+  - Formulated clear Nominative Fair Use and Trademark Guidelines for all 313 brand logos.
+- **Dynamic `<Haticon />` Component for React & Vue 3**:
+  - Introduced generic `<Haticon name="search" size={24} />` component for both `haticons/react` and `haticons/vue` with full TypeScript definitions and alias resolution.
+  - Enhanced `HaticonsResolver` (`haticons/resolver`) with `{ framework: 'vue' | 'react' }` support for automated bundler component imports.
+- **Cross-Platform Support Matrix**:
+  - Documented first-class integration paths and code examples for Web, React, Vue, React Native (`react-native-svg`), iOS (SwiftUI/UIKit), Android (Compose/XML), Flutter, and Desktop.
+- **Automated Production Quality Gate & Testing**:
+  - Added `scripts/verify-release.js` test suite verifying all 569 icons, aliases, CSS font path resolution, CJS/ESM modules, framework components, and npm tarball contents.
+  - Added automated bundle size benchmarking (`scripts/bundle-size.js` and `BUNDLE_SIZE.md`).
+
+### Fixed
+- **Category CSS Font Path Resolution**: Corrected relative font URL path (`../../fonts/`) in all standalone category stylesheets (`dist/css/categories/*.css`), ensuring webfonts resolve correctly from category entry points.
+- **Category & Core Font Exception Alignment**: Clean build pipeline ensuring all 14 modular stylesheets share core font rules seamlessly without duplication.
+- **Updated Bundle Sizes & Benchmarks**: Synchronized latest Brotli and Gzip size metrics reflecting core transforms and canonical alias footprint across full webfont (100.24 KB raw) and minified CSS (75.40 KB raw, 12.16 KB gzip, 8.97 KB brotli).
+- **Release Synchronization**: Synchronized package version (1.0.2), README, CDN snippets, changelogs, and website documentation into lockstep.
 
 ---
 

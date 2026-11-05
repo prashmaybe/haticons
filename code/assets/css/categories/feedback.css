@@ -1,7 +1,7 @@
 @font-face {
   font-family: "haticons";
-  src: url("../fonts/haticons.eot?5zss7");
-  src: url("../fonts/haticons.eot?5zss7#iefix") format("embedded-opentype"), url("../fonts/haticons.woff2?5zss7") format("woff2"), url("../fonts/haticons.woff?5zss7") format("woff"), url("../fonts/haticons.ttf?5zss7") format("truetype"), url("../fonts/haticons.svg?5zss7#haticons") format("svg");
+  src: url("../../fonts/haticons.eot?5zss7");
+  src: url("../../fonts/haticons.eot?5zss7#iefix") format("embedded-opentype"), url("../../fonts/haticons.woff2?5zss7") format("woff2"), url("../../fonts/haticons.woff?5zss7") format("woff"), url("../../fonts/haticons.ttf?5zss7") format("truetype"), url("../../fonts/haticons.svg?5zss7#haticons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -44,6 +44,10 @@
   opacity: 0.85;
 }
 
+.hi-xs {
+  font-size: 0.75em;
+}
+
 .hi-sm {
   font-size: 0.875em;
 }
@@ -81,6 +85,31 @@
 .hi-fw {
   text-align: center;
   width: 1.25em;
+  display: inline-block;
+}
+
+.hi-rotate-90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.hi-rotate-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.hi-rotate-270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+
+.hi-flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.hi-flip-vertical {
+  transform: scaleY(-1);
   display: inline-block;
 }
 
@@ -181,7 +210,15 @@
 .hi-close:before,
 .hi-close-fill:before,
 .hi-close-outline:before,
-.hi-close-sharp:before {
+.hi-close-sharp:before,
+.hi-times:before,
+.hi-times-fill:before,
+.hi-times-outline:before,
+.hi-times-sharp:before,
+.hi-x-mark:before,
+.hi-x-mark-fill:before,
+.hi-x-mark-outline:before,
+.hi-x-mark-sharp:before {
   content: "\f102";
 }
 
@@ -220,7 +257,11 @@
 .hi-bell:before,
 .hi-bell-fill:before,
 .hi-bell-outline:before,
-.hi-bell-sharp:before {
+.hi-bell-sharp:before,
+.hi-notification:before,
+.hi-notification-fill:before,
+.hi-notification-outline:before,
+.hi-notification-sharp:before {
   content: "\e912";
 }
 
@@ -234,7 +275,15 @@
 .hi-check:before,
 .hi-check-fill:before,
 .hi-check-outline:before,
-.hi-check-sharp:before {
+.hi-check-sharp:before,
+.hi-check-mark:before,
+.hi-check-mark-fill:before,
+.hi-check-mark-outline:before,
+.hi-check-mark-sharp:before,
+.hi-checkmark:before,
+.hi-checkmark-fill:before,
+.hi-checkmark-outline:before,
+.hi-checkmark-sharp:before {
   content: "\e91c";
 }
 
@@ -269,7 +318,11 @@
 .hi-info:before,
 .hi-info-fill:before,
 .hi-info-outline:before,
-.hi-info-sharp:before {
+.hi-info-sharp:before,
+.hi-info-circle:before,
+.hi-info-circle-fill:before,
+.hi-info-circle-outline:before,
+.hi-info-circle-sharp:before {
   content: "\e945";
 }
 
@@ -283,14 +336,22 @@
 .hi-question-circle:before,
 .hi-question-circle-fill:before,
 .hi-question-circle-outline:before,
-.hi-question-circle-sharp:before {
+.hi-question-circle-sharp:before,
+.hi-help-circle:before,
+.hi-help-circle-fill:before,
+.hi-help-circle-outline:before,
+.hi-help-circle-sharp:before {
   content: "\e963";
 }
 
 .hi-warning-o:before,
 .hi-warning-o-fill:before,
 .hi-warning-o-outline:before,
-.hi-warning-o-sharp:before {
+.hi-warning-o-sharp:before,
+.hi-warning-circle:before,
+.hi-warning-circle-fill:before,
+.hi-warning-circle-outline:before,
+.hi-warning-circle-sharp:before {
   content: "\e982";
 }
 

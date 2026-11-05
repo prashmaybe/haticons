@@ -22,7 +22,15 @@
 .hi-close:before,
 .hi-close-fill:before,
 .hi-close-outline:before,
-.hi-close-sharp:before { content: "\f102"; }
+.hi-close-sharp:before,
+.hi-times:before,
+.hi-times-fill:before,
+.hi-times-outline:before,
+.hi-times-sharp:before,
+.hi-x-mark:before,
+.hi-x-mark-fill:before,
+.hi-x-mark-outline:before,
+.hi-x-mark-sharp:before { content: "\f102"; }
 .hi-checkbox-unchecked:before,
 .hi-checkbox-unchecked-fill:before,
 .hi-checkbox-unchecked-outline:before,
@@ -46,7 +54,11 @@
 .hi-bell:before,
 .hi-bell-fill:before,
 .hi-bell-outline:before,
-.hi-bell-sharp:before { content: "\e912"; }
+.hi-bell-sharp:before,
+.hi-notification:before,
+.hi-notification-fill:before,
+.hi-notification-outline:before,
+.hi-notification-sharp:before { content: "\e912"; }
 .hi-check-circle:before,
 .hi-check-circle-fill:before,
 .hi-check-circle-outline:before,
@@ -54,7 +66,15 @@
 .hi-check:before,
 .hi-check-fill:before,
 .hi-check-outline:before,
-.hi-check-sharp:before { content: "\e91c"; }
+.hi-check-sharp:before,
+.hi-check-mark:before,
+.hi-check-mark-fill:before,
+.hi-check-mark-outline:before,
+.hi-check-mark-sharp:before,
+.hi-checkmark:before,
+.hi-checkmark-fill:before,
+.hi-checkmark-outline:before,
+.hi-checkmark-sharp:before { content: "\e91c"; }
 .hi-checkbox:before,
 .hi-checkbox-fill:before,
 .hi-checkbox-outline:before,
@@ -74,7 +94,11 @@
 .hi-info:before,
 .hi-info-fill:before,
 .hi-info-outline:before,
-.hi-info-sharp:before { content: "\e945"; }
+.hi-info-sharp:before,
+.hi-info-circle:before,
+.hi-info-circle-fill:before,
+.hi-info-circle-outline:before,
+.hi-info-circle-sharp:before { content: "\e945"; }
 .hi-question-circle-big:before,
 .hi-question-circle-big-fill:before,
 .hi-question-circle-big-outline:before,
@@ -82,11 +106,19 @@
 .hi-question-circle:before,
 .hi-question-circle-fill:before,
 .hi-question-circle-outline:before,
-.hi-question-circle-sharp:before { content: "\e963"; }
+.hi-question-circle-sharp:before,
+.hi-help-circle:before,
+.hi-help-circle-fill:before,
+.hi-help-circle-outline:before,
+.hi-help-circle-sharp:before { content: "\e963"; }
 .hi-warning-o:before,
 .hi-warning-o-fill:before,
 .hi-warning-o-outline:before,
-.hi-warning-o-sharp:before { content: "\e982"; }
+.hi-warning-o-sharp:before,
+.hi-warning-circle:before,
+.hi-warning-circle-fill:before,
+.hi-warning-circle-outline:before,
+.hi-warning-circle-sharp:before { content: "\e982"; }
 .hi-warning:before,
 .hi-warning-fill:before,
 .hi-warning-outline:before,

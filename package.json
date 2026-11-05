@@ -1,6 +1,6 @@
 {
   "name": "haticons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of beautifully crafted, modular, lightweight web font and SVG icons for Web, iOS, Android, and Desktop apps. Inspired by Ionicons, FontAwesome, and Glyphicons.",
   "main": "index.js",
   "module": "index.mjs",
@@ -18,7 +18,9 @@
     "bin",
     "README.md",
     "CHANGELOG.md",
-    "LICENSE"
+    "LICENSE",
+    "PROVENANCE.md",
+    "BUNDLE_SIZE.md"
   ],
   "bin": {
     "haticons": "./bin/haticons.js"
@@ -78,15 +80,17 @@
     "./data/categories.json": "./dist/data/categories.json",
     "./scss/*": "./scss/*",
     "./less/*": "./less/*",
-    "./fonts/*": "./dist/fonts/*"
+    "./fonts/*": "./dist/fonts/*",
+    "./dist/*": "./dist/*"
   },
   "scripts": {
     "start": "node scripts/serve.js",
     "serve": "node scripts/serve.js",
     "build": "node scripts/build.js",
     "build:site": "node scripts/build-site.js",
-    "test": "node -e \"const h = require('./index.js'); const cart = require('./dist/icons/cart.js'); const snap = h.getIcon('snapchat'); const reactIcon = h.getIcon('react'); const xAlias = h.getIcon('x'); const cursor = h.getIcon('cursor'); const trae = h.getIcon('trae'); const anti = h.getIcon('antigravity'); const boodoo = h.getIcon('boodoo'); const windsurf = h.getIcon('windsurf'); const claude = h.getIcon('claude'); const gemini = h.getIcon('gemini'); const cusror = h.getIcon('cusror'); const antogravity = h.getIcon('antogravity'); console.log('Icons count (CJS):', h.icons.length, 'Verified Brands:', [cursor, trae, anti, boodoo, windsurf, claude, gemini, cusror, antogravity].every(Boolean)); if (h.icons.length !== 569 || cart.name !== 'cart' || !snap || snap.name !== 'spanchat' || !reactIcon || !xAlias || !cursor || !trae || !anti || !boodoo || !windsurf || !claude || !gemini || !cusror || !antogravity) process.exit(1);\" && node --input-type=module -e \"import { icons, getIcon } from './index.mjs'; import cart from './dist/icons/cart.mjs'; const cursor = getIcon('cursor'); const trae = getIcon('trae'); const anti = getIcon('antigravity'); const boodoo = getIcon('boodoo'); const windsurf = getIcon('windsurf'); const claude = getIcon('claude'); const gemini = getIcon('gemini'); console.log('Icons count (ESM):', icons.length, 'Verified ESM:', [cursor, trae, anti, boodoo, windsurf, claude, gemini].every(Boolean)); if (icons.length !== 569 || cart.name !== 'cart' || !cursor || !trae || !anti || !boodoo || !windsurf || !claude || !gemini) process.exit(1);\"",
-    "prepublishOnly": "npm run test && npm run build"
+    "build:size": "node scripts/bundle-size.js",
+    "test": "node scripts/verify-release.js",
+    "prepublishOnly": "npm run test && npm run build && npm run build:size"
   },
   "repository": {
     "type": "git",
@@ -118,13 +122,27 @@
   "bugs": {
     "url": "https://github.com/prashmaybe/haticons/issues"
   },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "less": "^4.9.1",
+    "react": "^19.3.1",
     "sass": "^1.106.1",
     "svg2ttf": "^6.1.0",
     "ttf2eot": "^3.1.0",
     "ttf2woff": "^3.0.0",
+    "vue": "^3.5.44",
     "woff2": "^1.0.0"
   }
 }
