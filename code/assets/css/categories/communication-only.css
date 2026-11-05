@@ -62,14 +62,22 @@
 .hi-envelope:before,
 .hi-envelope-fill:before,
 .hi-envelope-outline:before,
-.hi-envelope-sharp:before {
+.hi-envelope-sharp:before,
+.hi-email:before,
+.hi-email-fill:before,
+.hi-email-outline:before,
+.hi-email-sharp:before {
   content: "\e930";
 }
 
 .hi-paper-plane:before,
 .hi-paper-plane-fill:before,
 .hi-paper-plane-outline:before,
-.hi-paper-plane-sharp:before {
+.hi-paper-plane-sharp:before,
+.hi-send:before,
+.hi-send-fill:before,
+.hi-send-outline:before,
+.hi-send-sharp:before {
   content: "\e957";
 }
 

@@ -44,6 +44,10 @@
   opacity: 0.85;
 }
 
+.hi-xs {
+  font-size: 0.75em;
+}
+
 .hi-sm {
   font-size: 0.875em;
 }
@@ -81,6 +85,31 @@
 .hi-fw {
   text-align: center;
   width: 1.25em;
+  display: inline-block;
+}
+
+.hi-rotate-90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.hi-rotate-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.hi-rotate-270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+
+.hi-flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.hi-flip-vertical {
+  transform: scaleY(-1);
   display: inline-block;
 }
 
@@ -213,14 +242,22 @@
 .hi-envelope:before,
 .hi-envelope-fill:before,
 .hi-envelope-outline:before,
-.hi-envelope-sharp:before {
+.hi-envelope-sharp:before,
+.hi-email:before,
+.hi-email-fill:before,
+.hi-email-outline:before,
+.hi-email-sharp:before {
   content: "\e930";
 }
 
 .hi-paper-plane:before,
 .hi-paper-plane-fill:before,
 .hi-paper-plane-outline:before,
-.hi-paper-plane-sharp:before {
+.hi-paper-plane-sharp:before,
+.hi-send:before,
+.hi-send-fill:before,
+.hi-send-outline:before,
+.hi-send-sharp:before {
   content: "\e957";
 }
 

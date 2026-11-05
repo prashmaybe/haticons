@@ -44,6 +44,10 @@
   opacity: 0.85;
 }
 
+.hi-xs {
+  font-size: 0.75em;
+}
+
 .hi-sm {
   font-size: 0.875em;
 }
@@ -81,6 +85,31 @@
 .hi-fw {
   text-align: center;
   width: 1.25em;
+  display: inline-block;
+}
+
+.hi-rotate-90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.hi-rotate-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.hi-rotate-270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+
+.hi-flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.hi-flip-vertical {
+  transform: scaleY(-1);
   display: inline-block;
 }
 
@@ -250,7 +279,15 @@
 .hi-drive:before,
 .hi-drive-fill:before,
 .hi-drive-outline:before,
-.hi-drive-sharp:before {
+.hi-drive-sharp:before,
+.hi-gdrive:before,
+.hi-gdrive-fill:before,
+.hi-gdrive-outline:before,
+.hi-gdrive-sharp:before,
+.hi-google-drive:before,
+.hi-google-drive-fill:before,
+.hi-google-drive-outline:before,
+.hi-google-drive-sharp:before {
   content: "\f018";
 }
 
@@ -355,7 +392,11 @@
 .hi-azurepipelines:before,
 .hi-azurepipelines-fill:before,
 .hi-azurepipelines-outline:before,
-.hi-azurepipelines-sharp:before {
+.hi-azurepipelines-sharp:before,
+.hi-azure:before,
+.hi-azure-fill:before,
+.hi-azure-outline:before,
+.hi-azure-sharp:before {
   content: "\f02c";
 }
 
@@ -569,7 +610,11 @@
 .hi-youtube-play:before,
 .hi-youtube-play-fill:before,
 .hi-youtube-play-outline:before,
-.hi-youtube-play-sharp:before {
+.hi-youtube-play-sharp:before,
+.hi-youtube:before,
+.hi-youtube-fill:before,
+.hi-youtube-outline:before,
+.hi-youtube-sharp:before {
   content: "\f053";
 }
 
@@ -709,7 +754,11 @@
 .hi-play-station:before,
 .hi-play-station-fill:before,
 .hi-play-station-outline:before,
-.hi-play-station-sharp:before {
+.hi-play-station-sharp:before,
+.hi-playstation:before,
+.hi-playstation-fill:before,
+.hi-playstation-outline:before,
+.hi-playstation-sharp:before {
   content: "\f080";
 }
 
@@ -881,7 +930,15 @@
 .hi-visualstudiocode:before,
 .hi-visualstudiocode-fill:before,
 .hi-visualstudiocode-outline:before,
-.hi-visualstudiocode-sharp:before {
+.hi-visualstudiocode-sharp:before,
+.hi-vscode:before,
+.hi-vscode-fill:before,
+.hi-vscode-outline:before,
+.hi-vscode-sharp:before,
+.hi-vs-code:before,
+.hi-vs-code-fill:before,
+.hi-vs-code-outline:before,
+.hi-vs-code-sharp:before {
   content: "\f0a6";
 }
 
@@ -895,14 +952,22 @@
 .hi-vlcmediaplayer:before,
 .hi-vlcmediaplayer-fill:before,
 .hi-vlcmediaplayer-outline:before,
-.hi-vlcmediaplayer-sharp:before {
+.hi-vlcmediaplayer-sharp:before,
+.hi-vlc:before,
+.hi-vlc-fill:before,
+.hi-vlc-outline:before,
+.hi-vlc-sharp:before {
   content: "\f0a8";
 }
 
 .hi-vue-js:before,
 .hi-vue-js-fill:before,
 .hi-vue-js-outline:before,
-.hi-vue-js-sharp:before {
+.hi-vue-js-sharp:before,
+.hi-vue:before,
+.hi-vue-fill:before,
+.hi-vue-outline:before,
+.hi-vue-sharp:before {
   content: "\f0a9";
 }
 
@@ -1434,7 +1499,15 @@
 .hi-internetexplorer:before,
 .hi-internetexplorer-fill:before,
 .hi-internetexplorer-outline:before,
-.hi-internetexplorer-sharp:before {
+.hi-internetexplorer-sharp:before,
+.hi-ie:before,
+.hi-ie-fill:before,
+.hi-ie-outline:before,
+.hi-ie-sharp:before,
+.hi-internet-explorer:before,
+.hi-internet-explorer-fill:before,
+.hi-internet-explorer-outline:before,
+.hi-internet-explorer-sharp:before {
   content: "\f153";
 }
 
@@ -1455,7 +1528,11 @@
 .hi-javascript:before,
 .hi-javascript-fill:before,
 .hi-javascript-outline:before,
-.hi-javascript-sharp:before {
+.hi-javascript-sharp:before,
+.hi-js:before,
+.hi-js-fill:before,
+.hi-js-outline:before,
+.hi-js-sharp:before {
   content: "\f156";
 }
 
@@ -1679,7 +1756,11 @@
 .hi-python:before,
 .hi-python-fill:before,
 .hi-python-outline:before,
-.hi-python-sharp:before {
+.hi-python-sharp:before,
+.hi-py:before,
+.hi-py-fill:before,
+.hi-py-outline:before,
+.hi-py-sharp:before {
   content: "\f177";
 }
 
@@ -1721,7 +1802,11 @@
 .hi-ruby:before,
 .hi-ruby-fill:before,
 .hi-ruby-outline:before,
-.hi-ruby-sharp:before {
+.hi-ruby-sharp:before,
+.hi-rb:before,
+.hi-rb-fill:before,
+.hi-rb-outline:before,
+.hi-rb-sharp:before {
   content: "\f17d";
 }
 
@@ -1931,7 +2016,11 @@
 .hi-typescript:before,
 .hi-typescript-fill:before,
 .hi-typescript-outline:before,
-.hi-typescript-sharp:before {
+.hi-typescript-sharp:before,
+.hi-ts:before,
+.hi-ts-fill:before,
+.hi-ts-outline:before,
+.hi-ts-sharp:before {
   content: "\f19c";
 }
 

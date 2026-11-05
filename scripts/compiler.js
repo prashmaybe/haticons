@@ -67,6 +67,7 @@ $hi-prefix: "hi-" !default;
 }
 
 // Optional utility sizing & transforms
+.#{$hi-prefix}xs { font-size: 0.75em; }
 .#{$hi-prefix}sm { font-size: 0.875em; }
 .#{$hi-prefix}md { font-size: 1.15em; }
 .#{$hi-prefix}lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -0.0667em; }
@@ -76,6 +77,28 @@ $hi-prefix: "hi-" !default;
 .#{$hi-prefix}4x { font-size: 4em; }
 .#{$hi-prefix}5x { font-size: 5em; }
 .#{$hi-prefix}fw { text-align: center; width: 1.25em; display: inline-block; }
+
+// Rotation & Flip Transformations
+.#{$hi-prefix}rotate-90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+.#{$hi-prefix}rotate-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+.#{$hi-prefix}rotate-270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+.#{$hi-prefix}flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+.#{$hi-prefix}flip-vertical {
+  transform: scaleY(-1);
+  display: inline-block;
+}
 
 // Animation Micro-interactions
 .#{$hi-prefix}spin {
@@ -229,6 +252,7 @@ function generateLessFiles({ ROOT_DIR, LESS_DIR, LESS_CATEGORIES, categorized, c
 }
 
 // Optional utility sizing & transforms
+.@{hi-prefix}xs { font-size: 0.75em; }
 .@{hi-prefix}sm { font-size: 0.875em; }
 .@{hi-prefix}md { font-size: 1.15em; }
 .@{hi-prefix}lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -0.0667em; }
@@ -238,6 +262,28 @@ function generateLessFiles({ ROOT_DIR, LESS_DIR, LESS_CATEGORIES, categorized, c
 .@{hi-prefix}4x { font-size: 4em; }
 .@{hi-prefix}5x { font-size: 5em; }
 .@{hi-prefix}fw { text-align: center; width: 1.25em; display: inline-block; }
+
+// Rotation & Flip Transformations
+.@{hi-prefix}rotate-90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+.@{hi-prefix}rotate-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+.@{hi-prefix}rotate-270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+.@{hi-prefix}flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+.@{hi-prefix}flip-vertical {
+  transform: scaleY(-1);
+  display: inline-block;
+}
 
 // Animation Micro-interactions
 .@{hi-prefix}spin {

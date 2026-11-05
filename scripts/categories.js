@@ -144,7 +144,43 @@ const ICON_ALIASES = {
   'arrow-down': 'arrow-bottom',
   'chevron-up': 'chevron-top',
   'chevron-down': 'chevron-bottom',
-  'loading': 'spinner'
+  'loading': 'spinner',
+
+  // Common Framework & Tech Brand Aliases
+  'vue': 'vue-js',
+  'youtube': 'youtube-play',
+  'azure': 'azurepipelines',
+  'vscode': 'visualstudiocode',
+  'vs-code': 'visualstudiocode',
+  'js': 'javascript',
+  'ts': 'typescript',
+  'py': 'python',
+  'rb': 'ruby',
+  'vlc': 'vlcmediaplayer',
+  'ie': 'internetexplorer',
+  'internet-explorer': 'internetexplorer',
+  'playstation': 'play-station',
+  'gdrive': 'drive',
+  'google-drive': 'drive',
+
+  // High-Frequency UI Action & Object Aliases
+  'email': 'envelope',
+  'send': 'paper-plane',
+  'notification': 'bell',
+  'trash-can': 'trash',
+  'delete': 'trash',
+  'remove': 'trash',
+  'card': 'credit-card',
+  'creditcard': 'credit-card',
+  'find': 'search',
+  'times': 'close',
+  'x-mark': 'close',
+  'check-mark': 'check',
+  'checkmark': 'check',
+  'star-outline': 'star-o',
+  'warning-circle': 'warning-o',
+  'info-circle': 'info',
+  'help-circle': 'question-circle'
 };
 
 function enrichIcons(rawIcons) {
