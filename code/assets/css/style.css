@@ -1179,6 +1179,44 @@ body {
   color: var(--hi-primary) !important;
 }
 
+/* Featured Icon Cards Grid (Homepage) */
+.featured-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.featured-icon-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  min-height: 110px;
+}
+
+.featured-icon-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--hi-primary) !important;
+  box-shadow: 0 10px 20px -5px rgba(124, 58, 237, 0.15) !important;
+}
+
+.featured-icon-card:hover i {
+  color: var(--hi-primary) !important;
+  transform: scale(1.1);
+}
+
+.featured-icon-card i {
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.text-3xs {
+  font-size: 0.65rem;
+}
+
+@media (max-width: 575.98px) {
+  .featured-icons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 0.5rem;
+  }
+}
+
 /* Mobile Responsiveness Improvements */
 @media (max-width: 575.98px) {
   .haticons-set-grid,

@@ -72,10 +72,12 @@ function getAnnouncementBar() {
 
 /**
  * Main Navigation Bar
- * @param {'home'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
+ * @param {'home'|'icons'|'playground'|'tutorial'|'reference'|'changelogs'|'terms'|'privacy'|'license'|'other'} activePage
  */
 function getNavbar(activePage = 'home') {
     const isHome = activePage === 'home';
+    const isIcons = activePage === 'icons';
+    const isPlayground = activePage === 'playground';
     const isTutorial = activePage === 'tutorial';
     const isReference = activePage === 'reference';
     const isChangelogs = activePage === 'changelogs';
@@ -107,23 +109,17 @@ function getNavbar(activePage = 'home') {
             <!-- Collapsible Navigation Menu -->
             <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="mainNavbarCollapse">
                 <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 py-2 py-lg-0">
-                    <a href="${isHome ? '#explore' : '/#explore'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+                    <a href="/icons.html" class="btn btn-ghost ${isIcons ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
                         <i class="hi-search"></i> Icons
                     </a>
-                    <a href="${isHome ? '#playground' : '/#playground'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+                    <a href="/playground.html" class="btn btn-ghost ${isPlayground ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
                         <i class="hi-paintbox"></i> Playground
                     </a>
-                    <a href="${isHome ? '#features' : '/#features'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-star"></i> Features
-                    </a>
-                    <a href="${isHome ? '#start' : '/#start'}" class="btn btn-ghost text-muted d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-play"></i> Set Up
+                    <a href="/tutorial.html" class="btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
+                        <i class="hi-bulb"></i> Docs &amp; Setup
                     </a>
                     <a href="/reference.html" class="btn btn-ghost ${isReference ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
                         <i class="hi-document"></i> Reference
-                    </a>
-                    <a href="/tutorial.html" class="btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-bulb"></i> Tutorial
                     </a>
                     <a href="/changelogs.html" class="btn btn-ghost ${isChangelogs ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
                         <i class="hi-time"></i> Changelogs
@@ -187,9 +183,10 @@ function getFooter(activePage = 'home') {
                 <div class="col-6 col-md-2 offset-md-1">
                     <h6 class="fw-bold text-dark text-xs text-uppercase tracking-wider mb-3">Documentation</h6>
                     <ul class="list-unstyled text-sm mb-0 d-flex flex-column gap-2">
-                        <li><a href="/reference.html" class="text-decoration-none ${activePage === 'reference' ? 'text-primary fw-semibold' : 'text-muted'}">Icon Reference</a></li>
+                        <li><a href="/icons.html" class="text-decoration-none ${activePage === 'icons' ? 'text-primary fw-semibold' : 'text-muted'}">Icon Explorer</a></li>
+                        <li><a href="/playground.html" class="text-decoration-none ${activePage === 'playground' ? 'text-primary fw-semibold' : 'text-muted'}">Live Playground</a></li>
+                        <li><a href="/reference.html" class="text-decoration-none ${activePage === 'reference' ? 'text-primary fw-semibold' : 'text-muted'}">Codepoints Reference</a></li>
                         <li><a href="/tutorial.html" class="text-decoration-none ${activePage === 'tutorial' ? 'text-primary fw-semibold' : 'text-muted'}">Integration Guide</a></li>
-                        <li><a href="/tutorial.html#modular-css" class="text-decoration-none text-muted">Modular Categories</a></li>
                         <li><a href="/changelogs.html" class="text-decoration-none ${activePage === 'changelogs' ? 'text-primary fw-semibold' : 'text-muted'}">Changelogs</a></li>
                     </ul>
                 </div>

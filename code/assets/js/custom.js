@@ -457,8 +457,16 @@
                 }
             }
 
-            // Search input with debounce
+            // Search input with debounce & URL query param support
             if (searchInput) {
+                var urlParams = new URLSearchParams(window.location.search);
+                var initialQ = urlParams.get('q');
+                if (initialQ) {
+                    searchInput.value = initialQ;
+                    searchQuery = initialQ;
+                    applyExplorerFilter();
+                }
+
                 var searchTimer = null;
                 searchInput.addEventListener('input', function () {
                     var val = this.value;

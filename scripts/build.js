@@ -344,6 +344,12 @@ require('./generate-packages.js');
 console.log('Generating code/index.html...');
 require('./generate-html.js');
 
+console.log('Generating code/icons.html...');
+require('./generate-icons-page.js');
+
+console.log('Generating code/playground.html...');
+require('./generate-playground-page.js');
+
 console.log('Generating code/reference.html...');
 require('./generate-reference.js');
 

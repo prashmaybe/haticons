@@ -4,6 +4,8 @@ const path = require('path');
 const ROOT_DIR = path.resolve(__dirname, '..');
 const htmlFiles = [
   'index.html',
+  'icons.html',
+  'playground.html',
   'tutorial.html',
   'reference.html',
   'changelogs.html',
