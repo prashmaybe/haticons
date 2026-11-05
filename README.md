@@ -89,7 +89,7 @@ import 'haticons/categories/directional.min.css';
 ```
 Or via HTML / CDN:
 ```html
-<!-- Load only Commerce & Payment icons (~1.16 KB gzipped) -->
+<!-- Load only Commerce & Payment icons (~1.24 KB gzipped) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@1.0.2/dist/css/categories/commerce.min.css">
 ```
 
@@ -149,13 +149,14 @@ Measured on production-built assets using Gzip and Brotli (level 9). See [BUNDLE
 
 | Asset / Strategy | Description | Raw Size | Gzip Size | Brotli Size |
 | :--- | :--- | :---: | :---: | :---: |
-| **`core.min.css`** | Shared `@font-face` & utilities | 2.08 KB | **0.78 KB** | 0.70 KB |
-| **`commerce-only.min.css`** | Zero-waste category glyphs | 2.21 KB | **0.41 KB** | 0.34 KB |
-| **`commerce.min.css`** | Standalone commerce bundle | 4.29 KB | **1.16 KB** | 1.00 KB |
-| **Tree-Shaken `cart.svg`** | Standalone vector SVG | 2.72 KB | **0.83 KB** | 0.75 KB |
-| **React `<HiCart />`** | Individual tree-shaken component | 3.28 KB | **1.11 KB** | 0.95 KB |
-| **`haticons.min.css`** | Complete 569 icon styles | 72.11 KB | **11.65 KB** | 8.58 KB |
-| **`haticons.woff2`** | Complete 569 vector webfont | 100.12 KB | **100.17 KB** | 100.12 KB |
+| **`core.min.css`** | Shared `@font-face` & utilities | 2.40 KB | **855 B** | 767 B |
+| **`commerce-only.min.css`** | Zero-waste category glyphs | 2.40 KB | **442 B** | 370 B |
+| **`commerce.min.css`** | Standalone commerce bundle | 4.81 KB | **1.24 KB** | 1.08 KB |
+| **Tree-Shaken `cart.svg`** | Standalone vector SVG | 2.72 KB | **858 B** | 773 B |
+| **React `<HiCart />`** | Individual tree-shaken component | 3.28 KB | **1.11 KB** | 971 B |
+| **Vue `<HiCart />`** | Individual Vue 3 component | 3.27 KB | **1.11 KB** | 993 B |
+| **`haticons.min.css`** | Complete 569 icon styles | 75.40 KB | **12.16 KB** | 8.97 KB |
+| **`haticons.woff2`** | Complete 569 vector webfont | 100.24 KB | **100.28 KB** | 100.24 KB |
 
 ---
 
@@ -277,10 +278,39 @@ npx haticons list
 
 ---
 
-## 🎬 Micro-Animations & Duotone Engine
+## 🎬 Sizing, Rotation, Micro-Animations & Duotone Engine
 
-Haticons provides built-in CSS animations and duotone variants out of the box:
+Haticons provides built-in sizing modifiers, rotational & flip transforms, CSS micro-animations, and duotone variants out of the box:
 
+### Sizing Modifiers
+Control icon dimensions proportionally using size multiplier utility classes:
+```html
+<i class="hi-cart hi-xs"></i>   <!-- 0.75em -->
+<i class="hi-cart hi-sm"></i>   <!-- 0.875em -->
+<i class="hi-cart hi-md"></i>   <!-- 1.15em -->
+<i class="hi-cart hi-lg"></i>   <!-- 1.33em -->
+<i class="hi-cart hi-xl"></i>   <!-- 1.5em -->
+<i class="hi-cart hi-2x"></i>   <!-- 2em -->
+<i class="hi-cart hi-3x"></i>   <!-- 3em -->
+<i class="hi-cart hi-4x"></i>   <!-- 4em -->
+<i class="hi-cart hi-5x"></i>   <!-- 5em -->
+<i class="hi-cart hi-fw"></i>   <!-- Fixed-width alignment (1.25em) -->
+```
+
+### Rotation & Directional Flips
+Rotate or flip any icon without writing custom CSS rules:
+```html
+<!-- Rotations -->
+<i class="hi-arrow-right hi-rotate-90"></i>
+<i class="hi-arrow-right hi-rotate-180"></i>
+<i class="hi-arrow-right hi-rotate-270"></i>
+
+<!-- Flips -->
+<i class="hi-shield hi-flip-horizontal"></i>
+<i class="hi-shield hi-flip-vertical"></i>
+```
+
+### Micro-Interactions & Duotone
 ```html
 <!-- Spinning / Loading -->
 <i class="hi-refresh hi-spin"></i>
@@ -402,10 +432,11 @@ When a button or link has no visible text, supply an accessible label via `aria-
 
 ## 🔄 Canonical Names & Backward-Compatible Aliases
 
-To standardize icon naming without breaking existing code:
-- Legacy suffixes with `1` (such as `pencil1`, `search1`, `bell1`, `calendar1`, `check1`) have canonical aliases (`pencil-alt`, `search-alt`, `bell-alt`, `calendar-alt`, `check-alt`).
-- Typo corrections like `snapchat` are supported as aliases pointing to `spanchat`.
-- AI and brand aliases like `chatgpt` (points to `openai`), `x` (points to `x-twitter`), and `claude` (points to `anthropic`) resolve seamlessly across JS and CSS.
+To standardize icon naming without breaking existing code, Haticons provides **103 canonical aliases** resolving identically in CSS, LESS, Sass, React, Vue, and JS/TS:
+- **Frameworks & Languages**: `vue` (`vue-js`), `js` (`javascript`), `ts` (`typescript`), `py` (`python`), `rb` (`ruby`), `vscode` / `vs-code` (`visualstudiocode`), `azure` (`azurepipelines`), `vlc` (`vlcmediaplayer`), `ie` / `internet-explorer` (`internetexplorer`), `playstation` (`play-station`), `youtube` (`youtube-play`), `gdrive` / `google-drive` (`drive`).
+- **High-Frequency UI Actions & Objects**: `email` (`envelope`), `send` (`paper-plane`), `notification` (`bell`), `trash-can` / `delete` / `remove` (`trash`), `card` / `creditcard` (`credit-card`), `find` (`search`), `times` / `x-mark` (`close`), `check-mark` / `checkmark` (`check`), `star-outline` (`star-o`), `warning-circle` (`warning-o`), `info-circle` (`info`), `help-circle` (`question-circle`).
+- **AI & Social Aliases**: `chatgpt` (`openai`), `x` / `twitter-x` (`x-twitter`), `claude` (`anthropic`), `agy` / `google-antigravity` (`antigravity`), `windsurf` (`codeium`), `k8s` (`kubernetes`), `gcp` (`google-cloud`), `dark-mode` (`moon`), `ai` / `magic` (`sparkles`).
+- **Legacy Suffixes**: Suffixes with `1` (`pencil1`, `search1`, `bell1`, `calendar1`, `check1`) map cleanly to canonical `*-alt` equivalents.
 - The original classes and glyph Unicode codepoints remain 100% intact and functional for existing deployments.
 
 ---

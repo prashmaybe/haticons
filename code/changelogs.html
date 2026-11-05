@@ -141,17 +141,24 @@
                     <span class="badge bg-primary text-white fs-6 rounded-pill px-1 py-0.5">v1.0.2</span>
                     <span class="badge bg-success-soft text-white border border-success-subtle rounded-pill text-xs">Latest Release</span>
                 </div>
-                <time class="text-muted text-xs font-monospace">October 29, 2026</time>
+                <time class="text-muted text-xs font-monospace">November 5, 2026</time>
             </div>
 
-            <h2 class="fw-bold text-dark mb-2">AI &amp; Developer Brands, Asset Provenance, Dynamic Framework Components &amp; Quality Gate</h2>
+            <h2 class="fw-bold text-dark mb-2">AI &amp; Developer Brands, Canonical Aliases, Utility Transforms &amp; Quality Gate</h2>
 
             <p class="text-muted text-sm mb-2">
-                Milestone release expanding the library to 569 vector icons (+75 new brand, developer, media, and UI icons), introducing the formal Asset Provenance Manifest (<code>PROVENANCE.md</code>) and Font &amp; Asset Embedding Exception in <code>LICENSE</code> for commercial adoption, dynamic generic <code>&lt;Haticon /&gt;</code> components for React and Vue, cross-platform support matrix, automated release quality checks, and real bundle size benchmarks.
+                Milestone release expanding the library to 569 vector icons (+75 new brand, developer, media, and UI icons), introducing 103 canonical aliases for modern frameworks and high-frequency UI actions, rotational and flip CSS transformation utilities, the formal Asset Provenance Manifest (<code>PROVENANCE.md</code>) and Font &amp; Asset Embedding Exception in <code>LICENSE</code> for commercial adoption, dynamic generic <code>&lt;Haticon /&gt;</code> components for React and Vue, cross-platform support matrix, automated release quality checks, and real bundle size benchmarks.
             </p>
 
             <h3 class="fw-bold text-dark text-uppercase tracking-wider text-xs">🚀 New Features &amp; Addons</h3>
             <ul class="text-sm text-muted mb-4">
+                <li><strong>Rotation, Flip &amp; Micro-Sizing CSS Utilities:</strong> Added rotation helpers (<code>.hi-rotate-90</code>, <code>.hi-rotate-180</code>, <code>.hi-rotate-270</code>), directional flipping utilities (<code>.hi-flip-horizontal</code>, <code>.hi-flip-vertical</code>), and micro sizing (<code>.hi-xs</code>) across SCSS, LESS, and compiled CSS bundles.</li>
+                <li><strong>103 Canonical &amp; Backward-Compatible Aliases:</strong> Seamless cross-resolution for high-frequency framework names and actions:
+                    <ul>
+                        <li><strong>Frameworks &amp; Languages:</strong> <code>vue</code> (&rarr; <code>vue-js</code>), <code>js</code> (&rarr; <code>javascript</code>), <code>ts</code> (&rarr; <code>typescript</code>), <code>py</code> (&rarr; <code>python</code>), <code>rb</code> (&rarr; <code>ruby</code>), <code>vscode</code> / <code>vs-code</code> (&rarr; <code>visualstudiocode</code>), <code>azure</code> (&rarr; <code>azurepipelines</code>), <code>vlc</code> (&rarr; <code>vlcmediaplayer</code>), <code>ie</code> / <code>internet-explorer</code> (&rarr; <code>internetexplorer</code>), <code>playstation</code> (&rarr; <code>play-station</code>), <code>youtube</code> (&rarr; <code>youtube-play</code>), and <code>gdrive</code> / <code>google-drive</code> (&rarr; <code>drive</code>).</li>
+                        <li><strong>High-Frequency UI Actions:</strong> <code>email</code> (&rarr; <code>envelope</code>), <code>send</code> (&rarr; <code>paper-plane</code>), <code>notification</code> (&rarr; <code>bell</code>), <code>trash-can</code> / <code>delete</code> / <code>remove</code> (&rarr; <code>trash</code>), <code>card</code> / <code>creditcard</code> (&rarr; <code>credit-card</code>), <code>find</code> (&rarr; <code>search</code>), <code>times</code> / <code>x-mark</code> (&rarr; <code>close</code>), <code>check-mark</code> / <code>checkmark</code> (&rarr; <code>check</code>), <code>star-outline</code> (&rarr; <code>star-o</code>), <code>warning-circle</code> (&rarr; <code>warning-o</code>), <code>info-circle</code> (&rarr; <code>info</code>), and <code>help-circle</code> (&rarr; <code>question-circle</code>).</li>
+                    </ul>
+                </li>
                 <li><strong>75 New Vector Glyphs (Total 569 Icons):</strong>
                     Expanded catalog across 8 categories:
                     <ul>
@@ -172,6 +179,7 @@
             <ul class="text-sm text-muted mb-4">
                 <li><strong>Category CSS Font Resolution:</strong> Corrected font URL paths (<code>../../fonts/</code>) in standalone category stylesheets (<code>dist/css/categories/*.css</code>) so webfonts resolve accurately.</li>
                 <li><strong>Unplugin Resolver Framework Selection:</strong> Added <code>framework: 'vue' | 'react'</code> option to <code>HaticonsResolver</code>.</li>
+                <li><strong>Updated Bundle Size Benchmarks:</strong> Reflected updated Brotli/Gzip bundle metrics across webfonts (100.24 KB raw) and stylesheets (75.40 KB raw, 12.16 KB gzip) accounting for new transform and alias classes.</li>
                 <li><strong>Release Consistency:</strong> Synchronized all package exports, README, documentation, and CDN links to version 1.0.2.</li>
             </ul>
 

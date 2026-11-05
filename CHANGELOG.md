@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.2] - 2026-10-29
+## [1.0.2] - 2026-11-05
 
 ### Added
+- **Rotation, Flip & Utility Transform Classes**: Added rotation helpers (`.hi-rotate-90`, `.hi-rotate-180`, `.hi-rotate-270`), directional flipping utilities (`.hi-flip-horizontal`, `.hi-flip-vertical`), and micro sizing modifier (`.hi-xs`) across LESS, SCSS, and compiled CSS bundles.
+- **High-Frequency Icon & Brand Canonical Aliases (103 Total Aliases)**:
+  - **Frameworks & Languages**: `vue` (`vue-js`), `js` (`javascript`), `ts` (`typescript`), `py` (`python`), `rb` (`ruby`), `vscode` / `vs-code` (`visualstudiocode`), `azure` (`azurepipelines`), `vlc` (`vlcmediaplayer`), `ie` / `internet-explorer` (`internetexplorer`), `playstation` (`play-station`), `youtube` (`youtube-play`), and `gdrive` / `google-drive` (`drive`).
+  - **UI Actions & Common Objects**: `email` (`envelope`), `send` (`paper-plane`), `notification` (`bell`), `trash-can` / `delete` / `remove` (`trash`), `card` / `creditcard` (`credit-card`), `find` (`search`), `times` / `x-mark` (`close`), `check-mark` / `checkmark` (`check`), `star-outline` (`star-o`), `warning-circle` (`warning-o`), `info-circle` (`info`), and `help-circle` (`question-circle`).
 - **75 New Icons Across 8 Categories (Total 569 Icons)**: Expanded library from 494 to 569 vector icons (+75 icons across categories):
   - **20 AI & Developer Brand Icons**:
     - **Cursor** (`hi-cursor`, alias `cusror`): Cursor AI code editor icon.
@@ -54,6 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - **Category CSS Font Path Resolution**: Corrected relative font URL path (`../../fonts/`) in all standalone category stylesheets (`dist/css/categories/*.css`), ensuring webfonts resolve correctly from category entry points.
+- **Category & Core Font Exception Alignment**: Clean build pipeline ensuring all 14 modular stylesheets share core font rules seamlessly without duplication.
+- **Updated Bundle Sizes & Benchmarks**: Synchronized latest Brotli and Gzip size metrics reflecting core transforms and canonical alias footprint across full webfont (100.24 KB raw) and minified CSS (75.40 KB raw, 12.16 KB gzip, 8.97 KB brotli).
 - **Release Synchronization**: Synchronized package version (1.0.2), README, CDN snippets, changelogs, and website documentation into lockstep.
 
 ---
