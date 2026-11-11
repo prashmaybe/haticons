@@ -120,7 +120,13 @@ body {
   .navbar-collapse {
     border-top: 1px solid var(--hi-border);
     padding-top: 0.75rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+  .navbar-collapse.show {
+    display: block !important;
   }
   .navbar-collapse .btn-ghost {
     padding: 0.625rem 0.75rem;
@@ -1245,4 +1251,63 @@ body {
   .cust-export-actions {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* Button & UI sizing helpers */
+.btn-xs {
+  font-size: 0.775rem !important;
+  padding: 0.25rem 0.65rem !important;
+  line-height: 1.35;
+}
+
+/* Custom Modal Backdrop Overlay for pure-JS fallback */
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.modal.show {
+  z-index: 1055 !important;
+}
+
+#customBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 1050;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--hi-primary) !important;
+  outline-offset: 2px;
+}
+
+/* Scrollbar polish for code blocks and trays */
+pre::-webkit-scrollbar,
+textarea::-webkit-scrollbar,
+div::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+[data-theme="dark"] pre::-webkit-scrollbar-thumb,
+[data-theme="dark"] textarea::-webkit-scrollbar-thumb,
+[data-theme="dark"] div::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.2);
 }

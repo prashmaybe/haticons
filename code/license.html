@@ -102,6 +102,16 @@
                             <span>npm</span>
                         </a>
                     </div>
+
+                    <!-- Mobile-Only Extra Actions in Dropdown -->
+                    <div class="d-flex d-lg-none align-items-center gap-2 pt-2 mt-2 border-top">
+                        <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm rounded-pill flex-fill d-inline-flex align-items-center justify-content-center gap-1">
+                            <i class="hi-github"></i> GitHub
+                        </a>
+                        <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill flex-fill d-inline-flex align-items-center justify-content-center gap-1">
+                            <i class="hi-npm"></i> npm
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -899,6 +909,52 @@ See PROVENANCE.md for the complete asset provenance manifest.
 </pre>
         </div>
     </main>
+
+    <!-- Subset Exporter Modal -->
+    <div class="modal fade" id="subsetExportModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border shadow-lg">
+                <div class="modal-header bg-light border-bottom px-3 py-2">
+                    <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2">
+                        <i class="hi-archive text-primary"></i>
+                        <span>Export Custom Subset</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" data-boodoo-dismiss="modal" aria-label="Close">
+                        <i class="hi-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted text-sm">
+                        You have selected <strong id="subsetModalCount" class="text-primary">0</strong> icons for your custom zero-waste bundle.
+                    </p>
+                    <div id="subsetSelectedTags" class="d-flex flex-wrap gap-1 p-3 bg-light rounded-3 border mb-3 text-xs" style="max-height: 140px; overflow-y: auto;"></div>
+                    
+                    <h6 class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">CLI / npm Command:</h6>
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" id="subsetCliCmd" class="form-control font-monospace text-xs" readonly>
+                        <button class="btn btn-outline-secondary" type="button" id="copySubsetCliBtn">Copy</button>
+                    </div>
+
+                    <h6 class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-2">Standalone Subset CSS:</h6>
+                    <textarea id="subsetCssOutput" class="form-control font-monospace text-xs mb-3" rows="4" readonly></textarea>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class="btn btn-sm btn-outline-danger rounded-pill px-3" id="clearSubsetTrayBtn">
+                            Clear Tray
+                        </button>
+                        <button type="button" class="btn btn-sm btn-primary rounded-pill px-4" id="copySubsetCssBtn">
+                            <i class="hi-paste me-1"></i> Copy Subset CSS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="haticonsToast" class="copy-toast d-none">
+        <i class="hi-check-circle me-1"></i> Copied to clipboard!
+    </div>
 
     <!-- Footer -->
     <footer class="py-5 bg-white border-top">

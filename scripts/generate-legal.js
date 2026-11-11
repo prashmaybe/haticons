@@ -5,7 +5,9 @@ const {
     getHtmlHead,
     getAnnouncementBar,
     getNavbar,
-    getFooter
+    getFooter,
+    getSubsetModal,
+    getToast
 } = require('./template.js');
 
 // 1. Terms of Use
@@ -73,6 +75,10 @@ ${getNavbar('other')}
             </p>
         </div>
     </main>
+
+${getSubsetModal()}
+
+${getToast()}
 
 ${getFooter('terms')}
 
@@ -146,6 +152,10 @@ ${getNavbar('other')}
             </p>
         </div>
     </main>
+
+${getSubsetModal()}
+
+${getToast()}
 
 ${getFooter('privacy')}
 
@@ -259,6 +269,10 @@ ${getNavbar('other')}
             <pre class="bg-light p-3 rounded-3 text-xs font-monospace text-dark overflow-auto mb-0" style="max-height: 480px; white-space: pre-wrap; line-height: 1.5;">${escapedLicense}</pre>
         </div>
     </main>
+
+${getSubsetModal()}
+
+${getToast()}
 
 ${getFooter('license')}
 
