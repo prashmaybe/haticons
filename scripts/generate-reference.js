@@ -65,7 +65,7 @@ Object.keys(categories).sort().forEach(catKey => {
 
         iconsListHtml += `
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3">
-        <div class="p-2 border rounded-3 bg-white d-flex align-items-center gap-2 reference-icon-item" 
+        <div class="p-1 border rounded-3 bg-white d-flex align-items-center gap-1 reference-icon-item" 
              data-class="${item.class}" 
              data-name="${item.name}" 
              data-search="${searchTerms}"
@@ -90,8 +90,8 @@ Object.keys(categories).sort().forEach(catKey => {
     });
 
     categoryRowsHtml += `
-    <div class="category-reference-block mb-4 pb-5 border-bottom" id="cat-${catKey}">
-      <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
+    <div class="category-reference-block mb-2 pb-3 border-bottom" id="cat-${catKey}">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-1">
         <div>
           <h3 class="h4 fw-bold text-dark mb-1 d-flex align-items-center gap-1">
             <span>${meta.name}</span>
@@ -164,7 +164,7 @@ ${getNavbar('reference')}
                 </div>
 
                 <!-- Interactive Filters: Animations & Variants -->
-                <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 mb-1">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 mb-2">
                     <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider me-1">Style Preview:</span>
                     <button type="button" class="btn btn-sm btn-primary rounded-pill px-1 ref-style-btn active" data-style="default">Normal</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 ref-style-btn" data-style="duotone">Duotone</button>
@@ -251,7 +251,7 @@ ${getNavbar('reference')}
                             <h6 class="fw-bold text-dark text-sm mb-3">Live Customization Controls</h6>
                             
                             <!-- Size Slider -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <div class="d-flex justify-content-between text-xs text-muted mb-1">
                                     <span>Size:</span>
                                     <strong id="custSizeVal" class="text-dark">72px</strong>
@@ -260,7 +260,7 @@ ${getNavbar('reference')}
                             </div>
 
                             <!-- Color Picker & Quick Swatches -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <label class="form-label text-xs text-muted mb-1">Fill Color:</label>
                                 <input type="color" class="form-control form-control-color w-100 rounded-3 border p-1 mb-2" id="custColorPicker" value="#7c3aed" style="height: 38px;">
                                 <label class="form-label text-xs text-muted mb-1 d-block">Quick Colors:</label>

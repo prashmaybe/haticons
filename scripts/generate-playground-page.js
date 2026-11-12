@@ -36,7 +36,7 @@ ${getNavbar('playground')}
     <!-- Page Header -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-1 px-1 py-1 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
                 <i class="hi-paintbox"></i>
                 <span>Real-Time Icon Studio</span>
             </div>
@@ -61,7 +61,7 @@ ${getNavbar('playground')}
                             </div>
 
                             <!-- Canvas Stage -->
-                            <div class="playground-canvas p-4 rounded-4 bg-light border text-center mb-4 d-flex flex-column align-items-center justify-content-center position-relative" style="min-height: 240px;">
+                            <div class="playground-canvas p-2 rounded-4 bg-light border text-center mb-2 d-flex flex-column align-items-center justify-content-center position-relative" style="min-height: 240px;">
                                 <div id="pgIconWrap" class="d-flex align-items-center justify-content-center">
                                     <i id="pgIconDisplay" class="hi-haticons" style="font-size: 64px; color: #7c3aed;"></i>
                                 </div>
@@ -69,7 +69,7 @@ ${getNavbar('playground')}
                             </div>
 
                             <!-- Icon Selection Quick Dropdown -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <label class="form-label text-xs fw-semibold text-muted text-uppercase tracking-wider mb-1">Select Icon:</label>
                                 <select class="form-select form-select-sm rounded-pill" id="pgIconSelect">
                                     <option value="haticons">hi-haticons (Logo)</option>
@@ -91,7 +91,7 @@ ${getNavbar('playground')}
                             </div>
 
                             <!-- Size Slider -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <div class="d-flex justify-content-between text-xs text-muted mb-1">
                                     <span class="fw-semibold text-uppercase tracking-wider">Icon Size:</span>
                                     <strong id="pgSizeVal" class="text-primary font-monospace">64px</strong>
@@ -100,12 +100,12 @@ ${getNavbar('playground')}
                             </div>
 
                             <!-- Color Controls -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <div class="d-flex justify-content-between text-xs text-muted mb-1">
                                     <span class="fw-semibold text-uppercase tracking-wider">Color:</span>
                                     <span id="pgColorHex" class="font-monospace text-dark">#7c3aed</span>
                                 </div>
-                                <div class="d-flex align-items-center gap-2 mb-2">
+                                <div class="d-flex align-items-center gap-1 mb-2">
                                     <input type="color" class="form-control form-control-color border rounded-3 p-1" id="pgColorPicker" value="#7c3aed" style="width: 48px; height: 38px;">
                                     <div class="quick-colors-grid flex-grow-1">
                                         <button type="button" class="btn p-0 rounded-circle quick-color pg-color-btn" style="background:#7c3aed;" data-color="#7c3aed" title="Purple"></button>
@@ -135,7 +135,7 @@ ${getNavbar('playground')}
                             </div>
                         </div>
 
-                        <div class="pt-3 border-top mt-3">
+                        <div class="pt-2 border-top mt-2">
                             <a href="/icons.html" class="btn btn-outline-secondary btn-sm rounded-pill w-100 d-inline-flex align-items-center justify-content-center gap-1">
                                 <i class="hi-search"></i> <span>Pick from full library of ${totalIcons} icons</span>
                             </a>
@@ -157,7 +157,7 @@ ${getNavbar('playground')}
                                 </div>
                             </div>
 
-                            <div class="code-snippet-box mb-3">
+                            <div class="code-snippet-box mb-2">
                                 <div class="code-snippet-header">
                                     <span class="code-lang-label" id="pgCodeLangLabel"><i class="hi-html5"></i> HTML Markup</span>
                                     <div class="d-flex align-items-center gap-1">

@@ -174,7 +174,7 @@ function getFooter(activePage = 'home') {
         <div class="container">
             <div class="row g-4 mb-4">
                 <div class="col-12 col-md-4">
-                    <div class="d-flex align-items-center gap-2 mb-2">
+                    <div class="d-flex align-items-center gap-1 mb-2">
                         <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary icon-badge-sm">
                             <i class="hi-haticons fs-5"></i>
                         </span>
@@ -183,7 +183,7 @@ function getFooter(activePage = 'home') {
                     <p class="text-muted text-sm mb-3">
                         A beautifully crafted, modular open-source icon suite featuring ${count}+ vector and webfont icons for modern Web, iOS, Android, and Desktop apps.
                     </p>
-                    <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
+                    <div class="d-flex align-items-center gap-1 mb-2 flex-wrap">
                         <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm rounded-pill px-2 d-inline-flex align-items-center gap-1" title="GitHub Repository">
                             <i class="hi-github"></i> GitHub
                         </a>

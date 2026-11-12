@@ -108,16 +108,16 @@ ${getNavbar('home')}
     <!-- Hero Section -->
     <header class="hero-section py-5 text-center position-relative overflow-hidden">
         <div class="container py-4 position-relative z-1">
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
-                <span class="px-1 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 mb-2">
+                <span class="px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
                     <i class="hi-star"></i>
                     <span>${totalIcons}+ Modern Vector Icons</span>
                 </span>
-                <span class="px-1 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
+                <span class="px-1 py-0.5 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
                     <i class="hi-check-circle text-success"></i>
                     <span>GPL-3.0 Open Source</span>
                 </span>
-                <span class="px-1 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
+                <span class="px-1 py-0.5 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
                     <i class="hi-archive text-warning"></i>
                     <span>14 Modular CSS Bundles</span>
                 </span>
@@ -133,15 +133,15 @@ ${getNavbar('home')}
 
             <!-- Main Action CTAs -->
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-4">
-                <a href="/icons.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
+                <a href="/icons.html" class="btn btn-primary btn-lg rounded-pill px-2 shadow-sm d-inline-flex align-items-center gap-1">
                     <i class="hi-search"></i>
                     <span>Explore All ${totalIcons} Icons</span>
                 </a>
-                <a href="/playground.html" class="btn btn-outline-primary btn-lg rounded-pill px-4 d-inline-flex align-items-center gap-2 bg-white">
+                <a href="/playground.html" class="btn btn-outline-primary btn-lg rounded-pill px-2 d-inline-flex align-items-center gap-1 bg-white">
                     <i class="hi-paintbox"></i>
                     <span>Live Studio Playground</span>
                 </a>
-                <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-lg rounded-pill px-4 d-inline-flex align-items-center gap-2 bg-white">
+                <a href="/download/haticons.zip" class="btn btn-outline-secondary btn-lg rounded-pill px-2 d-inline-flex align-items-center gap-1 bg-white">
                     <i class="hi-download"></i>
                     <span>Download ZIP (~1.3MB)</span>
                 </a>
@@ -200,7 +200,7 @@ ${featuredIconsHtml}
             </div>
 
             <div class="text-center">
-                <a href="/icons.html" class="btn btn-primary rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
+                <a href="/icons.html" class="btn btn-primary rounded-pill px-2 shadow-sm d-inline-flex align-items-center gap-1">
                     <i class="hi-search"></i>
                     <span>Open Icon Explorer (${totalIcons} icons)</span>
                 </a>
@@ -225,7 +225,7 @@ ${featuredIconsHtml}
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card p-2 rounded-4 bg-white border shadow-2xs">
-                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
+                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-1">
                             <i class="hi-star fs-4"></i>
                         </div>
                         <h3 class="fw-bold text-dark mb-1">${totalIcons}+ Vector Glyphs</h3>
@@ -237,7 +237,7 @@ ${featuredIconsHtml}
 
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card p-2 rounded-4 bg-white border shadow-2xs">
-                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
+                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-1">
                             <i class="hi-archive fs-4"></i>
                         </div>
                         <h3 class="fw-bold text-dark mb-1">14 Modular Bundles</h3>
@@ -249,7 +249,7 @@ ${featuredIconsHtml}
 
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card p-2 rounded-4 bg-white border shadow-2xs">
-                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
+                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-1">
                             <i class="hi-javascript fs-4"></i>
                         </div>
                         <h3 class="fw-bold text-dark mb-1">React &amp; Vue 3 Native</h3>
@@ -261,7 +261,7 @@ ${featuredIconsHtml}
 
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card p-2 rounded-4 bg-white border shadow-2xs">
-                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
+                        <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-1">
                             <i class="hi-check-circle fs-4 text-success"></i>
                         </div>
                         <h3 class="fw-bold text-dark mb-1">100% Free &amp; Open Source</h3>
@@ -288,11 +288,11 @@ ${featuredIconsHtml}
                         Add Haticons with one line of CDN code or via your package manager. Icons automatically inherit font size and color.
                     </p>
                     <div class="d-flex flex-wrap gap-2">
-                        <a href="/tutorial.html" class="btn btn-primary rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
+                        <a href="/tutorial.html" class="btn btn-primary rounded-pill px-2 shadow-sm d-inline-flex align-items-center gap-1">
                             <i class="hi-bulb"></i>
                             <span>View Full Docs &amp; Setup Guide</span>
                         </a>
-                        <a href="/playground.html" class="btn btn-outline-secondary rounded-pill px-4 bg-white d-inline-flex align-items-center gap-2">
+                        <a href="/playground.html" class="btn btn-outline-secondary rounded-pill px-2 bg-white d-inline-flex align-items-center gap-1">
                             <i class="hi-paintbox"></i>
                             <span>Open Studio Playground</span>
                         </a>
@@ -302,7 +302,7 @@ ${featuredIconsHtml}
                 <div class="col-12 col-lg-7">
                     <div class="card p-2 rounded-4 bg-light border shadow-2xs">
                         <h3 class="fw-bold text-dark mb-1"><i class="hi-cloudflare text-warning me-1"></i> Quick CDN Embed:</h3>
-                        <div class="code-snippet-box mb-3">
+                        <div class="code-snippet-box mb-2">
                             <div class="code-snippet-header">
                                 <span class="code-lang-label">&lt;head&gt; stylesheet</span>
                                 <button type="button" class="code-copy-btn" data-code='&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css"&gt;'>

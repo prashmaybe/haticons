@@ -97,7 +97,7 @@ ${getNavbar('icons')}
     <!-- Page Header -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-1 px-1 py-1 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
                 <i class="hi-search"></i>
                 <span>${totalIcons} Vector &amp; Font Icons</span>
             </div>
@@ -119,17 +119,18 @@ ${getNavbar('icons')}
                 </div>
 
                 <!-- Style Variants & Animation Modifiers -->
-                <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 mb-2">
                     <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider me-1">Variants:</span>
                     <button type="button" class="btn btn-sm btn-primary rounded-pill px-1 style-filter-btn active" data-style="all">All Styles</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 style-filter-btn" data-style="outline">Outline</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 style-filter-btn" data-style="fill">Fill</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 style-filter-btn" data-style="sharp">Sharp</button>
-
-                    <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider ms-2 me-1">Animations:</span>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 anim-filter-btn" data-anim="spin"><i class="hi-refresh hi-spin me-1"></i>Spin</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 anim-filter-btn" data-anim="pulse"><i class="hi-heart-fill hi-pulse me-1 text-danger"></i>Pulse</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 anim-filter-btn" data-anim="bounce"><i class="hi-arrow-up hi-bounce me-1 text-primary"></i>Bounce</button>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 mb-2">
+                    <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider me-1">Animations:</span>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 anim-filter-btn" data-anim="spin"><i class="hi-refresh hi-spin me-1"></i>Spin</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 anim-filter-btn" data-anim="pulse"><i class="hi-heart-fill hi-pulse me-1 text-danger"></i>Pulse</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 anim-filter-btn" data-anim="bounce"><i class="hi-arrow-up hi-bounce me-1 text-primary"></i>Bounce</button>
                 </div>
 
                 <!-- Category Filter Pills -->
@@ -188,7 +189,7 @@ ${getNavbar('icons')}
     <main class="py-5" id="explore">
         <div class="container">
             <!-- Counter & Helper Bar -->
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2 px-1 text-xs text-muted">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-1 px-1 text-xs text-muted">
                 <div>Showing <strong id="visibleCount" class="text-primary">${totalIcons}</strong> of ${totalIcons} icons</div>
                 <div class="d-flex align-items-center gap-2">
                     <span class="badge bg-white text-muted border rounded-pill">Click card to customize &amp; copy</span>
@@ -217,11 +218,11 @@ ${iconGridCardsHtml}
                     Check out our comprehensive Reference catalog with unicode codepoints for every icon, plus individual CSS stylesheets for each category.
                 </p>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <a href="/reference.html" class="btn btn-primary rounded-pill px-4 shadow-sm d-inline-flex align-items-center gap-2">
+                    <a href="/reference.html" class="btn btn-primary rounded-pill px-2 shadow-sm d-inline-flex align-items-center gap-1">
                         <i class="hi-document"></i>
                         <span>Codepoint Reference Table</span>
                     </a>
-                    <a href="/tutorial.html#modular-css" class="btn btn-outline-secondary rounded-pill px-4 bg-white d-inline-flex align-items-center gap-2">
+                    <a href="/tutorial.html#modular-css" class="btn btn-outline-secondary rounded-pill px-2 bg-white d-inline-flex align-items-center gap-1">
                         <i class="hi-archive"></i>
                         <span>Modular Category Stylesheets</span>
                     </a>
@@ -262,7 +263,7 @@ ${iconGridCardsHtml}
                             <h6 class="fw-bold text-dark text-sm mb-3">Live Customization Controls</h6>
                             
                             <!-- Size Slider -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <div class="d-flex justify-content-between text-xs text-muted mb-1">
                                     <span>Size:</span>
                                     <strong id="custSizeVal" class="text-dark">72px</strong>
@@ -271,7 +272,7 @@ ${iconGridCardsHtml}
                             </div>
 
                             <!-- Color Picker & Quick Swatches -->
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <label class="form-label text-xs text-muted mb-1">Fill Color:</label>
                                 <input type="color" class="form-control form-control-color w-100 rounded-3 border p-1 mb-2" id="custColorPicker" value="#7c3aed" style="height: 38px;">
                                 <label class="form-label text-xs text-muted mb-1 d-block">Quick Colors:</label>
