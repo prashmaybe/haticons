@@ -68,7 +68,7 @@ featuredCategories.forEach(catKey => {
 
     categoryCardsHtml += `
             <div class="col-12 col-sm-6 col-lg-3">
-                <a href="/icons.html" class="card category-card p-3 rounded-4 bg-white border text-decoration-none shadow-2xs d-flex flex-column justify-content-between">
+                <a href="/icons.html" class="card category-card p-2 rounded-4 bg-white border text-decoration-none shadow-2xs d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <h3 class="h6 fw-bold text-dark mb-0">${meta.name}</h3>
@@ -77,7 +77,7 @@ featuredCategories.forEach(catKey => {
                         <p class="text-muted text-xs mb-3">${meta.description}</p>
                     </div>
                     <div class="d-flex align-items-center justify-content-between pt-2 border-top">
-                        <div class="d-flex align-items-center gap-2 text-muted">
+                        <div class="d-flex align-items-center gap-1 text-muted">
                             ${sampleIcons.map(si => `<i class="${si.class} fs-6" title="${si.name}"></i>`).join('')}
                         </div>
                         <span class="text-primary text-xs fw-semibold d-inline-flex align-items-center gap-1">
