@@ -141,27 +141,13 @@
         var modalEl = typeof modalId === 'string' ? document.getElementById(modalId) : modalId;
         if (!modalEl) return;
 
-        if (window.boodoo && window.boodoo.Modal) {
-            try {
-                var bModal = window.boodoo.Modal.getOrCreateInstance ?
-                    window.boodoo.Modal.getOrCreateInstance(modalEl) : new window.boodoo.Modal(modalEl);
-                bModal.show();
-                return;
-            } catch (err) {}
-        }
-        if (window.bootstrap && window.bootstrap.Modal) {
-            try {
-                var bsModal = window.bootstrap.Modal.getOrCreateInstance ?
-                    window.bootstrap.Modal.getOrCreateInstance(modalEl) : new window.bootstrap.Modal(modalEl);
-                bsModal.show();
-                return;
-            } catch (err) {}
-        }
-
-        // Pure JS fallback
-        modalEl.classList.add('show');
+        // Ensure display block and show class
         modalEl.style.display = 'block';
+        setTimeout(function () {
+            modalEl.classList.add('show');
+        }, 10);
         document.body.classList.add('modal-open');
+
         var bd = document.getElementById('customBackdrop');
         if (!bd) {
             bd = document.createElement('div');
@@ -176,18 +162,6 @@
         modalIds.forEach(function (id) {
             var modal = document.getElementById(id);
             if (modal) {
-                if (window.boodoo && window.boodoo.Modal) {
-                    try {
-                        var inst = window.boodoo.Modal.getInstance ? window.boodoo.Modal.getInstance(modal) : null;
-                        if (inst && typeof inst.hide === 'function') inst.hide();
-                    } catch (e) {}
-                }
-                if (window.bootstrap && window.bootstrap.Modal) {
-                    try {
-                        var bsInst = window.bootstrap.Modal.getInstance ? window.bootstrap.Modal.getInstance(modal) : null;
-                        if (bsInst && typeof bsInst.hide === 'function') bsInst.hide();
-                    } catch (e) {}
-                }
                 modal.classList.remove('show');
                 modal.style.display = 'none';
             }

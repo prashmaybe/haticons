@@ -69,7 +69,7 @@ icons.forEach(item => {
                 <div class="icon-glyph-wrap mx-auto d-flex align-items-center justify-content-center mb-2">
                     <i class="${item.class} haticon-display-icon"></i>
                 </div>
-                <div class="icon-name-text text-truncate w-100 mb-1" title="${item.name}">${item.name}</div>
+                <div class="icon-name-text w-100 mb-1" title="${item.name}">${item.name}</div>
                 <div class="d-flex align-items-center justify-content-between text-2xs text-muted w-100">
                     <span class="category-badge text-truncate">${item.category}</span>
                     <span class="copy-hint text-primary fw-medium"><i class="hi-paste"></i></span>
@@ -324,7 +324,7 @@ ${getToast()}
 ${getFooter('icons')}
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.3.0/dist/js/boodoo.min.js"></script>
     <script type="text/javascript" src="/assets/js/theme.js"></script>
     <script type="text/javascript" src="/assets/js/custom.js"></script>
 </body>

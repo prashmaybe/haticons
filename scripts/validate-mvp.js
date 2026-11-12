@@ -40,7 +40,8 @@ htmlFiles.forEach(file => {
     if (h.startsWith('http://') || h.startsWith('https://') || h.startsWith('mailto:') || h.startsWith('javascript:')) return;
     if (h === '/' || h === '') return;
 
-    const [pagePath, hash] = h.split('#');
+    const [rawPath, hash] = h.split('#');
+    const [pagePath] = rawPath.split('?');
     let targetFileName = file;
 
     if (pagePath && pagePath !== '/') {

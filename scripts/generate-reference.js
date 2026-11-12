@@ -77,7 +77,7 @@ Object.keys(categories).sort().forEach(catKey => {
           </div>
           <div class="overflow-hidden flex-grow-1">
             <div class="d-flex align-items-center justify-content-between gap-1">
-              <div class="text-sm fw-semibold text-dark text-truncate icon-title-label" title="${item.name}">${item.name}</div>
+              <div class="text-sm fw-semibold text-dark icon-title-label" title="${item.name}">${item.name}</div>
               ${aliasBadge}
             </div>
             <div class="text-xs text-muted font-monospace d-flex align-items-center justify-content-between">
@@ -313,7 +313,7 @@ ${getToast('reference-toast')}
 ${getFooter('reference')}
 
     <!-- boodoo & Haticons JavaScript Bundles -->
-    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.3.0/dist/js/boodoo.min.js"></script>
     <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/custom.js"></script>
 </body>

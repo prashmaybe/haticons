@@ -40,11 +40,11 @@ function getHtmlHead(title, description, keywords, canonicalPath = '') {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- boodoo CSS Framework -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/css/boodoo.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boodoo@1.3.0/dist/css/boodoo.min.css">
 
     <!-- Haticons CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="/assets/css/haticons.min.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css?v=1.3.0" />
     <script>
         (function () {
             var t = localStorage.getItem('haticons_theme_preference') || 'system';
@@ -85,8 +85,8 @@ function getNavbar(activePage = 'home') {
     return `    <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-2 shadow-xs" id="mainHeaderNav">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-2" href="/">
-                <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-soft text-primary">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-3 me-xl-4 flex-shrink-0" href="/">
+                <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-3 bg-primary-soft text-primary">
                     <i class="hi-haticons fs-4"></i>
                 </span>
                 <span class="fs-4 fw-bold text-dark tracking-tight">Haticons</span>
@@ -107,51 +107,56 @@ function getNavbar(activePage = 'home') {
             </div>
 
             <!-- Collapsible Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="mainNavbarCollapse">
-                <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 py-2 py-lg-0">
-                    <a href="/icons.html" class="btn btn-ghost ${isIcons ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-search"></i> Icons
+            <div class="collapse navbar-collapse justify-content-between mt-2 mt-lg-0" id="mainNavbarCollapse">
+                <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-lg-2 gap-xl-3 py-2 py-lg-0">
+                    <a href="/icons.html" class="nav-link-btn btn btn-ghost ${isIcons ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-2">
+                        <i class="hi-search"></i>
+                        <span>Icons</span>
                     </a>
-                    <a href="/playground.html" class="btn btn-ghost ${isPlayground ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-paintbox"></i> Playground
+                    <a href="/playground.html" class="nav-link-btn btn btn-ghost ${isPlayground ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-2">
+                        <i class="hi-paintbox"></i>
+                        <span>Playground</span>
                     </a>
-                    <a href="/tutorial.html" class="btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-bulb"></i> Docs &amp; Setup
+                    <a href="/tutorial.html" class="nav-link-btn btn btn-ghost ${isTutorial ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-2">
+                        <i class="hi-bulb"></i>
+                        <span>Docs &amp; Setup</span>
                     </a>
-                    <a href="/reference.html" class="btn btn-ghost ${isReference ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-document"></i> Reference
+                    <a href="/reference.html" class="nav-link-btn btn btn-ghost ${isReference ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-2">
+                        <i class="hi-document"></i>
+                        <span>Reference</span>
                     </a>
-                    <a href="/changelogs.html" class="btn btn-ghost ${isChangelogs ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-1">
-                        <i class="hi-time"></i> Changelogs
+                    <a href="/changelogs.html" class="nav-link-btn btn btn-ghost ${isChangelogs ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-2">
+                        <i class="hi-time"></i>
+                        <span>Changelogs</span>
                     </a>
+                </div>
 
-                    <!-- Desktop Actions -->
-                    <div class="d-none d-lg-flex align-items-center gap-1 ms-lg-2">
-                        <button type="button" class="btn btn-ghost text-muted px-2 py-1 nav-subset-btn" title="Open custom subset tray" aria-label="Open custom subset tray">
-                            <i class="hi-archive fs-5"></i>
-                            <span class="badge bg-primary text-white rounded-pill px-1 text-2xs nav-subset-count ms-1">0</span>
-                        </button>
-                        <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
-                            <i class="hi-sun theme-toggle-icon fs-5"></i>
-                        </button>
-                        <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-1 rounded-circle" title="View on GitHub" aria-label="View on GitHub">
-                            <i class="hi-github fs-5"></i>
-                        </a>
-                        <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center justify-content-center gap-1 ms-1">
-                            <i class="hi-npm"></i>
-                            <span>npm</span>
-                        </a>
-                    </div>
+                <!-- Desktop Actions -->
+                <div class="d-none d-lg-flex align-items-center gap-2 ms-lg-auto">
+                    <button type="button" class="btn btn-ghost text-muted px-2 py-1 nav-subset-btn d-inline-flex align-items-center gap-1" title="Open custom subset tray" aria-label="Open custom subset tray">
+                        <i class="hi-archive fs-5"></i>
+                        <span class="badge bg-primary text-white rounded-pill px-2 py-05 text-2xs nav-subset-count">0</span>
+                    </button>
+                    <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
+                        <i class="hi-sun theme-toggle-icon fs-5"></i>
+                    </button>
+                    <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-2 rounded-circle d-inline-flex align-items-center justify-content-center" title="View on GitHub" aria-label="View on GitHub">
+                        <i class="hi-github fs-5"></i>
+                    </a>
+                    <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 py-1 d-inline-flex align-items-center justify-content-center gap-1 ms-1">
+                        <i class="hi-npm"></i>
+                        <span>npm</span>
+                    </a>
+                </div>
 
-                    <!-- Mobile-Only Extra Actions in Dropdown -->
-                    <div class="d-flex d-lg-none align-items-center gap-2 pt-2 mt-2 border-top">
-                        <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm rounded-pill flex-fill d-inline-flex align-items-center justify-content-center gap-1">
-                            <i class="hi-github"></i> GitHub
-                        </a>
-                        <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill flex-fill d-inline-flex align-items-center justify-content-center gap-1">
-                            <i class="hi-npm"></i> npm
-                        </a>
-                    </div>
+                <!-- Mobile-Only Extra Actions in Dropdown -->
+                <div class="d-flex d-lg-none align-items-center gap-2 pt-2 mt-2 border-top">
+                    <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm rounded-pill flex-fill d-inline-flex align-items-center justify-content-center gap-1">
+                        <i class="hi-github"></i> GitHub
+                    </a>
+                    <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill flex-fill d-inline-flex align-items-center justify-content-center gap-1">
+                        <i class="hi-npm"></i> npm
+                    </a>
                 </div>
             </div>
         </div>

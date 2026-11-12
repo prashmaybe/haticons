@@ -51,7 +51,7 @@ const featuredIconNames = [
 let featuredIconsHtml = '';
 featuredIconNames.forEach(item => {
     featuredIconsHtml += `
-            <a href="/icons.html" class="featured-icon-card p-3 rounded-4 bg-white border text-center text-decoration-none shadow-2xs d-flex flex-column align-items-center justify-content-center">
+            <a href="/icons.html" class="featured-icon-card p-1 rounded-4 bg-white border text-center text-decoration-none shadow-2xs d-flex flex-column align-items-center justify-content-center">
                 <i class="hi-${item.name} fs-2 text-dark mb-2"></i>
                 <span class="text-xs fw-semibold text-dark text-truncate w-100">${item.label}</span>
                 <span class="text-3xs text-muted text-uppercase tracking-wider">${item.tag}</span>
@@ -360,7 +360,7 @@ ${getToast()}
 ${getFooter('home')}
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.2.2/dist/js/boodoo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boodoo@1.3.0/dist/js/boodoo.min.js"></script>
     <script type="text/javascript" src="/assets/js/theme.js"></script>
     <script type="text/javascript" src="/assets/js/custom.js"></script>
 </body>

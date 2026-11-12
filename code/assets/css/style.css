@@ -72,8 +72,9 @@ body {
 
 [data-theme="dark"] .navbar.bg-white,
 [data-theme="dark"] .navbar {
-  background-color: rgba(17, 24, 39, 0.95) !important;
-  backdrop-filter: blur(8px);
+  background-color: #151927 !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
 /* Navbar Container Layout: Single-line alignment */
@@ -87,6 +88,21 @@ body {
 
 .navbar .navbar-brand {
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link-btn {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+  padding: 0.4rem 0.65rem !important;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-link-btn i {
+  font-size: 1rem;
 }
 
 @media (min-width: 992px) {
@@ -104,6 +120,7 @@ body {
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
     flex-shrink: 0;
+    align-items: center;
   }
 }
 
@@ -341,21 +358,42 @@ body {
   background-color: rgba(34, 197, 94, 0.1) !important;
 }
 
-.text-2xs {
-  font-size: 0.6875rem !important;
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
 }
 
-.tracking-tight {
-  letter-spacing: -0.025em;
+.text-2xs {
+  font-size: 0.6875rem !important;
+  line-height: 0.95rem !important;
+}
+
+.text-3xs {
+  font-size: 0.625rem !important;
+  line-height: 0.85rem !important;
+}
+
+.fw-extrabold {
+  font-weight: 800 !important;
+}
+
+.shadow-2xs {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03) !important;
 }
 
 .shadow-xs {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
 .logo-icon-wrap {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px !important;
+}
+
+[data-theme="dark"] .logo-icon-wrap {
+  background-color: #1e1d3a !important;
+  color: #7547e4 !important;
 }
 
 /* Hero Section */
@@ -365,6 +403,23 @@ body {
 
 .hero-title {
   letter-spacing: -0.03em;
+}
+
+/* Section Spacing & Hierarchy Polish */
+section {
+  position: relative;
+}
+
+.hero-section {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 
 /* Feature Cards */
@@ -392,6 +447,13 @@ body {
 /* Categories Pills Bar */
 .category-tabs-wrap {
   scrollbar-width: thin;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.4rem !important;
+  row-gap: 0.45rem;
+  margin-top: 0.5rem;
 }
 
 .category-filter-btn {
@@ -416,22 +478,22 @@ body {
 .haticons-set-grid,
 .haticon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.25rem;
 }
 
 @media (max-width: 576px) {
   .haticons-set-grid,
   .haticon-grid {
-    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.85rem;
   }
 }
 
 @media (min-width: 992px) {
   .haticons-set-grid,
   .haticon-grid {
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1.25rem;
   }
 }
@@ -445,8 +507,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1.25rem 0.75rem !important;
+  justify-content: space-between;
+  padding: 1.25rem 0.85rem !important;
+  min-height: 154px;
 }
 
 .haticon-card:hover {
@@ -497,9 +560,19 @@ body {
 }
 
 .icon-name-text {
-  font-size: 0.775rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: #1e293b;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  line-height: 1.3;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.25rem;
+  text-align: center;
 }
 
 .category-badge {
@@ -559,9 +632,10 @@ body {
 }
 
 .quick-colors-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 22px);
-  gap: 0.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .quick-color {
@@ -636,6 +710,13 @@ body {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   border: 1px solid #e2e8f0;
   user-select: none;
+  min-height: 68px;
+}
+
+.icon-title-label {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
 }
 
 .reference-icon-item:hover {
@@ -707,9 +788,13 @@ body {
 }
 
 [data-theme="dark"] .theme-toggle-btn {
-  background: var(--hi-bg-card);
+  background: #181d2e;
   color: #f8fafc;
-  border-color: var(--hi-border);
+  border-color: #333d52;
+}
+
+[data-theme="dark"] .theme-toggle-btn .theme-toggle-icon.text-warning {
+  color: #c48e39 !important;
 }
 
 /* Sidebar & Sticky elements */
@@ -1227,21 +1312,22 @@ body {
 @media (max-width: 575.98px) {
   .haticons-set-grid,
   .haticon-grid {
-    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.75rem;
   }
 
   .haticon-card {
-    padding: 0.85rem 0.5rem !important;
+    padding: 1rem 0.65rem !important;
+    min-height: 140px;
   }
 
   .haticon-display-icon {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 
   .icon-glyph-wrap {
-    height: 44px;
-    width: 44px;
+    height: 48px;
+    width: 48px;
   }
 
   .hero-title {
