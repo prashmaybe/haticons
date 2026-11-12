@@ -57,7 +57,7 @@ ${getNavbar('playground')}
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <h2 class="h6 fw-bold text-dark mb-0">Live Canvas Stage</h2>
-                                <span class="badge bg-primary-soft text-primary rounded-pill text-xs px-2 py-05">Interactive</span>
+                                <span class="badge bg-primary-soft text-primary rounded-pill text-xs px-1 py-0.5">Interactive</span>
                             </div>
 
                             <!-- Canvas Stage -->

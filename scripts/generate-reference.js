@@ -142,7 +142,7 @@ ${getNavbar('reference')}
     <!-- Header Banner -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                 <i class="hi-document"></i>
                 <span>Complete Icon Catalog &amp; Codepoint Reference</span>
             </div>
@@ -223,7 +223,7 @@ ${getNavbar('reference')}
     <div class="modal fade" id="customizerModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-4 border shadow-lg overflow-hidden">
-                <div class="modal-header bg-light border-bottom px-2 py-1.5">
+                <div class="modal-header bg-light border-bottom px-1 py-0.5.5">
                     <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2" id="custModalTitle">
                         <i class="hi-paintbox text-primary"></i>
                         <span>Icon Customizer &amp; Exporter</span>

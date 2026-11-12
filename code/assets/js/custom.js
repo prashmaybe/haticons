@@ -105,7 +105,7 @@
     function saveSubsetToStorage() {
         try {
             localStorage.setItem(SUBSET_STORAGE_KEY, JSON.stringify(Array.from(selectedSubset)));
-        } catch (e) {}
+        } catch (e) { }
     }
 
     function updateAllSubsetCounts() {
@@ -889,7 +889,7 @@
                 } else {
                     iconList.forEach(function (ic) {
                         var badge = document.createElement('span');
-                        badge.className = 'badge bg-white text-dark border rounded-pill px-2 py-1 d-inline-flex align-items-center gap-1';
+                        badge.className = 'badge bg-white text-dark border rounded-pill px-1 py-0.5 d-inline-flex align-items-center gap-1';
                         var badgeIcon = document.createElement('i');
                         badgeIcon.className = 'hi-' + ic + ' text-primary';
                         badge.appendChild(badgeIcon);

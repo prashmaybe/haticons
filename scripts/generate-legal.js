@@ -30,7 +30,7 @@ ${getNavbar('other')}
     <!-- Header Banner -->
     <header class="py-5 bg-white border-bottom text-center">
         <div class="container">
-            <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                 <i class="hi-document"></i>
                 <span>Legal Agreement</span>
             </div>
@@ -109,7 +109,7 @@ ${getNavbar('other')}
     <!-- Header Banner -->
     <header class="py-5 bg-white border-bottom text-center">
         <div class="container">
-            <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                 <i class="hi-lock"></i>
                 <span>Privacy &amp; Data Protection</span>
             </div>
@@ -192,7 +192,7 @@ ${getNavbar('other')}
     <!-- Header Banner -->
     <header class="py-5 bg-white border-bottom text-center">
         <div class="container">
-            <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                 <i class="hi-check-circle"></i>
                 <span>GNU General Public License v3.0</span>
             </div>
@@ -235,7 +235,7 @@ ${getNavbar('other')}
 
         <!-- Font & Asset Embedding Exception -->
         <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
-            <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
+            <h2 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
                 <i class="hi-shield text-success"></i>
                 <span>Font &amp; Asset Embedding Exception (Commercial &amp; Proprietary Safe)</span>
             </h2>
@@ -249,7 +249,7 @@ ${getNavbar('other')}
 
         <!-- Third-Party Trademarks & Brand Icons Notice -->
         <div class="card p-4 rounded-4 border bg-white shadow-xs mb-4">
-            <h2 class="h6 fw-bold text-dark mb-2 d-flex align-items-center gap-2">
+            <h2 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
                 <i class="hi-lock text-primary"></i>
                 <span>Brand Icons &amp; Third-Party Trademarks</span>
             </h2>

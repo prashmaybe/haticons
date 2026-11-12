@@ -148,7 +148,7 @@ ${getNavbar('home')}
             </div>
 
             <!-- Quick Copy Command Bar -->
-            <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-stretch gap-2 mb-4" style="max-width: 640px;">
+            <div class="install-bar mx-auto p-1 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-stretch gap-2 mb-4" style="max-width: 640px;">
                 <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate install-text" id="npmCmd">npm install haticons</span>
                     <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
@@ -212,7 +212,7 @@ ${featuredIconsHtml}
     <section class="py-5 bg-light border-bottom">
         <div class="container">
             <div class="text-center mb-5">
-                <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+                <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                     <i class="hi-star"></i>
                     <span>Engineered for Production</span>
                 </div>
@@ -228,7 +228,7 @@ ${featuredIconsHtml}
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-star fs-4"></i>
                         </div>
-                        <h3 class="h6 fw-bold text-dark mb-2">${totalIcons}+ Vector Glyphs</h3>
+                        <h3 class="fw-bold text-dark mb-1">${totalIcons}+ Vector Glyphs</h3>
                         <p class="text-muted text-xs mb-0">
                             Crafted on a 1024-unit coordinate grid. Crisp display on high-DPI, Retina, and mobile screens.
                         </p>
@@ -240,7 +240,7 @@ ${featuredIconsHtml}
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-archive fs-4"></i>
                         </div>
-                        <h3 class="h6 fw-bold text-dark mb-2">14 Modular Bundles</h3>
+                        <h3 class="fw-bold text-dark mb-1">14 Modular Bundles</h3>
                         <p class="text-muted text-xs mb-0">
                             Include only what you need. E.g. <code>commerce.min.css</code> (4KB) or <code>interface.min.css</code> (13KB) independently.
                         </p>
@@ -252,7 +252,7 @@ ${featuredIconsHtml}
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-javascript fs-4"></i>
                         </div>
-                        <h3 class="h6 fw-bold text-dark mb-2">React &amp; Vue 3 Native</h3>
+                        <h3 class="fw-bold text-dark mb-1">React &amp; Vue 3 Native</h3>
                         <p class="text-muted text-xs mb-0">
                             Pre-built React and Vue 3 modules with full TypeScript types and unplugin auto-import support.
                         </p>
@@ -264,7 +264,7 @@ ${featuredIconsHtml}
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-check-circle fs-4 text-success"></i>
                         </div>
-                        <h3 class="h6 fw-bold text-dark mb-2">100% Free &amp; Open Source</h3>
+                        <h3 class="fw-bold text-dark mb-1">100% Free &amp; Open Source</h3>
                         <p class="text-muted text-xs mb-0">
                             GPL-3.0 licensed for open-source, client, SaaS, and enterprise commercial applications.
                         </p>
@@ -279,7 +279,7 @@ ${featuredIconsHtml}
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-lg-5">
-                    <div class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
+                    <div class="d-inline-flex align-items-center gap-1 px-1 py-0.5 rounded-pill bg-primary-soft text-primary fw-medium text-xs mb-2 border border-primary-subtle">
                         <i class="hi-play"></i>
                         <span>Simple Setup</span>
                     </div>
@@ -300,8 +300,8 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-lg-7">
-                    <div class="card p-4 rounded-4 bg-light border shadow-2xs">
-                        <h3 class="h6 fw-bold text-dark mb-2"><i class="hi-cloudflare text-warning me-1"></i> Quick CDN Embed:</h3>
+                    <div class="card p-2 rounded-4 bg-light border shadow-2xs">
+                        <h3 class="fw-bold text-dark mb-1"><i class="hi-cloudflare text-warning me-1"></i> Quick CDN Embed:</h3>
                         <div class="code-snippet-box mb-3">
                             <div class="code-snippet-header">
                                 <span class="code-lang-label">&lt;head&gt; stylesheet</span>
@@ -312,7 +312,7 @@ ${featuredIconsHtml}
                             <pre class="code-snippet-body"><code><span class="code-token-punct">&lt;</span><span class="code-token-tag">link</span> <span class="code-token-attr">rel</span><span class="code-token-punct">=</span><span class="code-token-string">"stylesheet"</span> <span class="code-token-attr">href</span><span class="code-token-punct">=</span><span class="code-token-string">"https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css"</span><span class="code-token-punct">&gt;</span></code></pre>
                         </div>
 
-                        <h3 class="h6 fw-bold text-dark mb-2"><i class="hi-html5 text-primary me-1"></i> HTML Usage:</h3>
+                        <h3 class="fw-bold text-dark mb-1"><i class="hi-html5 text-primary me-1"></i> HTML Usage:</h3>
                         <div class="code-snippet-box">
                             <div class="code-snippet-header">
                                 <span class="code-lang-label">Icon markup</span>
