@@ -235,7 +235,7 @@ ${iconGridCardsHtml}
     <div class="modal fade" id="customizerModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-4 border shadow-lg overflow-hidden">
-                <div class="modal-header bg-light border-bottom px-1 py-2">
+                <div class="modal-header bg-light border-bottom px-1 py-1">
                     <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2" id="custModalTitle">
                         <i class="hi-paintbox text-primary"></i>
                         <span>Icon Customizer &amp; Exporter</span>
@@ -244,7 +244,7 @@ ${iconGridCardsHtml}
                         <i class="hi-close" aria-hidden="true"></i>
                     </button>
                 </div>
-                <div class="modal-body p-4">
+                <div class="modal-body p-2">
                     <div class="row g-4 align-items-center">
                         <div class="col-12 col-md-5 text-center">
                             <div class="p-4 bg-light rounded-4 border d-flex flex-column align-items-center justify-content-center position-relative" style="min-height: 240px;">
