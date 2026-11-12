@@ -1331,11 +1331,117 @@ section {
   }
 
   .hero-title {
-    font-size: 2.25rem !important;
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
   }
 
   .cust-export-actions {
     grid-template-columns: 1fr !important;
+  }
+
+  /* Make sure container has appropriate padding on extra small screens */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Search input wrapper adjustments */
+  .search-input-wrap {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Quick color swatches sizing on small screens */
+  .quick-color {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+  /* Modal responsive spacing */
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .modal-body {
+    padding: 1rem !important;
+  }
+
+  /* Sticky top offset for mobile navbar */
+  .sticky-top-nav {
+    top: 70px !important;
+  }
+
+  /* Code snippet header & actions */
+  .code-snippet-header {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.7rem;
+  }
+
+  .code-snippet-body {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.75rem;
+  }
+
+  /* Reference icon item touch target & label */
+  .reference-icon-item {
+    min-height: 60px;
+    padding: 0.65rem 0.75rem !important;
+  }
+
+  .reference-icon-icon-wrap {
+    min-width: 36px;
+    height: 36px;
+  }
+
+  /* Tables in documentation */
+  .table-responsive {
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+  }
+
+  /* Toast position on mobile */
+  .copy-toast {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    bottom: 16px;
+    width: max-content;
+    max-width: 90vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Hide excessive sticky sidebar on mobile reference & tutorial or ensure it flows naturally */
+  .sticky-top-nav {
+    position: static !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .reference-category-nav {
+    max-height: 240px;
+    overflow-y: auto;
+  }
+
+  .tutorial-toc {
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  /* Install bar on homepage */
+  .install-bar {
+    width: 100%;
+  }
+
+  .install-code-box code,
+  .install-code-box .install-text {
+    font-size: 0.75rem;
   }
 }
 

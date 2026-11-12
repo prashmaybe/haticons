@@ -109,15 +109,15 @@ ${getNavbar('home')}
     <header class="hero-section py-5 text-center position-relative overflow-hidden">
         <div class="container py-4 position-relative z-1">
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
-                <span class="px-3 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
+                <span class="px-1 py-1 rounded-pill bg-primary-soft text-primary fw-medium text-xs border border-primary-subtle d-inline-flex align-items-center gap-1">
                     <i class="hi-star"></i>
                     <span>${totalIcons}+ Modern Vector Icons</span>
                 </span>
-                <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
+                <span class="px-1 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
                     <i class="hi-check-circle text-success"></i>
                     <span>GPL-3.0 Open Source</span>
                 </span>
-                <span class="px-3 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
+                <span class="px-1 py-1 rounded-pill bg-white text-muted fw-medium text-xs border shadow-2xs d-inline-flex align-items-center gap-1">
                     <i class="hi-archive text-warning"></i>
                     <span>14 Modular CSS Bundles</span>
                 </span>
@@ -170,7 +170,7 @@ ${getNavbar('home')}
                         <i class="hi-search"></i>
                     </span>
                     <input type="text" name="q" class="form-control border-0 ps-2" placeholder="Search 569+ icons (press Enter)..." aria-label="Search icons">
-                    <button class="btn btn-primary px-3 fw-medium" type="submit">
+                    <button class="btn btn-primary px-1 fw-medium" type="submit">
                         Search
                     </button>
                 </div>
@@ -187,7 +187,7 @@ ${getNavbar('home')}
                     <p class="text-muted text-sm mb-0">From AI pioneer logos to everyday UI, shopping, and security symbols.</p>
                 </div>
                 <div>
-                    <a href="/icons.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 d-inline-flex align-items-center gap-1">
+                    <a href="/icons.html" class="btn btn-outline-primary btn-sm rounded-pill px-1 d-inline-flex align-items-center gap-1">
                         <span>Browse full library (${totalIcons} icons)</span>
                         <i class="hi-arrow-right"></i>
                     </a>
@@ -341,7 +341,7 @@ ${featuredIconsHtml}
                     <p class="text-muted text-sm mb-0">Organized across 14 dedicated domains with modular bundle options.</p>
                 </div>
                 <div>
-                    <a href="/reference.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3 bg-white">
+                    <a href="/reference.html" class="btn btn-outline-secondary btn-sm rounded-pill px-1 bg-white">
                         <i class="hi-document me-1"></i> Full Codepoints Reference
                     </a>
                 </div>

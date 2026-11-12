@@ -91,7 +91,7 @@ Object.keys(categories).sort().forEach(catKey => {
 
     categoryRowsHtml += `
     <div class="category-reference-block mb-4 pb-5 border-bottom" id="cat-${catKey}">
-      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
         <div>
           <h3 class="h4 fw-bold text-dark mb-1 d-flex align-items-center gap-1">
             <span>${meta.name}</span>
@@ -158,20 +158,20 @@ ${getNavbar('reference')}
                         <i class="hi-search fs-5"></i>
                     </span>
                     <input type="text" id="referenceSearchInput" class="form-control border-0 ps-2" placeholder="Search by name, class, alias (e.g. calendar, snapchat, pencil)..." aria-label="Search icons">
-                    <button class="btn btn-light border-0 text-muted px-3" type="button" id="clearRefSearch" title="Clear search">
+                    <button class="btn btn-light border-0 text-muted px-1" type="button" id="clearRefSearch" title="Clear search">
                         <i class="hi-close"></i>
                     </button>
                 </div>
 
                 <!-- Interactive Filters: Animations & Variants -->
-                <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-2">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-1 mb-1">
                     <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider me-1">Style Preview:</span>
-                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 ref-style-btn active" data-style="default">Normal</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 ref-style-btn" data-style="duotone">Duotone</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 ref-style-btn" data-style="spin">Spin</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 ref-style-btn" data-style="pulse">Pulse</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 ref-style-btn" data-style="bounce">Bounce</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 ref-style-btn" data-style="shake">Shake</button>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-1 ref-style-btn active" data-style="default">Normal</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 ref-style-btn" data-style="duotone">Duotone</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 ref-style-btn" data-style="spin">Spin</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 ref-style-btn" data-style="pulse">Pulse</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 ref-style-btn" data-style="bounce">Bounce</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 ref-style-btn" data-style="shake">Shake</button>
                 </div>
 
                 <div class="d-flex align-items-center justify-content-between text-xs text-muted px-2">
@@ -188,7 +188,7 @@ ${getNavbar('reference')}
     </header>
 
     <!-- Main Container -->
-    <div class="container pt-5">
+    <div class="container pt-3">
         <div id="refNoResults" class="alert alert-warning text-center rounded-4 border d-none my-4">
             <i class="hi-warning fs-3 d-block mb-2 text-warning"></i>
             <h4 class="h5 fw-bold text-dark mb-1">No matching icons found</h4>
@@ -200,7 +200,7 @@ ${getNavbar('reference')}
                 <div class="sticky-top sticky-top-nav">
                     <div class="card p-1 rounded-4 border bg-white shadow-xs">
                         <div class="text-xs fw-bold text-muted text-uppercase tracking-wider mb-1 px-1">Categories (${Object.keys(categories).length})</div>
-                        <nav class="nav flex-column gap-0.5 text-sm reference-category-nav" id="referenceCategoryNav">
+                        <nav class="nav flex-column gap-1 text-sm reference-category-nav" id="referenceCategoryNav">
                             ${categoryNavLinks}
                         </nav>
                         <hr class="my-2">
@@ -243,7 +243,7 @@ ${getNavbar('reference')}
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="badge bg-white text-muted border text-xs font-monospace px-3 py-1" id="custBadgeName">hi-cart</span>
+                                <span class="badge bg-white text-muted border text-xs font-monospace px-1 py-1" id="custBadgeName">hi-cart</span>
                             </div>
                         </div>
 

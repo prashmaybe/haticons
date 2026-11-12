@@ -36,7 +36,7 @@ ${getNavbar('playground')}
     <!-- Page Header -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-1 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
                 <i class="hi-paintbox"></i>
                 <span>Real-Time Icon Studio</span>
             </div>
@@ -55,7 +55,7 @@ ${getNavbar('playground')}
                 <div class="col-12 col-lg-6">
                     <div class="card p-2 rounded-4 bg-white border shadow-2xs d-flex flex-column justify-content-between">
                         <div>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
                                 <h2 class="h6 fw-bold text-dark mb-0">Live Canvas Stage</h2>
                                 <span class="badge bg-primary-soft text-primary rounded-pill text-xs px-1 py-0.5">Interactive</span>
                             </div>
@@ -65,7 +65,7 @@ ${getNavbar('playground')}
                                 <div id="pgIconWrap" class="d-flex align-items-center justify-content-center">
                                     <i id="pgIconDisplay" class="hi-haticons" style="font-size: 64px; color: #7c3aed;"></i>
                                 </div>
-                                <span class="badge bg-white text-muted border text-xs font-monospace mt-3 px-3 py-1 shadow-2xs" id="pgIconLabel">hi-haticons</span>
+                                <span class="badge bg-white text-muted border text-xs font-monospace mt-3 px-1 py-1 shadow-2xs" id="pgIconLabel">hi-haticons</span>
                             </div>
 
                             <!-- Icon Selection Quick Dropdown -->
@@ -126,11 +126,11 @@ ${getNavbar('playground')}
                             <div>
                                 <label class="form-label text-xs fw-semibold text-muted text-uppercase tracking-wider mb-1">Animation Modifier:</label>
                                 <div class="d-flex flex-wrap gap-1" id="pgAnimGroup">
-                                    <button type="button" class="btn btn-xs rounded-pill px-3 pg-anim-btn active" data-anim="">None</button>
-                                    <button type="button" class="btn btn-xs rounded-pill px-3 btn-outline-secondary pg-anim-btn" data-anim="hi-spin">hi-spin</button>
-                                    <button type="button" class="btn btn-xs rounded-pill px-3 btn-outline-secondary pg-anim-btn" data-anim="hi-pulse">hi-pulse</button>
-                                    <button type="button" class="btn btn-xs rounded-pill px-3 btn-outline-secondary pg-anim-btn" data-anim="hi-bounce">hi-bounce</button>
-                                    <button type="button" class="btn btn-xs rounded-pill px-3 btn-outline-secondary pg-anim-btn" data-anim="hi-shake">hi-shake</button>
+                                    <button type="button" class="btn btn-xs rounded-pill px-1 pg-anim-btn active" data-anim="">None</button>
+                                    <button type="button" class="btn btn-xs rounded-pill px-1 btn-outline-secondary pg-anim-btn" data-anim="hi-spin">hi-spin</button>
+                                    <button type="button" class="btn btn-xs rounded-pill px-1 btn-outline-secondary pg-anim-btn" data-anim="hi-pulse">hi-pulse</button>
+                                    <button type="button" class="btn btn-xs rounded-pill px-1 btn-outline-secondary pg-anim-btn" data-anim="hi-bounce">hi-bounce</button>
+                                    <button type="button" class="btn btn-xs rounded-pill px-1 btn-outline-secondary pg-anim-btn" data-anim="hi-shake">hi-shake</button>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ ${getNavbar('playground')}
                 <div class="col-12 col-lg-6">
                     <div class="card p-2 rounded-4 bg-white border shadow-2xs d-flex flex-column justify-content-between">
                         <div>
-                            <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
                                 <h2 class="h6 fw-bold text-dark mb-0">Production Snippets</h2>
                                 <div class="d-inline-flex p-0.5 rounded-pill bg-light border gap-0.5" id="pgSnippetTabs">
                                     <button type="button" class="btn btn-xs rounded-pill px-2 active pg-tab-btn" data-mode="html">HTML</button>
@@ -169,16 +169,16 @@ ${getNavbar('playground')}
                                 <pre class="code-snippet-body"><code id="pgCodeContent">&lt;i class="hi-haticons" style="font-size: 64px; color: #7c3aed;"&gt;&lt;/i&gt;</code></pre>
                             </div>
 
-                            <div class="p-3 bg-light rounded-3 border text-xs text-muted mb-3">
+                            <div class="p-1 bg-light rounded-3 border text-xs text-muted mb-2">
                                 <strong>Tip:</strong> Haticons natively respects <code>currentColor</code> and standard CSS font sizes (e.g. <code>fs-1</code>, <code>text-primary</code>).
                             </div>
                         </div>
 
                         <div class="d-flex gap-2">
-                            <button type="button" class="btn btn-primary rounded-pill btn-sm px-3 flex-fill" id="pgCopyPrimaryBtn">
+                            <button type="button" class="btn btn-primary rounded-pill btn-sm px-1 flex-fill" id="pgCopyPrimaryBtn">
                                 <i class="hi-paste me-1"></i> Copy HTML Tag
                             </button>
-                            <a href="/tutorial.html" class="btn btn-outline-secondary rounded-pill btn-sm px-3 flex-fill bg-white">
+                            <a href="/tutorial.html" class="btn btn-outline-secondary rounded-pill btn-sm px-1 flex-fill bg-white">
                                 <i class="hi-bulb me-1"></i> View Integration Guide
                             </a>
                         </div>

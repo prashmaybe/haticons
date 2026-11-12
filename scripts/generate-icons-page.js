@@ -97,7 +97,7 @@ ${getNavbar('icons')}
     <!-- Page Header -->
     <header class="py-5 bg-white border-bottom">
         <div class="container text-center">
-            <div class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
+            <div class="d-inline-flex align-items-center gap-1 px-1 py-1 rounded-pill bg-primary-soft text-primary fw-semibold text-xs mb-3 border border-primary-subtle">
                 <i class="hi-search"></i>
                 <span>${totalIcons} Vector &amp; Font Icons</span>
             </div>
@@ -113,7 +113,7 @@ ${getNavbar('icons')}
                         <i class="hi-search fs-5"></i>
                     </span>
                     <input type="text" id="iconSearchInput" class="form-control border-0 ps-2" placeholder="Search ${totalIcons}+ icons by name, alias, category (e.g. cart, heart, claude, react)..." aria-label="Search icons" autofocus>
-                    <button class="btn btn-light border-0 text-muted px-3" type="button" id="resetSearchBtn" title="Clear search">
+                    <button class="btn btn-light border-0 text-muted px-1" type="button" id="resetSearchBtn" title="Clear search">
                         <i class="hi-close"></i>
                     </button>
                 </div>
@@ -121,10 +121,10 @@ ${getNavbar('icons')}
                 <!-- Style Variants & Animation Modifiers -->
                 <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
                     <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider me-1">Variants:</span>
-                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-3 style-filter-btn active" data-style="all">All Styles</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 style-filter-btn" data-style="outline">Outline</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 style-filter-btn" data-style="fill">Fill</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 style-filter-btn" data-style="sharp">Sharp</button>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill px-1 style-filter-btn active" data-style="all">All Styles</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 style-filter-btn" data-style="outline">Outline</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 style-filter-btn" data-style="fill">Fill</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-1 style-filter-btn" data-style="sharp">Sharp</button>
 
                     <span class="text-xs fw-semibold text-muted text-uppercase tracking-wider ms-2 me-1">Animations:</span>
                     <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-2 anim-filter-btn" data-anim="spin"><i class="hi-refresh hi-spin me-1"></i>Spin</button>
@@ -188,7 +188,7 @@ ${getNavbar('icons')}
     <main class="py-5" id="explore">
         <div class="container">
             <!-- Counter & Helper Bar -->
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 px-1 text-xs text-muted">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2 px-1 text-xs text-muted">
                 <div>Showing <strong id="visibleCount" class="text-primary">${totalIcons}</strong> of ${totalIcons} icons</div>
                 <div class="d-flex align-items-center gap-2">
                     <span class="badge bg-white text-muted border rounded-pill">Click card to customize &amp; copy</span>
@@ -212,7 +212,7 @@ ${iconGridCardsHtml}
 
             <!-- Footer Help Box -->
             <div class="card p-4 rounded-4 bg-white border text-center shadow-2xs">
-                <h3 class="h5 fw-bold text-dark mb-2">Looking for Unicode Codepoints or CSS Category Bundles?</h3>
+                <h3 class="h5 fw-bold text-dark mb-1">Looking for Unicode Codepoints or CSS Category Bundles?</h3>
                 <p class="text-muted text-sm mx-auto mb-3" style="max-width: 600px;">
                     Check out our comprehensive Reference catalog with unicode codepoints for every icon, plus individual CSS stylesheets for each category.
                 </p>
@@ -234,7 +234,7 @@ ${iconGridCardsHtml}
     <div class="modal fade" id="customizerModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-4 border shadow-lg overflow-hidden">
-                <div class="modal-header bg-light border-bottom px-3 py-2">
+                <div class="modal-header bg-light border-bottom px-1 py-2">
                     <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2" id="custModalTitle">
                         <i class="hi-paintbox text-primary"></i>
                         <span>Icon Customizer &amp; Exporter</span>
@@ -254,7 +254,7 @@ ${iconGridCardsHtml}
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="badge bg-white text-muted border text-xs font-monospace px-3 py-1" id="custBadgeName">hi-cart</span>
+                                <span class="badge bg-white text-muted border text-xs font-monospace px-1 py-1" id="custBadgeName">hi-cart</span>
                             </div>
                         </div>
 
