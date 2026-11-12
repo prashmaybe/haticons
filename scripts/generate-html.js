@@ -52,7 +52,7 @@ let featuredIconsHtml = '';
 featuredIconNames.forEach(item => {
     featuredIconsHtml += `
             <a href="/icons.html" class="featured-icon-card p-1 rounded-4 bg-white border text-center text-decoration-none shadow-2xs d-flex flex-column align-items-center justify-content-center">
-                <i class="hi-${item.name} fs-2 text-dark mb-2"></i>
+                <i class="hi-${item.name} fs-8 text-dark mb-1"></i>
                 <span class="text-xs fw-semibold text-dark text-truncate w-100">${item.label}</span>
                 <span class="text-3xs text-muted text-uppercase tracking-wider">${item.tag}</span>
             </a>`;
@@ -68,7 +68,7 @@ featuredCategories.forEach(catKey => {
 
     categoryCardsHtml += `
             <div class="col-12 col-sm-6 col-lg-3">
-                <a href="/icons.html" class="card category-card p-3 rounded-4 bg-white border text-decoration-none shadow-2xs h-100 d-flex flex-column justify-content-between">
+                <a href="/icons.html" class="card category-card p-3 rounded-4 bg-white border text-decoration-none shadow-2xs d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <h3 class="h6 fw-bold text-dark mb-0">${meta.name}</h3>
@@ -224,7 +224,7 @@ ${featuredIconsHtml}
 
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs h-100">
+                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-star fs-4"></i>
                         </div>
@@ -236,7 +236,7 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs h-100">
+                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-archive fs-4"></i>
                         </div>
@@ -248,7 +248,7 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs h-100">
+                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-javascript fs-4"></i>
                         </div>
@@ -260,7 +260,7 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs h-100">
+                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-check-circle fs-4 text-success"></i>
                         </div>
