@@ -149,13 +149,13 @@ ${getNavbar('home')}
 
             <!-- Quick Copy Command Bar -->
             <div class="install-bar mx-auto p-2 bg-white rounded-4 border shadow-sm d-flex flex-column flex-md-row align-items-stretch gap-2 mb-4" style="max-width: 640px;">
-                <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
+                <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate install-text" id="npmCmd">npm install haticons</span>
                     <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="npm install haticons" title="Copy command">
                         <i class="hi-paste"></i>
                     </button>
                 </div>
-                <div class="install-code-box flex-fill px-3 py-2 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
+                <div class="install-code-box flex-fill px-1 py-0.5 text-start font-monospace text-xs text-dark rounded-3 bg-light d-flex align-items-center justify-content-between gap-1 overflow-hidden">
                     <span class="user-select-all text-truncate cdn-truncate install-text" id="cdnUrl">https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css</span>
                     <button class="btn btn-sm btn-ghost text-muted copy-btn flex-shrink-0" data-copy="https://cdn.jsdelivr.net/npm/haticons@${VERSION}/dist/css/haticons.min.css" title="Copy CDN URL">
                         <i class="hi-paste"></i>

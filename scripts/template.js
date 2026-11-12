@@ -83,7 +83,7 @@ function getNavbar(activePage = 'home') {
     const isChangelogs = activePage === 'changelogs';
 
     return `    <!-- Main Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-2 shadow-xs" id="mainHeaderNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top shadow-xs" id="mainHeaderNav">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none me-3 me-xl-4 flex-shrink-0" href="/">
                 <span class="logo-icon-wrap d-inline-flex align-items-center justify-content-center rounded-3 bg-primary-soft text-primary">
@@ -108,7 +108,7 @@ function getNavbar(activePage = 'home') {
 
             <!-- Collapsible Navigation Menu -->
             <div class="collapse navbar-collapse justify-content-between mt-2 mt-lg-0" id="mainNavbarCollapse">
-                <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-lg-2 gap-xl-3 py-2 py-lg-0">
+                <div class="navbar-nav d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-0.5">
                     <a href="/icons.html" class="nav-link-btn btn btn-ghost ${isIcons ? 'text-primary fw-semibold' : 'text-muted'} d-inline-flex align-items-center justify-content-start justify-content-lg-center gap-2">
                         <i class="hi-search"></i>
                         <span>Icons</span>
@@ -133,17 +133,17 @@ function getNavbar(activePage = 'home') {
 
                 <!-- Desktop Actions -->
                 <div class="d-none d-lg-flex align-items-center gap-2 ms-lg-auto">
-                    <button type="button" class="btn btn-ghost text-muted px-2 py-1 nav-subset-btn d-inline-flex align-items-center gap-1" title="Open custom subset tray" aria-label="Open custom subset tray">
+                    <button type="button" class="btn btn-ghost text-muted px-1 py-0.5 nav-subset-btn d-inline-flex align-items-center gap-1" title="Open custom subset tray" aria-label="Open custom subset tray">
                         <i class="hi-archive fs-5"></i>
-                        <span class="badge bg-primary text-white rounded-pill px-2 py-05 text-2xs nav-subset-count">0</span>
+                        <span class="badge bg-primary text-white rounded-pill px-1 py-0.5 text-2xs nav-subset-count">0</span>
                     </button>
                     <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
                         <i class="hi-sun theme-toggle-icon fs-5"></i>
                     </button>
-                    <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-2 rounded-circle d-inline-flex align-items-center justify-content-center" title="View on GitHub" aria-label="View on GitHub">
+                    <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-1 rounded-circle d-inline-flex align-items-center justify-content-center" title="View on GitHub" aria-label="View on GitHub">
                         <i class="hi-github fs-5"></i>
                     </a>
-                    <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-3 py-1 d-inline-flex align-items-center justify-content-center gap-1 ms-1">
+                    <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-1 py-0.5 d-inline-flex align-items-center justify-content-center gap-0.5">
                         <i class="hi-npm"></i>
                         <span>npm</span>
                     </a>
