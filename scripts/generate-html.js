@@ -166,7 +166,7 @@ ${getNavbar('home')}
             <!-- Quick Search Input that routes to full explorer -->
             <form action="/icons.html" method="get" class="mx-auto" style="max-width: 540px;">
                 <div class="input-group shadow-sm rounded-pill overflow-hidden border">
-                    <span class="input-group-text bg-white border-0 ps-3 text-muted">
+                    <span class="input-group-text bg-white border-0 ps-1 text-muted">
                         <i class="hi-search"></i>
                     </span>
                     <input type="text" name="q" class="form-control border-0 ps-2" placeholder="Search 569+ icons (press Enter)..." aria-label="Search icons">

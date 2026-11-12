@@ -140,7 +140,7 @@ function getNavbar(activePage = 'home') {
                     <button type="button" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme (System / Light / Dark)">
                         <i class="hi-sun theme-toggle-icon fs-5"></i>
                     </button>
-                    <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-1 rounded-circle d-inline-flex align-items-center justify-content-center" title="View on GitHub" aria-label="View on GitHub">
+                    <a href="https://github.com/prashmaybe/haticons" target="_blank" rel="noopener" class="btn btn-ghost text-muted p-0-.5 rounded-circle d-inline-flex align-items-center justify-content-center" title="View on GitHub" aria-label="View on GitHub">
                         <i class="hi-github fs-5"></i>
                     </a>
                     <a href="https://www.npmjs.com/package/haticons" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill px-1 py-0.5 d-inline-flex align-items-center justify-content-center gap-0.5">

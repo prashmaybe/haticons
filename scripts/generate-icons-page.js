@@ -109,7 +109,7 @@ ${getNavbar('icons')}
             <!-- Search Bar -->
             <div class="mx-auto" style="max-width: 680px;">
                 <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border mb-3">
-                    <span class="input-group-text bg-white border-0 ps-3 text-muted">
+                    <span class="input-group-text bg-white border-0 ps-1 text-muted">
                         <i class="hi-search fs-5"></i>
                     </span>
                     <input type="text" id="iconSearchInput" class="form-control border-0 ps-2" placeholder="Search ${totalIcons}+ icons by name, alias, category (e.g. cart, heart, claude, react)..." aria-label="Search icons" autofocus>
