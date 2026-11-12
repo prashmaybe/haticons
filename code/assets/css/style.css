@@ -274,6 +274,12 @@ body {
   color: var(--hi-primary) !important;
 }
 
+[data-theme="dark"] .reference-alias-badge {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #94a3b8 !important;
+}
+
 [data-theme="dark"] .hero-section {
   background: radial-gradient(circle at 50% 10%, rgba(168, 85, 247, 0.12) 0%, rgba(11, 15, 25, 1) 75%) !important;
 }
@@ -714,9 +720,27 @@ section {
 }
 
 .icon-title-label {
-  word-break: break-word;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1 1 auto;
   line-height: 1.35;
+}
+
+.reference-alias-badge {
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.15rem 0.45rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: -0.01em;
 }
 
 .reference-icon-item:hover {

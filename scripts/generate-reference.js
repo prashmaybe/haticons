@@ -60,12 +60,12 @@ Object.keys(categories).sort().forEach(catKey => {
         const searchTerms = [item.name, item.class, ...itemAliases].join(' ');
         const pathD = (glyphPaths[item.name] || '').replace(/"/g, '&quot;');
         const aliasBadge = itemAliases.length > 0
-            ? `<span class="badge bg-light text-muted border text-2xs rounded-pill" title="Canonical alias: ${itemAliases.map(a => 'hi-' + a).join(', ')}">${itemAliases[0]}</span>`
+            ? `<span class="badge bg-light text-muted border rounded-pill reference-alias-badge" title="Canonical alias: ${itemAliases.map(a => 'hi-' + a).join(', ')}">${itemAliases[0]}</span>`
             : '';
 
         iconsListHtml += `
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-        <div class="p-1 border rounded-3 bg-white d-flex align-items-center gap-1 reference-icon-item" 
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="p-2 border rounded-3 bg-white d-flex align-items-center gap-2 reference-icon-item" 
              data-class="${item.class}" 
              data-name="${item.name}" 
              data-search="${searchTerms}"
@@ -75,9 +75,9 @@ Object.keys(categories).sort().forEach(catKey => {
           <div class="reference-icon-icon-wrap d-flex align-items-center justify-content-center rounded-2 bg-light text-primary flex-shrink-0">
             <i class="${item.class} fs-3"></i>
           </div>
-          <div class="overflow-hidden flex-grow-1">
-            <div class="d-flex align-items-center justify-content-between gap-1">
-              <div class="text-sm fw-semibold text-dark icon-title-label" title="${item.name}">${item.name}</div>
+          <div class="overflow-hidden flex-grow-1 min-w-0">
+            <div class="d-flex align-items-center justify-content-between gap-1 mb-1">
+              <div class="text-sm fw-semibold text-dark text-truncate icon-title-label" title="${item.name}">${item.name}</div>
               ${aliasBadge}
             </div>
             <div class="text-xs text-muted font-monospace d-flex align-items-center justify-content-between">
