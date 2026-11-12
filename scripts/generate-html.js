@@ -224,7 +224,7 @@ ${featuredIconsHtml}
 
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
+                    <div class="card p-2 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-star fs-4"></i>
                         </div>
@@ -236,7 +236,7 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
+                    <div class="card p-2 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-archive fs-4"></i>
                         </div>
@@ -248,7 +248,7 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
+                    <div class="card p-2 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-javascript fs-4"></i>
                         </div>
@@ -260,7 +260,7 @@ ${featuredIconsHtml}
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs">
+                    <div class="card p-2 rounded-4 bg-white border shadow-2xs">
                         <div class="feature-icon-badge rounded-circle bg-primary-soft text-primary d-inline-flex align-items-center justify-content-center mb-3">
                             <i class="hi-check-circle fs-4 text-success"></i>
                         </div>

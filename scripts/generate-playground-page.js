@@ -53,7 +53,7 @@ ${getNavbar('playground')}
             <div class="row g-4 align-items-stretch">
                 <!-- Preview & Customization Controls -->
                 <div class="col-12 col-lg-6">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs d-flex flex-column justify-content-between">
+                    <div class="card p-2 rounded-4 bg-white border shadow-2xs d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <h2 class="h6 fw-bold text-dark mb-0">Live Canvas Stage</h2>
@@ -145,7 +145,7 @@ ${getNavbar('playground')}
 
                 <!-- Production Code Output -->
                 <div class="col-12 col-lg-6">
-                    <div class="card p-4 rounded-4 bg-white border shadow-2xs d-flex flex-column justify-content-between">
+                    <div class="card p-2 rounded-4 bg-white border shadow-2xs d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <h2 class="h6 fw-bold text-dark mb-0">Production Snippets</h2>
